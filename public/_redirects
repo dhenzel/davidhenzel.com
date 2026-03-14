@@ -1,0 +1,6 @@
+# WordPress legacy redirects
+/category/*  /blog  301
+/tag/*       /blog  301
+/wp-content/*  /    301
+/wp-admin/*    /    301
+/feed/*      /rss.xml  301
