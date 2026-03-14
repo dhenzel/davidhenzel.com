@@ -24,7 +24,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
           Hi, I'm David.
         </h1>
         <p class="text-xl text-neutral-500 leading-relaxed mb-8">
-          I'm an entrepreneur and I love building things — companies, systems, frameworks. I've built 10 ventures over 20+ years, but my biggest passion is helping people make more decisions out of love than fear. That's what <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-neutral-900 underline underline-offset-2 hover:opacity-60 transition-opacity">Love Not Fear</a> is all about.
+          I'm an entrepreneur and I love building things — companies, systems, frameworks. I've built and sold countless ventures over 20+ years, but my biggest passion is helping people make more decisions out of love than fear. That's what <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-neutral-900 underline underline-offset-2 hover:opacity-60 transition-opacity">Love Not Fear</a> is all about.
         </p>
         <a
           href="/about"
@@ -69,36 +69,11 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
     </div>
   </div>
 
-  <!-- Love Not Fear -->
-  <section class="max-w-5xl mx-auto px-6 py-20">
-    <div class="max-w-2xl">
-      <p class="text-xs uppercase tracking-widest text-neutral-400 mb-6">The operating system</p>
-      <blockquote class="text-2xl font-medium text-neutral-900 tracking-tight leading-snug mb-6">
-        "Every decision in life, you make out of love or out of fear."
-      </blockquote>
-      <p class="text-base text-neutral-500 leading-relaxed mb-4">
-        <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-neutral-900 underline underline-offset-2 hover:opacity-60 transition-opacity">Love Not Fear</a> is the operating system I've built for living and leading with purpose. It's a four-pillar system — find your purpose, define your values, craft your vision, build your habits — designed to help people make better decisions and live a better life.
-      </p>
-      <p class="text-base text-neutral-500 leading-relaxed mb-6">
-        We help <a href="https://lovenotfear.com/students" target="_blank" rel="noopener" class="text-neutral-900 underline underline-offset-2 hover:opacity-60 transition-opacity">students</a> figure out what to study and what to do with their lives. We help <a href="https://lovenotfear.com/entrepreneurs" target="_blank" rel="noopener" class="text-neutral-900 underline underline-offset-2 hover:opacity-60 transition-opacity">entrepreneurs</a> get clear on what they actually want — so they stop building on autopilot and start building what matters.
-      </p>
-      <a
-        href="/love-not-fear"
-        class="inline-flex items-center gap-2 text-sm font-medium text-neutral-900 hover:opacity-60 transition-opacity"
-      >
-        Explore the framework
-        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-        </svg>
-      </a>
-    </div>
-  </section>
-
   <!-- Companies -->
-  <section class="max-w-5xl mx-auto px-6 py-20 border-t border-neutral-100">
+  <section class="max-w-5xl mx-auto px-6 py-20">
     <SectionHeading
       title="Companies"
-      subtitle="Ten ventures built over two decades — software, services, and systems for helping people work and live better."
+      subtitle="Some of my current ventures — software, services, and systems for helping people work and live better."
     />
     <div class="flex flex-col gap-3">
       {companies.map((company) => (
