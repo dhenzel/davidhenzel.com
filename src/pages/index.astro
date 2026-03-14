@@ -12,8 +12,8 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
 ---
 
 <BaseLayout
-  title="David Henzel — Builder, Coach, Recovering Introvert"
-  description="David Henzel builds companies and coaches people at the intersection of technology, purpose, and conscious leadership through the Love Not Fear framework."
+  title="David Henzel — Entrepreneur & Systems Builder"
+  description="David Henzel is an entrepreneur and systems builder. He builds companies and helps people make more decisions out of love than fear through the Love Not Fear operating system."
 >
 
   <!-- Hero -->
@@ -24,7 +24,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
           Hi, I'm David.
         </h1>
         <p class="text-xl text-neutral-500 leading-relaxed mb-8">
-          I build companies and coach people to lead with purpose. Through the Love Not Fear framework, I help students find their calling and entrepreneurs figure out what truly matters.
+          I'm an entrepreneur and I love building things — companies, systems, frameworks. I've built 10 ventures over 20+ years, but my biggest passion is helping people make more decisions out of love than fear. That's what <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-neutral-900 underline underline-offset-2 hover:opacity-60 transition-opacity">Love Not Fear</a> is all about.
         </p>
         <a
           href="/about"
@@ -47,40 +47,40 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
     </div>
   </section>
 
-  <!-- Featured In -->
-  <div class="max-w-5xl mx-auto px-6">
-    <div class="flex items-center gap-6 py-6">
-      <p class="text-xs uppercase tracking-widest text-neutral-400 shrink-0">Featured in</p>
-      <div class="flex flex-wrap items-center gap-x-8 gap-y-4">
-        {[
-          { name: 'Forbes', logo: '/logos/media/forbes.png' },
-          { name: 'Inc.', logo: '/logos/media/inc.png' },
-          { name: 'Fast Company', logo: '/logos/media/fastcompany.png' },
-          { name: 'HuffPost', logo: '/logos/media/huffpost.png' },
-          { name: 'YEC', logo: '/logos/media/yec.png' },
-          { name: 'The Next Web', logo: '/logos/media/tnw.png' },
-          { name: 'VentureBeat', logo: '/logos/media/venturebeat.png' },
-        ].map((outlet) => (
-          <img
-            src={outlet.logo}
-            alt={outlet.name}
-            class="h-5 w-auto object-contain grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-            loading="lazy"
-          />
-        ))}
-      </div>
+  <!-- Featured In (full-width) -->
+  <div class="border-y border-neutral-100 py-8">
+    <div class="flex items-center justify-center gap-x-12 gap-y-6 flex-wrap px-6">
+      {[
+        { name: 'Forbes', logo: '/logos/media/forbes.png' },
+        { name: 'Inc.', logo: '/logos/media/inc.png' },
+        { name: 'Fast Company', logo: '/logos/media/fastcompany.png' },
+        { name: 'HuffPost', logo: '/logos/media/huffpost.png' },
+        { name: 'YEC', logo: '/logos/media/yec.png' },
+        { name: 'The Next Web', logo: '/logos/media/tnw.png' },
+        { name: 'VentureBeat', logo: '/logos/media/venturebeat.png' },
+      ].map((outlet) => (
+        <img
+          src={outlet.logo}
+          alt={outlet.name}
+          class="h-6 w-auto object-contain grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+          loading="lazy"
+        />
+      ))}
     </div>
   </div>
 
   <!-- Love Not Fear -->
   <section class="max-w-5xl mx-auto px-6 py-20">
     <div class="max-w-2xl">
-      <p class="text-xs uppercase tracking-widest text-neutral-400 mb-6">Philosophy</p>
+      <p class="text-xs uppercase tracking-widest text-neutral-400 mb-6">The operating system</p>
       <blockquote class="text-2xl font-medium text-neutral-900 tracking-tight leading-snug mb-6">
         "Every decision in life, you make out of love or out of fear."
       </blockquote>
+      <p class="text-base text-neutral-500 leading-relaxed mb-4">
+        <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-neutral-900 underline underline-offset-2 hover:opacity-60 transition-opacity">Love Not Fear</a> is the operating system I've built for living and leading with purpose. It's a four-pillar system — find your purpose, define your values, craft your vision, build your habits — designed to help people make better decisions and live a better life.
+      </p>
       <p class="text-base text-neutral-500 leading-relaxed mb-6">
-        Love Not Fear is the framework I've built my companies and life around. We help students figure out their purpose — what to study, what to do with their lives — and we help entrepreneurs get clear on what truly matters. It's about making decisions from a place of care and courage rather than anxiety and control.
+        We help <a href="https://lovenotfear.com/students" target="_blank" rel="noopener" class="text-neutral-900 underline underline-offset-2 hover:opacity-60 transition-opacity">students</a> figure out what to study and what to do with their lives. We help <a href="https://lovenotfear.com/entrepreneurs" target="_blank" rel="noopener" class="text-neutral-900 underline underline-offset-2 hover:opacity-60 transition-opacity">entrepreneurs</a> get clear on what they actually want — so they stop building on autopilot and start building what matters.
       </p>
       <a
         href="/love-not-fear"
@@ -98,7 +98,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
   <section class="max-w-5xl mx-auto px-6 py-20 border-t border-neutral-100">
     <SectionHeading
       title="Companies"
-      subtitle="Ten ventures built over two decades — software, services, and systems for modern businesses."
+      subtitle="Ten ventures built over two decades — software, services, and systems for helping people work and live better."
     />
     <div class="flex flex-col gap-3">
       {companies.map((company) => (
@@ -122,7 +122,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
   <section class="max-w-5xl mx-auto px-6 py-20 border-t border-neutral-100">
     <SectionHeading
       title="Writing"
-      subtitle="Thoughts on building companies, conscious leadership, and what it means to grow."
+      subtitle="Thoughts on building companies, systems, and what it means to grow."
     />
     {recentPosts.length === 0 ? (
       <div class="border border-neutral-200 rounded-lg px-8 py-12 text-center bg-neutral-50">
@@ -164,7 +164,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
         Stay in the loop
       </h2>
       <p class="text-base text-neutral-500 leading-relaxed mb-6">
-        Thoughts on building companies, conscious leadership, and the Love Not Fear framework. No spam, unsubscribe anytime.
+        Thoughts on building companies, systems thinking, and the Love Not Fear operating system. No spam, unsubscribe anytime.
       </p>
       <!-- GHL Form Embed — replace FORM_ID_HERE with your GoHighLevel newsletter form ID -->
       <iframe
