@@ -2,18 +2,18 @@ export interface Company {
   name: string;
   url: string;
   description: string;
-  category: 'AI & Consulting' | 'SaaS' | 'B2B Services' | 'Community & Coaching' | 'Recruiting';
+  logo: string;
 }
 
 export const companies: Company[] = [
-  { name: 'AI Operator', url: 'https://aioperator.com', description: 'AI consulting and implementation for businesses', category: 'AI & Consulting' },
-  { name: 'upcoach', url: 'https://upcoach.com', description: 'All-in-one platform for coaching businesses', category: 'SaaS' },
-  { name: 'Sendloop', url: 'https://sendloop.com', description: 'Email marketing automation platform', category: 'SaaS' },
-  { name: 'Octeth', url: 'https://octeth.com', description: 'Enterprise email infrastructure and deliverability', category: 'SaaS' },
-  { name: 'LTVplus', url: 'https://ltvplus.com', description: 'Outsourced customer support teams', category: 'B2B Services' },
-  { name: 'WinbackEngine', url: 'https://winbackengine.com', description: 'Automated customer win-back campaigns', category: 'B2B Services' },
-  { name: 'RecoverPayments', url: 'https://recoverpayments.com', description: 'Failed payment recovery service', category: 'B2B Services' },
-  { name: 'Shortlist', url: 'https://shortlist.io', description: 'Curated talent matching platform', category: 'B2B Services' },
-  { name: 'Love Not Fear', url: 'https://lovenotfear.com', description: 'Framework for conscious leadership and living', category: 'Community & Coaching' },
-  { name: 'LNF People', url: 'https://lnfpeople.com', description: 'Values-driven recruiting and team building', category: 'Recruiting' },
+  { name: 'AI Operator', url: 'https://aioperator.com', description: 'AI consulting and implementation for businesses', logo: '/logos/companies/aioperator.jpeg' },
+  { name: 'upcoach', url: 'https://upcoach.com', description: 'All-in-one platform for coaching businesses', logo: '/logos/companies/upcoach.png' },
+  { name: 'Sendloop', url: 'https://sendloop.com', description: 'Email marketing automation platform', logo: '/logos/companies/sendloop.png' },
+  { name: 'Octeth', url: 'https://octeth.com', description: 'Enterprise email infrastructure and deliverability', logo: '/logos/companies/octeth.png' },
+  { name: 'LTVplus', url: 'https://ltvplus.com', description: 'Outsourced customer support teams', logo: '/logos/companies/ltvplus.svg' },
+  { name: 'WinbackEngine', url: 'https://winbackengine.com', description: 'Automated customer win-back campaigns', logo: '/logos/companies/winbackengine.svg' },
+  { name: 'RecoverPayments', url: 'https://recoverpayments.com', description: 'Failed payment recovery service', logo: '/logos/companies/recoverpayments.png' },
+  { name: 'Shortlist', url: 'https://shortlist.io', description: 'Curated talent matching platform', logo: '/logos/companies/shortlist.svg' },
+  { name: 'Love Not Fear', url: 'https://lovenotfear.com', description: 'Framework for conscious leadership and living', logo: '/logos/companies/lovenotfear.png' },
+  { name: 'LNF People', url: 'https://lnfpeople.com', description: 'Values-driven recruiting and team building', logo: '/logos/companies/lnfpeople.jpg' },
 ];

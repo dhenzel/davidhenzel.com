@@ -6,47 +6,41 @@ interface Props {
 }
 
 const { company } = Astro.props;
-
-const categoryColors: Record<Company['category'], string> = {
-  'AI & Consulting': 'bg-neutral-900 text-white',
-  'SaaS': 'bg-neutral-100 text-neutral-700',
-  'B2B Services': 'bg-neutral-100 text-neutral-700',
-  'Community & Coaching': 'bg-neutral-100 text-neutral-700',
-  'Recruiting': 'bg-neutral-100 text-neutral-700',
-};
 ---
 
 <a
   href={company.url}
   target="_blank"
-  rel="noopener noreferrer"
-  class="group flex flex-col justify-between p-6 border border-neutral-200 rounded-lg bg-white hover:border-neutral-400 hover:shadow-sm transition-all duration-200"
+  rel="noopener"
+  class="group flex items-center gap-5 p-5 border border-neutral-200 rounded-lg bg-white hover:border-neutral-400 hover:shadow-sm transition-all duration-200"
 >
-  <div>
-    <div class="flex items-start justify-between gap-3 mb-3">
-      <h3 class="text-base font-semibold text-neutral-900 group-hover:opacity-70 transition-opacity">
-        {company.name}
-      </h3>
-      <svg
-        class="w-4 h-4 text-neutral-400 group-hover:text-neutral-700 shrink-0 mt-0.5 transition-colors"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        aria-hidden="true"
-      >
-        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-      </svg>
-    </div>
+  <div class="shrink-0 w-12 h-12 rounded-lg bg-neutral-50 border border-neutral-100 flex items-center justify-center overflow-hidden">
+    <img
+      src={company.logo}
+      alt={`${company.name} logo`}
+      class="w-10 h-10 object-contain"
+      loading="lazy"
+    />
+  </div>
+
+  <div class="min-w-0 flex-1">
+    <h3 class="text-base font-semibold text-neutral-900 group-hover:opacity-70 transition-opacity">
+      {company.name}
+    </h3>
     <p class="text-sm text-neutral-500 leading-relaxed">
       {company.description}
     </p>
   </div>
 
-  <div class="mt-4">
-    <span class:list={['inline-block text-xs font-medium px-2.5 py-1 rounded-full', categoryColors[company.category]]}>
-      {company.category}
-    </span>
-  </div>
+  <svg
+    class="w-4 h-4 text-neutral-400 group-hover:text-neutral-700 shrink-0 transition-colors"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    aria-hidden="true"
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+  </svg>
 </a>

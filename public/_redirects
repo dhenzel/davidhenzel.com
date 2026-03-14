@@ -4,3 +4,23 @@
 /wp-content/*  /    301
 /wp-admin/*    /    301
 /feed/*      /rss.xml  301
+
+# Blog post redirects (old WordPress slugs → new Astro paths)
+/productivity-tips-for-running-multiple-companies/  /blog/productivity-tips-for-running-multiple-companies  301
+/do-you-have-the-courage-to-follow-your-calling/  /blog/do-you-have-the-courage-to-follow-your-calling  301
+/the-little-book-of-stoicism-review/  /blog/the-little-book-of-stoicism-review  301
+/how-to-launch-new-product-features/  /blog/how-to-launch-new-product-features  301
+/mistakes-every-first-time-entrepreneur-will-make/  /blog/mistakes-every-first-time-entrepreneur-will-make  301
+/the-definitive-guide-to-work-life-balance/  /blog/the-definitive-guide-to-work-life-balance  301
+/effective-leadership-qualities/  /blog/effective-leadership-qualities  301
+/teach-leadership-traits-child/  /blog/teach-leadership-traits-child  301
+/characteristics-of-effective-communication/  /blog/characteristics-of-effective-communication  301
+/why-marriages-fail/  /blog/why-marriages-fail  301
+/managing-happiness-course-summary/  /blog/managing-happiness-course-summary  301
+/the-coaching-habit/  /blog/the-coaching-habit  301
+/the-definitive-guide-to-planning-your-life/  /blog/the-definitive-guide-to-planning-your-life  301
+/promote-ecommerce-site/  /blog/promote-ecommerce-site  301
+/the-lean-startup-done-is-better-than-perfect/  /blog/the-lean-startup-done-is-better-than-perfect  301
+/simple-cold-email-makes-networking-easy/  /blog/simple-cold-email-makes-networking-easy  301
+/how-to-read-hard-books/  /blog/how-to-read-hard-books  301
+/how-to-use-pain-to-become-stronger/  /blog/how-to-use-pain-to-become-stronger  301

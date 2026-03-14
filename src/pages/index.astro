@@ -38,16 +38,12 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
         </a>
       </div>
 
-      <!-- Headshot placeholder -->
       <div class="shrink-0">
-        <div
-          class="w-48 h-48 md:w-56 md:h-56 rounded-full bg-neutral-100 border border-neutral-200 flex items-center justify-center"
-          aria-label="David Henzel headshot placeholder"
-        >
-          <svg class="w-16 h-16 text-neutral-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-          </svg>
-        </div>
+        <img
+          src="/images/david-headshot.png"
+          alt="David Henzel"
+          class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border border-neutral-200"
+        />
       </div>
     </div>
   </section>
@@ -63,7 +59,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
       title="Companies"
       subtitle="Ten ventures built over two decades — software, services, and systems for modern businesses."
     />
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="flex flex-col gap-3">
       {companies.map((company) => (
         <CompanyCard company={company} />
       ))}
