@@ -7,12 +7,6 @@ const year = new Date().getFullYear();
 
 <footer class="border-t border-neutral-200 bg-white">
   <div class="max-w-5xl mx-auto px-6 py-12">
-    <!-- Newsletter signup -->
-    <div class="mb-8 max-w-sm">
-      <p class="text-sm font-semibold text-neutral-900 mb-2">Join the newsletter</p>
-      <p class="text-xs text-neutral-500 mb-3">Thoughts on building companies and the Love Not Fear operating system.</p>
-      <NewsletterForm id="footer" compact />
-    </div>
 
     <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
 
@@ -57,6 +51,15 @@ const year = new Date().getFullYear();
           </a>
         ))}
       </nav>
+    </div>
+
+    <!-- Newsletter signup -->
+    <div class="mt-8 pt-6 border-t border-neutral-200">
+      <div class="max-w-md">
+        <p class="text-sm font-semibold text-neutral-900 mb-2">Join the newsletter</p>
+        <p class="text-xs text-neutral-500 mb-3">Thoughts on building companies and the Love Not Fear operating system.</p>
+        <NewsletterForm id="footer" />
+      </div>
     </div>
 
     <!-- Copyright -->
