@@ -38,27 +38,23 @@ const year = new Date().getFullYear();
             LinkedIn
           </a>
         </div>
+        <nav class="flex flex-wrap gap-x-5 gap-y-1 mt-1" aria-label="Footer navigation">
+          {navItems.map((item) => (
+            <a
+              href={item.href}
+              class="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
       </div>
 
-      <!-- Right: nav repeat -->
-      <nav class="flex flex-wrap gap-x-6 gap-y-2" aria-label="Footer navigation">
-        {navItems.map((item) => (
-          <a
-            href={item.href}
-            class="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
-          >
-            {item.label}
-          </a>
-        ))}
-      </nav>
-    </div>
-
-    <!-- Newsletter signup -->
-    <div class="mt-8 pt-6 border-t border-neutral-200">
-      <div class="max-w-md">
-        <p class="text-sm font-semibold text-neutral-900 mb-2">Join the newsletter</p>
+      <!-- Right: newsletter -->
+      <div class="md:max-w-xs w-full">
+        <p class="text-sm font-semibold text-neutral-900 mb-1">Newsletter</p>
         <p class="text-xs text-neutral-500 mb-3">Thoughts on building companies and the Love Not Fear operating system.</p>
-        <NewsletterForm id="footer" />
+        <NewsletterForm id="footer" compact />
       </div>
     </div>
 
