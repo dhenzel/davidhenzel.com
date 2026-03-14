@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#fafafa"/>
+  <!-- Two rings slightly apart -->
+  <g stroke="#c4c4c4" stroke-width="2" stroke-linecap="round">
+    <circle cx="582" cy="315" r="35"/>
+    <circle cx="618" cy="315" r="35"/>
+  </g>
+</svg>

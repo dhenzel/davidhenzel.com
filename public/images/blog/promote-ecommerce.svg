@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#fafafa"/>
+  <!-- Megaphone -->
+  <g stroke="#c4c4c4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M570 300 L570 330 L610 345 L610 285 Z"/>
+    <path d="M610 285 Q650 270 650 315 Q650 360 610 345"/>
+    <line x1="560" y1="305" x2="570" y2="305"/>
+    <line x1="560" y1="325" x2="570" y2="325"/>
+    <rect x="555" y="302" width="15" height="26" rx="4"/>
+  </g>
+</svg>

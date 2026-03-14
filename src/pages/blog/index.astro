@@ -33,6 +33,7 @@ const posts = allPosts.sort(
             date={post.data.pubDate.toISOString()}
             excerpt={post.data.description}
             slug={post.id}
+            heroImage={post.data.heroImage}
           />
         ))}
       </div>

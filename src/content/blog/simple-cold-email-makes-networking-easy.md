@@ -1,6 +1,7 @@
 ---
 title: "A Simple Cold Email That Makes Networking Easy"
 description: "A proven cold email formula that gets responses from top professionals -- lead with genuine praise, establish credibility fast, make a specific ask, and offer to pay for their time."
+heroImage: "/images/blog/cold-email.svg"
 pubDate: 2015-12-03
 tags: ["networking", "entrepreneurship", "productivity", "cold outreach", "communication"]
 draft: false

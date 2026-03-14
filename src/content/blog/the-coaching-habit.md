@@ -1,6 +1,7 @@
 ---
 title: "The Coaching Habit: Just Ask the Right Questions"
 description: "A summary of Michael Bungay Stanier's The Coaching Habit and its seven essential questions that will transform how you lead, coach, and communicate with your team."
+heroImage: "/images/blog/coaching-habit.svg"
 pubDate: 2016-05-23
 tags: ["book review", "leadership", "coaching", "management"]
 draft: false

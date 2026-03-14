@@ -1,6 +1,7 @@
 ---
 title: "How to Use Pain to Become a Stronger Person"
 description: "Pain is inevitable, but how it shapes you is a choice. Three keys -- ownership, healing, and vulnerability -- determine whether hardship destroys you or refines you into someone stronger."
+heroImage: "/images/blog/pain-stronger.svg"
 pubDate: 2015-11-30
 tags: ["personal growth", "resilience", "mindset", "self-improvement", "leadership"]
 draft: false

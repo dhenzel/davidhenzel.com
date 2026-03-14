@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#fafafa"/>
+  <!-- Question mark in speech bubble -->
+  <g stroke="#c4c4c4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M540 280 Q540 240 580 240 L620 240 Q660 240 660 280 L660 320 Q660 360 620 360 L610 360 L600 390 L590 360 L580 360 Q540 360 540 320 Z"/>
+    <path d="M585 285 Q585 265 600 265 Q615 265 615 285 Q615 300 600 305 L600 315"/>
+    <circle cx="600" cy="335" r="2" fill="#c4c4c4"/>
+  </g>
+</svg>

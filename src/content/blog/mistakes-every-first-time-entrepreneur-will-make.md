@@ -1,6 +1,7 @@
 ---
 title: "7 Mistakes (Almost) Every First-Time Entrepreneur Will Make"
 description: "From chasing money to fearing failure, here are seven common traps that catch new business owners -- and how to avoid them based on hard-won experience building MaxCDN."
+heroImage: "/images/blog/entrepreneur-mistakes.svg"
 pubDate: 2017-09-19
 tags: ["entrepreneurship", "leadership", "mistakes", "startups"]
 draft: false

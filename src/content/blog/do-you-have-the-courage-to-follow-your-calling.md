@@ -1,6 +1,7 @@
 ---
 title: "Do You Have the Courage to Follow Your Calling?"
 description: "A chance encounter with a musician on a Bali beach sparks a reflection on the tension between following your passion and staying in your comfort zone."
+heroImage: "/images/blog/courage-calling.svg"
 pubDate: 2018-04-19
 tags: ["personal growth", "purpose", "entrepreneurship", "coaching"]
 draft: false

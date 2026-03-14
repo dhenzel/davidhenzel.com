@@ -1,6 +1,7 @@
 ---
 title: "The Definitive Guide to Planning Your Life"
 description: "A comprehensive, actionable guide to building a life plan -- from discovering your purpose with SWOT analysis and SMARTR goals to creating five-year, monthly, and daily plans that drive real progress."
+heroImage: "/images/blog/planning-life.svg"
 pubDate: 2015-12-11
 tags: ["productivity", "personal growth", "goal setting", "planning", "self-improvement"]
 draft: false

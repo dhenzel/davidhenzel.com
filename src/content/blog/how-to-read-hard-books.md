@@ -1,6 +1,7 @@
 ---
 title: "How to Read Hard Books"
 description: "Five practical strategies for getting through dense, challenging non-fiction books -- from reading along with the audiobook to ditching your highlighter and knowing when to quit."
+heroImage: "/images/blog/read-hard-books.svg"
 pubDate: 2015-12-02
 tags: ["personal growth", "productivity", "book review", "self-improvement", "learning"]
 draft: false

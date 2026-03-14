@@ -1,6 +1,7 @@
 ---
 title: "Productivity Tips: How to Run One or Multiple Companies Without Going Crazy"
 description: "Practical frameworks and personal hacks for limiting decision fatigue, from implementing EOS and hiring strong team leads to wearing only black and rating tasks by dollar value."
+heroImage: "/images/blog/productivity.svg"
 pubDate: 2020-11-30
 tags: ["productivity", "entrepreneurship", "leadership", "decision-making"]
 draft: false

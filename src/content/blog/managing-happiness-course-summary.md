@@ -1,6 +1,7 @@
 ---
 title: "Managing Happiness: Course Summary"
 description: "A complete overview of the Managing Happiness course — a six-part system for applying business principles to your relationship to eliminate struggles and build a thriving marriage."
+heroImage: "/images/blog/managing-happiness.svg"
 pubDate: 2017-07-17
 tags: ["relationships", "marriage", "productivity", "personal growth", "managing happiness"]
 draft: false

@@ -1,6 +1,7 @@
 ---
 title: "For Ambitious Entrepreneurs: 5 Effective Leadership Qualities"
 description: "Five leadership qualities that separate inspiring leaders from those who lead through fear — from emotional intelligence to compelling vision and aggressive action-taking."
+heroImage: "/images/blog/leadership-qualities.svg"
 pubDate: 2017-09-05
 tags: ["leadership", "entrepreneurship", "personal growth", "management"]
 draft: false

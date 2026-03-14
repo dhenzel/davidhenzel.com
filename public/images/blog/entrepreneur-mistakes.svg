@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#fafafa"/>
+  <!-- Winding path with stumble -->
+  <g stroke="#c4c4c4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M480 380 Q520 380 540 350 Q560 320 580 320 Q600 320 600 340 Q600 360 620 340 Q640 320 650 290 Q660 260 680 280 Q700 300 720 280"/>
+    <line x1="648" y1="292" x2="640" y2="270"/>
+    <line x1="648" y1="292" x2="662" y2="272"/>
+  </g>
+</svg>

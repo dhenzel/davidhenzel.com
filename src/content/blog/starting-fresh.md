@@ -1,6 +1,7 @@
 ---
 title: "Starting Fresh"
 description: "On rebuilding the personal site, getting back to writing, and why putting your name on something still matters."
+heroImage: "/images/blog/starting-fresh.svg"
 pubDate: 2025-03-14
 tags: ["writing", "building", "reflection"]
 draft: false

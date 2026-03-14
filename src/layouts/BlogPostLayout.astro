@@ -6,6 +6,7 @@ interface Props {
   description: string;
   pubDate: Date;
   updatedDate?: Date;
+  heroImage?: string;
   tags?: string[];
   readingTime: number;
   prevPost?: { id: string; title: string } | null;
@@ -17,6 +18,7 @@ const {
   description,
   pubDate,
   updatedDate,
+  heroImage,
   tags = [],
   readingTime,
   prevPost,
@@ -65,6 +67,18 @@ const formattedUpdatedDate = updatedDate
         </p>
       )}
     </header>
+
+    <!-- Hero image -->
+    {heroImage && (
+      <div class="max-w-2xl mb-10">
+        <img
+          src={heroImage}
+          alt=""
+          class="w-full rounded-lg border border-neutral-100"
+          loading="eager"
+        />
+      </div>
+    )}
 
     <!-- Post content -->
     <div class="max-w-2xl prose-content">

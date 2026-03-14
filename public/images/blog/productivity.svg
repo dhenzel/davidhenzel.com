@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#fafafa"/>
+  <!-- Interconnected circles / gears -->
+  <g stroke="#c4c4c4" stroke-width="2" stroke-linecap="round">
+    <circle cx="585" cy="300" r="28"/>
+    <circle cx="620" cy="330" r="22"/>
+    <circle cx="580" cy="345" r="16"/>
+  </g>
+</svg>

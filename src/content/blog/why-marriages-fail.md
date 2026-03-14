@@ -1,6 +1,7 @@
 ---
 title: "Why Marriages Fail: 4 Tragic Reasons That Entrepreneurs Need To Be Aware Of"
 description: "Four common reasons entrepreneurial marriages fall apart — from diverging priorities and emotional distance to financial distress — and practical strategies to prevent each one."
+heroImage: "/images/blog/marriages-fail.svg"
 pubDate: 2017-08-16
 tags: ["relationships", "marriage", "entrepreneurship", "personal growth"]
 draft: false

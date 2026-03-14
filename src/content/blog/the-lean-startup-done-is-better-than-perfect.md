@@ -1,6 +1,7 @@
 ---
 title: "The Lean Startup: Done is Better than Perfect"
 description: "A review of Eric Ries's The Lean Startup and why the Minimum Viable Product is the most critical concept for any founder -- how shipping fast validates ideas, saves resources, and generates immediate ROI."
+heroImage: "/images/blog/lean-startup.svg"
 pubDate: 2015-12-08
 tags: ["book review", "entrepreneurship", "startups", "productivity", "lean methodology"]
 draft: false

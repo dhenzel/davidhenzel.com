@@ -1,6 +1,7 @@
 ---
 title: "Good Leadership Traits You Should Teach Your Child"
 description: "Three practical ways to instill leadership traits in your children — from team-building through activities to storytelling that models grit and perseverance."
+heroImage: "/images/blog/leadership-child.svg"
 pubDate: 2017-08-29
 tags: ["leadership", "parenting", "personal growth"]
 draft: false

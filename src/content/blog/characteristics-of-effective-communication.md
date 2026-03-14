@@ -1,6 +1,7 @@
 ---
 title: "3 Characteristics of Effective Communication with Your Spouse"
 description: "How entrepreneurs can strengthen their marriage through empathy, honesty, and active listening — with a practical framework for structured conversations with your partner."
+heroImage: "/images/blog/effective-communication.svg"
 pubDate: 2017-08-22
 tags: ["relationships", "communication", "entrepreneurship", "marriage"]
 draft: false

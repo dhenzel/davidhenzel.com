@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#fafafa"/>
+  <!-- Compass -->
+  <g stroke="#c4c4c4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="600" cy="315" r="60"/>
+    <circle cx="600" cy="315" r="50"/>
+    <polygon points="600,270 607,310 600,300 593,310" fill="#c4c4c4" stroke="none"/>
+    <polygon points="600,360 607,320 600,330 593,320"/>
+    <line x1="600" y1="255" x2="600" y2="262"/>
+    <line x1="600" y1="368" x2="600" y2="375"/>
+    <line x1="540" y1="315" x2="547" y2="315"/>
+    <line x1="653" y1="315" x2="660" y2="315"/>
+  </g>
+</svg>

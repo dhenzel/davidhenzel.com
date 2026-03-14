@@ -1,6 +1,7 @@
 ---
 title: "How to Launch New Product Features Without Pissing Off Your Team and Customers"
 description: "A step-by-step playbook for communicating product updates across your organization -- from support and sales enablement to customer-facing announcements -- learned the hard way at MaxCDN."
+heroImage: "/images/blog/launch-features.svg"
 pubDate: 2017-10-10
 tags: ["product management", "entrepreneurship", "leadership", "communication"]
 draft: false

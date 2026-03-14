@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#fafafa"/>
+  <!-- Upward arrow / launch -->
+  <g stroke="#c4c4c4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="600" y1="370" x2="600" y2="260"/>
+    <polyline points="575,285 600,260 625,285"/>
+    <line x1="570" y1="370" x2="630" y2="370"/>
+    <circle cx="580" cy="350" r="3"/>
+    <circle cx="620" cy="340" r="3"/>
+  </g>
+</svg>

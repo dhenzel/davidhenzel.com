@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#fafafa"/>
+  <!-- Two overlapping speech bubbles -->
+  <g stroke="#c4c4c4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M530 270 Q530 240 560 240 L620 240 Q650 240 650 270 L650 310 Q650 340 620 340 L575 340 L560 365 L555 340 L560 340 Q530 340 530 310 Z"/>
+    <path d="M550 290 Q550 260 580 260 L640 260 Q670 260 670 290 L670 330 Q670 360 640 360 L650 385 L625 360 L580 360 Q550 360 550 330 Z"/>
+  </g>
+</svg>

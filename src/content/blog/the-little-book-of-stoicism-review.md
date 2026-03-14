@@ -1,6 +1,7 @@
 ---
 title: "Book Review: The Little Book of Stoicism"
 description: "A review of Jonas Salzgeber's practical guide to Stoic philosophy, covering the Stoic Happiness Triangle and 55 daily practices for resilience, confidence, and calmness."
+heroImage: "/images/blog/stoicism.svg"
 pubDate: 2019-02-21
 tags: ["book review", "stoicism", "personal growth", "philosophy"]
 draft: false

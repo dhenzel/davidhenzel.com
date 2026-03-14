@@ -1,6 +1,7 @@
 ---
 title: "For Entrepreneurs with a Family: The Definitive Guide to Work-Life Balance"
 description: "A comprehensive framework for work-life integration that applies business principles -- vision, boundaries, tools, and systems -- to running a happier family life alongside your company."
+heroImage: "/images/blog/work-life-balance.svg"
 pubDate: 2017-09-12
 tags: ["work-life balance", "productivity", "relationships", "entrepreneurship", "personal growth"]
 draft: false

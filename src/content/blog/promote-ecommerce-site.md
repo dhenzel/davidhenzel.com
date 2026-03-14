@@ -1,6 +1,7 @@
 ---
 title: "How to Promote Your eCommerce Site Without Going Broke"
 description: "A practical playbook for bootstrapped eCommerce founders to get featured on blogs and websites without spending a fortune on advertising, using free outreach tactics and affordable tools."
+heroImage: "/images/blog/promote-ecommerce.svg"
 pubDate: 2015-12-09
 tags: ["entrepreneurship", "ecommerce", "marketing", "startups", "bootstrapping"]
 draft: false

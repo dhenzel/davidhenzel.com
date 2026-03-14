@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#fafafa"/>
+  <!-- Roman column / pillar -->
+  <g stroke="#c4c4c4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="580" y="260" width="40" height="10"/>
+    <line x1="585" y1="270" x2="585" y2="360"/>
+    <line x1="595" y1="270" x2="595" y2="360"/>
+    <line x1="605" y1="270" x2="605" y2="360"/>
+    <line x1="615" y1="270" x2="615" y2="360"/>
+    <rect x="578" y="360" width="44" height="10"/>
+  </g>
+</svg>
