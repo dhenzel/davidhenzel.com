@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import CompanyCard from '../components/CompanyCard.astro';
-import MediaLogos from '../components/MediaLogos.astro';
 import BlogPostCard from '../components/BlogPostCard.astro';
 import { companies } from '../data/companies';
 import { getCollection } from 'astro:content';
@@ -40,8 +39,8 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
 
       <div class="shrink-0">
         <img
-          src="/images/david-headshot.png"
-          alt="David Henzel"
+          src="/images/david-onstage.png"
+          alt="David Henzel speaking on stage"
           class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border border-neutral-200"
         />
       </div>
@@ -50,7 +49,27 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
 
   <!-- Featured In -->
   <div class="max-w-5xl mx-auto px-6">
-    <MediaLogos />
+    <div class="flex items-center gap-6 py-6">
+      <p class="text-xs uppercase tracking-widest text-neutral-400 shrink-0">Featured in</p>
+      <div class="flex flex-wrap items-center gap-x-8 gap-y-4">
+        {[
+          { name: 'Forbes', logo: '/logos/media/forbes.png' },
+          { name: 'Inc.', logo: '/logos/media/inc.png' },
+          { name: 'Fast Company', logo: '/logos/media/fastcompany.png' },
+          { name: 'HuffPost', logo: '/logos/media/huffpost.png' },
+          { name: 'YEC', logo: '/logos/media/yec.png' },
+          { name: 'The Next Web', logo: '/logos/media/tnw.png' },
+          { name: 'VentureBeat', logo: '/logos/media/venturebeat.png' },
+        ].map((outlet) => (
+          <img
+            src={outlet.logo}
+            alt={outlet.name}
+            class="h-5 w-auto object-contain grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+            loading="lazy"
+          />
+        ))}
+      </div>
+    </div>
   </div>
 
   <!-- Companies -->
