@@ -24,10 +24,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     const apiKey = context.env.GHL_API_KEY;
     const locationId = context.env.GHL_LOCATION_ID;
     if (!apiKey || !locationId) {
-      return new Response(JSON.stringify({
-        error: 'Server configuration error',
-        debug: { hasApiKey: !!apiKey, hasLocationId: !!locationId, envKeys: Object.keys(context.env) },
-      }), {
+      return new Response(JSON.stringify({ error: 'Server configuration error' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json', ...corsHeaders },
       });
