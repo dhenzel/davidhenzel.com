@@ -1,5 +1,6 @@
 interface Env {
   GHL_API_KEY: string;
+  GHL_LOCATION_ID: string;
 }
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {
@@ -21,22 +22,26 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     }
 
     const apiKey = context.env.GHL_API_KEY;
-    if (!apiKey) {
+    const locationId = context.env.GHL_LOCATION_ID;
+    if (!apiKey || !locationId) {
       return new Response(JSON.stringify({ error: 'Server configuration error' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json', ...corsHeaders },
       });
     }
 
-    const ghlResponse = await fetch('https://rest.gohighlevel.com/v1/contacts/', {
+    // GHL v2 API for private integration tokens
+    const ghlResponse = await fetch('https://services.leadconnectorhq.com/contacts/', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
+        'Version': '2021-07-28',
       },
       body: JSON.stringify({
         email,
         firstName: firstName || undefined,
+        locationId,
         tags: ['newsletter', 'davidhenzel.com'],
         source: 'davidhenzel.com newsletter',
       }),
