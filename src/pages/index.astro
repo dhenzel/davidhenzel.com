@@ -3,8 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import CompanyCard from '../components/CompanyCard.astro';
 import BlogPostCard from '../components/BlogPostCard.astro';
-import NewsletterForm from '../components/NewsletterForm.astro';
 import { companies } from '../data/companies';
+
+const featuredCompanies = companies.filter((c) => c.featured);
 import { getCollection } from 'astro:content';
 
 const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
@@ -93,7 +94,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
       subtitle="Some of my current ventures — software, services, and systems for helping people work and live better."
     />
     <div class="flex flex-col gap-3">
-      {companies.map((company) => (
+      {featuredCompanies.map((company) => (
         <CompanyCard company={company} />
       ))}
     </div>
@@ -149,18 +150,5 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
     </div>
   </section>
 
-  <!-- Newsletter -->
-  <section class="max-w-5xl mx-auto px-6 py-20 border-t border-neutral-100">
-    <div class="max-w-xl">
-      <p class="text-xs uppercase tracking-widest text-neutral-400 mb-4">Newsletter</p>
-      <h2 class="text-2xl font-semibold tracking-tight text-neutral-900 mb-3">
-        Stay in the loop
-      </h2>
-      <p class="text-base text-neutral-500 leading-relaxed mb-6">
-        Thoughts on building companies, systems thinking, and the Love Not Fear operating system. No spam, unsubscribe anytime.
-      </p>
-      <NewsletterForm id="home" />
-    </div>
-  </section>
 
 </BaseLayout>

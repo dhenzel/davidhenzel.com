@@ -3,6 +3,7 @@ export interface Company {
   url: string;
   description: string;
   logo: string;
+  featured?: boolean;
 }
 
 export const companies: Company[] = [
@@ -11,18 +12,21 @@ export const companies: Company[] = [
     url: 'https://lovenotfear.com',
     description: 'The <a href="https://lovenotfear.com" target="_blank" rel="noopener">operating system for conscious leadership</a> and purposeful living. A four-pillar framework — purpose, values, vision, habits — that helps <a href="https://lovenotfear.com/students" target="_blank" rel="noopener">students find their calling</a> and <a href="https://lovenotfear.com/entrepreneurs" target="_blank" rel="noopener">entrepreneurs build what matters</a>.',
     logo: '/logos/companies/lovenotfear.png',
+    featured: true,
   },
   {
     name: 'AI Operator',
     url: 'https://aioperator.com',
     description: 'Helps organizations turn AI experimentation into measurable business outcomes through the ADOPT Method — a proven framework for <a href="https://aioperator.com" target="_blank" rel="noopener">enterprise AI implementation</a> and team transformation.',
     logo: '/logos/companies/aioperator.jpeg',
+    featured: true,
   },
   {
     name: 'upcoach',
     url: 'https://upcoach.com',
     description: 'An all-in-one <a href="https://upcoach.com" target="_blank" rel="noopener">coaching platform</a> that lets program creators build, sell, and run structured group coaching programs — with built-in payments, progress tracking, and client management.',
     logo: '/logos/companies/upcoach.png',
+    featured: true,
   },
   {
     name: 'Sendloop',
@@ -41,6 +45,7 @@ export const companies: Company[] = [
     url: 'https://ltvplus.com',
     description: '<a href="https://ltvplus.com" target="_blank" rel="noopener">Customer service outsourcing</a> that combines AI efficiency with dedicated human agents, delivering 24/7 omnichannel support for eCommerce and SaaS brands.',
     logo: '/logos/companies/ltvplus.svg',
+    featured: true,
   },
   {
     name: 'WinbackEngine',
@@ -59,11 +64,19 @@ export const companies: Company[] = [
     url: 'https://shortlist.io',
     description: 'A <a href="https://shortlist.io" target="_blank" rel="noopener">revenue-first marketing agency</a> that guarantees ROI on SEO and content — focusing on bottom-of-funnel keywords and conversion-optimized strategies that drive actual revenue.',
     logo: '/logos/companies/shortlist.svg',
+    featured: true,
   },
   {
     name: 'LNF People',
     url: 'https://lnfpeople.com',
     description: 'An <a href="https://lnfpeople.com" target="_blank" rel="noopener">offshore talent recruitment agency</a> that uses the Love Not Fear hiring method to match purpose-aligned candidates to values-driven companies — with a 95%+ retention rate.',
     logo: '/logos/companies/lnfpeople.jpg',
+  },
+  {
+    name: 'Dünyam Village',
+    url: 'https://dunyamvillage.com',
+    description: 'An exclusive <a href="https://dunyamvillage.com" target="_blank" rel="noopener">retreat center in Bodrum, Turkey</a> offering whole-place bookings for leadership teams and groups of up to 12 — transformative experiences in nature.',
+    logo: '/logos/companies/dunyamvillage.png',
+    featured: true,
   },
 ];
