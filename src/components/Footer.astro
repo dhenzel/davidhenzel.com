@@ -6,63 +6,44 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="border-t border-neutral-200 bg-white">
-  <div class="max-w-5xl mx-auto px-6 py-12">
-
-    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
-
-      <!-- Left: contact & social -->
-      <div class="flex flex-col gap-3">
-        <a
-          href="mailto:dh@davidhenzel.com"
-          class="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
-        >
-          dh@davidhenzel.com
-        </a>
-        <div class="flex items-center gap-4">
-          <a
-            href="https://twitter.com/davidhenzel"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
-            aria-label="David Henzel on X (Twitter)"
-          >
-            X / Twitter
-          </a>
-          <a
-            href="https://www.linkedin.com/in/davidhenzel"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
-            aria-label="David Henzel on LinkedIn"
-          >
-            LinkedIn
-          </a>
-        </div>
-        <nav class="flex flex-wrap gap-x-5 gap-y-1 mt-1" aria-label="Footer navigation">
-          {navItems.map((item) => (
-            <a
-              href={item.href}
-              class="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
+  <!-- Newsletter bar -->
+  <div class="max-w-5xl mx-auto px-6 pt-12 pb-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+      <div class="shrink-0">
+        <p class="text-sm font-semibold text-neutral-900 mb-1">Join the newsletter</p>
+        <p class="text-xs text-neutral-500">Thoughts on building companies and the Love Not Fear operating system.</p>
       </div>
-
-      <!-- Right: newsletter -->
-      <div class="md:max-w-xs w-full">
-        <p class="text-sm font-semibold text-neutral-900 mb-1">Newsletter</p>
-        <p class="text-xs text-neutral-500 mb-3">Thoughts on building companies and the Love Not Fear operating system.</p>
-        <NewsletterForm id="footer" compact />
+      <div class="md:max-w-sm w-full">
+        <NewsletterForm id="footer" />
       </div>
     </div>
+  </div>
 
-    <!-- Copyright -->
-    <div class="mt-8 pt-6 border-t border-neutral-200">
-      <p class="text-xs text-neutral-400">
-        &copy; {year} David Henzel
-      </p>
+  <!-- Links & copyright -->
+  <div class="border-t border-neutral-100">
+    <div class="max-w-5xl mx-auto px-6 py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="flex flex-wrap items-center gap-x-5 gap-y-2">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class="text-xs text-neutral-400 hover:text-neutral-900 transition-colors"
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="mailto:dh@davidhenzel.com" class="text-xs text-neutral-400 hover:text-neutral-900 transition-colors">
+          dh@davidhenzel.com
+        </a>
+        <a href="https://twitter.com/davidhenzel" target="_blank" rel="noopener noreferrer" class="text-xs text-neutral-400 hover:text-neutral-900 transition-colors">
+          Twitter
+        </a>
+        <a href="https://www.linkedin.com/in/davidhenzel" target="_blank" rel="noopener noreferrer" class="text-xs text-neutral-400 hover:text-neutral-900 transition-colors">
+          LinkedIn
+        </a>
+        <span class="text-xs text-neutral-300">&copy; {year} David Henzel</span>
+      </div>
     </div>
   </div>
 </footer>
