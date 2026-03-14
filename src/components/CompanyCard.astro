@@ -8,12 +8,7 @@ interface Props {
 const { company } = Astro.props;
 ---
 
-<a
-  href={company.url}
-  target="_blank"
-  rel="noopener"
-  class="group flex items-center gap-5 p-5 border border-neutral-200 rounded-lg bg-white hover:border-neutral-400 hover:shadow-sm transition-all duration-200"
->
+<div class="group flex items-center gap-5 p-5 border border-neutral-200 rounded-lg bg-white hover:border-neutral-400 hover:shadow-sm transition-all duration-200">
   <div class="shrink-0 w-20 h-20 rounded-lg bg-neutral-50 border border-neutral-100 flex items-center justify-center overflow-hidden">
     <img
       src={company.logo}
@@ -24,23 +19,11 @@ const { company } = Astro.props;
   </div>
 
   <div class="min-w-0 flex-1">
-    <h3 class="text-base font-semibold text-neutral-900 group-hover:opacity-70 transition-opacity">
-      {company.name}
+    <h3 class="text-base font-semibold text-neutral-900 mb-1">
+      <a href={company.url} target="_blank" rel="noopener" class="hover:opacity-70 transition-opacity">
+        {company.name}
+      </a>
     </h3>
-    <p class="text-sm text-neutral-500 leading-relaxed">
-      {company.description}
-    </p>
+    <p class="text-sm text-neutral-500 leading-relaxed [&_a]:text-neutral-700 [&_a]:underline [&_a]:underline-offset-2 [&_a]:hover:opacity-60 [&_a]:transition-opacity" set:html={company.description} />
   </div>
-
-  <svg
-    class="w-4 h-4 text-neutral-400 group-hover:text-neutral-700 shrink-0 transition-colors"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke-width="1.5"
-    stroke="currentColor"
-    aria-hidden="true"
-  >
-    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-  </svg>
-</a>
+</div>
