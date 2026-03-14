@@ -1,0 +1,26 @@
+---
+const outlets = [
+  'Forbes',
+  'Inc.',
+  'Fast Company',
+  'HuffPost',
+  'YEC',
+  'The Next Web',
+  'VentureBeat',
+];
+---
+
+<div class="py-10 border-y border-neutral-100">
+  <p class="text-xs uppercase tracking-widest text-neutral-400 text-center mb-6">
+    Featured in
+  </p>
+  <ul class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4" aria-label="Media outlets">
+    {outlets.map((outlet) => (
+      <li>
+        <span class="text-sm font-semibold text-neutral-300 tracking-tight select-none">
+          {outlet}
+        </span>
+      </li>
+    ))}
+  </ul>
+</div>
