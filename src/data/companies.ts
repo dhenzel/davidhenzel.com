@@ -7,6 +7,12 @@ export interface Company {
 
 export const companies: Company[] = [
   {
+    name: 'Love Not Fear',
+    url: 'https://lovenotfear.com',
+    description: 'The <a href="https://lovenotfear.com" target="_blank" rel="noopener">operating system for conscious leadership</a> and purposeful living. A four-pillar framework — purpose, values, vision, habits — that helps <a href="https://lovenotfear.com/students" target="_blank" rel="noopener">students find their calling</a> and <a href="https://lovenotfear.com/entrepreneurs" target="_blank" rel="noopener">entrepreneurs build what matters</a>.',
+    logo: '/logos/companies/lovenotfear.png',
+  },
+  {
     name: 'AI Operator',
     url: 'https://aioperator.com',
     description: 'Helps organizations turn AI experimentation into measurable business outcomes through the ADOPT Method — a proven framework for <a href="https://aioperator.com" target="_blank" rel="noopener">enterprise AI implementation</a> and team transformation.',

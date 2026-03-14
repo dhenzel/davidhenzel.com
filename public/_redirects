@@ -5,6 +5,9 @@
 /wp-admin/*    /    301
 /feed/*      /rss.xml  301
 
+# Page redirects
+/love-not-fear  https://lovenotfear.com  301
+
 # Blog post redirects (old WordPress slugs → new Astro paths)
 /productivity-tips-for-running-multiple-companies/  /blog/productivity-tips-for-running-multiple-companies  301
 /do-you-have-the-courage-to-follow-your-calling/  /blog/do-you-have-the-courage-to-follow-your-calling  301
