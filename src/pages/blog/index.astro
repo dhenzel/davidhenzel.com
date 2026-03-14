@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import BlogPostCard from '../../components/BlogPostCard.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const posts = allPosts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<BaseLayout
+  title="Writing — David Henzel"
+  description="Essays and reflections on entrepreneurship, leadership, and building companies."
+>
+  <section class="max-w-5xl mx-auto px-6 pt-20 pb-24">
+    <SectionHeading
+      title="Writing"
+      subtitle="Essays and reflections on building companies, conscious leadership, and what it means to grow."
+    />
+
+    {posts.length === 0 ? (
+      <div class="border border-neutral-200 rounded-lg px-8 py-12 text-center bg-neutral-50">
+        <p class="text-sm text-neutral-400 mb-2">No posts yet.</p>
+        <p class="text-xs text-neutral-400">Check back soon.</p>
+      </div>
+    ) : (
+      <div>
+        {posts.map((post) => (
+          <BlogPostCard
+            title={post.data.title}
+            date={post.data.pubDate.toISOString()}
+            excerpt={post.data.description}
+            slug={post.id}
+          />
+        ))}
+      </div>
+    )}
+  </section>
+</BaseLayout>

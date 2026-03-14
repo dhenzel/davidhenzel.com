@@ -1,0 +1,51 @@
+---
+import { getCollection, render } from 'astro:content';
+import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  const sorted = posts.sort(
+    (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+  );
+
+  return sorted.map((post, index) => ({
+    params: { id: post.id },
+    props: {
+      post,
+      prevPost: index > 0
+        ? { id: sorted[index - 1].id, title: sorted[index - 1].data.title }
+        : null,
+      nextPost: index < sorted.length - 1
+        ? { id: sorted[index + 1].id, title: sorted[index + 1].data.title }
+        : null,
+    },
+  }));
+}
+
+const { post, prevPost, nextPost } = Astro.props;
+const { Content } = await render(post);
+
+// Reading time estimate (~200 words per minute)
+function estimateReadingTime(text: string): number {
+  const words = text.trim().split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / 200));
+}
+
+// We estimate from the description + title as a rough proxy; full body isn't easily available pre-render
+// A simple heuristic: use the rendered body string if available
+const bodyText = post.body ?? '';
+const readingTime = estimateReadingTime(bodyText);
+---
+
+<BlogPostLayout
+  title={post.data.title}
+  description={post.data.description}
+  pubDate={post.data.pubDate}
+  updatedDate={post.data.updatedDate}
+  tags={post.data.tags}
+  readingTime={readingTime}
+  prevPost={prevPost}
+  nextPost={nextPost}
+>
+  <Content />
+</BlogPostLayout>

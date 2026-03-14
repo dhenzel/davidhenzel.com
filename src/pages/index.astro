@@ -3,7 +3,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import CompanyCard from '../components/CompanyCard.astro';
 import MediaLogos from '../components/MediaLogos.astro';
+import BlogPostCard from '../components/BlogPostCard.astro';
 import { companies } from '../data/companies';
+import { getCollection } from 'astro:content';
+
+const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
 ---
 
 <BaseLayout
@@ -81,12 +87,25 @@ import { companies } from '../data/companies';
       title="Writing"
       subtitle="Thoughts on entrepreneurship, leadership, and building companies."
     />
-    <div class="border border-neutral-200 rounded-lg px-8 py-12 text-center bg-neutral-50">
-      <p class="text-sm text-neutral-400 mb-4">Blog coming soon.</p>
-      <p class="text-xs text-neutral-400">
-        Essays and reflections on building companies, conscious leadership, and what it means to grow.
-      </p>
-    </div>
+    {recentPosts.length === 0 ? (
+      <div class="border border-neutral-200 rounded-lg px-8 py-12 text-center bg-neutral-50">
+        <p class="text-sm text-neutral-400 mb-4">Blog coming soon.</p>
+        <p class="text-xs text-neutral-400">
+          Essays and reflections on building companies, conscious leadership, and what it means to grow.
+        </p>
+      </div>
+    ) : (
+      <div>
+        {recentPosts.map((post) => (
+          <BlogPostCard
+            title={post.data.title}
+            date={post.data.pubDate.toISOString()}
+            excerpt={post.data.description}
+            slug={post.id}
+          />
+        ))}
+      </div>
+    )}
     <div class="mt-6">
       <a
         href="/blog"
