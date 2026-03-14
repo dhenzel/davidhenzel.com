@@ -21,7 +21,7 @@ export const companies: Company[] = [
   {
     name: 'upcoach',
     url: 'https://upcoach.com',
-    description: 'An all-in-one <a href="https://upcoach.com" target="_blank" rel="noopener">coaching platform</a> that lets program creators build, sell, and run structured <a href="https://upcoach.com" target="_blank" rel="noopener">group coaching programs</a> — with built-in payments, progress tracking, and client management.',
+    description: 'An all-in-one <a href="https://upcoach.com" target="_blank" rel="noopener">coaching platform</a> that lets program creators build, sell, and run structured group coaching programs — with built-in payments, progress tracking, and client management.',
     logo: '/logos/companies/upcoach.png',
   },
   {

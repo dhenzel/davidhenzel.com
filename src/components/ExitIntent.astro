@@ -1,0 +1,80 @@
+<!-- Exit Intent Newsletter Popup -->
+<div id="exit-popup" class="fixed inset-0 z-[100] hidden">
+  <!-- Backdrop -->
+  <div id="exit-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+
+  <!-- Modal -->
+  <div class="absolute inset-0 flex items-center justify-center p-6">
+    <div class="relative bg-white rounded-xl shadow-2xl max-w-md w-full p-8">
+      <!-- Close button -->
+      <button
+        id="exit-close"
+        class="absolute top-4 right-4 text-neutral-400 hover:text-neutral-900 transition-colors"
+        aria-label="Close popup"
+      >
+        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <p class="text-xs uppercase tracking-widest text-neutral-400 mb-3">Before you go</p>
+      <h2 class="text-2xl font-semibold tracking-tight text-neutral-900 mb-3">
+        Join the newsletter
+      </h2>
+      <p class="text-sm text-neutral-500 leading-relaxed mb-5">
+        Thoughts on building companies, the Love Not Fear operating system, and what it means to lead with purpose. No spam.
+      </p>
+
+      <!-- GHL Form Embed — replace FORM_ID_HERE with your GoHighLevel newsletter form ID -->
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/form/FORM_ID_HERE"
+        style="width:100%;height:200px;border:none;border-radius:3px"
+        id="exit-newsletter"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Newsletter"
+        data-layout-iframe-id="exit-newsletter"
+        data-form-id="FORM_ID_HERE"
+        title="Newsletter signup"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+<script>
+  const popup = document.getElementById('exit-popup');
+  const backdrop = document.getElementById('exit-backdrop');
+  const closeBtn = document.getElementById('exit-close');
+  const STORAGE_KEY = 'dh_exit_popup_shown';
+
+  function showPopup() {
+    if (sessionStorage.getItem(STORAGE_KEY)) return;
+    popup?.classList.remove('hidden');
+    sessionStorage.setItem(STORAGE_KEY, '1');
+  }
+
+  function hidePopup() {
+    popup?.classList.add('hidden');
+  }
+
+  // Exit intent: mouse leaves viewport from top
+  document.addEventListener('mouseout', (e) => {
+    if (e.clientY <= 0) showPopup();
+  });
+
+  // Close on backdrop click or close button
+  backdrop?.addEventListener('click', hidePopup);
+  closeBtn?.addEventListener('click', hidePopup);
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') hidePopup();
+  });
+</script>

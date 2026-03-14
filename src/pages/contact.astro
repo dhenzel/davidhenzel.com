@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Contact — David Henzel"
-  description="Get in touch with David Henzel. Email, X/Twitter, LinkedIn — or book a call."
+  description="Get in touch with David Henzel. Reach out for business inquiries, partnerships, or join the newsletter for thoughts on building companies and the Love Not Fear framework."
 >
 
   <!-- Hero -->
@@ -17,9 +17,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </p>
   </section>
 
-  <!-- Contact methods -->
+  <!-- Newsletter + Contact -->
   <section class="max-w-5xl mx-auto px-6 pb-24">
-    <div class="max-w-lg space-y-6">
+    <div class="max-w-lg space-y-8">
+
+      <!-- Newsletter signup -->
+      <div class="border border-neutral-200 rounded-lg p-6">
+        <p class="text-xs uppercase tracking-widest text-neutral-400 mb-2">Newsletter</p>
+        <p class="text-base text-neutral-600 leading-relaxed mb-4">
+          Join the newsletter for thoughts on building companies, systems thinking, and the Love Not Fear operating system.
+        </p>
+        <!-- GHL Form Embed — replace FORM_ID_HERE with your GoHighLevel newsletter form ID -->
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/FORM_ID_HERE"
+          style="width:100%;height:250px;border:none;border-radius:3px"
+          id="contact-newsletter"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="Newsletter"
+          data-layout-iframe-id="contact-newsletter"
+          data-form-id="FORM_ID_HERE"
+          title="Newsletter signup"
+        ></iframe>
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+      </div>
 
       <!-- Email -->
       <div class="border border-neutral-200 rounded-lg p-6 hover:border-neutral-400 transition-colors">
@@ -57,19 +83,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           linkedin.com/in/davidhenzel
         </a>
       </div>
-
-      <!-- Calendly placeholder -->
-      {/* <div class="border border-neutral-200 rounded-lg p-6 hover:border-neutral-400 transition-colors">
-        <p class="text-xs uppercase tracking-widest text-neutral-400 mb-2">Book a call</p>
-        <a
-          href="https://calendly.com/davidhenzel"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-xl font-medium text-neutral-900 hover:opacity-60 transition-opacity"
-        >
-          calendly.com/davidhenzel
-        </a>
-      </div> */}
 
     </div>
   </section>
