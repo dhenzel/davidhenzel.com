@@ -12,8 +12,8 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
 ---
 
 <BaseLayout
-  title="David Henzel — Entrepreneur & Founder"
-  description="David Henzel is a serial entrepreneur and founder building companies at the intersection of people, technology, and conscious leadership."
+  title="David Henzel — Builder, Coach, Recovering Introvert"
+  description="David Henzel builds companies and coaches people at the intersection of technology, purpose, and conscious leadership through the Love Not Fear framework."
 >
 
   <!-- Hero -->
@@ -24,7 +24,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
           Hi, I'm David.
         </h1>
         <p class="text-xl text-neutral-500 leading-relaxed mb-8">
-          Serial entrepreneur and founder. I build companies that help people work better, grow faster, and lead with purpose. Across 10 ventures — from SaaS to AI to conscious leadership.
+          I build companies and coach people to lead with purpose. Through the Love Not Fear framework, I help students find their calling and entrepreneurs figure out what truly matters.
         </p>
         <a
           href="/about"
@@ -41,7 +41,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
         <img
           src="/images/david-onstage.png"
           alt="David Henzel speaking on stage"
-          class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border border-neutral-200"
+          class="w-56 h-56 md:w-72 md:h-72 rounded-xl object-cover border border-neutral-200"
         />
       </div>
     </div>
@@ -72,8 +72,30 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
     </div>
   </div>
 
-  <!-- Companies -->
+  <!-- Love Not Fear -->
   <section class="max-w-5xl mx-auto px-6 py-20">
+    <div class="max-w-2xl">
+      <p class="text-xs uppercase tracking-widest text-neutral-400 mb-6">Philosophy</p>
+      <blockquote class="text-2xl font-medium text-neutral-900 tracking-tight leading-snug mb-6">
+        "Every decision in life, you make out of love or out of fear."
+      </blockquote>
+      <p class="text-base text-neutral-500 leading-relaxed mb-6">
+        Love Not Fear is the framework I've built my companies and life around. We help students figure out their purpose — what to study, what to do with their lives — and we help entrepreneurs get clear on what truly matters. It's about making decisions from a place of care and courage rather than anxiety and control.
+      </p>
+      <a
+        href="/love-not-fear"
+        class="inline-flex items-center gap-2 text-sm font-medium text-neutral-900 hover:opacity-60 transition-opacity"
+      >
+        Explore the framework
+        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Companies -->
+  <section class="max-w-5xl mx-auto px-6 py-20 border-t border-neutral-100">
     <SectionHeading
       title="Companies"
       subtitle="Ten ventures built over two decades — software, services, and systems for modern businesses."
@@ -100,7 +122,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
   <section class="max-w-5xl mx-auto px-6 py-20 border-t border-neutral-100">
     <SectionHeading
       title="Writing"
-      subtitle="Thoughts on entrepreneurship, leadership, and building companies."
+      subtitle="Thoughts on building companies, conscious leadership, and what it means to grow."
     />
     {recentPosts.length === 0 ? (
       <div class="border border-neutral-200 rounded-lg px-8 py-12 text-center bg-neutral-50">
@@ -134,25 +156,34 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
     </div>
   </section>
 
-  <!-- Love Not Fear Teaser -->
+  <!-- Newsletter -->
   <section class="max-w-5xl mx-auto px-6 py-20 border-t border-neutral-100">
-    <div class="max-w-2xl">
-      <p class="text-xs uppercase tracking-widest text-neutral-400 mb-6">Philosophy</p>
-      <blockquote class="text-2xl font-medium text-neutral-900 tracking-tight leading-snug mb-6">
-        "Lead with love, not fear."
-      </blockquote>
+    <div class="max-w-xl">
+      <p class="text-xs uppercase tracking-widest text-neutral-400 mb-4">Newsletter</p>
+      <h2 class="text-2xl font-semibold tracking-tight text-neutral-900 mb-3">
+        Stay in the loop
+      </h2>
       <p class="text-base text-neutral-500 leading-relaxed mb-6">
-        Love Not Fear is the framework I've built my companies and life around. It's about making decisions from a place of care and courage rather than anxiety and control — in business, in leadership, and in how we show up for the people around us.
+        Thoughts on building companies, conscious leadership, and the Love Not Fear framework. No spam, unsubscribe anytime.
       </p>
-      <a
-        href="/love-not-fear"
-        class="inline-flex items-center gap-2 text-sm font-medium text-neutral-900 hover:opacity-60 transition-opacity"
-      >
-        Explore the framework
-        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-        </svg>
-      </a>
+      <!-- GHL Form Embed — replace FORM_ID_HERE with your GoHighLevel newsletter form ID -->
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/form/FORM_ID_HERE"
+        style="width:100%;height:200px;border:none;border-radius:3px"
+        id="inline-newsletter"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Newsletter"
+        data-layout-iframe-id="inline-newsletter"
+        data-form-id="FORM_ID_HERE"
+        title="Newsletter signup"
+      ></iframe>
+      <script src="https://link.msgsndr.com/js/form_embed.js"></script>
     </div>
   </section>
 
