@@ -1,0 +1,86 @@
+---
+interface Props {
+  id: string;
+  compact?: boolean;
+}
+
+const { id, compact = false } = Astro.props;
+---
+
+<form class="newsletter-form" data-form-id={id}>
+  <div class:list={[compact ? 'flex gap-2' : 'flex flex-col gap-3']}>
+    {!compact && (
+      <input
+        type="text"
+        name="firstName"
+        placeholder="First name"
+        class="w-full px-4 py-2.5 text-sm border border-neutral-200 rounded-lg bg-white text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-400 transition-colors"
+      />
+    )}
+    <input
+      type="email"
+      name="email"
+      placeholder="Email address"
+      required
+      class:list={[
+        'px-4 py-2.5 text-sm border border-neutral-200 rounded-lg bg-white text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-400 transition-colors',
+        compact ? 'flex-1 min-w-0' : 'w-full',
+      ]}
+    />
+    <button
+      type="submit"
+      class:list={[
+        'px-5 py-2.5 text-sm font-medium rounded-lg transition-colors',
+        'bg-neutral-900 text-white hover:bg-neutral-700',
+        compact ? 'shrink-0' : 'w-full',
+      ]}
+    >
+      Subscribe
+    </button>
+  </div>
+  <p class="newsletter-status mt-2 text-xs hidden"></p>
+</form>
+
+<script>
+  document.querySelectorAll('.newsletter-form').forEach((form) => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const f = e.target as HTMLFormElement;
+      const btn = f.querySelector('button') as HTMLButtonElement;
+      const status = f.querySelector('.newsletter-status') as HTMLElement;
+      const emailInput = f.querySelector('input[name="email"]') as HTMLInputElement;
+      const nameInput = f.querySelector('input[name="firstName"]') as HTMLInputElement | null;
+
+      btn.disabled = true;
+      btn.textContent = 'Subscribing...';
+      status.classList.add('hidden');
+
+      try {
+        const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: emailInput.value,
+            firstName: nameInput?.value || undefined,
+          }),
+        });
+
+        if (res.ok) {
+          status.textContent = 'You\'re in! Check your inbox.';
+          status.className = 'newsletter-status mt-2 text-xs text-green-600';
+          f.reset();
+        } else {
+          const data = await res.json();
+          status.textContent = data.error || 'Something went wrong. Try again.';
+          status.className = 'newsletter-status mt-2 text-xs text-red-500';
+        }
+      } catch {
+        status.textContent = 'Network error. Please try again.';
+        status.className = 'newsletter-status mt-2 text-xs text-red-500';
+      }
+
+      btn.disabled = false;
+      btn.textContent = 'Subscribe';
+    });
+  });
+</script>
