@@ -1,0 +1,105 @@
+---
+import { navItems } from '../data/navigation';
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 bg-white border-b border-neutral-200">
+  <div class="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
+    <!-- Text logo -->
+    <a
+      href="/"
+      class="text-neutral-900 font-semibold text-lg tracking-tight hover:opacity-70 transition-opacity"
+    >
+      David Henzel
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+      {navItems.map((item) => {
+        const isActive =
+          item.href === '/'
+            ? currentPath === '/'
+            : currentPath.startsWith(item.href);
+        return (
+          <a
+            href={item.href}
+            class:list={[
+              'text-sm transition-colors',
+              isActive
+                ? 'text-neutral-900 font-medium'
+                : 'text-neutral-600 hover:text-neutral-900',
+            ]}
+          >
+            {item.label}
+          </a>
+        );
+      })}
+    </nav>
+
+    <!-- Mobile hamburger button -->
+    <button
+      id="menu-toggle"
+      class="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 text-neutral-900"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="block w-5 h-px bg-current transition-all duration-200" id="bar1"></span>
+      <span class="block w-5 h-px bg-current transition-all duration-200" id="bar2"></span>
+      <span class="block w-5 h-px bg-current transition-all duration-200" id="bar3"></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="md:hidden hidden border-t border-neutral-200 bg-white"
+    aria-label="Mobile navigation"
+  >
+    <nav class="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-4">
+      {navItems.map((item) => {
+        const isActive =
+          item.href === '/'
+            ? currentPath === '/'
+            : currentPath.startsWith(item.href);
+        return (
+          <a
+            href={item.href}
+            class:list={[
+              'text-sm py-1 transition-colors',
+              isActive
+                ? 'text-neutral-900 font-medium'
+                : 'text-neutral-600 hover:text-neutral-900',
+            ]}
+          >
+            {item.label}
+          </a>
+        );
+      })}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu?.classList.toggle('hidden') === false;
+    toggle.setAttribute('aria-expanded', String(isOpen));
+
+    if (isOpen) {
+      bar1?.classList.add('translate-y-[7px]', 'rotate-45');
+      bar2?.classList.add('opacity-0');
+      bar3?.classList.add('-translate-y-[7px]', '-rotate-45');
+    } else {
+      bar1?.classList.remove('translate-y-[7px]', 'rotate-45');
+      bar2?.classList.remove('opacity-0');
+      bar3?.classList.remove('-translate-y-[7px]', '-rotate-45');
+    }
+  });
+</script>

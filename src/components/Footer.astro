@@ -1,0 +1,61 @@
+---
+import { navItems } from '../data/navigation';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-neutral-200 bg-white">
+  <div class="max-w-5xl mx-auto px-6 py-12">
+    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+
+      <!-- Left: contact & social -->
+      <div class="flex flex-col gap-3">
+        <a
+          href="mailto:dh@davidhenzel.com"
+          class="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
+        >
+          dh@davidhenzel.com
+        </a>
+        <div class="flex items-center gap-4">
+          <a
+            href="https://twitter.com/davidhenzel"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
+            aria-label="David Henzel on X (Twitter)"
+          >
+            X / Twitter
+          </a>
+          <a
+            href="https://www.linkedin.com/in/davidhenzel"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
+            aria-label="David Henzel on LinkedIn"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: nav repeat -->
+      <nav class="flex flex-wrap gap-x-6 gap-y-2" aria-label="Footer navigation">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-8 pt-6 border-t border-neutral-200">
+      <p class="text-xs text-neutral-400">
+        &copy; {year} David Henzel
+      </p>
+    </div>
+  </div>
+</footer>
