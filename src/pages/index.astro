@@ -51,10 +51,11 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
 
   <!-- Featured In (full-width) -->
   <div class="border-y border-neutral-100 py-8">
-    <div class="flex items-center justify-center gap-x-12 gap-y-6 flex-wrap px-6">
+    <div class="flex items-center justify-center gap-x-10 gap-y-6 flex-wrap px-6">
+      <span class="text-xs uppercase tracking-widest text-neutral-300">As seen in</span>
       {[
-        { name: 'Forbes', logo: '/logos/media/forbes.png' },
-        { name: 'Inc.', logo: '/logos/media/inc.png' },
+        { name: 'Forbes', logo: '/logos/media/forbes.png', big: true },
+        { name: 'Inc.', logo: '/logos/media/inc.png', big: true },
         { name: 'Fast Company', logo: '/logos/media/fastcompany.png' },
         { name: 'HuffPost', logo: '/logos/media/huffpost.png' },
         { name: 'YEC', logo: '/logos/media/yec.png' },
@@ -64,7 +65,10 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
         <img
           src={outlet.logo}
           alt={outlet.name}
-          class="h-6 w-auto object-contain grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+          class:list={[
+            'w-auto object-contain grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all duration-300',
+            outlet.big ? 'h-8' : 'h-6',
+          ]}
           loading="lazy"
         />
       ))}
