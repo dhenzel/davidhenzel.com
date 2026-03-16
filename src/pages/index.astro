@@ -44,7 +44,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
             rel="noopener"
             class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 border border-border text-sm font-medium rounded-lg text-foreground hover:border-accent/40 hover:text-accent transition-colors"
           >
-            The framework
+            The LNF framework
             <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
             </svg>
@@ -102,11 +102,6 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
         We help <a href="https://lovenotfear.com/students" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">students</a> figure out what to study and what to do with their lives. We help <a href="https://lovenotfear.com/entrepreneurs" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">entrepreneurs</a> get clear on what they actually want. We work with <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">individuals</a> who want to live more intentionally. And we help <a href="https://lnfpeople.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">companies</a> build teams rooted in purpose and values.
       </p>
     </div>
-  </section>
-
-  <!-- Book Teaser -->
-  <section class="max-w-5xl mx-auto px-6 pb-20">
-    <BookBanner />
   </section>
 
   <!-- Newsletter Section (dedicated mid-page) -->
