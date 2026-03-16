@@ -2,41 +2,88 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import BlogPostCard from '../../components/BlogPostCard.astro';
+import BookBanner from '../../components/BookBanner.astro';
+import BookPopup from '../../components/BookPopup.astro';
+import TagFilter from '../../components/TagFilter.astro';
 import { getCollection } from 'astro:content';
 
+const activeTag = Astro.url.searchParams.get('tag') || undefined;
+
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
-const posts = allPosts.sort(
+const sortedPosts = allPosts.sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+// Derive unique tags from all posts
+const tagCounts = new Map<string, number>();
+sortedPosts.forEach((post) => {
+  post.data.tags?.forEach((tag: string) => {
+    tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+  });
+});
+const allTags = [...tagCounts.entries()]
+  .sort((a, b) => b[1] - a[1])
+  .map(([tag]) => tag)
+  .slice(0, 8);
+
+// Filter posts by active tag
+const posts = activeTag
+  ? sortedPosts.filter((post) =>
+      post.data.tags?.some((t: string) => t === activeTag)
+    )
+  : sortedPosts;
+
+const [featuredPost, ...remainingPosts] = posts;
 ---
 
 <BaseLayout
-  title="Writing — David Henzel"
-  description="Essays and reflections on entrepreneurship, leadership, and building companies."
+  title="Content — David Henzel"
+  description="Blog posts, videos, ideas, and things worth sharing."
 >
   <section class="max-w-5xl mx-auto px-6 pt-20 pb-24">
     <SectionHeading
-      title="Writing"
-      subtitle="Essays and reflections on building companies, conscious leadership, and what it means to grow."
+      title="Content"
+      subtitle="Blog posts, videos, ideas, and things worth sharing."
     />
 
+    <div class="mb-8">
+      <BookBanner />
+    </div>
+
+    <div class="mb-8">
+      <TagFilter tags={allTags} activeTag={activeTag} />
+    </div>
+
     {posts.length === 0 ? (
-      <div class="border border-neutral-200 rounded-lg px-8 py-12 text-center bg-neutral-50">
-        <p class="text-sm text-neutral-400 mb-2">No posts yet.</p>
-        <p class="text-xs text-neutral-400">Check back soon.</p>
+      <div class="border border-border rounded-xl px-8 py-12 text-center bg-muted">
+        <p class="text-sm text-secondary mb-2">No posts found for this tag.</p>
+        <a href="/blog" class="text-sm text-accent hover:underline">View all posts</a>
       </div>
     ) : (
-      <div>
-        {posts.map((post) => (
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {featuredPost && (
+          <BlogPostCard
+            title={featuredPost.data.title}
+            date={featuredPost.data.pubDate.toISOString()}
+            excerpt={featuredPost.data.description}
+            slug={featuredPost.id}
+            heroImage={featuredPost.data.heroImage}
+            tags={featuredPost.data.tags}
+            featured={true}
+          />
+        )}
+        {remainingPosts.map((post) => (
           <BlogPostCard
             title={post.data.title}
             date={post.data.pubDate.toISOString()}
             excerpt={post.data.description}
             slug={post.id}
             heroImage={post.data.heroImage}
+            tags={post.data.tags}
           />
         ))}
       </div>
     )}
   </section>
+  <BookPopup />
 </BaseLayout>

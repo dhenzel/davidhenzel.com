@@ -9,11 +9,11 @@ import NewsletterForm from './NewsletterForm.astro';
 
   <!-- Modal -->
   <div class="absolute inset-0 flex items-center justify-center p-6">
-    <div class="relative bg-white rounded-xl shadow-2xl max-w-md w-full p-8">
+    <div class="relative bg-background rounded-xl shadow-2xl max-w-md w-full p-8">
       <!-- Close button -->
       <button
         id="exit-close"
-        class="absolute top-4 right-4 text-neutral-400 hover:text-neutral-900 transition-colors"
+        class="absolute top-4 right-4 text-secondary hover:text-foreground transition-colors"
         aria-label="Close popup"
       >
         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -21,11 +21,11 @@ import NewsletterForm from './NewsletterForm.astro';
         </svg>
       </button>
 
-      <p class="text-xs uppercase tracking-widest text-neutral-400 mb-3">Before you go</p>
-      <h2 class="text-2xl font-semibold tracking-tight text-neutral-900 mb-3">
+      <p class="text-xs uppercase tracking-widest text-secondary/60 mb-3">Before you go</p>
+      <h2 class="text-2xl font-semibold tracking-tight text-foreground mb-3">
         Join the newsletter
       </h2>
-      <p class="text-sm text-neutral-500 leading-relaxed mb-5">
+      <p class="text-sm text-secondary leading-relaxed mb-5">
         Thoughts on building companies, the Love Not Fear operating system, and what it means to lead with purpose. No spam.
       </p>
 

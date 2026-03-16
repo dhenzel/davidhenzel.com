@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
 
 interface Props {
   title: string;
@@ -47,22 +48,25 @@ const formattedUpdatedDate = updatedDate
       {tags.length > 0 && (
         <div class="flex flex-wrap gap-2 mb-5">
           {tags.map((tag) => (
-            <span class="text-xs uppercase tracking-wide text-neutral-400 bg-neutral-100 px-2.5 py-1 rounded-full">
+            <a
+              href={`/blog?tag=${encodeURIComponent(tag)}`}
+              class="text-xs uppercase tracking-wide text-secondary bg-muted px-2.5 py-1 rounded-full hover:bg-border transition-colors"
+            >
               {tag}
-            </span>
+            </a>
           ))}
         </div>
       )}
-      <h1 class="text-4xl font-semibold tracking-tight text-neutral-900 leading-tight mb-5">
+      <h1 class="text-4xl font-semibold tracking-tight text-foreground leading-tight mb-5">
         {title}
       </h1>
-      <div class="flex items-center gap-3 text-sm text-neutral-400">
+      <div class="flex items-center gap-3 text-sm text-secondary">
         <time datetime={pubDate.toISOString()}>{formattedPubDate}</time>
-        <span aria-hidden="true">·</span>
+        <span aria-hidden="true">&middot;</span>
         <span>{readingTime} min read</span>
       </div>
       {formattedUpdatedDate && (
-        <p class="mt-2 text-xs text-neutral-400">
+        <p class="mt-2 text-xs text-secondary">
           Updated {formattedUpdatedDate}
         </p>
       )}
@@ -74,7 +78,7 @@ const formattedUpdatedDate = updatedDate
         <img
           src={heroImage}
           alt=""
-          class="w-full rounded-lg border border-neutral-100"
+          class="w-full rounded-xl border border-border"
           loading="eager"
         />
       </div>
@@ -85,10 +89,19 @@ const formattedUpdatedDate = updatedDate
       <slot />
     </div>
 
+    <!-- Inline newsletter CTA -->
+    <div class="max-w-2xl mt-16">
+      <div class="rounded-xl bg-accent-light border border-border p-6 md:p-8">
+        <p class="text-lg font-semibold text-foreground mb-1">Enjoyed this?</p>
+        <p class="text-sm text-secondary mb-5">Get more essays on leadership, systems, and building with purpose — delivered to your inbox.</p>
+        <NewsletterForm id="inline-blog" compact />
+      </div>
+    </div>
+
     <!-- Prev / Next navigation -->
     {(prevPost || nextPost) && (
       <nav
-        class="max-w-2xl mt-16 pt-8 border-t border-neutral-200 flex flex-col sm:flex-row justify-between gap-6"
+        class="max-w-2xl mt-12 pt-8 border-t border-border flex flex-col sm:flex-row justify-between gap-6"
         aria-label="Post navigation"
       >
         {prevPost ? (
@@ -96,8 +109,8 @@ const formattedUpdatedDate = updatedDate
             href={`/blog/${prevPost.id}`}
             class="group flex flex-col gap-1 text-sm max-w-xs"
           >
-            <span class="text-xs uppercase tracking-wide text-neutral-400">← Previous</span>
-            <span class="text-neutral-700 group-hover:text-neutral-900 group-hover:underline underline-offset-2 transition-colors">
+            <span class="text-xs uppercase tracking-wide text-secondary">&larr; Previous</span>
+            <span class="text-foreground group-hover:text-accent group-hover:underline underline-offset-2 transition-colors">
               {prevPost.title}
             </span>
           </a>
@@ -109,8 +122,8 @@ const formattedUpdatedDate = updatedDate
             href={`/blog/${nextPost.id}`}
             class="group flex flex-col gap-1 text-sm max-w-xs sm:text-right"
           >
-            <span class="text-xs uppercase tracking-wide text-neutral-400">Next →</span>
-            <span class="text-neutral-700 group-hover:text-neutral-900 group-hover:underline underline-offset-2 transition-colors">
+            <span class="text-xs uppercase tracking-wide text-secondary">Next &rarr;</span>
+            <span class="text-foreground group-hover:text-accent group-hover:underline underline-offset-2 transition-colors">
               {nextPost.title}
             </span>
           </a>
@@ -130,7 +143,7 @@ const formattedUpdatedDate = updatedDate
   .prose-content :global(h6) {
     font-weight: 600;
     letter-spacing: -0.02em;
-    color: #171717;
+    color: #1A1A1A;
     margin-top: 2em;
     margin-bottom: 0.5em;
     line-height: 1.3;
@@ -149,19 +162,19 @@ const formattedUpdatedDate = updatedDate
   }
 
   .prose-content :global(a) {
-    color: #171717;
+    color: #B91C1C;
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 1px;
   }
 
   .prose-content :global(a:hover) {
-    opacity: 0.6;
+    opacity: 0.7;
   }
 
   .prose-content :global(strong) {
     font-weight: 600;
-    color: #171717;
+    color: #1A1A1A;
   }
 
   .prose-content :global(em) {
@@ -189,10 +202,10 @@ const formattedUpdatedDate = updatedDate
   }
 
   .prose-content :global(blockquote) {
-    border-left: 3px solid #e5e5e5;
+    border-left: 3px solid #B91C1C;
     padding-left: 1.25em;
     margin: 2em 0;
-    color: #525252;
+    color: #6B6355;
     font-style: italic;
   }
 
@@ -203,15 +216,15 @@ const formattedUpdatedDate = updatedDate
   .prose-content :global(code) {
     font-family: ui-monospace, 'Fira Code', monospace;
     font-size: 0.875em;
-    background-color: #f5f5f5;
+    background-color: #F2F0EB;
     padding: 0.15em 0.4em;
     border-radius: 4px;
-    color: #171717;
+    color: #1A1A1A;
   }
 
   .prose-content :global(pre) {
-    background-color: #f5f5f5;
-    border: 1px solid #e5e5e5;
+    background-color: #F2F0EB;
+    border: 1px solid #E8E5DF;
     border-radius: 8px;
     padding: 1.25em 1.5em;
     overflow-x: auto;
@@ -227,14 +240,14 @@ const formattedUpdatedDate = updatedDate
 
   .prose-content :global(hr) {
     border: none;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #E8E5DF;
     margin: 2.5em 0;
   }
 
   .prose-content :global(img) {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 12px;
     margin: 2em 0;
   }
 
@@ -249,11 +262,11 @@ const formattedUpdatedDate = updatedDate
   .prose-content :global(td) {
     text-align: left;
     padding: 0.6em 0.9em;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #E8E5DF;
   }
 
   .prose-content :global(th) {
     font-weight: 600;
-    color: #171717;
+    color: #1A1A1A;
   }
 </style>

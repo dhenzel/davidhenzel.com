@@ -3,6 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import CompanyCard from '../components/CompanyCard.astro';
 import BlogPostCard from '../components/BlogPostCard.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
+import BookBanner from '../components/BookBanner.astro';
+import BookPopup from '../components/BookPopup.astro';
 import { companies } from '../data/companies';
 
 const featuredCompanies = companies.filter((c) => c.featured);
@@ -14,45 +17,55 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
 ---
 
 <BaseLayout
-  title="David Henzel — Entrepreneur & Systems Builder"
-  description="David Henzel is an entrepreneur and systems builder. He builds companies and helps people make more decisions out of love than fear through the Love Not Fear operating system."
+  title="David Henzel — Self-Leadership, Purpose & the Love Not Fear Operating System"
+  description="David Henzel helps people find their purpose and build systems for a life they love. Serial entrepreneur, author, and creator of the Love Not Fear operating system."
 >
 
   <!-- Hero -->
   <section class="max-w-5xl mx-auto px-6 pt-24 pb-20">
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-12">
       <div class="max-w-xl">
-        <h1 class="text-5xl font-semibold tracking-tight text-neutral-900 mb-5 leading-tight">
-          Hi, I'm David.
-        </h1>
-        <p class="text-xl text-neutral-500 leading-relaxed mb-8">
-          I'm an entrepreneur and I love building things — companies, systems, frameworks. I've built and sold countless ventures over 20+ years, but my biggest passion is helping people make more decisions out of love than fear.
+        <blockquote class="text-3xl md:text-4xl font-semibold tracking-tight text-foreground leading-tight mb-6">
+          "Every decision in life, you make out of love or out of fear."
+        </blockquote>
+        <p class="text-xl text-secondary leading-relaxed mb-8">
+          I'm David Henzel. I've spent 25+ years building companies, and the most important thing I've learned is that the best decisions come from love, not fear.
         </p>
-        <a
-          href="/about"
-          class="inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-900 text-white text-sm font-medium rounded-lg hover:bg-neutral-700 transition-colors"
-        >
-          More about me
-          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-          </svg>
-        </a>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a
+            href="/about"
+            class="inline-flex items-center justify-center px-5 py-2.5 bg-foreground text-background text-sm font-medium rounded-lg hover:bg-foreground/85 transition-colors"
+          >
+            About me
+          </a>
+          <a
+            href="https://lovenotfear.com"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 border border-border text-sm font-medium rounded-lg text-foreground hover:border-accent/40 hover:text-accent transition-colors"
+          >
+            The framework
+            <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+        </div>
       </div>
 
       <div class="shrink-0">
         <img
           src="/images/david-onstage.png"
           alt="David Henzel speaking on stage"
-          class="w-56 h-56 md:w-72 md:h-72 rounded-xl object-cover border border-neutral-200"
+          class="w-56 h-56 md:w-72 md:h-72 rounded-xl object-cover border border-border"
         />
       </div>
     </div>
   </section>
 
   <!-- Featured In (full-width) -->
-  <div class="border-y border-neutral-100 py-8">
+  <div class="border-y border-border py-8">
     <div class="flex items-center justify-center gap-x-10 gap-y-6 flex-wrap px-6">
-      <span class="text-xs uppercase tracking-widest text-neutral-300">As seen in</span>
+      <span class="text-xs uppercase tracking-widest text-secondary/50">As seen in</span>
       {[
         { name: 'Forbes', logo: '/logos/media/forbes.png', big: true },
         { name: 'Inc.', logo: '/logos/media/inc.png', big: true },
@@ -76,23 +89,47 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
   </div>
 
   <!-- The Operating System -->
-  <section class="max-w-5xl mx-auto px-6 py-20">
+  <section class="max-w-5xl mx-auto px-6 py-20 border-t border-border">
     <div class="max-w-2xl">
-      <p class="text-xs uppercase tracking-widest text-neutral-400 mb-6">The operating system</p>
-      <blockquote class="text-2xl font-medium text-neutral-900 tracking-tight leading-snug mb-6">
+      <p class="text-xs uppercase tracking-widest text-secondary/60 mb-6">The operating system</p>
+      <blockquote class="text-2xl font-medium text-foreground tracking-tight leading-snug mb-6">
         "Every decision in life, you make out of love or out of fear."
       </blockquote>
-      <p class="text-base text-neutral-500 leading-relaxed mb-4">
-        <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-neutral-900 underline underline-offset-2 hover:opacity-60 transition-opacity">Love Not Fear</a> is the operating system I've built for living and leading with purpose. It's a four-pillar system — find your purpose, define your values, craft your vision, build your habits — designed to help people make better decisions and live a better life.
+      <p class="text-base text-secondary leading-relaxed mb-4">
+        <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">Love Not Fear</a> is the operating system I've built for living and leading with purpose. It's a four-pillar system — find your purpose, define your values, craft your vision, build your habits — designed to help people make better decisions and live a better life.
       </p>
-      <p class="text-base text-neutral-500 leading-relaxed mb-6">
-        We help <a href="https://lovenotfear.com/students" target="_blank" rel="noopener" class="text-neutral-900 underline underline-offset-2 hover:opacity-60 transition-opacity">students</a> figure out what to study and what to do with their lives. We help <a href="https://lovenotfear.com/entrepreneurs" target="_blank" rel="noopener" class="text-neutral-900 underline underline-offset-2 hover:opacity-60 transition-opacity">entrepreneurs</a> get clear on what they actually want. We work with <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-neutral-900 underline underline-offset-2 hover:opacity-60 transition-opacity">individuals</a> who want to live more intentionally. And we help <a href="https://lnfpeople.com" target="_blank" rel="noopener" class="text-neutral-900 underline underline-offset-2 hover:opacity-60 transition-opacity">companies</a> build teams rooted in purpose and values.
+      <p class="text-base text-secondary leading-relaxed">
+        We help <a href="https://lovenotfear.com/students" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">students</a> figure out what to study and what to do with their lives. We help <a href="https://lovenotfear.com/entrepreneurs" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">entrepreneurs</a> get clear on what they actually want. We work with <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">individuals</a> who want to live more intentionally. And we help <a href="https://lnfpeople.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">companies</a> build teams rooted in purpose and values.
       </p>
     </div>
   </section>
 
+  <!-- Book Teaser -->
+  <section class="max-w-5xl mx-auto px-6 pb-20">
+    <BookBanner />
+  </section>
+
+  <!-- Newsletter Section (dedicated mid-page) -->
+  <section class="bg-muted border-y border-border">
+    <div class="max-w-5xl mx-auto px-6 py-16">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <div class="max-w-md">
+          <h2 class="text-2xl font-semibold tracking-tight text-foreground mb-2">
+            Stay in the loop
+          </h2>
+          <p class="text-base text-secondary leading-relaxed">
+            Essays on purpose, self-leadership, and building a life you love. No spam, no fluff — just the real stuff.
+          </p>
+        </div>
+        <div class="md:max-w-sm w-full">
+          <NewsletterForm id="mid-page" />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Companies -->
-  <section class="max-w-5xl mx-auto px-6 py-20 border-t border-neutral-100">
+  <section class="max-w-5xl mx-auto px-6 py-20">
     <SectionHeading
       title="Companies"
       subtitle="Some of my current ventures — software, services, and systems for helping people work and live better."
@@ -105,7 +142,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
     <div class="mt-8">
       <a
         href="/companies"
-        class="text-sm text-neutral-500 hover:text-neutral-900 transition-colors inline-flex items-center gap-1.5"
+        class="text-sm text-secondary hover:text-accent transition-colors inline-flex items-center gap-1.5"
       >
         View all companies
         <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
@@ -116,20 +153,20 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
   </section>
 
   <!-- Blog Preview -->
-  <section class="max-w-5xl mx-auto px-6 py-20 border-t border-neutral-100">
+  <section class="max-w-5xl mx-auto px-6 py-20 border-t border-border">
     <SectionHeading
-      title="Writing"
-      subtitle="Thoughts on building companies, systems, and what it means to grow."
+      title="Content"
+      subtitle="Blog posts, videos, ideas, and things worth sharing."
     />
     {recentPosts.length === 0 ? (
-      <div class="border border-neutral-200 rounded-lg px-8 py-12 text-center bg-neutral-50">
-        <p class="text-sm text-neutral-400 mb-4">Blog coming soon.</p>
-        <p class="text-xs text-neutral-400">
+      <div class="border border-border rounded-xl px-8 py-12 text-center bg-muted">
+        <p class="text-sm text-secondary mb-4">Blog coming soon.</p>
+        <p class="text-xs text-secondary">
           Essays and reflections on building companies, conscious leadership, and what it means to grow.
         </p>
       </div>
     ) : (
-      <div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {recentPosts.map((post) => (
           <BlogPostCard
             title={post.data.title}
@@ -137,16 +174,17 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
             excerpt={post.data.description}
             slug={post.id}
             heroImage={post.data.heroImage}
+            tags={post.data.tags}
           />
         ))}
       </div>
     )}
-    <div class="mt-6">
+    <div class="mt-8">
       <a
         href="/blog"
-        class="text-sm text-neutral-400 hover:text-neutral-900 transition-colors inline-flex items-center gap-1.5"
+        class="text-sm text-secondary hover:text-accent transition-colors inline-flex items-center gap-1.5"
       >
-        Go to blog
+        View all content
         <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
         </svg>
@@ -154,5 +192,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
     </div>
   </section>
 
+  <!-- Book Popup (modal) -->
+  <BookPopup />
 
 </BaseLayout>

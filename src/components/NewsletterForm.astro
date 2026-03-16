@@ -14,7 +14,7 @@ const { id, compact = false } = Astro.props;
         type="text"
         name="firstName"
         placeholder="First name"
-        class="w-full px-4 py-2.5 text-sm border border-neutral-200 rounded-lg bg-white text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-400 transition-colors"
+        class="w-full px-4 py-2.5 text-sm border border-border rounded-lg bg-background text-foreground placeholder-secondary/50 focus:outline-none focus:border-accent transition-colors"
       />
     )}
     <input
@@ -23,7 +23,7 @@ const { id, compact = false } = Astro.props;
       placeholder="Email address"
       required
       class:list={[
-        'px-4 py-2.5 text-sm border border-neutral-200 rounded-lg bg-white text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-400 transition-colors',
+        'px-4 py-2.5 text-sm border border-border rounded-lg bg-background text-foreground placeholder-secondary/50 focus:outline-none focus:border-accent transition-colors',
         compact ? 'flex-1 min-w-0' : 'w-full',
       ]}
     />
@@ -31,7 +31,7 @@ const { id, compact = false } = Astro.props;
       type="submit"
       class:list={[
         'px-5 py-2.5 text-sm font-medium rounded-lg transition-colors',
-        'bg-neutral-900 text-white hover:bg-neutral-700',
+        'bg-accent text-white hover:bg-accent/90',
         compact ? 'shrink-0' : 'w-full',
       ]}
     >

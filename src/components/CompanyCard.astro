@@ -8,8 +8,8 @@ interface Props {
 const { company } = Astro.props;
 ---
 
-<div class="group flex items-center gap-5 p-5 border border-neutral-200 rounded-lg bg-white hover:border-neutral-400 hover:shadow-sm transition-all duration-200">
-  <div class="shrink-0 w-20 h-20 rounded-lg bg-neutral-50 border border-neutral-100 flex items-center justify-center overflow-hidden">
+<div class="group flex items-center gap-5 p-5 border border-border rounded-xl bg-background hover:border-accent/30 hover:shadow-sm transition-all duration-200">
+  <div class="shrink-0 w-20 h-20 rounded-lg bg-muted border border-border flex items-center justify-center overflow-hidden">
     <img
       src={company.logo}
       alt={`${company.name} logo`}
@@ -19,11 +19,11 @@ const { company } = Astro.props;
   </div>
 
   <div class="min-w-0 flex-1">
-    <h3 class="text-base font-semibold text-neutral-900 mb-1">
-      <a href={company.url} target="_blank" rel="noopener" class="hover:opacity-70 transition-opacity">
+    <h3 class="text-base font-semibold text-foreground mb-1">
+      <a href={company.url} target="_blank" rel="noopener" class="hover:text-accent transition-colors">
         {company.name}
       </a>
     </h3>
-    <p class="text-sm text-neutral-500 leading-relaxed [&_a]:text-neutral-700 [&_a]:underline [&_a]:underline-offset-2 [&_a]:hover:opacity-60 [&_a]:transition-opacity" set:html={company.description} />
+    <p class="text-sm text-secondary leading-relaxed [&_a]:text-accent [&_a]:underline [&_a]:underline-offset-2 [&_a]:hover:opacity-70 [&_a]:transition-opacity" set:html={company.description} />
   </div>
 </div>

@@ -1,0 +1,35 @@
+---
+interface Props {
+  tags: string[];
+  activeTag?: string;
+}
+
+const { tags, activeTag } = Astro.props;
+---
+
+<div class="flex flex-wrap gap-2" role="navigation" aria-label="Filter by tag">
+  <a
+    href="/blog"
+    class:list={[
+      'text-sm px-3.5 py-1.5 rounded-full transition-colors',
+      !activeTag
+        ? 'bg-foreground text-background font-medium'
+        : 'bg-muted text-secondary hover:bg-border',
+    ]}
+  >
+    All
+  </a>
+  {tags.map((tag) => (
+    <a
+      href={`/blog?tag=${encodeURIComponent(tag)}`}
+      class:list={[
+        'text-sm px-3.5 py-1.5 rounded-full transition-colors capitalize',
+        activeTag === tag
+          ? 'bg-foreground text-background font-medium'
+          : 'bg-muted text-secondary hover:bg-border',
+      ]}
+    >
+      {tag}
+    </a>
+  ))}
+</div>

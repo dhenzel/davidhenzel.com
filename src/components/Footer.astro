@@ -5,13 +5,13 @@ import NewsletterForm from './NewsletterForm.astro';
 const year = new Date().getFullYear();
 ---
 
-<footer class="border-t border-neutral-200 bg-white">
+<footer id="newsletter" class="border-t border-border bg-muted">
   <!-- Newsletter bar -->
   <div class="max-w-5xl mx-auto px-6 pt-12 pb-8">
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
       <div class="shrink-0">
-        <p class="text-sm font-semibold text-neutral-900 mb-1">Join the newsletter</p>
-        <p class="text-xs text-neutral-500">Thoughts on building companies and the Love Not Fear operating system.</p>
+        <p class="text-sm font-semibold text-foreground mb-1">Join the newsletter</p>
+        <p class="text-xs text-secondary">Thoughts on building companies and the Love Not Fear operating system.</p>
       </div>
       <div class="md:max-w-sm w-full">
         <NewsletterForm id="footer" />
@@ -20,29 +20,29 @@ const year = new Date().getFullYear();
   </div>
 
   <!-- Links & copyright -->
-  <div class="border-t border-neutral-100">
+  <div class="border-t border-border">
     <div class="max-w-5xl mx-auto px-6 py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       <div class="flex flex-wrap items-center gap-x-5 gap-y-2">
         {navItems.map((item) => (
           <a
             href={item.href}
-            class="text-xs text-neutral-400 hover:text-neutral-900 transition-colors"
+            class="text-xs text-secondary/70 hover:text-foreground transition-colors"
           >
             {item.label}
           </a>
         ))}
       </div>
       <div class="flex items-center gap-4">
-        <a href="mailto:dh@davidhenzel.com" class="text-xs text-neutral-400 hover:text-neutral-900 transition-colors">
+        <a href="mailto:dh@davidhenzel.com" class="text-xs text-secondary/70 hover:text-foreground transition-colors">
           dh@davidhenzel.com
         </a>
-        <a href="https://twitter.com/davidhenzel" target="_blank" rel="noopener noreferrer" class="text-xs text-neutral-400 hover:text-neutral-900 transition-colors">
+        <a href="https://twitter.com/davidhenzel" target="_blank" rel="noopener noreferrer" class="text-xs text-secondary/70 hover:text-foreground transition-colors">
           Twitter
         </a>
-        <a href="https://www.linkedin.com/in/davidhenzel" target="_blank" rel="noopener noreferrer" class="text-xs text-neutral-400 hover:text-neutral-900 transition-colors">
+        <a href="https://www.linkedin.com/in/davidhenzel" target="_blank" rel="noopener noreferrer" class="text-xs text-secondary/70 hover:text-foreground transition-colors">
           LinkedIn
         </a>
-        <span class="text-xs text-neutral-300">&copy; {year} David Henzel</span>
+        <span class="text-xs text-secondary/40">&copy; {year} David Henzel</span>
       </div>
     </div>
   </div>
