@@ -1,88 +1,64 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
 ---
 
 <BaseLayout
-  title="About — David Henzel"
-  description="David Henzel is a serial entrepreneur, recovering introvert, and creator of the Love Not Fear operating system. 20+ years building companies, now focused on helping people find their purpose."
+  title="About - David Henzel"
+  description="David Henzel is a serial entrepreneur, recovering introvert, and creator of the Love Not Fear operating system. 25+ years building companies, now focused on helping people find their purpose."
 >
 
-  <!-- Hero -->
-  <section class="max-w-5xl mx-auto px-6 pt-24 pb-16">
-    <div class="flex flex-col md:flex-row md:items-start gap-12">
-
-      <div class="shrink-0">
-        <img
-          src="/images/david-headshot.png"
-          alt="David Henzel"
-          class="w-full md:w-72 h-80 object-cover rounded-xl border border-border"
-        />
-      </div>
-
-      <!-- Name + tagline -->
-      <div>
-        <h1 class="text-5xl font-semibold tracking-tight text-foreground mb-4 leading-tight">
-          David Henzel
-        </h1>
-        <p class="text-xl text-secondary leading-relaxed">
-          Recovering introvert. Serial entrepreneur. Living by <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">Love Not Fear</a>.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
   <!-- Bio -->
-  <section class="max-w-5xl mx-auto px-6 pb-20">
-    <div class="max-w-2xl">
-      <p class="text-xs uppercase tracking-widest text-secondary/60 mb-8">The story</p>
-      <div class="space-y-5 text-base text-secondary leading-relaxed">
-        <p>
-          I've always been an entrepreneur. I started my first company as a teenager in Germany, and I've never had a traditional job. What I did have was a problem: I was painfully shy. The kind of shy that made running a meeting with my own team terrifying and a conference call with a customer feel impossible.
-        </p>
-        <p>
-          That started to change when I met <a href="https://syedbalkhi.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">Syed Balkhi</a> at a conference in Las Vegas. My company at the time was MaxCDN. After his keynote, Syed grabbed me by the arm and introduced me to every mover and shaker in the WordPress industry. I watched him and thought: <em>This is what I've been missing.</em> So I forced the change. Toastmasters twice a week, networking events twice a week, for years. Exposure therapy. It worked.
-        </p>
-        <p>
-          But the real shift came from my yoga teacher. One day she said five words that rewired everything: <em>"Every decision in life, you make out of love or out of fear."</em> That simple idea became the lens through which I started seeing my business decisions, my relationships, my daily habits. Everything.
-        </p>
-        <p>
-          Then my wife was diagnosed with breast cancer. She's fine today, but it forced me to confront my own mortality. I found myself imagining my deathbed self asking: <em>Did I really do what I was supposed to do?</em> I was running a successful company, but I realized: <strong class="text-foreground">the biggest risk isn't failing at something new. The biggest risk is succeeding at something that doesn't matter.</strong>
-        </p>
-        <p>
-          We sold MaxCDN and I rebuilt everything around impact. I founded <a href="https://ltvplus.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">LTVplus</a>, built <a href="https://upcoach.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">upcoach</a>, and launched <a href="https://aioperator.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">AI Operator</a>. Today I run a <a href="/companies" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">portfolio of companies</a> with over 500 employees across SaaS, B2B services, AI consulting, and community.
-        </p>
-        <p>
-          But the thing I'm most passionate about is <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">Love Not Fear</a>, the operating system I built around that yoga teacher's insight. It's a four-pillar framework: find your purpose, define your values, craft your vision, build your habits. We use it to help <a href="https://lovenotfear.com/students" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">students</a> figure out what to do with their lives, <a href="https://lovenotfear.com/entrepreneurs" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">entrepreneurs</a> get clear on what actually matters, and <a href="https://lnfpeople.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">companies</a> build teams rooted in purpose.
-        </p>
-        <p>
-          Every company I build, every system I design, every decision I make. It comes back to the same question: <em>is this coming from love, or from fear?</em>
+  <section class="pt-16">
+    <div class="flex flex-col sm:flex-row sm:items-start gap-8 mb-8">
+      <img
+        src="/images/david-headshot.png"
+        alt="David Henzel"
+        class="w-32 h-32 object-cover rounded-full border border-border shrink-0"
+      />
+      <div>
+        <h1 class="text-2xl font-semibold tracking-tight text-foreground mb-2">About</h1>
+        <p class="text-base text-secondary leading-relaxed">
+          Recovering introvert. Serial entrepreneur. Originally from Wiesbaden, Germany. Lived in Los Angeles for years. Now based in Bodrum, Turkey. Living by <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">Love Not Fear</a>.
         </p>
       </div>
     </div>
+
+    <div class="space-y-5 text-base text-secondary leading-relaxed">
+      <p>
+        Hi, I'm David. I'm excited about helping people find their purpose, build systems for their lives, and make decisions from love instead of fear. I'm a systems thinker, a serial entrepreneur, and I'm obsessed with applying business principles to personal life.
+      </p>
+      <p>
+        Growing up, I attended 14 different schools. Always the new kid. I was pretty lost and incredibly shy. I dropped out at 15, never got a degree, never had a real job. But I found entrepreneurship, and that gave me direction.
+      </p>
+      <p>
+        In 2009, I moved from Germany to Los Angeles and co-founded <a href="https://en.wikipedia.org/wiki/MaxCDN" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">MaxCDN</a>. The business grew, but I was still deeply introverted. Making a phone call felt painful. So I forced myself through exposure therapy: Toastmasters twice a week, two networking events a week, talking to everyone even though it was incredibly uncomfortable. Over time, it worked.
+      </p>
+      <p>
+        Then a yoga teacher said something that rewired everything: <em>"Every decision in life, you make out of love or out of fear."</em> I started seeing it everywhere. In sales, in leadership, in how I showed up at home. Most of what I thought were rational decisions were actually fear in disguise. This simple idea was so powerful that I started building my life around it.
+      </p>
+      <p>
+        Around the same time, my mother passed away from cancer and my wife was diagnosed with breast cancer. She's fine today. But it shook me. I did the <a href="https://community.lovenotfear.com/c/funeral-exercise" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">funeral exercise</a>, imagined myself on my deathbed, and asked: <em>did I live a good life?</em> The answer was clear. I wanted more impact. I wanted to find my real purpose.
+      </p>
+      <p>
+        We had a successful exit with MaxCDN. I started applying the same frameworks I used in business (vision, mission, values, goals, habits) to my personal life. And it worked ridiculously well. I built a <a href="/companies" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">portfolio of companies</a>, moved to Bodrum, Turkey with my wife Yurda and our daughter Emma, and built <a href="https://dunyamvillage.com" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">Dunyam Village, a leadership retreat center in Bodrum</a>. We live there with 10 dogs, horses, donkeys, chickens, and ducks. Love Not Fear was always there in the background, but it stayed a side project. I kept getting excited about it, then getting distracted by the next company.
+      </p>
+      <p>
+        Then my friend <a href="https://philipmckernan.com" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">Philip McKernan</a> gave me the push I needed. He told me I was like someone who'd loved a girl for 20 years but kept hooking up with her friends. I was too scared to fully commit to Love Not Fear because if it didn't work out, it would feel like I'd failed at life. It was too personal. Once I saw that, I couldn't unsee it.
+      </p>
+      <p>
+        Today, <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">Love Not Fear</a> is the center of everything I do. I help <a href="https://lovenotfear.com/students" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">students</a> figure out what they want to do with their lives, <a href="https://lovenotfear.com/entrepreneurs" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">entrepreneurs</a> find alignment, and <a href="https://lnfpeople.com" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">organizations</a> build culture rooted in purpose. I'm writing a book, building <a href="https://community.lovenotfear.com/c/free-lnf-self-leadership-course" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">free tools</a> and courses, and I'm excited about using AI to make all of this more accessible. I'm just sharing what I learned along the way.
+      </p>
+    </div>
   </section>
 
-  <!-- Media mentions -->
-  <section class="max-w-5xl mx-auto px-6 py-20 border-t border-border">
-    <p class="text-xs uppercase tracking-widest text-secondary/60 mb-8">Featured in</p>
-    <div class="flex flex-wrap items-center gap-x-10 gap-y-6">
-      {[
-        { name: 'Forbes', logo: '/logos/media/forbes.png' },
-        { name: 'Inc.', logo: '/logos/media/inc.png' },
-        { name: 'Fast Company', logo: '/logos/media/fastcompany.png' },
-        { name: 'HuffPost', logo: '/logos/media/huffpost.png' },
-        { name: 'YEC', logo: '/logos/media/yec.png' },
-        { name: 'The Next Web', logo: '/logos/media/tnw.png' },
-        { name: 'VentureBeat', logo: '/logos/media/venturebeat.png' },
-      ].map((outlet) => (
-        <img
-          src={outlet.logo}
-          alt={outlet.name}
-          class="h-6 w-auto object-contain grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-          loading="lazy"
-        />
-      ))}
-    </div>
+  <hr class="border-t border-border my-12" />
+
+  <!-- Newsletter -->
+  <section>
+    <p class="text-sm font-semibold text-foreground mb-1">Want to follow the journey?</p>
+    <p class="text-xs text-secondary mb-4">Occasional essays on building companies, finding purpose, and the Love Not Fear operating system.</p>
+    <NewsletterForm id="about" compact />
   </section>
 
 </BaseLayout>

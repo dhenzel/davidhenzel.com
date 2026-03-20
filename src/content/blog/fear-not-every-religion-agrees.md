@@ -3,6 +3,7 @@ title: "'Fear Not' — The One Thing Every Major Religion Agrees On"
 description: "Christianity, Islam, Judaism, Hinduism, Buddhism, Taoism, and Sufism all carry the same core message: overcome fear through love. This isn't modern self-help. It's ancient truth."
 heroImage: "/images/blog/fear-not-sacred-texts.svg"
 pubDate: 2026-03-16
+updatedDate: 2026-03-20
 tags: ["love not fear", "purpose", "personal growth", "spirituality"]
 draft: false
 ---
@@ -63,3 +64,7 @@ Not because it's easy. Because it's the path.
 ---
 
 *This is the foundation of the [Love Not Fear](https://lovenotfear.com) operating system — a framework for making better decisions by understanding the two forces behind every choice. If this resonates, [learn more about the framework](https://lovenotfear.com) or [reach out](/contact).*
+
+---
+
+**Here's an exercise rooted in this same tradition.** The Funeral Exercise asks you to imagine what people would say about you at the end. It cuts through the noise and shows you what actually matters. [Try it for free →](https://community.lovenotfear.com/c/funeral-exercise)

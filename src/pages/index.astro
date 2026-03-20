@@ -1,193 +1,135 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import SectionHeading from '../components/SectionHeading.astro';
-import CompanyCard from '../components/CompanyCard.astro';
-import BlogPostCard from '../components/BlogPostCard.astro';
 import NewsletterForm from '../components/NewsletterForm.astro';
-import BookBanner from '../components/BookBanner.astro';
-import BookPopup from '../components/BookPopup.astro';
 import { companies } from '../data/companies';
 
 const featuredCompanies = companies.filter((c) => c.featured);
-import { getCollection } from 'astro:content';
-
-const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 3);
 ---
 
 <BaseLayout
-  title="David Henzel — Self-Leadership, Purpose & the Love Not Fear Operating System"
+  title="David Henzel"
   description="David Henzel helps people find their purpose and build systems for a life they love. Serial entrepreneur, author, and creator of the Love Not Fear operating system."
 >
 
-  <!-- Hero -->
-  <section class="max-w-5xl mx-auto px-6 pt-24 pb-20">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-12">
-      <div class="max-w-xl">
-        <blockquote class="text-3xl md:text-4xl font-semibold tracking-tight text-foreground leading-tight mb-6">
-          "Every decision in life, you make out of love or out of fear."
-        </blockquote>
-        <p class="text-xl text-secondary leading-relaxed mb-8">
-          I'm David Henzel. I've spent 25+ years building companies, and the most important thing I've learned is that the best decisions come from love, not fear.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-3">
-          <a
-            href="/about"
-            class="inline-flex items-center justify-center px-5 py-2.5 bg-foreground text-background text-sm font-medium rounded-lg hover:bg-foreground/85 transition-colors"
-          >
-            About me
-          </a>
-          <a
-            href="https://lovenotfear.com"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 border border-border text-sm font-medium rounded-lg text-foreground hover:border-accent/40 hover:text-accent transition-colors"
-          >
-            The LNF framework
-            <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-            </svg>
-          </a>
-        </div>
-      </div>
+  <!-- Opening essay -->
+  <section class="pt-16 pb-0">
+    <p class="text-lg leading-relaxed text-foreground mb-5">
+      Every decision in life, you make out of love or out of fear.
+    </p>
 
-      <div class="shrink-0">
-        <img
-          src="/images/david-onstage.png"
-          alt="David Henzel speaking on stage"
-          class="w-56 h-56 md:w-72 md:h-72 rounded-xl object-cover border border-border"
-        />
-      </div>
+    <p class="text-base text-secondary leading-relaxed mb-5">
+      A yoga teacher said that to me years ago, and it rewired everything. Not gradually. Immediately. I started seeing it everywhere: in the way I ran my companies, in the way I treated my team, in the way I showed up at home. Most of what I thought were rational business decisions were actually fear dressed up in a spreadsheet.
+    </p>
+
+    <p class="text-base text-secondary leading-relaxed mb-5">
+      I've been building companies for over 25 years. I started as a teenager in Wiesbaden, Germany, painfully shy, running a business I was barely brave enough to talk about. I lived in Los Angeles for years before moving to Bodrum, Turkey. I've never had a real job. What I've had instead is a long, messy education in figuring out what actually matters.
+    </p>
+
+    <p class="text-base text-secondary leading-relaxed mb-5">
+      The turning point wasn't a business win. It was my wife's breast cancer diagnosis. She's fine today. But lying awake at 3am, I realized something that changed the trajectory of everything: <strong class="text-foreground">the biggest risk isn't failing at something new. The biggest risk is succeeding at something that doesn't matter.</strong>
+    </p>
+
+    <p class="text-base text-secondary leading-relaxed mb-5">
+      We had a successful exit. It was a great outcome. But instead of doing the same thing again, I started building a portfolio of companies around what actually mattered to me.
+    </p>
+
+    <p class="text-base text-secondary leading-relaxed mb-5">
+      Now I run a <a href="/companies" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">portfolio of companies</a> with over 500 employees. But the thing I care most about is <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">Love Not Fear</a>, an operating system for living and leading with purpose. Four pillars: find your purpose, define your values, craft your vision, build your habits. We use it with <a href="https://lovenotfear.com/students" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">students</a> trying to figure out what to do with their lives, <a href="https://lovenotfear.com/entrepreneurs" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">entrepreneurs</a> who've lost the plot, and <a href="https://lnfpeople.com" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">companies</a> that want to hire and lead differently.
+    </p>
+
+    <p class="text-base text-secondary leading-relaxed mb-2">
+      I'm also writing a book about all of this. It's not a self-help book. It's a self-leadership book. There's a difference.
+    </p>
+    <p class="text-sm text-secondary mb-5">
+      Want to know when it comes out? <button onclick="document.getElementById('book-signup').classList.toggle('hidden')" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors cursor-pointer bg-transparent border-none p-0 text-sm font-normal">Sign up here</button> and I'll let you know.
+    </p>
+    <div id="book-signup" class="hidden mb-5">
+      <NewsletterForm id="book-inline" compact />
+      <p class="text-xs text-secondary/50 mt-1">No spam. Just the book announcement.</p>
     </div>
+
+    <p class="text-sm text-secondary/60 mb-0">
+      Featured in Forbes, Inc., Fast Company, HuffPost, VentureBeat, The Next Web.
+    </p>
   </section>
 
-  <!-- Featured In (full-width) -->
-  <div class="border-y border-border py-8">
-    <div class="flex items-center justify-center gap-x-10 gap-y-6 flex-wrap px-6">
-      <span class="text-xs uppercase tracking-widest text-secondary/50">As seen in</span>
-      {[
-        { name: 'Forbes', logo: '/logos/media/forbes.png', big: true },
-        { name: 'Inc.', logo: '/logos/media/inc.png', big: true },
-        { name: 'Fast Company', logo: '/logos/media/fastcompany.png' },
-        { name: 'HuffPost', logo: '/logos/media/huffpost.png' },
-        { name: 'YEC', logo: '/logos/media/yec.png' },
-        { name: 'The Next Web', logo: '/logos/media/tnw.png' },
-        { name: 'VentureBeat', logo: '/logos/media/venturebeat.png' },
-      ].map((outlet) => (
-        <img
-          src={outlet.logo}
-          alt={outlet.name}
-          class:list={[
-            'w-auto object-contain grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all duration-300',
-            outlet.big ? 'h-8' : 'h-6',
-          ]}
-          loading="lazy"
-        />
-      ))}
-    </div>
-  </div>
+  <hr class="border-t border-border my-12" />
 
-  <!-- The Operating System -->
-  <section class="max-w-5xl mx-auto px-6 py-20 border-t border-border">
-    <div class="max-w-2xl">
-      <p class="text-xs uppercase tracking-widest text-secondary/60 mb-6">The operating system</p>
-      <blockquote class="text-2xl font-medium text-foreground tracking-tight leading-snug mb-6">
-        "Every decision in life, you make out of love or out of fear."
-      </blockquote>
-      <p class="text-base text-secondary leading-relaxed mb-4">
-        <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">Love Not Fear</a> is the operating system I've built for living and leading with purpose. It's a four-pillar system — find your purpose, define your values, craft your vision, build your habits — designed to help people make better decisions and live a better life.
-      </p>
-      <p class="text-base text-secondary leading-relaxed">
-        We help <a href="https://lovenotfear.com/students" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">students</a> figure out what to study and what to do with their lives. We help <a href="https://lovenotfear.com/entrepreneurs" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">entrepreneurs</a> get clear on what they actually want. We work with <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">individuals</a> who want to live more intentionally. And we help <a href="https://lnfpeople.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">companies</a> build teams rooted in purpose and values.
-      </p>
-    </div>
+  <!-- What I believe -->
+  <section>
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-secondary/60 mb-6">What I believe</h2>
+
+    <p class="text-base text-secondary leading-relaxed mb-5">
+      Most personal development is backwards. People set goals, build habits, and grind, then wonder why they feel empty when they hit the number. That's because they skipped the foundation. You can't build a system for your life if you don't know what your life is for.
+    </p>
+
+    <p class="text-base text-secondary leading-relaxed mb-5">
+      Purpose comes first. Not passion. Purpose. Passion is what you enjoy. Purpose is what you'd do even when it's hard. Once you know that, values become your filter. Vision becomes your direction. Habits become your engine. In that order.
+    </p>
+
+    <p class="text-base text-secondary leading-relaxed mb-5">
+      I believe most fear-based decisions look rational on the surface. Staying in a job you've outgrown because "the market is tough." Not raising prices because "customers might leave." Not having the hard conversation because "the timing isn't right." These feel like logic. They're not. They're fear wearing a reasonable mask.
+    </p>
+
+    <p class="text-base text-secondary leading-relaxed mb-5">
+      I believe you should build companies that make the world slightly less broken, not slightly more optimized. I believe the best leaders are the ones who've done the inner work. I believe you can be ambitious and kind at the same time, and that anyone who tells you otherwise is protecting their own cynicism.
+    </p>
+
+    <p class="text-base text-secondary leading-relaxed">
+      I believe simplicity is a discipline, not a style. The hardest thing in business, and in life, is saying no to good things so you can say yes to the right things.
+    </p>
   </section>
 
-  <!-- Newsletter Section (dedicated mid-page) -->
-  <section class="bg-muted border-y border-border">
-    <div class="max-w-5xl mx-auto px-6 py-16">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-        <div class="max-w-md">
-          <h2 class="text-2xl font-semibold tracking-tight text-foreground mb-2">
-            Stay in the loop
-          </h2>
-          <p class="text-base text-secondary leading-relaxed">
-            Essays on purpose, self-leadership, and building a life you love. No spam, no fluff — just the real stuff.
-          </p>
-        </div>
-        <div class="md:max-w-sm w-full">
-          <NewsletterForm id="mid-page" />
-        </div>
-      </div>
-    </div>
+  <hr class="border-t border-border my-12" />
+
+  <!-- Values -->
+  <section>
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-secondary/60 mb-6">Values</h2>
+
+    <p class="text-base text-secondary leading-relaxed mb-5">
+      <span class="font-semibold text-accent">1. First Things First.</span> Always prioritize health and your loved ones. If it's not a "FUCK YES," it's a "NO."
+    </p>
+
+    <p class="text-base text-secondary leading-relaxed mb-5">
+      <span class="font-semibold text-accent">2. Own It.</span> Always do your best. Be impeccable with your word. Do not complain or blame. Find solutions.
+    </p>
+
+    <p class="text-base text-secondary leading-relaxed mb-5">
+      <span class="font-semibold text-accent">3. Create Impact.</span> Enrich the lives of everybody we come in touch with. Don't take things personal. Do not make assumptions.
+    </p>
+
+    <p class="text-base text-secondary leading-relaxed mb-5">
+      <span class="font-semibold text-accent">4. Unconditional Love.</span> Make decisions out of love, not fear.
+    </p>
+
+    <p class="text-base text-secondary leading-relaxed mb-6">
+      <span class="font-semibold text-accent">5. Simplicity.</span> Be Authentic. Only do and buy things that matter.
+    </p>
+
+    <p class="text-sm text-secondary leading-relaxed">
+      Want to define your own? I built a free AI tool that walks you through it. <a href="https://community.lovenotfear.com/c/define-your-personal-core-values" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">Discover your core values here</a>.
+    </p>
   </section>
+
+  <hr class="border-t border-border my-12" />
 
   <!-- Companies -->
-  <section class="max-w-5xl mx-auto px-6 py-20">
-    <SectionHeading
-      title="Companies"
-      subtitle="Some of my current ventures — software, services, and systems for helping people work and live better."
-    />
-    <div class="flex flex-col gap-3">
-      {featuredCompanies.map((company) => (
-        <CompanyCard company={company} />
-      ))}
-    </div>
-    <div class="mt-8">
-      <a
-        href="/companies"
-        class="text-sm text-secondary hover:text-accent transition-colors inline-flex items-center gap-1.5"
-      >
-        View all companies
-        <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-        </svg>
-      </a>
-    </div>
+  <section>
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-secondary/60 mb-6">Companies</h2>
+
+    {featuredCompanies.map((company) => (
+      <p class="mb-3.5 leading-relaxed">
+        <a href={company.url} target="_blank" rel="noopener" class="font-semibold text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">{company.name}</a>
+        <span class="text-secondary/40 mx-1">&middot;</span>
+        <span class="text-sm text-secondary" set:html={company.description.replace(/<a[^>]*>/g, '').replace(/<\/a>/g, '')} />
+      </p>
+    ))}
+
+    <p class="mt-6">
+      <a href="/companies" class="text-sm text-secondary hover:text-accent transition-colors underline underline-offset-3 decoration-border hover:decoration-accent">See all companies</a>
+    </p>
   </section>
 
-  <!-- Blog Preview -->
-  <section class="max-w-5xl mx-auto px-6 py-20 border-t border-border">
-    <SectionHeading
-      title="Content"
-      subtitle="Blog posts, videos, ideas, and things worth sharing."
-    />
-    {recentPosts.length === 0 ? (
-      <div class="border border-border rounded-xl px-8 py-12 text-center bg-muted">
-        <p class="text-sm text-secondary mb-4">Blog coming soon.</p>
-        <p class="text-xs text-secondary">
-          Essays and reflections on building companies, conscious leadership, and what it means to grow.
-        </p>
-      </div>
-    ) : (
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {recentPosts.map((post) => (
-          <BlogPostCard
-            title={post.data.title}
-            date={post.data.pubDate.toISOString()}
-            excerpt={post.data.description}
-            slug={post.id}
-            heroImage={post.data.heroImage}
-            tags={post.data.tags}
-          />
-        ))}
-      </div>
-    )}
-    <div class="mt-8">
-      <a
-        href="/blog"
-        class="text-sm text-secondary hover:text-accent transition-colors inline-flex items-center gap-1.5"
-      >
-        View all content
-        <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-        </svg>
-      </a>
-    </div>
-  </section>
 
-  <!-- Book Popup (modal) -->
-  <BookPopup />
 
 </BaseLayout>

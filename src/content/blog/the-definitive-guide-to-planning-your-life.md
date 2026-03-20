@@ -1,8 +1,9 @@
 ---
 title: "The Definitive Guide to Planning Your Life"
-description: "A comprehensive, actionable guide to building a life plan -- from discovering your purpose with SWOT analysis and SMARTR goals to creating five-year, monthly, and daily plans that drive real progress."
+description: "A comprehensive, actionable guide to purpose-driven life planning. From discovering your purpose with SWOT analysis and SMARTR goals to creating five-year, monthly, and daily plans."
 heroImage: "/images/blog/planning-life.svg"
 pubDate: 2015-12-11
+updatedDate: 2026-03-20
 tags: ["productivity", "personal growth", "goal setting", "planning", "self-improvement"]
 draft: false
 ---
@@ -233,3 +234,15 @@ Building beautiful things is easier with the right tools. This is true for build
 **Chains.cc** -- Chains is a habit-building app that helps you turn new habits into established routines. The app lets you build long chains to track how often you accomplish a specific task. Even though there's no negative consequence for breaking these chains, you may find that simply seeing how well you've been doing is enough to keep you on the right track.
 
 **Coach.me (Previously Lift)** -- Lift adds accountability to your goals by connecting you and your goals to a larger community. This way, instead of simply stating your goals to yourself, you can release your goals publicly and receive motivation, advice, and reminders to keep you on task.
+
+---
+
+**Know where you're going?** I built a free tool that helps you define your personal vision and mission. Most people skip this step. Don't. [Build yours →](https://community.lovenotfear.com/c/define-your-personal-vision-and-mission)
+
+---
+
+## Related reading
+
+- [The Definitive Guide to Work-Life Balance](/blog/the-definitive-guide-to-work-life-balance) -- How to apply the same business principles from this guide to running a happier family life.
+- [Productivity Tips for Running Multiple Companies](/blog/productivity-tips-for-running-multiple-companies) -- Practical frameworks for limiting decision fatigue so you can focus on what matters.
+- [Managing Happiness: Course Summary](/blog/managing-happiness-course-summary) -- A six-part system for applying business principles to your relationship.

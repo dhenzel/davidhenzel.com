@@ -1,4 +1,24 @@
 User-agent: *
 Allow: /
 
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 2
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 2
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 2
+
 Sitemap: https://davidhenzel.com/sitemap-index.xml

@@ -7,6 +7,7 @@ import mdx from '@astrojs/mdx';
 export default defineConfig({
   site: 'https://davidhenzel.com',
   output: 'static',
+  compressHTML: true,
   vite: {
     plugins: [tailwindcss()],
   },

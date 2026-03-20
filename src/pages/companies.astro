@@ -1,33 +1,38 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import CompanyCard from '../components/CompanyCard.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
 import { companies } from '../data/companies';
+
+const featuredCompanies = companies.filter((c) => c.featured);
+const otherCompanies = companies.filter((c) => !c.featured);
 ---
 
 <BaseLayout
-  title="Companies — David Henzel"
+  title="Companies - David Henzel"
   description="David Henzel's portfolio of companies across SaaS, B2B services, AI consulting, and conscious leadership."
 >
 
-  <!-- Hero -->
-  <section class="max-w-5xl mx-auto px-6 pt-24 pb-16">
-    <h1 class="text-4xl font-semibold tracking-tight text-foreground mb-4">
-      Portfolio
+  <!-- Intro -->
+  <section class="pt-16">
+    <h1 class="text-2xl font-semibold tracking-tight text-foreground mb-4">
+      Companies
     </h1>
-    <p class="text-xl text-secondary leading-relaxed max-w-2xl mb-4">
-      These are my active companies — across SaaS, B2B services, AI, and conscious leadership. I'd love to find ways to work together.
+    <p class="text-base text-secondary leading-relaxed mb-4">
+      These are my active companies, across SaaS, B2B services, AI, and conscious leadership. I'd love to find ways to work together.
     </p>
-    <p class="text-base text-secondary leading-relaxed max-w-2xl">
-      Interested in any of these? <a href="/contact" class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity">Reach out</a> and I'm happy to introduce you to the founder or key person on the team.
+    <p class="text-base text-secondary leading-relaxed">
+      Interested in any of these? <a href="/contact" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">Reach out</a> and I'm happy to introduce you to the founder or key person on the team.
     </p>
   </section>
 
+  <hr class="border-t border-border my-12" />
+
   <!-- Video -->
-  <section class="max-w-5xl mx-auto px-6 pb-16">
-    <div class="rounded-xl overflow-hidden border border-border" style="aspect-ratio: 16/9;">
+  <section class="mb-12">
+    <div class="overflow-hidden" style="aspect-ratio: 16/9;">
       <iframe
         src="https://www.youtube.com/embed/WUHhTPiVTtc"
-        title="David Henzel — Companies & Portfolio"
+        title="David Henzel - Companies & Portfolio"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
@@ -37,13 +42,24 @@ import { companies } from '../data/companies';
     </div>
   </section>
 
-  <!-- Companies flat list -->
-  <section class="max-w-5xl mx-auto px-6 pb-24">
-    <div class="flex flex-col gap-3">
-      {companies.map((company) => (
-        <CompanyCard company={company} />
-      ))}
-    </div>
+  <!-- All companies -->
+  <section>
+    {companies.map((company) => (
+      <p class="mb-3.5 leading-relaxed">
+        <a href={company.url} target="_blank" rel="noopener" class="font-semibold text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">{company.name}</a>
+        <span class="text-secondary/40 mx-1">&middot;</span>
+        <span class="text-sm text-secondary" set:html={company.description.replace(/<a[^>]*>/g, '').replace(/<\/a>/g, '')} />
+      </p>
+    ))}
+  </section>
+
+  <hr class="border-t border-border my-12" />
+
+  <!-- Newsletter -->
+  <section>
+    <p class="text-sm font-semibold text-foreground mb-1">Follow what we're building</p>
+    <p class="text-xs text-secondary mb-4">Updates on new companies, lessons learned, and the Love Not Fear operating system.</p>
+    <NewsletterForm id="companies" compact />
   </section>
 
 </BaseLayout>

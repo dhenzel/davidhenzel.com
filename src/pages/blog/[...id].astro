@@ -35,6 +35,19 @@ function estimateReadingTime(text: string): number {
 // A simple heuristic: use the rendered body string if available
 const bodyText = post.body ?? '';
 const readingTime = estimateReadingTime(bodyText);
+
+// Related posts: find posts sharing tags with this post
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const currentTags = new Set(post.data.tags ?? []);
+const relatedPosts = allPosts
+  .filter((p) => p.id !== post.id)
+  .map((p) => {
+    const shared = (p.data.tags ?? []).filter((t: string) => currentTags.has(t)).length;
+    return { id: p.id, title: p.data.title, pubDate: p.data.pubDate, shared };
+  })
+  .filter((p) => p.shared > 0)
+  .sort((a, b) => b.shared - a.shared || b.pubDate.valueOf() - a.pubDate.valueOf())
+  .slice(0, 3);
 ---
 
 <BlogPostLayout
@@ -44,9 +57,11 @@ const readingTime = estimateReadingTime(bodyText);
   updatedDate={post.data.updatedDate}
   heroImage={post.data.heroImage}
   tags={post.data.tags}
+  cta={post.data.cta}
   readingTime={readingTime}
   prevPost={prevPost}
   nextPost={nextPost}
+  relatedPosts={relatedPosts}
 >
   <Content />
 </BlogPostLayout>

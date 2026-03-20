@@ -3,6 +3,7 @@ title: "A Simple Cold Email That Makes Networking Easy"
 description: "A proven cold email formula that gets responses from top professionals -- lead with genuine praise, establish credibility fast, make a specific ask, and offer to pay for their time."
 heroImage: "/images/blog/cold-email.svg"
 pubDate: 2015-12-03
+updatedDate: 2026-03-20
 tags: ["networking", "entrepreneurship", "productivity", "cold outreach", "communication"]
 draft: false
 ---
@@ -54,3 +55,7 @@ Don't overlook this. Stand out from the crowd by recognizing the high value they
 ## Using This Template
 
 One final thought on making this work: networking is a numbers game. While this template is powerful, it's only going to work if you send it out over and over again. The more connections you attempt to make, the greater your potential for beginning a successful relationship.
+
+---
+
+**Great networking starts with knowing yourself.** The Big 5 personality test shows you how you come across to others and where your natural strengths lie. Free, AI-powered, takes 10 minutes. [Take the test →](https://community.lovenotfear.com/c/the-big-5-personality-test)

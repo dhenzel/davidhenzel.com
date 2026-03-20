@@ -1,82 +1,49 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
 ---
 
 <BaseLayout
-  title="Contact — David Henzel"
+  title="Contact - David Henzel"
   description="Get in touch with David Henzel. Reach out for business inquiries, speaking engagements, partnerships, or join the newsletter."
 >
 
-  <!-- Hero -->
-  <section class="max-w-5xl mx-auto px-6 pt-24 pb-16">
-    <h1 class="text-5xl font-semibold tracking-tight text-foreground mb-4 leading-tight">
-      Get in Touch
+  <!-- Contact -->
+  <section class="pt-16">
+    <h1 class="text-2xl font-semibold tracking-tight text-foreground mb-4">
+      Get in touch
     </h1>
-    <p class="text-xl text-secondary leading-relaxed max-w-xl">
-      I read every email. For business inquiries, speaking engagements, partnerships, or just to say hello — don't hesitate to reach out.
+    <p class="text-base text-secondary leading-relaxed mb-8">
+      I read every email. For business inquiries, speaking engagements, partnerships, or just to say hello.
     </p>
-  </section>
 
-  <!-- Contact Methods -->
-  <section class="max-w-5xl mx-auto px-6 pb-16">
-    <div class="max-w-lg space-y-8">
-
-      <!-- Email -->
-      <div class="border border-border rounded-xl p-6 hover:border-accent/40 transition-colors">
-        <p class="text-xs uppercase tracking-widest text-secondary/60 mb-2">Email</p>
-        <a
-          href="mailto:dh@davidhenzel.com"
-          class="text-xl font-medium text-foreground hover:text-accent transition-colors"
-        >
-          dh@davidhenzel.com
-        </a>
-      </div>
-
-      <!-- X / Twitter -->
-      <div class="border border-border rounded-xl p-6 hover:border-accent/40 transition-colors">
-        <p class="text-xs uppercase tracking-widest text-secondary/60 mb-2">X / Twitter</p>
-        <a
-          href="https://twitter.com/davidhenzel"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-xl font-medium text-foreground hover:text-accent transition-colors"
-        >
-          @davidhenzel
-        </a>
-      </div>
-
-      <!-- LinkedIn -->
-      <div class="border border-border rounded-xl p-6 hover:border-accent/40 transition-colors">
-        <p class="text-xs uppercase tracking-widest text-secondary/60 mb-2">LinkedIn</p>
-        <a
-          href="https://www.linkedin.com/in/davidhenzel"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-xl font-medium text-foreground hover:text-accent transition-colors"
-        >
-          linkedin.com/in/davidhenzel
-        </a>
-      </div>
-
-      <!-- Speaking -->
-      <div class="border border-border rounded-xl p-6 hover:border-accent/40 transition-colors">
-        <p class="text-xs uppercase tracking-widest text-secondary/60 mb-2">Speaking Inquiries</p>
-        <p class="text-sm text-secondary leading-relaxed mb-3">
-          Available for keynotes, panels, podcasts, and university lectures.
-        </p>
-        <a
-          href="/speaking"
-          class="text-sm text-accent font-medium hover:opacity-70 transition-opacity inline-flex items-center gap-1"
-        >
-          View speaking topics
-          <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-          </svg>
-        </a>
-      </div>
-
+    <div class="space-y-4 text-base text-secondary leading-relaxed">
+      <p>
+        <span class="text-foreground font-medium">Email:</span>
+        <a href="mailto:dh@davidhenzel.com" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">dh@davidhenzel.com</a>
+      </p>
+      <p>
+        <span class="text-foreground font-medium">Twitter:</span>
+        <a href="https://twitter.com/davidhenzel" target="_blank" rel="noopener noreferrer" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">@davidhenzel</a>
+      </p>
+      <p>
+        <span class="text-foreground font-medium">LinkedIn:</span>
+        <a href="https://www.linkedin.com/in/davidhenzel" target="_blank" rel="noopener noreferrer" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">linkedin.com/in/davidhenzel</a>
+      </p>
+      <p>
+        <span class="text-foreground font-medium">Speaking:</span>
+        <a href="/speaking" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">View topics and book me</a>
+      </p>
     </div>
   </section>
 
+  <hr class="border-t border-border my-12" />
+
+  <!-- Newsletter -->
+  <section>
+    <p class="text-sm font-semibold text-foreground mb-1">Or just stay in the loop</p>
+    <p class="text-xs text-secondary mb-4">Essays on building companies and the Love Not Fear operating system. No spam.</p>
+    <NewsletterForm id="contact" compact />
+  </section>
 
 </BaseLayout>

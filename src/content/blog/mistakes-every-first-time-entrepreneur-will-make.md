@@ -3,6 +3,7 @@ title: "7 Mistakes (Almost) Every First-Time Entrepreneur Will Make"
 description: "From chasing money to fearing failure, here are seven common traps that catch new business owners -- and how to avoid them based on hard-won experience building MaxCDN."
 heroImage: "/images/blog/entrepreneur-mistakes.svg"
 pubDate: 2017-09-19
+updatedDate: 2026-03-20
 tags: ["entrepreneurship", "leadership", "mistakes", "startups"]
 draft: false
 ---
@@ -40,3 +41,7 @@ So you had a great idea, started a blog, and four months later you're not a zill
 ## 7. Management Woes
 
 Just left the cubicle? Striking out on your own with more questions than answers? It can be hard, without prior experience, to suddenly be expected to manage a team. But if you're going to make entrepreneurship work, you'll need to get past your fears and learn to be the leader your company deserves. This becomes doubly important when you begin hiring (or promoting) your first middle managers who rely on you for guidance in their new roles.
+
+---
+
+**Before you burn out chasing everything, check your balance.** The Wheel of Life assessment gives you a quick snapshot of where you're thriving and where you're neglecting. Free, takes 5 minutes. [Take the assessment →](https://community.lovenotfear.com/c/the-wheel-of-life)

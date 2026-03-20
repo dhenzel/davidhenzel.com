@@ -1,8 +1,9 @@
 ---
 title: "Book Review: The Little Book of Stoicism"
-description: "A review of Jonas Salzgeber's practical guide to Stoic philosophy, covering the Stoic Happiness Triangle and 55 daily practices for resilience, confidence, and calmness."
+description: "A review of Jonas Salzgeber's practical guide to Stoic philosophy for self-leadership, covering the Stoic Happiness Triangle and 55 daily practices for resilience and calmness."
 heroImage: "/images/blog/stoicism.svg"
 pubDate: 2019-02-21
+updatedDate: 2026-03-20
 tags: ["book review", "stoicism", "personal growth", "philosophy"]
 draft: false
 ---
@@ -36,3 +37,7 @@ Here are some of the practices from the book that resonated with me the most:
 - **Buy tranquility whenever possible**: Using Epictetus's principle, one can choose peace over irritation over minor inconveniences.
 
 - **Lead by example**: Demonstrating beliefs through action proves more powerful than verbal instruction.
+
+---
+
+**The Stoics spent a lot of time thinking about death.** So does this exercise. The Funeral Exercise asks you to imagine what people would say about you at the end of your life. It's the kind of reflection Marcus Aurelius would have approved of. [Try it for free →](https://community.lovenotfear.com/c/funeral-exercise)

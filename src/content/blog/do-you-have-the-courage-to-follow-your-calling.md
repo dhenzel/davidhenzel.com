@@ -1,8 +1,9 @@
 ---
 title: "Do You Have the Courage to Follow Your Calling?"
-description: "A chance encounter with a musician on a Bali beach sparks a reflection on the tension between following your passion and staying in your comfort zone."
+description: "A chance encounter with a musician on a Bali beach sparks a reflection on purpose-driven living, the tension between following your calling and staying in your comfort zone."
 heroImage: "/images/blog/courage-calling.svg"
 pubDate: 2018-04-19
+updatedDate: 2026-03-20
 tags: ["personal growth", "purpose", "entrepreneurship", "coaching"]
 draft: false
 ---
@@ -32,3 +33,7 @@ Over the years I found that this is what makes me the happiest!
 If I would have as much courage as the couple at the beach, I may have picked individuals. Yet, I have chosen to stick with organizations. Being successful here seems easier and more within my comfort zone.
 
 I'm curious to hear if you ever been to Bali or shared similar struggles and which decision you made in the end.
+
+---
+
+**Here's an exercise that changed my perspective.** The Funeral Exercise asks you to imagine what people would say about you. It's uncomfortable and clarifying. [Try it for free →](https://community.lovenotfear.com/c/funeral-exercise)

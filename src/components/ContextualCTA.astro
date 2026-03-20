@@ -1,0 +1,107 @@
+---
+interface Props {
+  type?: 'newsletter' | 'lnf-course' | 'free-course' | 'community' | 'cohort' | 'retreat' | 'upcoach' | 'ai-operator';
+  tags?: string[];
+}
+
+const { type, tags = [] } = Astro.props;
+
+// Auto-select CTA based on tags if no explicit type given
+function selectCTA(tags: string[]): string {
+  const t = tags.map(tag => tag.toLowerCase());
+
+  if (t.some(tag => ['love not fear', 'self-leadership', 'purpose', 'values', 'mindset', 'habits'].includes(tag))) {
+    return 'lnf-course';
+  }
+  if (t.some(tag => ['coaching', 'transformation'].includes(tag))) {
+    return 'cohort';
+  }
+  if (t.some(tag => ['relationships', 'marriage', 'work-life balance'].includes(tag))) {
+    return 'retreat';
+  }
+  if (t.some(tag => ['management', 'coaching'].includes(tag))) {
+    return 'upcoach';
+  }
+  if (t.some(tag => ['ai', 'automation', 'technology'].includes(tag))) {
+    return 'ai-operator';
+  }
+  return 'newsletter';
+}
+
+const ctaType = type || selectCTA(tags);
+
+const ctas: Record<string, { heading: string; body: string; linkText: string; url: string; external: boolean }> = {
+  'newsletter': {
+    heading: 'Want more like this?',
+    body: 'I write occasionally about building companies and living with purpose. No spam, no fluff.',
+    linkText: 'Subscribe to the newsletter',
+    url: '/contact',
+    external: false,
+  },
+  'lnf-course': {
+    heading: 'I put everything I know into a free course.',
+    body: 'Purpose, values, vision, habits. The same stuff that changed how I run my life and my companies. No cost, no catch.',
+    linkText: 'Start the free self-leadership course',
+    url: 'https://community.lovenotfear.com/c/free-lnf-self-leadership-course',
+    external: true,
+  },
+  'cohort': {
+    heading: 'Want to go deeper?',
+    body: 'If this resonates, I run small group cohorts where we work through this stuff together. Real people, real conversations, real change.',
+    linkText: 'Get in touch to join a cohort',
+    url: 'mailto:dh@davidhenzel.com?subject=Cohort%20Inquiry',
+    external: false,
+  },
+  'retreat': {
+    heading: 'Come to Bodrum.',
+    body: 'I host leadership retreats at my place in Bodrum, Turkey. Small groups, real conversations, nature. The kind of reset that sticks.',
+    linkText: 'Learn more about Dunyam Village',
+    url: 'https://dunyamvillage.com',
+    external: true,
+  },
+  'upcoach': {
+    heading: 'We built a platform for this.',
+    body: 'If you run coaching programs or team development, UpCoach handles the structure so you can focus on the people.',
+    linkText: 'Check out UpCoach',
+    url: 'https://upcoach.com',
+    external: true,
+  },
+  'ai-operator': {
+    heading: 'AI, but practical.',
+    body: 'My team helps organizations implement AI without the hype. Just measurable outcomes.',
+    linkText: 'See AI Operator',
+    url: 'https://aioperator.com',
+    external: true,
+  },
+  'free-course': {
+    heading: 'The full course is free.',
+    body: 'I put together a complete self-leadership course. Purpose, values, vision, habits. Everything I wish someone had handed me 20 years ago. Free, self-paced, no strings.',
+    linkText: 'Start the free self-leadership course',
+    url: 'https://community.lovenotfear.com/c/free-lnf-self-leadership-course',
+    external: true,
+  },
+  'community': {
+    heading: 'You don\'t have to figure this out alone.',
+    body: 'The Love Not Fear community is where people who think like this hang out. Facilitators, founders, students. Real conversations, no fluff.',
+    linkText: 'Join the community',
+    url: 'https://community.lovenotfear.com/c/love-not-fear-community',
+    external: true,
+  },
+};
+
+const cta = ctas[ctaType];
+---
+
+<aside class="my-12">
+  <hr class="border-t border-border mb-8" />
+  <p class="text-base font-semibold text-foreground mb-1">{cta.heading}</p>
+  <p class="text-sm text-secondary leading-relaxed mb-3">{cta.body}</p>
+  <a
+    href={cta.url}
+    target={cta.external ? '_blank' : undefined}
+    rel={cta.external ? 'noopener' : undefined}
+    class="text-sm text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors"
+  >
+    {cta.linkText}
+  </a>
+</aside>

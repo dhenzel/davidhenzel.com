@@ -10,21 +10,21 @@ export const companies: Company[] = [
   {
     name: 'Love Not Fear',
     url: 'https://lovenotfear.com',
-    description: 'The <a href="https://lovenotfear.com" target="_blank" rel="noopener">operating system for conscious leadership</a> and purposeful living. A four-pillar framework — purpose, values, vision, habits — that helps <a href="https://lovenotfear.com/students" target="_blank" rel="noopener">students find their calling</a> and <a href="https://lovenotfear.com/entrepreneurs" target="_blank" rel="noopener">entrepreneurs build what matters</a>.',
+    description: 'The <a href="https://lovenotfear.com" target="_blank" rel="noopener">operating system for conscious leadership</a> and purposeful living. A four-pillar framework: purpose, values, vision, habits. Helps <a href="https://lovenotfear.com/students" target="_blank" rel="noopener">students find their calling</a> and <a href="https://lovenotfear.com/entrepreneurs" target="_blank" rel="noopener">entrepreneurs build what matters</a>.',
     logo: '/logos/companies/lovenotfear.png',
     featured: true,
   },
   {
     name: 'AI Operator',
     url: 'https://aioperator.com',
-    description: 'Helps organizations turn AI experimentation into measurable business outcomes through the ADOPT Method — a proven framework for <a href="https://aioperator.com" target="_blank" rel="noopener">enterprise AI implementation</a> and team transformation.',
+    description: 'Helps organizations turn AI experimentation into measurable business outcomes through the ADOPT Method, a proven framework for <a href="https://aioperator.com" target="_blank" rel="noopener">enterprise AI implementation</a> and team transformation.',
     logo: '/logos/companies/aioperator.jpeg',
     featured: true,
   },
   {
     name: 'upcoach',
     url: 'https://upcoach.com',
-    description: 'An all-in-one <a href="https://upcoach.com" target="_blank" rel="noopener">coaching platform</a> that lets program creators build, sell, and run structured group coaching programs — with built-in payments, progress tracking, and client management.',
+    description: 'An all-in-one <a href="https://upcoach.com" target="_blank" rel="noopener">coaching platform</a> that lets program creators build, sell, and run structured group coaching programs, with built-in payments, progress tracking, and client management.',
     logo: '/logos/companies/upcoach.png',
     featured: true,
   },
@@ -37,7 +37,7 @@ export const companies: Company[] = [
   {
     name: 'Octeth',
     url: 'https://octeth.com',
-    description: 'A <a href="https://octeth.com" target="_blank" rel="noopener">self-hosted email marketing platform</a> that lets agencies own their email infrastructure — with full white-labeling, unlimited clients, and major savings over SaaS alternatives.',
+    description: 'A <a href="https://octeth.com" target="_blank" rel="noopener">self-hosted email marketing platform</a> that lets agencies own their email infrastructure, with full white-labeling, unlimited clients, and major savings over SaaS alternatives.',
     logo: '/logos/companies/octeth.png',
   },
   {
@@ -50,7 +50,7 @@ export const companies: Company[] = [
   {
     name: 'WinbackEngine',
     url: 'https://winbackengine.com',
-    description: 'A <a href="https://winbackengine.com" target="_blank" rel="noopener">customer win-back service</a> that uses AI-powered omnichannel outreach — including real phone calls by trained agents — to reactivate lapsed customers with a guaranteed 3x ROI.',
+    description: 'A <a href="https://winbackengine.com" target="_blank" rel="noopener">customer win-back service</a> that uses AI-powered omnichannel outreach, including real phone calls by trained agents, to reactivate lapsed customers with a guaranteed 3x ROI.',
     logo: '/logos/companies/winbackengine.svg',
   },
   {
@@ -62,20 +62,32 @@ export const companies: Company[] = [
   {
     name: 'Shortlist',
     url: 'https://shortlist.io',
-    description: 'A <a href="https://shortlist.io" target="_blank" rel="noopener">revenue-first marketing agency</a> that guarantees ROI on SEO and content — focusing on bottom-of-funnel keywords and conversion-optimized strategies that drive actual revenue.',
+    description: 'A <a href="https://shortlist.io" target="_blank" rel="noopener">revenue-first marketing agency</a> that guarantees ROI on SEO and content, focusing on bottom-of-funnel keywords and conversion-optimized strategies that drive actual revenue.',
     logo: '/logos/companies/shortlist.svg',
     featured: true,
   },
   {
     name: 'LNF People',
     url: 'https://lnfpeople.com',
-    description: 'An <a href="https://lnfpeople.com" target="_blank" rel="noopener">offshore talent recruitment agency</a> that uses the Love Not Fear hiring method to match purpose-aligned candidates to values-driven companies — with a 95%+ retention rate.',
+    description: 'An <a href="https://lnfpeople.com" target="_blank" rel="noopener">offshore talent recruitment agency</a> that uses the Love Not Fear hiring method to match purpose-aligned candidates to values-driven companies, with a 95%+ retention rate.',
     logo: '/logos/companies/lnfpeople.jpg',
+  },
+  {
+    name: 'TaskDrive',
+    url: 'https://taskdrive.com',
+    description: 'A <a href="https://taskdrive.com" target="_blank" rel="noopener">global talent recruitment service</a> that helps businesses hire remote professionals aligned with their mission, vision, and culture. One-time fee model.',
+    logo: '/logos/companies/taskdrive.png',
+  },
+  {
+    name: 'Koala Krunch',
+    url: 'https://koalakrunch.de',
+    description: 'A <a href="https://koalakrunch.de" target="_blank" rel="noopener">healthy snack brand</a> offering 100% fruit snacks with nothing else: no sugar, no additives. Vegan, gluten-free, and packed with vitamins and fiber.',
+    logo: '/logos/companies/koalakrunch.png',
   },
   {
     name: 'Dünyam Village',
     url: 'https://dunyamvillage.com',
-    description: 'An exclusive <a href="https://dunyamvillage.com" target="_blank" rel="noopener">retreat center in Bodrum, Turkey</a> offering whole-place bookings for leadership teams and groups of up to 12 — transformative experiences in nature.',
+    description: 'An exclusive <a href="https://dunyamvillage.com" target="_blank" rel="noopener">retreat center in Bodrum, Turkey</a> offering whole-place bookings for leadership teams and groups of up to 12. Transformative experiences in nature.',
     logo: '/logos/companies/dunyamvillage.png',
     featured: true,
   },

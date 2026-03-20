@@ -3,6 +3,7 @@ title: "Why Marriages Fail: 4 Tragic Reasons That Entrepreneurs Need To Be Aware
 description: "Four common reasons entrepreneurial marriages fall apart — from diverging priorities and emotional distance to financial distress — and practical strategies to prevent each one."
 heroImage: "/images/blog/marriages-fail.svg"
 pubDate: 2017-08-16
+updatedDate: 2026-03-20
 tags: ["relationships", "marriage", "entrepreneurship", "personal growth"]
 draft: false
 ---
@@ -108,3 +109,7 @@ At home, I have family goals to keep myself productively occupied. You can do th
 I've had a rough patch with my wife. And I now understand the importance of balancing family and work life.
 
 Entrepreneurship brings freedom, confidence and a sense of achievement. But remember that you still need to earn the confidence and trust of your spouse. Never treat them secondary to your entrepreneurial endeavors.
+
+---
+
+**How balanced is your life right now?** The Wheel of Life assessment gives you a clear picture of where you're thriving and where you're neglecting. Takes 5 minutes. [Take the assessment →](https://community.lovenotfear.com/c/the-wheel-of-life)

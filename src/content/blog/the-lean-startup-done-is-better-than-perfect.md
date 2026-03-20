@@ -3,6 +3,7 @@ title: "The Lean Startup: Done is Better than Perfect"
 description: "A review of Eric Ries's The Lean Startup and why the Minimum Viable Product is the most critical concept for any founder -- how shipping fast validates ideas, saves resources, and generates immediate ROI."
 heroImage: "/images/blog/lean-startup.svg"
 pubDate: 2015-12-08
+updatedDate: 2026-03-20
 tags: ["book review", "entrepreneurship", "startups", "productivity", "lean methodology"]
 draft: false
 ---
@@ -35,3 +36,7 @@ This is just some of the "why" behind your MVP. And truth be told, it's only abo
 - How to break product cycles into a self-reinforcing, "Build > Measure > Learn," loop
 
 Of all the books we've reviewed so far, The Lean Startup is easily the most practical. Until now, the other books have been guidebooks for building your entrepreneur mindset. But pick up a copy of this book, and you can put that mindset to work building something great.
+
+---
+
+**Before you build, know why you're building.** I made a free tool that helps you define your personal vision and mission. Direction before execution. [Build yours →](https://community.lovenotfear.com/c/define-your-personal-vision-and-mission)

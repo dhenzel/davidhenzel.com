@@ -3,6 +3,7 @@ title: "How to Promote Your eCommerce Site Without Going Broke"
 description: "A practical playbook for bootstrapped eCommerce founders to get featured on blogs and websites without spending a fortune on advertising, using free outreach tactics and affordable tools."
 heroImage: "/images/blog/promote-ecommerce.svg"
 pubDate: 2015-12-09
+updatedDate: 2026-03-20
 tags: ["entrepreneurship", "ecommerce", "marketing", "startups", "bootstrapping"]
 draft: false
 ---
@@ -56,3 +57,7 @@ Look, this approach isn't easy. It's going to take some serious commitment and e
 But if you can get over these initial setbacks, you could potentially see your website or product featured across the web, reaching potential customers you otherwise would have had to pay big bucks to advertise to -- customers your competitors are already paying huge sums to talk to.
 
 So keep at it, and don't stop until you get what you're after!
+
+---
+
+**Tactics work better when you know your direction.** I built a free tool that helps you define your personal vision and mission. Clarity on purpose makes every marketing decision easier. [Build yours →](https://community.lovenotfear.com/c/define-your-personal-vision-and-mission)

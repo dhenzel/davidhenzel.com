@@ -1,6 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import NewsletterForm from '../components/NewsletterForm.astro';
+import ContextualCTA from '../components/ContextualCTA.astro';
 
 interface Props {
   title: string;
@@ -9,9 +9,11 @@ interface Props {
   updatedDate?: Date;
   heroImage?: string;
   tags?: string[];
+  cta?: 'newsletter' | 'lnf-course' | 'cohort' | 'retreat' | 'upcoach' | 'ai-operator';
   readingTime: number;
   prevPost?: { id: string; title: string } | null;
   nextPost?: { id: string; title: string } | null;
+  relatedPosts?: { id: string; title: string; pubDate: Date }[];
 }
 
 const {
@@ -21,9 +23,11 @@ const {
   updatedDate,
   heroImage,
   tags = [],
+  cta,
   readingTime,
   prevPost,
   nextPost,
+  relatedPosts = [],
 } = Astro.props;
 
 const formattedPubDate = pubDate.toLocaleDateString('en-US', {
@@ -41,7 +45,21 @@ const formattedUpdatedDate = updatedDate
   : null;
 ---
 
-<BaseLayout title={`${title} — David Henzel`} description={description}>
+<BaseLayout
+  title={`${title} — David Henzel`}
+  description={description}
+  image={heroImage}
+  article={{ pubDate, updatedDate, tags }}
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://davidhenzel.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Content", "item": "https://davidhenzel.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": title }
+    ]
+  })} />
   <article class="max-w-5xl mx-auto px-6 pt-16 pb-24">
     <!-- Post header -->
     <header class="max-w-2xl mb-12">
@@ -77,7 +95,7 @@ const formattedUpdatedDate = updatedDate
       <div class="max-w-2xl mb-10">
         <img
           src={heroImage}
-          alt=""
+          alt={"Article: " + title + " by David Henzel"}
           class="w-full rounded-xl border border-border"
           loading="eager"
         />
@@ -89,14 +107,33 @@ const formattedUpdatedDate = updatedDate
       <slot />
     </div>
 
-    <!-- Inline newsletter CTA -->
-    <div class="max-w-2xl mt-16">
-      <div class="rounded-xl bg-accent-light border border-border p-6 md:p-8">
-        <p class="text-lg font-semibold text-foreground mb-1">Enjoyed this?</p>
-        <p class="text-sm text-secondary mb-5">Get more essays on leadership, systems, and building with purpose — delivered to your inbox.</p>
-        <NewsletterForm id="inline-blog" compact />
-      </div>
+    <!-- Contextual CTA -->
+    <div class="max-w-2xl">
+      <ContextualCTA type={cta} tags={tags} />
     </div>
+
+    <!-- Related posts -->
+    {relatedPosts.length > 0 && (
+      <div class="max-w-2xl mt-12 pt-8 border-t border-border">
+        <p class="text-sm font-semibold uppercase tracking-wide text-secondary mb-4">Related</p>
+        <ul class="space-y-2">
+          {relatedPosts.map((rp) => (
+            <li class="text-sm text-secondary">
+              <time datetime={rp.pubDate.toISOString()}>
+                {rp.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+              </time>
+              {' '}
+              <a
+                href={`/blog/${rp.id}`}
+                class="text-foreground hover:text-accent hover:underline underline-offset-2 transition-colors"
+              >
+                {rp.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
 
     <!-- Prev / Next navigation -->
     {(prevPost || nextPost) && (

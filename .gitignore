@@ -28,3 +28,6 @@ pnpm-debug.log*
 
 # claude
 .claude/
+src-backup-modern/
+plan.md
+public/plan.md

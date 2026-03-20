@@ -10,9 +10,14 @@ interface Props {
   description: string;
   image?: string;
   canonicalURL?: string;
+  article?: {
+    pubDate: Date;
+    updatedDate?: Date;
+    tags?: string[];
+  };
 }
 
-const { title, description, image, canonicalURL } = Astro.props;
+const { title, description, image, canonicalURL, article } = Astro.props;
 ---
 
 <!doctype html>
@@ -23,11 +28,12 @@ const { title, description, image, canonicalURL } = Astro.props;
       description={description}
       image={image}
       canonicalURL={canonicalURL}
+      article={article}
     />
   </head>
   <body>
     <Header />
-    <main>
+    <main class="max-w-[640px] mx-auto px-6">
       <slot />
     </main>
     <Footer />

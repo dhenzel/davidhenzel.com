@@ -1,8 +1,9 @@
 ---
 title: "Good Leadership Traits You Should Teach Your Child"
-description: "Three practical ways to instill leadership traits in your children — from team-building through activities to storytelling that models grit and perseverance."
+description: "Three practical ways to instill conscious leadership traits in your children, from team-building through activities to storytelling that models grit and perseverance."
 heroImage: "/images/blog/leadership-child.svg"
 pubDate: 2017-08-29
+updatedDate: 2026-03-20
 tags: ["leadership", "parenting", "personal growth"]
 draft: false
 ---
@@ -58,3 +59,7 @@ Stories from your life where you exhibited grit and perseverance. Because kids d
 And while we are on the subject, you should also gift them novels, comics, and literature. Reading expands their idea of the world. It is essential for quicker learning, and it's a habit that all successful people fall back on.
 
 Leadership is a mindset. If your child has a sense of ownership, then they won't surrender in the face of adversities. Rather, they will believe in taking action and getting past the failures – because you taught them so.
+
+---
+
+**Want to know your own values before teaching them?** I built a free AI tool that helps you discover your personal core values. Hard to teach what you haven't defined for yourself. [Define your values →](https://community.lovenotfear.com/c/define-your-personal-core-values)

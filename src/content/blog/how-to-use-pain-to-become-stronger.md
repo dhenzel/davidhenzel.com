@@ -1,8 +1,9 @@
 ---
 title: "How to Use Pain to Become a Stronger Person"
-description: "Pain is inevitable, but how it shapes you is a choice. Three keys -- ownership, healing, and vulnerability -- determine whether hardship destroys you or refines you into someone stronger."
+description: "Pain is inevitable, but how it shapes you is a choice. Three self-leadership keys: ownership, healing, and vulnerability determine whether hardship destroys you or refines you."
 heroImage: "/images/blog/pain-stronger.svg"
 pubDate: 2015-11-30
+updatedDate: 2026-03-20
 tags: ["personal growth", "resilience", "mindset", "self-improvement", "leadership"]
 draft: false
 ---
@@ -48,3 +49,7 @@ In order to be refined by the pain in your life, you need to accept its presence
 McCall ends his talk by reminding us that while pain is inevitable, it is fully within your control whether or not it will be destructive or beneficial. The next time you come face to face with pain, will you make excuses, play the victim, and refuse the help of others? Or will you open up, heal what needs healing, and accept full responsibility for what happens?
 
 One path leads ruin, the other will help you rise from the ashes, stronger than before.
+
+---
+
+**Values are your anchor when pain hits.** I built a free AI tool that helps you discover your personal core values. When everything shakes, these hold. No signup, takes 15 minutes. [Define your values →](https://community.lovenotfear.com/c/define-your-personal-core-values)

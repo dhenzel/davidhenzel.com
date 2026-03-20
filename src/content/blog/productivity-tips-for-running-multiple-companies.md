@@ -3,6 +3,7 @@ title: "Productivity Tips: How to Run One or Multiple Companies Without Going Cr
 description: "Practical frameworks and personal hacks for limiting decision fatigue, from implementing EOS and hiring strong team leads to wearing only black and rating tasks by dollar value."
 heroImage: "/images/blog/productivity.svg"
 pubDate: 2020-11-30
+updatedDate: 2026-03-20
 tags: ["productivity", "entrepreneurship", "leadership", "decision-making"]
 draft: false
 ---
@@ -106,3 +107,7 @@ Then I add monetary value to the rest of the tasks: $10, $100, $1000, and $10,00
 I only keep the expensive ones ($1k and $10k tasks) and do my best to delegate, automate, or ignore the ones that I rated $10 and $100.
 
 There you have it, simple yet very efficient tips that you can use today to boost your personal productivity and I promise that will reflect on your business as well.
+
+---
+
+**All of this gets easier when you know your direction.** I built a free tool that helps you define your personal vision and mission. It takes the guesswork out of deciding what matters. [Build yours →](https://community.lovenotfear.com/c/define-your-personal-vision-and-mission)

@@ -3,6 +3,7 @@ title: "How to Read Hard Books"
 description: "Five practical strategies for getting through dense, challenging non-fiction books -- from reading along with the audiobook to ditching your highlighter and knowing when to quit."
 heroImage: "/images/blog/read-hard-books.svg"
 pubDate: 2015-12-02
+updatedDate: 2026-03-20
 tags: ["personal growth", "productivity", "book review", "self-improvement", "learning"]
 draft: false
 ---
@@ -46,3 +47,7 @@ Yes, you might spoil the *surprise*. But the added value you'll get from underst
 OK, so at the expense of ruining your self-imposed education, let me offer one final piece of advice: if you hate the book, stop reading it.
 
 I know. I just said that you need to push through if you want to get anything out of the material. But honestly, if you're torturing yourself to finish the second half of a particularly grueling book, just move on. It could be that the next big idea is lurking in a different, more accessible book. Go read that one.
+
+---
+
+**Curious about how you learn?** The Big 5 personality test reveals your openness, conscientiousness, and other traits that shape how you absorb information. Free, AI-powered, takes 10 minutes. [Take the test →](https://community.lovenotfear.com/c/the-big-5-personality-test)

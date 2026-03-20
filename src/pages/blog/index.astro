@@ -1,89 +1,41 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import SectionHeading from '../../components/SectionHeading.astro';
-import BlogPostCard from '../../components/BlogPostCard.astro';
-import BookBanner from '../../components/BookBanner.astro';
-import BookPopup from '../../components/BookPopup.astro';
-import TagFilter from '../../components/TagFilter.astro';
 import { getCollection } from 'astro:content';
 
-const activeTag = Astro.url.searchParams.get('tag') || undefined;
-
-const allPosts = await getCollection('blog', ({ data }) => !data.draft);
-const sortedPosts = allPosts.sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
-
-// Derive unique tags from all posts
-const tagCounts = new Map<string, number>();
-sortedPosts.forEach((post) => {
-  post.data.tags?.forEach((tag: string) => {
-    tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
-  });
-});
-const allTags = [...tagCounts.entries()]
-  .sort((a, b) => b[1] - a[1])
-  .map(([tag]) => tag)
-  .slice(0, 8);
-
-// Filter posts by active tag
-const posts = activeTag
-  ? sortedPosts.filter((post) =>
-      post.data.tags?.some((t: string) => t === activeTag)
-    )
-  : sortedPosts;
-
-const [featuredPost, ...remainingPosts] = posts;
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <BaseLayout
   title="Content — David Henzel"
-  description="Blog posts, videos, ideas, and things worth sharing."
+  description="Essays, ideas, and things worth sharing."
 >
-  <section class="max-w-5xl mx-auto px-6 pt-20 pb-24">
-    <SectionHeading
-      title="Content"
-      subtitle="Blog posts, videos, ideas, and things worth sharing."
-    />
-
-    <div class="mb-8">
-      <BookBanner />
-    </div>
-
-    <div class="mb-8">
-      <TagFilter tags={allTags} activeTag={activeTag} />
-    </div>
+  <section class="pt-16">
+    <h1 class="text-2xl font-semibold tracking-tight text-foreground mb-2">Content</h1>
+    <p class="text-base text-secondary leading-relaxed mb-10">
+      Essays, ideas, and things worth sharing.
+    </p>
 
     {posts.length === 0 ? (
-      <div class="border border-border rounded-xl px-8 py-12 text-center bg-muted">
-        <p class="text-sm text-secondary mb-2">No posts found for this tag.</p>
-        <a href="/blog" class="text-sm text-accent hover:underline">View all posts</a>
-      </div>
+      <p class="text-sm text-secondary">Nothing here yet. Check back soon.</p>
     ) : (
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {featuredPost && (
-          <BlogPostCard
-            title={featuredPost.data.title}
-            date={featuredPost.data.pubDate.toISOString()}
-            excerpt={featuredPost.data.description}
-            slug={featuredPost.id}
-            heroImage={featuredPost.data.heroImage}
-            tags={featuredPost.data.tags}
-            featured={true}
-          />
-        )}
-        {remainingPosts.map((post) => (
-          <BlogPostCard
-            title={post.data.title}
-            date={post.data.pubDate.toISOString()}
-            excerpt={post.data.description}
-            slug={post.id}
-            heroImage={post.data.heroImage}
-            tags={post.data.tags}
-          />
-        ))}
+      <div class="space-y-8">
+        {posts.map((post) => {
+          const date = new Date(post.data.pubDate);
+          const formatted = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+          return (
+            <article>
+              <p class="text-xs text-secondary/50 mb-1">{formatted}</p>
+              <a href={`/blog/${post.id}`} class="text-base font-semibold text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">
+                {post.data.title}
+              </a>
+              {post.data.description && (
+                <p class="text-sm text-secondary leading-relaxed mt-1">{post.data.description}</p>
+              )}
+            </article>
+          );
+        })}
       </div>
     )}
   </section>
-  <BookPopup />
 </BaseLayout>

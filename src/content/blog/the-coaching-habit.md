@@ -1,8 +1,9 @@
 ---
 title: "The Coaching Habit: Just Ask the Right Questions"
-description: "A summary of Michael Bungay Stanier's The Coaching Habit and its seven essential questions that will transform how you lead, coach, and communicate with your team."
+description: "A summary of Michael Bungay Stanier's The Coaching Habit and its seven essential questions for conscious leadership. Transform how you lead, coach, and communicate with your team."
 heroImage: "/images/blog/coaching-habit.svg"
 pubDate: 2016-05-23
+updatedDate: 2026-03-20
 tags: ["book review", "leadership", "coaching", "management"]
 draft: false
 ---
@@ -44,3 +45,7 @@ It helps finish the conversation with a sense of accomplishment and meaning on a
 Incorporated into your coaching habit, these questions have the potential to transform your weekly check-in one-to-ones, your team meetings, your sales meetings and (particularly important) those non-meeting moments when you just bump into someone between scheduled events.
 
 Stop defaulting to old habits, and discover the power of these transformative questions that will help you unlock your inner coaching genius.
+
+---
+
+**Good coaching starts with knowing what you stand for.** I built a free AI tool that helps you discover your personal core values. Takes 15 minutes, no signup required. [Define your values →](https://community.lovenotfear.com/c/define-your-personal-core-values)

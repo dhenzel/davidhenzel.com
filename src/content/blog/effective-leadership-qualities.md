@@ -1,8 +1,9 @@
 ---
 title: "For Ambitious Entrepreneurs: 5 Effective Leadership Qualities"
-description: "Five leadership qualities that separate inspiring leaders from those who lead through fear — from emotional intelligence to compelling vision and aggressive action-taking."
+description: "Five conscious leadership qualities that separate inspiring leaders from those who lead through fear. A love not fear approach to emotional intelligence, vision, and bold action."
 heroImage: "/images/blog/leadership-qualities.svg"
 pubDate: 2017-09-05
+updatedDate: 2026-03-20
 tags: ["leadership", "entrepreneurship", "personal growth", "management"]
 draft: false
 ---
@@ -82,3 +83,14 @@ Take it from Amazon. Their Vision is to be Earth's most customer-centric company
 In today's world, where every second person is an aspiring entrepreneur, you need to set yourself apart.
 
 How many of the above-mentioned effective leadership qualities do you possess?
+
+---
+
+**What do you actually stand for?** Great leadership starts with knowing your values. I built a free AI tool that walks you through defining them. No signup, takes 15 minutes. [Define your values →](https://community.lovenotfear.com/c/define-your-personal-core-values)
+
+---
+
+## Related reading
+
+- [The Coaching Habit: Just Ask the Right Questions](/blog/the-coaching-habit) -- Seven essential questions that will transform how you lead and communicate with your team.
+- [7 Mistakes Every First-Time Entrepreneur Will Make](/blog/mistakes-every-first-time-entrepreneur-will-make) -- Common traps that catch new business owners, and how to avoid them.

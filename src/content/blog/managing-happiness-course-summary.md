@@ -1,8 +1,9 @@
 ---
 title: "Managing Happiness: Course Summary"
-description: "A complete overview of the Managing Happiness course — a six-part system for applying business principles to your relationship to eliminate struggles and build a thriving marriage."
+description: "A complete overview of the Managing Happiness course. A six-part self-leadership system for applying business principles to your relationship to build a thriving, purpose-driven marriage."
 heroImage: "/images/blog/managing-happiness.svg"
 pubDate: 2017-07-17
+updatedDate: 2026-03-20
 tags: ["relationships", "marriage", "productivity", "personal growth", "managing happiness"]
 draft: false
 ---
@@ -128,3 +129,15 @@ Then start managing it.
 Even if you are not struggling in your relationship, start managing it to make sure that there is always scope for growth and improvement.
 
 If a plant is not growing anymore, it dies. If a business is not growing anymore, it dies. What happens if a person or a relationship stops growing and improving?
+
+---
+
+**Step one of Managing Happiness is knowing what you want.** I built a free tool that helps you define your personal vision and mission with AI. No signup required. [Start here →](https://community.lovenotfear.com/c/define-your-personal-vision-and-mission)
+
+---
+
+## Related reading
+
+- [Why Marriages Fail: 4 Tragic Reasons](/blog/why-marriages-fail) -- The common patterns that destroy entrepreneurial marriages, and how to prevent them.
+- [The Definitive Guide to Work-Life Balance](/blog/the-definitive-guide-to-work-life-balance) -- A comprehensive framework for work-life integration using business principles.
+- [3 Characteristics of Effective Communication with Your Spouse](/blog/characteristics-of-effective-communication) -- How empathy, honesty, and active listening strengthen your marriage.

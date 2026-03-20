@@ -3,6 +3,7 @@ title: "For Entrepreneurs with a Family: The Definitive Guide to Work-Life Balan
 description: "A comprehensive framework for work-life integration that applies business principles -- vision, boundaries, tools, and systems -- to running a happier family life alongside your company."
 heroImage: "/images/blog/work-life-balance.svg"
 pubDate: 2017-09-12
+updatedDate: 2026-03-20
 tags: ["work-life balance", "productivity", "relationships", "entrepreneurship", "personal growth"]
 draft: false
 ---
@@ -181,3 +182,15 @@ Again, it's just like a business. You wouldn't stop improving your products once
 - Measure progress (if you don't measure it, you can't change it)
 
 I've been working on work-life integration consistently for over two decades and I *still* work on my system every day.
+
+---
+
+**How balanced is your life right now?** Try the free Wheel of Life assessment. It takes 5 minutes and the results might surprise you. [Take the assessment →](https://community.lovenotfear.com/c/the-wheel-of-life)
+
+---
+
+## Related reading
+
+- [The Definitive Guide to Planning Your Life](/blog/the-definitive-guide-to-planning-your-life) -- A step-by-step framework for discovering your purpose and building a life plan.
+- [Managing Happiness: Course Summary](/blog/managing-happiness-course-summary) -- The full system for applying business principles to your marriage.
+- [Why Marriages Fail: 4 Tragic Reasons](/blog/why-marriages-fail) -- The common traps that catch entrepreneurial marriages, and how to avoid them.

@@ -3,6 +3,7 @@ title: "How to Launch New Product Features Without Pissing Off Your Team and Cus
 description: "A step-by-step playbook for communicating product updates across your organization -- from support and sales enablement to customer-facing announcements -- learned the hard way at MaxCDN."
 heroImage: "/images/blog/launch-features.svg"
 pubDate: 2017-10-10
+updatedDate: 2026-03-20
 tags: ["product management", "entrepreneurship", "leadership", "communication"]
 draft: false
 ---
@@ -81,3 +82,7 @@ When it comes to a release of something major or a big change in your company, t
 Launching product updates is a complex process which involves everyone in the company. Many things happen at once and it is easy to get distracted.
 
 I am a firm believer in checklists so I highly recommend that you do one for every aspect of your release -- support, marketing, sales, etc. This way you will make sure you don't miss anything important and it will help you distribute the work more efficiently.
+
+---
+
+**Launches go smoother when the whole team knows where you're headed.** I built a free tool that helps you define your personal vision and mission. When your "why" is clear, every launch decision gets easier. [Build yours →](https://community.lovenotfear.com/c/define-your-personal-vision-and-mission)
