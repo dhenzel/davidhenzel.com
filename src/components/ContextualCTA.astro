@@ -93,14 +93,14 @@ const cta = ctas[ctaType];
 ---
 
 <aside class="my-12">
-  <hr class="border-t border-border mb-8" />
+  <hr class="border-t border-accent/25 mb-8" />
   <p class="text-base font-semibold text-foreground mb-1">{cta.heading}</p>
   <p class="text-sm text-secondary leading-relaxed mb-3">{cta.body}</p>
   <a
     href={cta.url}
     target={cta.external ? '_blank' : undefined}
     rel={cta.external ? 'noopener' : undefined}
-    class="text-sm text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors"
+    class="text-sm text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors"
   >
     {cta.linkText}
   </a>

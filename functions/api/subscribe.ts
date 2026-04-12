@@ -11,8 +11,15 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   };
 
   try {
-    const body = await context.request.json() as { email?: string; firstName?: string };
-    const { email, firstName } = body;
+    const body = await context.request.json() as {
+      email?: string;
+      firstName?: string;
+      formSource?: string;
+      utmSource?: string;
+      utmMedium?: string;
+      utmCampaign?: string;
+    };
+    const { email, firstName, formSource, utmSource, utmMedium, utmCampaign } = body;
 
     if (!email || !email.includes('@')) {
       return new Response(JSON.stringify({ error: 'Valid email is required' }), {
@@ -42,7 +49,14 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
         email,
         firstName: firstName || undefined,
         locationId,
-        tags: ['newsletter', 'davidhenzel.com'],
+        tags: [
+          'newsletter',
+          'davidhenzel.com',
+          ...(formSource ? [`form-${formSource}`] : []),
+          ...(utmSource ? [`utm-source-${utmSource}`] : []),
+          ...(utmMedium ? [`utm-medium-${utmMedium}`] : []),
+          ...(utmCampaign ? [`utm-campaign-${utmCampaign}`] : []),
+        ],
         source: 'davidhenzel.com newsletter',
       }),
     });

@@ -1,27 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import NewsletterForm from '../components/NewsletterForm.astro';
 import { companies } from '../data/companies';
 
 const featuredCompanies = companies.filter((c) => c.featured);
-const otherCompanies = companies.filter((c) => !c.featured);
 ---
 
 <BaseLayout
-  title="Companies - David Henzel"
-  description="David Henzel's portfolio of companies across SaaS, B2B services, AI consulting, and conscious leadership."
+  title="Book a Call - David Henzel"
+  description="Book a 20-minute call with David Henzel. Let's talk about building companies, conscious leadership, or how we might work together."
 >
 
   <!-- Intro -->
   <section class="pt-16">
     <h1 class="text-2xl font-semibold tracking-tight text-foreground mb-4">
-      Companies
+      Book a call with me
     </h1>
-    <p class="text-base text-secondary leading-relaxed mb-4">
-      These are my active companies, across SaaS, B2B services, AI, and conscious leadership. I'd love to find ways to work together.
-    </p>
     <p class="text-base text-secondary leading-relaxed">
-      Interested in any of these? <a href="/contact" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">Reach out</a> and I'm happy to introduce you to the founder or key person on the team.
+      I'd love to connect. Whether it's about building companies, conscious leadership, or finding ways to work together — grab a time that works for you.
     </p>
   </section>
 
@@ -32,7 +27,7 @@ const otherCompanies = companies.filter((c) => !c.featured);
     <div class="overflow-hidden" style="aspect-ratio: 16/9;">
       <iframe
         src="https://www.youtube.com/embed/WUHhTPiVTtc"
-        title="David Henzel - Companies & Portfolio"
+        title="David Henzel - About Me"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
@@ -42,24 +37,31 @@ const otherCompanies = companies.filter((c) => !c.featured);
     </div>
   </section>
 
-  <!-- All companies -->
+  <!-- Calendly -->
   <section>
-    {companies.map((company) => (
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-accent mb-6">Pick a time</h2>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/dhenzel/20min?hide_gdpr_banner=1" style="min-width:320px;height:1000px;overflow:hidden;"></div>
+  </section>
+
+  <hr class="border-t border-accent/25 my-12" />
+
+  <!-- Companies -->
+  <section>
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-accent mb-6">Companies</h2>
+
+    {featuredCompanies.map((company) => (
       <p class="mb-3.5 leading-relaxed">
         <a href={company.url} target="_blank" rel="noopener" class="font-semibold text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">{company.name}</a>
         <span class="text-secondary/40 mx-1">&middot;</span>
         <span class="text-sm text-secondary" set:html={company.description.replace(/<a[^>]*>/g, '').replace(/<\/a>/g, '')} />
       </p>
     ))}
-  </section>
 
-  <hr class="border-t border-accent/25 my-12" />
-
-  <!-- Newsletter -->
-  <section>
-    <p class="text-sm font-semibold text-foreground mb-1">Follow what we're building</p>
-    <p class="text-xs text-secondary mb-4">Updates on new companies, lessons learned, and the Love Not Fear operating system.</p>
-    <NewsletterForm id="companies" compact />
+    <p class="mt-6">
+      <a href="/companies" class="text-sm text-accent transition-colors underline underline-offset-3 decoration-accent/30 hover:decoration-accent">See all companies</a>
+    </p>
   </section>
 
 </BaseLayout>
+
+<script is:inline src="https://assets.calendly.com/assets/external/widget.js" async></script>

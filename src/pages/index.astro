@@ -13,7 +13,7 @@ const featuredCompanies = companies.filter((c) => c.featured);
 
   <!-- Opening essay -->
   <section class="pt-16 pb-0">
-    <p class="text-lg leading-relaxed text-foreground mb-5">
+    <p class="text-lg leading-relaxed text-foreground mb-5 border-l-2 border-accent pl-4">
       Every decision in life, you make out of love or out of fear.
     </p>
 
@@ -34,14 +34,14 @@ const featuredCompanies = companies.filter((c) => c.featured);
     </p>
 
     <p class="text-base text-secondary leading-relaxed mb-5">
-      Now I run a <a href="/companies" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">portfolio of companies</a> with over 500 employees. But the thing I care most about is <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">Love Not Fear</a>, an operating system for living and leading with purpose. Four pillars: find your purpose, define your values, craft your vision, build your habits. We use it with <a href="https://lovenotfear.com/students" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">students</a> trying to figure out what to do with their lives, <a href="https://lovenotfear.com/entrepreneurs" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">entrepreneurs</a> who've lost the plot, and <a href="https://lnfpeople.com" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">companies</a> that want to hire and lead differently.
+      Now I run a <a href="/companies" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">portfolio of companies</a> with over 500 employees. But the thing I care most about is <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">Love Not Fear</a>, an operating system for living and leading with purpose. Four pillars: find your purpose, define your values, craft your vision, build your habits. We use it with <a href="https://lovenotfear.com/students" target="_blank" rel="noopener" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">students</a> trying to figure out what to do with their lives, <a href="https://lovenotfear.com/entrepreneurs" target="_blank" rel="noopener" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">entrepreneurs</a> who've lost the plot, and <a href="https://lnfpeople.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">companies</a> that want to hire and lead differently.
     </p>
 
     <p class="text-base text-secondary leading-relaxed mb-2">
       I'm also writing a book about all of this. It's not a self-help book. It's a self-leadership book. There's a difference.
     </p>
     <p class="text-sm text-secondary mb-5">
-      Want to know when it comes out? <button onclick="document.getElementById('book-signup').classList.toggle('hidden')" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors cursor-pointer bg-transparent border-none p-0 text-sm font-normal">Sign up here</button> and I'll let you know.
+      Want to know when it comes out? <button onclick="document.getElementById('book-signup').classList.toggle('hidden')" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors cursor-pointer bg-transparent border-none p-0 text-sm font-normal">Sign up here</button> and I'll let you know.
     </p>
     <div id="book-signup" class="hidden mb-5">
       <NewsletterForm id="book-inline" compact />
@@ -53,11 +53,11 @@ const featuredCompanies = companies.filter((c) => c.featured);
     </p>
   </section>
 
-  <hr class="border-t border-border my-12" />
+  <hr class="border-t border-accent/25 my-12" />
 
   <!-- What I believe -->
   <section>
-    <h2 class="text-sm font-semibold uppercase tracking-widest text-secondary/60 mb-6">What I believe</h2>
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-accent mb-6">What I believe</h2>
 
     <p class="text-base text-secondary leading-relaxed mb-5">
       Most personal development is backwards. People set goals, build habits, and grind, then wonder why they feel empty when they hit the number. That's because they skipped the foundation. You can't build a system for your life if you don't know what your life is for.
@@ -80,11 +80,11 @@ const featuredCompanies = companies.filter((c) => c.featured);
     </p>
   </section>
 
-  <hr class="border-t border-border my-12" />
+  <hr class="border-t border-accent/25 my-12" />
 
   <!-- Values -->
   <section>
-    <h2 class="text-sm font-semibold uppercase tracking-widest text-secondary/60 mb-6">Values</h2>
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-accent mb-6">Values</h2>
 
     <p class="text-base text-secondary leading-relaxed mb-5">
       <span class="font-semibold text-accent">1. First Things First.</span> Always prioritize health and your loved ones. If it's not a "FUCK YES," it's a "NO."
@@ -107,26 +107,26 @@ const featuredCompanies = companies.filter((c) => c.featured);
     </p>
 
     <p class="text-sm text-secondary leading-relaxed">
-      Want to define your own? I built a free AI tool that walks you through it. <a href="https://community.lovenotfear.com/c/define-your-personal-core-values" target="_blank" rel="noopener" class="text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">Discover your core values here</a>.
+      Want to define your own? I built a free AI tool that walks you through it. <a href="https://community.lovenotfear.com/c/define-your-personal-core-values" target="_blank" rel="noopener" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">Discover your core values here</a>.
     </p>
   </section>
 
-  <hr class="border-t border-border my-12" />
+  <hr class="border-t border-accent/25 my-12" />
 
   <!-- Companies -->
   <section>
-    <h2 class="text-sm font-semibold uppercase tracking-widest text-secondary/60 mb-6">Companies</h2>
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-accent mb-6">Companies</h2>
 
     {featuredCompanies.map((company) => (
       <p class="mb-3.5 leading-relaxed">
-        <a href={company.url} target="_blank" rel="noopener" class="font-semibold text-foreground underline underline-offset-3 decoration-border hover:text-accent hover:decoration-accent transition-colors">{company.name}</a>
+        <a href={company.url} target="_blank" rel="noopener" class="font-semibold text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">{company.name}</a>
         <span class="text-secondary/40 mx-1">&middot;</span>
         <span class="text-sm text-secondary" set:html={company.description.replace(/<a[^>]*>/g, '').replace(/<\/a>/g, '')} />
       </p>
     ))}
 
     <p class="mt-6">
-      <a href="/companies" class="text-sm text-secondary hover:text-accent transition-colors underline underline-offset-3 decoration-border hover:decoration-accent">See all companies</a>
+      <a href="/companies" class="text-sm text-accent transition-colors underline underline-offset-3 decoration-accent/30 hover:decoration-accent">See all companies</a>
     </p>
   </section>
 

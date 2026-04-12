@@ -68,7 +68,7 @@ const formattedUpdatedDate = updatedDate
           {tags.map((tag) => (
             <a
               href={`/blog?tag=${encodeURIComponent(tag)}`}
-              class="text-xs uppercase tracking-wide text-secondary bg-muted px-2.5 py-1 rounded-full hover:bg-border transition-colors"
+              class="text-xs uppercase tracking-wide text-accent bg-accent/10 px-2.5 py-1 rounded-full hover:bg-accent/20 transition-colors"
             >
               {tag}
             </a>
@@ -138,7 +138,7 @@ const formattedUpdatedDate = updatedDate
     <!-- Prev / Next navigation -->
     {(prevPost || nextPost) && (
       <nav
-        class="max-w-2xl mt-12 pt-8 border-t border-border flex flex-col sm:flex-row justify-between gap-6"
+        class="max-w-2xl mt-12 pt-8 border-t border-accent/25 flex flex-col sm:flex-row justify-between gap-6"
         aria-label="Post navigation"
       >
         {prevPost ? (
@@ -180,7 +180,7 @@ const formattedUpdatedDate = updatedDate
   .prose-content :global(h6) {
     font-weight: 600;
     letter-spacing: -0.02em;
-    color: #1A1A1A;
+    color: #0A0A0A;
     margin-top: 2em;
     margin-bottom: 0.5em;
     line-height: 1.3;
@@ -194,12 +194,13 @@ const formattedUpdatedDate = updatedDate
   .prose-content :global(p) {
     font-size: 1.0625rem;
     line-height: 1.75;
-    color: #404040;
+    color: #374151;
     margin-bottom: 1.5em;
   }
 
   .prose-content :global(a) {
-    color: #B91C1C;
+    color: #10B981;
+    text-decoration-color: rgba(16, 185, 129, 0.3);
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 1px;
@@ -211,7 +212,7 @@ const formattedUpdatedDate = updatedDate
 
   .prose-content :global(strong) {
     font-weight: 600;
-    color: #1A1A1A;
+    color: #0A0A0A;
   }
 
   .prose-content :global(em) {
@@ -222,7 +223,7 @@ const formattedUpdatedDate = updatedDate
   .prose-content :global(ol) {
     margin-bottom: 1.5em;
     padding-left: 1.5em;
-    color: #404040;
+    color: #374151;
     line-height: 1.75;
   }
 
@@ -239,10 +240,10 @@ const formattedUpdatedDate = updatedDate
   }
 
   .prose-content :global(blockquote) {
-    border-left: 3px solid #B91C1C;
+    border-left: 3px solid #10B981;
     padding-left: 1.25em;
     margin: 2em 0;
-    color: #6B6355;
+    color: #6B7280;
     font-style: italic;
   }
 
@@ -253,15 +254,15 @@ const formattedUpdatedDate = updatedDate
   .prose-content :global(code) {
     font-family: ui-monospace, 'Fira Code', monospace;
     font-size: 0.875em;
-    background-color: #F2F0EB;
+    background-color: #F3F4F6;
     padding: 0.15em 0.4em;
     border-radius: 4px;
-    color: #1A1A1A;
+    color: #0A0A0A;
   }
 
   .prose-content :global(pre) {
-    background-color: #F2F0EB;
-    border: 1px solid #E8E5DF;
+    background-color: #F3F4F6;
+    border: 1px solid #E5E7EB;
     border-radius: 8px;
     padding: 1.25em 1.5em;
     overflow-x: auto;
@@ -277,7 +278,7 @@ const formattedUpdatedDate = updatedDate
 
   .prose-content :global(hr) {
     border: none;
-    border-top: 1px solid #E8E5DF;
+    border-top: 1px solid #E5E7EB;
     margin: 2.5em 0;
   }
 
@@ -299,11 +300,11 @@ const formattedUpdatedDate = updatedDate
   .prose-content :global(td) {
     text-align: left;
     padding: 0.6em 0.9em;
-    border-bottom: 1px solid #E8E5DF;
+    border-bottom: 1px solid #E5E7EB;
   }
 
   .prose-content :global(th) {
     font-weight: 600;
-    color: #1A1A1A;
+    color: #0A0A0A;
   }
 </style>
