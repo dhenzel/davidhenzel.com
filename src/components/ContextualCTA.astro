@@ -1,6 +1,6 @@
 ---
 interface Props {
-  type?: 'newsletter' | 'lnf-course' | 'free-course' | 'community' | 'cohort' | 'retreat' | 'upcoach' | 'ai-operator';
+  type?: 'newsletter' | 'lnf-course' | 'free-course' | 'community' | 'cohort' | 'retreat' | 'upcoach';
   tags?: string[];
 }
 
@@ -21,9 +21,6 @@ function selectCTA(tags: string[]): string {
   }
   if (t.some(tag => ['management', 'coaching'].includes(tag))) {
     return 'upcoach';
-  }
-  if (t.some(tag => ['ai', 'automation', 'technology'].includes(tag))) {
-    return 'ai-operator';
   }
   return 'newsletter';
 }
@@ -64,13 +61,6 @@ const ctas: Record<string, { heading: string; body: string; linkText: string; ur
     body: 'If you run coaching programs or team development, UpCoach handles the structure so you can focus on the people.',
     linkText: 'Check out UpCoach',
     url: 'https://upcoach.com',
-    external: true,
-  },
-  'ai-operator': {
-    heading: 'AI, but practical.',
-    body: 'My team helps organizations implement AI without the hype. Just measurable outcomes.',
-    linkText: 'See AI Operator',
-    url: 'https://aioperator.com',
     external: true,
   },
   'free-course': {

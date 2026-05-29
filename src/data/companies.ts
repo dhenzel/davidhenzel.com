@@ -15,13 +15,6 @@ export const companies: Company[] = [
     featured: true,
   },
   {
-    name: 'AI Operator',
-    url: 'https://aioperator.com',
-    description: 'Helps organizations turn AI experimentation into measurable business outcomes through the ADOPT Method, a proven framework for <a href="https://aioperator.com" target="_blank" rel="noopener">enterprise AI implementation</a> and team transformation.',
-    logo: '/logos/companies/aioperator.jpeg',
-    featured: true,
-  },
-  {
     name: 'upcoach',
     url: 'https://upcoach.com',
     description: 'An all-in-one <a href="https://upcoach.com" target="_blank" rel="noopener">coaching platform</a> that lets program creators build, sell, and run structured group coaching programs, with built-in payments, progress tracking, and client management.',
