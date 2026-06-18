@@ -22,6 +22,13 @@ export const companies: Company[] = [
     featured: true,
   },
   {
+    name: 'Context Engine',
+    url: 'https://contextengine.com',
+    description: 'A single-tenant, self-hostable <a href="https://contextengine.com" target="_blank" rel="noopener">context layer for AI</a> that captures, consolidates, and serves your company\'s knowledge to any MCP-capable tool or agent, so your AI already knows your world without endless re-briefing. Own your context; we help you run it.',
+    logo: '/logos/companies/contextengine.png',
+    featured: true,
+  },
+  {
     name: 'Sendloop',
     url: 'https://sendloop.com',
     description: 'An <a href="https://sendloop.com" target="_blank" rel="noopener">email marketing platform</a> built for high-volume senders, offering drag-and-drop campaign creation, advanced segmentation, and transactional email delivery for businesses and agencies.',
