@@ -18,7 +18,7 @@ const { id, compact = false } = Astro.props;
     />
     <button
       type="submit"
-      class="text-sm text-accent hover:text-accent/80 transition-colors underline underline-offset-3 decoration-accent/30 hover:decoration-accent shrink-0"
+      class="font-mono text-[0.72rem] uppercase tracking-[0.15em] text-foreground hover:text-hover transition-colors shrink-0"
     >
       Subscribe
     </button>
@@ -62,16 +62,16 @@ const { id, compact = false } = Astro.props;
 
         if (res.ok) {
           status.textContent = 'You\'re in! Check your inbox.';
-          status.className = 'newsletter-status mt-2 text-xs text-green-600';
+          status.className = 'newsletter-status mt-2 text-xs text-foreground';
           f.reset();
         } else {
           const data = await res.json();
           status.textContent = data.error || 'Something went wrong. Try again.';
-          status.className = 'newsletter-status mt-2 text-xs text-red-500';
+          status.className = 'newsletter-status mt-2 text-xs text-hover';
         }
       } catch {
         status.textContent = 'Network error. Please try again.';
-        status.className = 'newsletter-status mt-2 text-xs text-red-500';
+        status.className = 'newsletter-status mt-2 text-xs text-hover';
       }
 
       btn.disabled = false;

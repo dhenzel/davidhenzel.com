@@ -1,18 +1,35 @@
+/* Fonts — self-hosted via Fontsource (no third-party requests) */
+@import "@fontsource-variable/fraunces";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jetbrains-mono";
+
 @import "tailwindcss";
 
 @theme {
-  --color-background: #FAFAF8;
-  --color-foreground: #1A1A1A;
-  --color-secondary: #6B6355;
-  --color-border: #E8E5DF;
-  --color-muted: #F2F0EB;
-  --color-accent: #B91C1C;
-  --color-accent-light: #FEF2F2;
+  /* ── Palette: near-monochrome / ink-on-paper ───────────────────────────
+     Personality is carried by type + whitespace, not color.
+     Color appears essentially only on hover (--color-hover). */
+  --color-background: #FBFBFA;   /* warm paper */
+  --color-foreground: #1C1C1A;   /* near-black ink */
+  --color-secondary: #6E6C66;    /* muted text */
+  --color-border: #E4E2DD;       /* hairline rules */
+  --color-muted: #F4F3F1;        /* raised / surface blocks */
+  --color-accent: #1C1C1A;       /* the accent IS the ink */
+  --color-accent-light: #F4F3F1; /* subtle tint (kept for legacy usage) */
+  --color-hover: #A8321E;        /* warm terracotta — hover / underline states only */
 
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* ── Type ──────────────────────────────────────────────────────────── */
+  --font-sans: "Inter Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Fraunces Variable", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, monospace;
 
   --font-size-base: 1rem;
   --line-height-base: 1.7;
+
+  /* ── Measure / width tiers ─────────────────────────────────────────── */
+  --container-prose: 42.5rem;    /* 680px — long-form / blog body */
+  --container-content: 67.5rem;  /* 1080px — home sections, grids */
+  --container-wide: 80rem;       /* 1280px — hero / full-bleed bands */
 }
 
 html {
@@ -21,6 +38,8 @@ html {
   background-color: var(--color-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -31,4 +50,31 @@ body {
 
 main {
   flex: 1;
+}
+
+::selection {
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+}
+
+/* Display type: tighten the editorial serif */
+.font-serif {
+  font-optical-sizing: auto;
+  letter-spacing: -0.015em;
+}
+
+/* Reusable ink link: ink text, hairline underline, warm on hover */
+@layer components {
+  .ink-link {
+    color: var(--color-foreground);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--color-border);
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  }
+  .ink-link:hover {
+    color: var(--color-hover);
+    text-decoration-color: var(--color-hover);
+  }
 }

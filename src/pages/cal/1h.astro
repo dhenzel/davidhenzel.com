@@ -1,72 +1,31 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { companies } from '../../data/companies';
-
-const featuredCompanies = companies.filter((c) => c.featured);
 ---
 
 <BaseLayout
-  title="Book a 1-Hour Call - David Henzel"
-  description="Book a 1-hour call with David Henzel. Let's talk about building companies, conscious leadership, or how we might work together."
+  title="Book a 1-Hour Call — David Henzel"
+  description="Book a 1-hour call with David Henzel. Let's talk about building companies, AI transformation, conscious leadership, or how we might work together."
 >
-
-  <!-- Intro -->
-  <section class="pt-16">
-    <h1 class="text-2xl font-semibold tracking-tight text-foreground mb-4">
-      Book a 1-hour call with me
+  <section class="max-w-prose mx-auto px-6 pt-20 md:pt-28">
+    <p class="font-mono text-[0.72rem] uppercase tracking-[0.2em] text-secondary mb-8">Book a call · 1 hour</p>
+    <h1 class="font-serif text-4xl md:text-5xl font-medium tracking-tight text-foreground leading-[1.1]">
+      Let's talk — the long version.
     </h1>
-    <p class="text-base text-secondary leading-relaxed">
-      I'd love to connect. Whether it's about building companies, conscious leadership, or finding ways to work together — grab a time that works for you.
+    <p class="mt-6 text-lg text-secondary leading-relaxed">
+      Whether it's about building companies, AI transformation, conscious leadership, or finding ways
+      to work together — grab a time that works for you.
     </p>
-  </section>
 
-  <hr class="border-t border-accent/25 my-12" />
-
-  <!-- Video -->
-  <section class="mb-12">
-    <div class="overflow-hidden" style="aspect-ratio: 16/9;">
+    <div class="mt-12">
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary mb-6">Pick a time</p>
       <iframe
-        src="https://www.youtube.com/embed/WUHhTPiVTtc"
-        title="David Henzel - About Me"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        style="width: 100%; height: 100%;"
-        loading="lazy"
+        src="https://api.leadconnectorhq.com/widget/booking/wvZ1o2Ocl0diHYgJameX"
+        style="width: 100%; min-width: 320px; height: 1000px; border: none; overflow: hidden;"
+        scrolling="no"
+        id="Hi3CT6gGT3JZGLlIgoQP_1780826336275"
       ></iframe>
     </div>
+
+  <script is:inline src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
   </section>
-
-  <!-- Booking -->
-  <section>
-    <h2 class="text-sm font-semibold uppercase tracking-widest text-accent mb-6">Pick a time</h2>
-    <iframe
-      src="https://api.leadconnectorhq.com/widget/booking/wvZ1o2Ocl0diHYgJameX"
-      style="width: 100%; min-width: 320px; height: 1000px; border: none; overflow: hidden;"
-      scrolling="no"
-      id="Hi3CT6gGT3JZGLlIgoQP_1780826336275"
-    ></iframe>
-  </section>
-
-  <hr class="border-t border-accent/25 my-12" />
-
-  <!-- Companies -->
-  <section>
-    <h2 class="text-sm font-semibold uppercase tracking-widest text-accent mb-6">Companies</h2>
-
-    {featuredCompanies.map((company) => (
-      <p class="mb-3.5 leading-relaxed">
-        <a href={company.url} target="_blank" rel="noopener" class="font-semibold text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">{company.name}</a>
-        <span class="text-secondary/40 mx-1">&middot;</span>
-        <span class="text-sm text-secondary" set:html={company.description.replace(/<a[^>]*>/g, '').replace(/<\/a>/g, '')} />
-      </p>
-    ))}
-
-    <p class="mt-6">
-      <a href="/companies" class="text-sm text-accent transition-colors underline underline-offset-3 decoration-accent/30 hover:decoration-accent">See all companies</a>
-    </p>
-  </section>
-
 </BaseLayout>
-
-<script is:inline src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>

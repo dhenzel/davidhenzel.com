@@ -1,0 +1,10 @@
+---
+import { pillars } from '../data/pillars';
+import PillarCard from './PillarCard.astro';
+---
+
+<div class="border-b border-border">
+  {pillars.map((pillar, i) => (
+    <PillarCard pillar={pillar} index={i} />
+  ))}
+</div>

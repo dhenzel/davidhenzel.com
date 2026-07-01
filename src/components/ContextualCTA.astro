@@ -1,50 +1,50 @@
 ---
+import { pillarForTags } from '../data/pillars';
+
 interface Props {
-  type?: 'newsletter' | 'lnf-course' | 'free-course' | 'community' | 'cohort' | 'retreat' | 'upcoach';
+  type?: 'newsletter' | 'lnf-course' | 'free-course' | 'community' | 'cohort' | 'retreat' | 'upcoach' | 'context-engine';
   tags?: string[];
 }
 
 const { type, tags = [] } = Astro.props;
 
-// Auto-select CTA based on tags if no explicit type given
-function selectCTA(tags: string[]): string {
-  const t = tags.map(tag => tag.toLowerCase());
+// Map the post's pillar → the venture it funnels toward.
+const pillarToCTA: Record<string, string> = {
+  'ai-native-company': 'context-engine',
+  'culture-without-fear': 'upcoach',
+  'operators-notebook': 'newsletter',
+  'founders-operating-system': 'lnf-course',
+  'love-vs-fear': 'community',
+};
 
-  if (t.some(tag => ['love not fear', 'self-leadership', 'purpose', 'values', 'mindset', 'habits'].includes(tag))) {
-    return 'lnf-course';
-  }
-  if (t.some(tag => ['coaching', 'transformation'].includes(tag))) {
-    return 'cohort';
-  }
-  if (t.some(tag => ['relationships', 'marriage', 'work-life balance'].includes(tag))) {
-    return 'retreat';
-  }
-  if (t.some(tag => ['management', 'coaching'].includes(tag))) {
-    return 'upcoach';
-  }
-  return 'newsletter';
-}
-
-const ctaType = type || selectCTA(tags);
+const pillar = pillarForTags(tags);
+const ctaType = type || (pillar ? pillarToCTA[pillar.slug] : undefined) || 'newsletter';
 
 const ctas: Record<string, { heading: string; body: string; linkText: string; url: string; external: boolean }> = {
   'newsletter': {
     heading: 'Want more like this?',
-    body: 'I write occasionally about building companies and living with purpose. No spam, no fluff.',
+    body: 'I write occasionally from inside the arena — what I\'m building, what broke, and the plays that worked. No spam, no fluff.',
     linkText: 'Subscribe to the newsletter',
     url: '/contact',
     external: false,
   },
+  'context-engine': {
+    heading: 'This is what I build all day.',
+    body: 'Context Engine is the context layer I actually run — it captures your company\'s knowledge and serves it to any AI tool, so your agents already know your world. Real transformation, not setup porn.',
+    linkText: 'See Context Engine',
+    url: 'https://contextengine.com',
+    external: true,
+  },
   'lnf-course': {
     heading: 'I put everything I know into a free course.',
-    body: 'Purpose, values, vision, habits. The same stuff that changed how I run my life and my companies. No cost, no catch.',
+    body: 'Purpose, values, vision, habits. The same operating system that changed how I run my life and my companies. No cost, no catch.',
     linkText: 'Start the free self-leadership course',
     url: 'https://community.lovenotfear.com/c/free-lnf-self-leadership-course',
     external: true,
   },
   'cohort': {
     heading: 'Want to go deeper?',
-    body: 'If this resonates, I run small group cohorts where we work through this stuff together. Real people, real conversations, real change.',
+    body: 'If this resonates, I run small group cohorts where we work through this together. Real people, real conversations, real change.',
     linkText: 'Get in touch to join a cohort',
     url: 'mailto:dh@davidhenzel.com?subject=Cohort%20Inquiry',
     external: false,
@@ -52,20 +52,20 @@ const ctas: Record<string, { heading: string; body: string; linkText: string; ur
   'retreat': {
     heading: 'Come to Bodrum.',
     body: 'I host leadership retreats at my place in Bodrum, Turkey. Small groups, real conversations, nature. The kind of reset that sticks.',
-    linkText: 'Learn more about Dunyam Village',
+    linkText: 'Learn more about Dünyam Village',
     url: 'https://dunyamvillage.com',
     external: true,
   },
   'upcoach': {
     heading: 'We built a platform for this.',
-    body: 'If you run coaching programs or team development, UpCoach handles the structure so you can focus on the people.',
-    linkText: 'Check out UpCoach',
+    body: 'If you run coaching programs or team development, upcoach handles the structure so you can focus on the people.',
+    linkText: 'Check out upcoach',
     url: 'https://upcoach.com',
     external: true,
   },
   'free-course': {
     heading: 'The full course is free.',
-    body: 'I put together a complete self-leadership course. Purpose, values, vision, habits. Everything I wish someone had handed me 20 years ago. Free, self-paced, no strings.',
+    body: 'A complete self-leadership course — purpose, values, vision, habits. Everything I wish someone had handed me 20 years ago. Free, self-paced, no strings.',
     linkText: 'Start the free self-leadership course',
     url: 'https://community.lovenotfear.com/c/free-lnf-self-leadership-course',
     external: true,
@@ -79,19 +79,18 @@ const ctas: Record<string, { heading: string; body: string; linkText: string; ur
   },
 };
 
-const cta = ctas[ctaType];
+const cta = ctas[ctaType] ?? ctas['newsletter'];
 ---
 
-<aside class="my-12">
-  <hr class="border-t border-accent/25 mb-8" />
-  <p class="text-base font-semibold text-foreground mb-1">{cta.heading}</p>
-  <p class="text-sm text-secondary leading-relaxed mb-3">{cta.body}</p>
+<aside class="my-14 border-t border-border pt-8">
+  <p class="font-serif text-xl text-foreground mb-2">{cta.heading}</p>
+  <p class="text-sm text-secondary leading-relaxed mb-4 max-w-xl">{cta.body}</p>
   <a
     href={cta.url}
     target={cta.external ? '_blank' : undefined}
     rel={cta.external ? 'noopener' : undefined}
-    class="text-sm text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors"
+    class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]"
   >
-    {cta.linkText}
+    {cta.linkText} →
   </a>
 </aside>

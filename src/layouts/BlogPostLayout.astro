@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import ContextualCTA from '../components/ContextualCTA.astro';
+import { pillarForTags } from '../data/pillars';
 
 interface Props {
   title: string;
@@ -30,6 +31,8 @@ const {
   relatedPosts = [],
 } = Astro.props;
 
+const pillar = pillarForTags(tags);
+
 const formattedPubDate = pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'long',
@@ -56,35 +59,32 @@ const formattedUpdatedDate = updatedDate
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://davidhenzel.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Content", "item": "https://davidhenzel.com/blog" },
+      { "@type": "ListItem", "position": 2, "name": "Writing", "item": "https://davidhenzel.com/blog" },
       { "@type": "ListItem", "position": 3, "name": title }
     ]
   })} />
-  <article class="max-w-5xl mx-auto px-6 pt-16 pb-24">
+  <article class="max-w-prose mx-auto px-6 pt-16 md:pt-24 pb-24">
     <!-- Post header -->
-    <header class="max-w-2xl mb-12">
-      {tags.length > 0 && (
-        <div class="flex flex-wrap gap-2 mb-5">
-          {tags.map((tag) => (
-            <a
-              href={`/blog?tag=${encodeURIComponent(tag)}`}
-              class="text-xs uppercase tracking-wide text-accent bg-accent/10 px-2.5 py-1 rounded-full hover:bg-accent/20 transition-colors"
-            >
-              {tag}
-            </a>
-          ))}
-        </div>
-      )}
-      <h1 class="text-4xl font-semibold tracking-tight text-foreground leading-tight mb-5">
+    <header class="mb-10">
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-2 mb-6">
+        {pillar && (
+          <a href={`/blog?pillar=${pillar.slug}`} class="font-mono text-[0.7rem] uppercase tracking-[0.15em] text-secondary hover:text-hover transition-colors">
+            {pillar.title}
+          </a>
+        )}
+        <span class="font-mono text-[0.7rem] uppercase tracking-[0.15em] text-secondary/70">
+          <time datetime={pubDate.toISOString()}>{formattedPubDate}</time>
+          <span aria-hidden="true"> · </span>{readingTime} min read
+        </span>
+      </div>
+      <h1 class="font-serif text-4xl md:text-5xl font-medium tracking-tight text-foreground leading-[1.1]">
         {title}
       </h1>
-      <div class="flex items-center gap-3 text-sm text-secondary">
-        <time datetime={pubDate.toISOString()}>{formattedPubDate}</time>
-        <span aria-hidden="true">&middot;</span>
-        <span>{readingTime} min read</span>
-      </div>
+      {description && (
+        <p class="mt-5 text-lg text-secondary leading-relaxed">{description}</p>
+      )}
       {formattedUpdatedDate && (
-        <p class="mt-2 text-xs text-secondary">
+        <p class="mt-3 font-mono text-[0.7rem] uppercase tracking-[0.15em] text-secondary/70">
           Updated {formattedUpdatedDate}
         </p>
       )}
@@ -92,42 +92,38 @@ const formattedUpdatedDate = updatedDate
 
     <!-- Hero image -->
     {heroImage && (
-      <div class="max-w-2xl mb-10">
+      <div class="mb-12">
         <img
           src={heroImage}
           alt={"Article: " + title + " by David Henzel"}
-          class="w-full rounded-xl border border-border"
+          class="w-full border border-border"
           loading="eager"
         />
       </div>
     )}
 
     <!-- Post content -->
-    <div class="max-w-2xl prose-content">
+    <div class="prose-content">
       <slot />
     </div>
 
     <!-- Contextual CTA -->
-    <div class="max-w-2xl">
-      <ContextualCTA type={cta} tags={tags} />
-    </div>
+    <ContextualCTA type={cta} tags={tags} />
 
     <!-- Related posts -->
     {relatedPosts.length > 0 && (
-      <div class="max-w-2xl mt-12 pt-8 border-t border-border">
-        <p class="text-sm font-semibold uppercase tracking-wide text-secondary mb-4">Related</p>
-        <ul class="space-y-2">
+      <div class="mt-14 pt-8 border-t border-border">
+        <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary mb-5">Related</p>
+        <ul class="space-y-4">
           {relatedPosts.map((rp) => (
-            <li class="text-sm text-secondary">
-              <time datetime={rp.pubDate.toISOString()}>
-                {rp.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
-              </time>
-              {' '}
-              <a
-                href={`/blog/${rp.id}`}
-                class="text-foreground hover:text-accent hover:underline underline-offset-2 transition-colors"
-              >
-                {rp.title}
+            <li>
+              <a href={`/blog/${rp.id}`} class="group flex items-baseline gap-4">
+                <time datetime={rp.pubDate.toISOString()} class="font-mono text-[0.7rem] uppercase tracking-[0.15em] text-secondary/70 shrink-0 w-24">
+                  {rp.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                </time>
+                <span class="font-serif text-lg text-foreground group-hover:text-hover transition-colors leading-snug">
+                  {rp.title}
+                </span>
               </a>
             </li>
           ))}
@@ -138,31 +134,21 @@ const formattedUpdatedDate = updatedDate
     <!-- Prev / Next navigation -->
     {(prevPost || nextPost) && (
       <nav
-        class="max-w-2xl mt-12 pt-8 border-t border-accent/25 flex flex-col sm:flex-row justify-between gap-6"
+        class="mt-14 pt-8 border-t border-border flex flex-col sm:flex-row justify-between gap-6"
         aria-label="Post navigation"
       >
         {prevPost ? (
-          <a
-            href={`/blog/${prevPost.id}`}
-            class="group flex flex-col gap-1 text-sm max-w-xs"
-          >
-            <span class="text-xs uppercase tracking-wide text-secondary">&larr; Previous</span>
-            <span class="text-foreground group-hover:text-accent group-hover:underline underline-offset-2 transition-colors">
-              {prevPost.title}
-            </span>
+          <a href={`/blog/${prevPost.id}`} class="group flex flex-col gap-1.5 max-w-xs">
+            <span class="font-mono text-[0.7rem] uppercase tracking-[0.15em] text-secondary/70">← Previous</span>
+            <span class="font-serif text-base text-foreground group-hover:text-hover transition-colors">{prevPost.title}</span>
           </a>
         ) : (
           <div />
         )}
         {nextPost && (
-          <a
-            href={`/blog/${nextPost.id}`}
-            class="group flex flex-col gap-1 text-sm max-w-xs sm:text-right"
-          >
-            <span class="text-xs uppercase tracking-wide text-secondary">Next &rarr;</span>
-            <span class="text-foreground group-hover:text-accent group-hover:underline underline-offset-2 transition-colors">
-              {nextPost.title}
-            </span>
+          <a href={`/blog/${nextPost.id}`} class="group flex flex-col gap-1.5 max-w-xs sm:text-right sm:items-end">
+            <span class="font-mono text-[0.7rem] uppercase tracking-[0.15em] text-secondary/70">Next →</span>
+            <span class="font-serif text-base text-foreground group-hover:text-hover transition-colors">{nextPost.title}</span>
           </a>
         )}
       </nav>
@@ -171,48 +157,51 @@ const formattedUpdatedDate = updatedDate
 </BaseLayout>
 
 <style>
-  /* Prose-like styles for blog post content */
+  /* Prose styles for blog post content — tokenized, serif headings */
   .prose-content :global(h1),
   .prose-content :global(h2),
   .prose-content :global(h3),
   .prose-content :global(h4),
   .prose-content :global(h5),
   .prose-content :global(h6) {
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: #0A0A0A;
-    margin-top: 2em;
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: var(--color-foreground);
+    margin-top: 1.8em;
     margin-bottom: 0.5em;
-    line-height: 1.3;
+    line-height: 1.2;
   }
 
   .prose-content :global(h1) { font-size: 2rem; }
-  .prose-content :global(h2) { font-size: 1.5rem; }
-  .prose-content :global(h3) { font-size: 1.25rem; }
+  .prose-content :global(h2) { font-size: 1.6rem; }
+  .prose-content :global(h3) { font-size: 1.3rem; }
   .prose-content :global(h4) { font-size: 1.1rem; }
 
   .prose-content :global(p) {
     font-size: 1.0625rem;
     line-height: 1.75;
-    color: #374151;
+    color: var(--color-secondary);
     margin-bottom: 1.5em;
   }
 
   .prose-content :global(a) {
-    color: #10B981;
-    text-decoration-color: rgba(16, 185, 129, 0.3);
+    color: var(--color-foreground);
     text-decoration: underline;
+    text-decoration-color: var(--color-border);
     text-underline-offset: 3px;
     text-decoration-thickness: 1px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
   }
 
   .prose-content :global(a:hover) {
-    opacity: 0.7;
+    color: var(--color-hover);
+    text-decoration-color: var(--color-hover);
   }
 
   .prose-content :global(strong) {
     font-weight: 600;
-    color: #0A0A0A;
+    color: var(--color-foreground);
   }
 
   .prose-content :global(em) {
@@ -223,46 +212,44 @@ const formattedUpdatedDate = updatedDate
   .prose-content :global(ol) {
     margin-bottom: 1.5em;
     padding-left: 1.5em;
-    color: #374151;
+    color: var(--color-secondary);
     line-height: 1.75;
   }
 
-  .prose-content :global(ul) {
-    list-style-type: disc;
-  }
-
-  .prose-content :global(ol) {
-    list-style-type: decimal;
-  }
-
-  .prose-content :global(li) {
-    margin-bottom: 0.4em;
-  }
+  .prose-content :global(ul) { list-style-type: disc; }
+  .prose-content :global(ol) { list-style-type: decimal; }
+  .prose-content :global(li) { margin-bottom: 0.4em; }
 
   .prose-content :global(blockquote) {
-    border-left: 3px solid #10B981;
+    border-left: 2px solid var(--color-foreground);
     padding-left: 1.25em;
     margin: 2em 0;
-    color: #6B7280;
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    line-height: 1.4;
+    color: var(--color-foreground);
     font-style: italic;
   }
 
   .prose-content :global(blockquote p) {
     margin-bottom: 0;
+    color: var(--color-foreground);
+    font-size: inherit;
+    line-height: inherit;
   }
 
   .prose-content :global(code) {
-    font-family: ui-monospace, 'Fira Code', monospace;
-    font-size: 0.875em;
-    background-color: #F3F4F6;
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    background-color: var(--color-muted);
     padding: 0.15em 0.4em;
     border-radius: 4px;
-    color: #0A0A0A;
+    color: var(--color-foreground);
   }
 
   .prose-content :global(pre) {
-    background-color: #F3F4F6;
-    border: 1px solid #E5E7EB;
+    background-color: var(--color-muted);
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 1.25em 1.5em;
     overflow-x: auto;
@@ -278,14 +265,14 @@ const formattedUpdatedDate = updatedDate
 
   .prose-content :global(hr) {
     border: none;
-    border-top: 1px solid #E5E7EB;
+    border-top: 1px solid var(--color-border);
     margin: 2.5em 0;
   }
 
   .prose-content :global(img) {
     max-width: 100%;
     height: auto;
-    border-radius: 12px;
+    border: 1px solid var(--color-border);
     margin: 2em 0;
   }
 
@@ -300,11 +287,12 @@ const formattedUpdatedDate = updatedDate
   .prose-content :global(td) {
     text-align: left;
     padding: 0.6em 0.9em;
-    border-bottom: 1px solid #E5E7EB;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-secondary);
   }
 
   .prose-content :global(th) {
     font-weight: 600;
-    color: #0A0A0A;
+    color: var(--color-foreground);
   }
 </style>

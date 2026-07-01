@@ -1,0 +1,36 @@
+---
+import { pillars } from '../data/pillars';
+
+interface Props {
+  activePillar?: string;
+}
+
+const { activePillar } = Astro.props;
+---
+
+<nav class="flex flex-wrap gap-x-6 gap-y-2" aria-label="Filter by pillar">
+  <a
+    href="/blog"
+    class:list={[
+      'font-mono text-[0.7rem] uppercase tracking-[0.15em] pb-1 border-b transition-colors',
+      !activePillar
+        ? 'text-foreground border-foreground'
+        : 'text-secondary border-transparent hover:text-foreground',
+    ]}
+  >
+    All
+  </a>
+  {pillars.map((pillar) => (
+    <a
+      href={`/blog?pillar=${pillar.slug}`}
+      class:list={[
+        'font-mono text-[0.7rem] uppercase tracking-[0.15em] pb-1 border-b transition-colors',
+        activePillar === pillar.slug
+          ? 'text-foreground border-foreground'
+          : 'text-secondary border-transparent hover:text-foreground',
+      ]}
+    >
+      {pillar.title}
+    </a>
+  ))}
+</nav>

@@ -4,16 +4,16 @@ import { navItems } from '../data/navigation';
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="pt-10 pb-0">
-  <div class="max-w-[640px] mx-auto px-6">
-    <div class="flex items-center justify-between">
+<header class="border-b border-border">
+  <div class="max-w-content mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
       <!-- Logo -->
-      <a href="/" class="hover:opacity-70 transition-opacity">
+      <a href="/" class="hover:opacity-70 transition-opacity" aria-label="David Henzel — home">
         <img src="/images/dh-logo.svg" alt="David Henzel" class="h-6 w-auto" />
       </a>
 
       <!-- Desktop nav -->
-      <nav class="hidden md:flex items-center gap-5" aria-label="Main navigation">
+      <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
         {navItems.map((item) => {
           const isActive =
             item.href === '/'
@@ -23,9 +23,9 @@ const currentPath = Astro.url.pathname;
             <a
               href={item.href}
               class:list={[
-                'text-sm transition-colors',
+                'font-mono text-[0.72rem] uppercase tracking-[0.15em] transition-colors',
                 isActive
-                  ? 'text-accent font-medium'
+                  ? 'text-foreground'
                   : 'text-secondary hover:text-foreground',
               ]}
             >
@@ -33,6 +33,12 @@ const currentPath = Astro.url.pathname;
             </a>
           );
         })}
+        <a
+          href="/cal"
+          class="font-mono text-[0.72rem] uppercase tracking-[0.15em] text-background bg-foreground px-3.5 py-2 hover:bg-hover transition-colors"
+        >
+          Book a call
+        </a>
       </nav>
 
       <!-- Mobile hamburger button -->
@@ -55,7 +61,7 @@ const currentPath = Astro.url.pathname;
       class="md:hidden hidden"
       aria-label="Mobile navigation"
     >
-      <nav class="py-4 flex flex-col gap-4">
+      <nav class="pb-6 flex flex-col gap-4">
         {navItems.map((item) => {
           const isActive =
             item.href === '/'
@@ -65,9 +71,9 @@ const currentPath = Astro.url.pathname;
             <a
               href={item.href}
               class:list={[
-                'text-sm py-1 transition-colors',
+                'font-mono text-xs uppercase tracking-[0.15em] py-1 transition-colors',
                 isActive
-                  ? 'text-accent font-medium'
+                  ? 'text-foreground'
                   : 'text-secondary hover:text-foreground',
               ]}
             >
@@ -75,6 +81,9 @@ const currentPath = Astro.url.pathname;
             </a>
           );
         })}
+        <a href="/cal" class="font-mono text-xs uppercase tracking-[0.15em] py-1 text-foreground">
+          Book a call →
+        </a>
       </nav>
     </div>
   </div>

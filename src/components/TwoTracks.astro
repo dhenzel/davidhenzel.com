@@ -1,0 +1,56 @@
+---
+// Two separable ways into the work: the business track and the personal track.
+const tracks = [
+  {
+    eyebrow: 'Track 01',
+    title: 'Run your company better',
+    body: 'Rebuild the org on AI and better systems, and build a culture where people work from love, not fear. Growth, retention, and support that actually move the number.',
+    links: [
+      { label: 'Context Engine', href: 'https://contextengine.com', external: true },
+      { label: 'upcoach', href: 'https://upcoach.com', external: true },
+      { label: 'LTVplus', href: 'https://ltvplus.com', external: true },
+      { label: 'Shortlist', href: 'https://shortlist.io', external: true },
+    ],
+  },
+  {
+    eyebrow: 'Track 02',
+    title: 'Build your own operating system',
+    body: 'Get to your A-game — clarity and strength on vision, values, and habits — and put your own agent to work on your life. The love-not-fear work, for the person behind the company.',
+    links: [
+      { label: 'Love Not Fear', href: 'https://lovenotfear.com', external: true },
+      { label: 'Free self-leadership course', href: 'https://community.lovenotfear.com/c/free-lnf-self-leadership-course', external: true },
+      { label: 'Dünyam Village retreat', href: 'https://dunyamvillage.com', external: true },
+    ],
+  },
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border">
+  {tracks.map((track) => (
+    <div class="bg-background p-8 md:p-10 flex flex-col">
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary mb-5">
+        {track.eyebrow}
+      </p>
+      <h3 class="font-serif text-2xl md:text-3xl font-medium tracking-tight text-foreground leading-tight mb-4">
+        {track.title}
+      </h3>
+      <p class="text-base text-secondary leading-relaxed mb-8 flex-1">
+        {track.body}
+      </p>
+      <ul class="flex flex-wrap gap-x-5 gap-y-2">
+        {track.links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              target={link.external ? '_blank' : undefined}
+              rel={link.external ? 'noopener' : undefined}
+              class="ink-link text-sm"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</div>

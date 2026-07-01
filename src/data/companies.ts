@@ -4,6 +4,8 @@ export interface Company {
   description: string;
   logo: string;
   featured?: boolean;
+  /** flagship = lead of the portfolio; exited = past company/exit; default active */
+  status?: 'flagship' | 'active' | 'exited';
 }
 
 export const companies: Company[] = [
@@ -27,6 +29,7 @@ export const companies: Company[] = [
     description: 'A single-tenant, self-hostable <a href="https://contextengine.com" target="_blank" rel="noopener">context layer for AI</a> that captures, consolidates, and serves your company\'s knowledge to any MCP-capable tool or agent, so your AI already knows your world without endless re-briefing. Own your context; we help you run it.',
     logo: '/logos/companies/contextengine.png',
     featured: true,
+    status: 'flagship',
   },
   {
     name: 'Sendloop',
@@ -90,5 +93,12 @@ export const companies: Company[] = [
     description: 'An exclusive <a href="https://dunyamvillage.com" target="_blank" rel="noopener">retreat center in Bodrum, Turkey</a> offering whole-place bookings for leadership teams and groups of up to 12. Transformative experiences in nature.',
     logo: '/logos/companies/dunyamvillage.png',
     featured: true,
+  },
+  {
+    name: 'MaxCDN',
+    url: 'https://en.wikipedia.org/wiki/MaxCDN',
+    description: 'The content delivery network I co-founded in Los Angeles. We grew it into a global CDN serving millions of sites, then exited — the outcome that funded everything since.',
+    logo: '',
+    status: 'exited',
   },
 ];

@@ -1,41 +1,97 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/Section.astro';
+import PillarFilter from '../../components/PillarFilter.astro';
 import { getCollection } from 'astro:content';
+import { pillarForTags } from '../../data/pillars';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 ---
 
 <BaseLayout
-  title="Content — David Henzel"
-  description="Essays, ideas, and things worth sharing."
+  title="Writing — David Henzel"
+  description="Essays from inside the arena — building the AI-native company, culture without fear, the operator's notebook, and the love-not-fear work underneath it all."
 >
-  <section class="pt-16">
-    <h1 class="text-2xl font-semibold tracking-tight text-foreground mb-2">Content</h1>
-    <p class="text-base text-secondary leading-relaxed mb-10">
-      Essays, ideas, and things worth sharing.
+  <section class="max-w-content mx-auto px-6 pt-20 md:pt-28">
+    <p class="font-mono text-[0.72rem] uppercase tracking-[0.2em] text-secondary mb-8">Writing</p>
+    <h1 class="font-serif text-4xl md:text-5xl font-medium tracking-tight text-foreground leading-[1.1] max-w-3xl">
+      From inside the arena — not the sidelines.
+    </h1>
+    <p class="mt-6 text-lg text-secondary leading-relaxed max-w-2xl">
+      What I'm actually building, what broke, and the love-not-fear work underneath it. Filter by pillar.
     </p>
 
+    <div class="mt-10 overflow-x-auto pb-1">
+      <PillarFilter />
+    </div>
+  </section>
+
+  <Section width="content" space="md">
     {posts.length === 0 ? (
       <p class="text-sm text-secondary">Nothing here yet. Check back soon.</p>
     ) : (
-      <div class="space-y-8">
+      <div id="post-list" class="border-b border-border">
         {posts.map((post) => {
-          const date = new Date(post.data.pubDate);
-          const formatted = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+          const pillar = pillarForTags(post.data.tags);
           return (
-            <article>
-              <p class="text-xs text-secondary/50 mb-1">{formatted}</p>
-              <a href={`/blog/${post.id}`} class="text-base font-semibold text-foreground underline underline-offset-3 decoration-accent/30 hover:text-accent hover:decoration-accent transition-colors">
-                {post.data.title}
+            <article class="post-item border-t border-border" data-pillar={pillar?.slug ?? ''}>
+              <a href={`/blog/${post.id}`} class="group block py-7">
+                <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-6">
+                  <time class="font-mono text-[0.7rem] uppercase tracking-[0.15em] text-secondary/70 shrink-0 sm:w-28 mb-1 sm:mb-0">
+                    {fmt(new Date(post.data.pubDate))}
+                  </time>
+                  <div class="min-w-0">
+                    {pillar && (
+                      <p class="font-mono text-[0.65rem] uppercase tracking-[0.15em] text-secondary/70 mb-1.5">{pillar.title}</p>
+                    )}
+                    <h2 class="font-serif text-2xl md:text-[1.75rem] font-medium tracking-tight text-foreground leading-snug group-hover:text-hover transition-colors">
+                      {post.data.title}
+                    </h2>
+                    {post.data.description && (
+                      <p class="mt-2 text-sm text-secondary leading-relaxed max-w-2xl">{post.data.description}</p>
+                    )}
+                  </div>
+                </div>
               </a>
-              {post.data.description && (
-                <p class="text-sm text-secondary leading-relaxed mt-1">{post.data.description}</p>
-              )}
             </article>
           );
         })}
       </div>
     )}
-  </section>
+    <p id="empty-state" class="hidden text-sm text-secondary mt-8">No posts in this pillar yet — more coming. Meanwhile, <a href="/blog" class="ink-link">see everything</a>.</p>
+  </Section>
 </BaseLayout>
+
+<script>
+  // Client-side pillar filtering (static site — query string, not a route)
+  const params = new URLSearchParams(window.location.search);
+  const activePillar = params.get('pillar');
+
+  if (activePillar) {
+    // Filter posts
+    const items = document.querySelectorAll<HTMLElement>('.post-item');
+    let shown = 0;
+    items.forEach((item) => {
+      const match = item.dataset.pillar === activePillar;
+      item.style.display = match ? '' : 'none';
+      if (match) shown++;
+    });
+    document.getElementById('empty-state')?.classList.toggle('hidden', shown > 0);
+
+    // Highlight the active filter link
+    document.querySelectorAll<HTMLAnchorElement>('nav[aria-label="Filter by pillar"] a').forEach((a) => {
+      const isActive = a.getAttribute('href') === `/blog?pillar=${activePillar}`;
+      if (isActive) {
+        a.classList.remove('text-secondary', 'border-transparent');
+        a.classList.add('text-foreground', 'border-foreground');
+      } else {
+        a.classList.remove('text-foreground', 'border-foreground');
+        a.classList.add('text-secondary', 'border-transparent');
+      }
+    });
+  }
+</script>

@@ -1,18 +1,45 @@
 ---
+import { navItems } from '../data/navigation';
 const year = new Date().getFullYear();
 ---
 
-<footer class="max-w-[640px] mx-auto px-6 mt-16 pb-16">
-  <hr class="border-t border-accent/25 mb-10" />
+<footer class="border-t border-border mt-24">
+  <div class="max-w-content mx-auto px-6 py-14">
+    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
+      <div class="max-w-xs">
+        <img src="/images/dh-logo.svg" alt="David Henzel" class="h-6 w-auto mb-4" />
+        <p class="text-sm text-secondary leading-relaxed">
+          Building companies and choosing love over fear. Much love.
+        </p>
+      </div>
 
-  <div class="text-sm text-secondary space-y-3">
-    <p>🇩🇪 Wiesbaden · 🇺🇸 Los Angeles · 🇹🇷 Bodrum</p>
-    <div class="flex flex-wrap items-center gap-x-4">
-      <a href="mailto:dh@davidhenzel.com" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">Email</a>
-      <a href="https://twitter.com/davidhenzel" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">Twitter</a>
-      <a href="https://www.linkedin.com/in/davidhenzel" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">LinkedIn</a>
-      <a href="https://www.instagram.com/davidhenzel" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">Instagram</a>
+      <div class="flex flex-col gap-8 sm:flex-row sm:gap-16">
+        <div>
+          <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary/70 mb-4">Site</p>
+          <ul class="space-y-2.5">
+            {navItems.map((item) => (
+              <li>
+                <a href={item.href} class="text-sm text-secondary hover:text-foreground transition-colors">{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary/70 mb-4">Elsewhere</p>
+          <ul class="space-y-2.5">
+            <li><a href="mailto:dh@davidhenzel.com" class="text-sm text-secondary hover:text-foreground transition-colors">Email</a></li>
+            <li><a href="https://twitter.com/davidhenzel" target="_blank" rel="noopener noreferrer" class="text-sm text-secondary hover:text-foreground transition-colors">Twitter / X</a></li>
+            <li><a href="https://www.linkedin.com/in/davidhenzel" target="_blank" rel="noopener noreferrer" class="text-sm text-secondary hover:text-foreground transition-colors">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/davidhenzel" target="_blank" rel="noopener noreferrer" class="text-sm text-secondary hover:text-foreground transition-colors">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <p class="text-secondary/50">&copy; {year} David Henzel</p>
+
+    <div class="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.15em] text-secondary/70">🇩🇪 Wiesbaden · 🇺🇸 Los Angeles · 🇹🇷 Bodrum</p>
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.15em] text-secondary/70">&copy; {year} David Henzel</p>
+    </div>
   </div>
 </footer>

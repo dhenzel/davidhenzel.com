@@ -1,98 +1,118 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+
+const topics = [
+  {
+    title: 'AI Transformation Is Real Work, Not a Magic Trick',
+    body: 'Why most of what you\'re sold is theater — and what real, operator-grade AI transformation actually takes. The demo is easy; production is hard. Measured in adoption and proven value, not an impressive rig nobody opens two months later.',
+  },
+  {
+    title: 'Building the AI-Native Company',
+    body: 'How to rebuild an organization on AI, better systems, and a context layer — live, from someone running a real portfolio, not selling a course about it.',
+  },
+  {
+    title: 'Culture Without Fear',
+    body: 'How to build a company where people do their best work out of love, not fear. Hiring, firing, and running teams from a place that isn\'t hustle and grind.',
+  },
+  {
+    title: 'From Introvert to CEO',
+    body: 'The story of a self-described recovering introvert who built and sold companies, and how self-awareness — not bravado — became the real competitive advantage.',
+  },
+  {
+    title: 'Your Personal Operating System',
+    body: 'A practical framework for getting clear on who you are and what you want — vision, mission, values, goals, habits — and putting your own agent to work on your life, not just your company.',
+  },
+  {
+    title: 'For Universities: Helping Students Find Their Path',
+    body: 'Helping young people figure out what they actually want to do, what to study, and how to build a foundation of self-awareness before the world tells them who to be.',
+  },
+];
+
+const appearances = [
+  "Entrepreneurs' Organization (EO) — Member & Speaker",
+  'Forbes Business Council — Guest Contributor',
+  'Entrepreneur on Fire Podcast',
+  'Marketing Speak Podcast by Stephan Spencer',
+  'Radical Responsibility Podcast with Fleet Maull',
+  'Org Design Podcast',
+  'The Startup Chat Podcast — Multiple Appearances',
+  'Running Remote — Future of Distributed Teams',
+  'SaaStock — Building Companies with Purpose',
+  'SEED Slovenia',
+  'University guest lectures — Self-Leadership for Students',
+  'Corporate workshops & webinars — Love Not Fear for Teams',
+];
 ---
 
 <BaseLayout
-  title="Speaking - David Henzel"
-  description="Book David Henzel to speak at your event. Topics include conscious leadership, the Love Not Fear operating system, AI + entrepreneurship, and self-leadership systems."
+  title="Speaking — David Henzel"
+  description="Book David Henzel to speak. Topics include doing AI transformation for real, building culture without fear, from introvert to CEO, and building your personal operating system."
 >
-
   <!-- Intro -->
-  <section class="pt-16">
-    <h1 class="text-2xl font-semibold tracking-tight text-foreground mb-4">
-      Speaking
-    </h1>
-    <p class="text-base text-secondary leading-relaxed mb-5">
-      I speak about conscious leadership, building companies from a place of love, and the systems that help people find their purpose. Whether it's a keynote, workshop, webinar, podcast, or university lecture, I bring real stories from 25+ years of building.
-    </p>
-    <p class="text-base text-secondary leading-relaxed">
-      Interested? Email me: <a href="mailto:dh@davidhenzel.com?subject=Speaking%20Inquiry" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">dh@davidhenzel.com</a>
-    </p>
-  </section>
-
-  <hr class="border-t border-accent/25 my-12" />
-
-  <!-- Talk Topics -->
-  <section>
-    <h2 class="text-sm font-semibold uppercase tracking-widest text-accent mb-8">Talk Topics</h2>
-
-    <div class="space-y-8 text-base text-secondary leading-relaxed">
-      <div>
-        <p class="font-semibold text-foreground mb-1">Love Not Fear: The Operating System for Conscious Leadership</p>
-        <p>How to make better decisions by understanding the two forces that drive every choice, and building systems that keep you operating from love.</p>
+  <section class="max-w-content mx-auto px-6 pt-20 md:pt-28">
+    <div class="grid md:grid-cols-5 gap-10 items-center">
+      <div class="md:col-span-3">
+        <p class="font-mono text-[0.72rem] uppercase tracking-[0.2em] text-secondary mb-8">Speaking</p>
+        <h1 class="font-serif text-4xl md:text-5xl font-medium tracking-tight text-foreground leading-[1.1]">
+          Real stories from 25+ years in the arena.
+        </h1>
+        <p class="mt-6 text-lg text-secondary leading-relaxed">
+          I speak about doing AI transformation for real, building companies from a place of love, and
+          the systems that help people find their purpose. Keynote, workshop, webinar, podcast, or
+          university lecture — I bring what I'm actually building and running, not theory from the
+          sidelines.
+        </p>
+        <p class="mt-6">
+          <a href="mailto:dh@davidhenzel.com?subject=Speaking%20Inquiry" class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]">
+            dh@davidhenzel.com →
+          </a>
+        </p>
       </div>
-
-      <div>
-        <p class="font-semibold text-foreground mb-1">From Introvert to CEO: Building Companies from a Place of Love</p>
-        <p>The personal story of a self-described recovering introvert who built and sold multiple companies, and how self-awareness became his greatest competitive advantage.</p>
-      </div>
-
-      <div>
-        <p class="font-semibold text-foreground mb-1">AI + Entrepreneurship: Building the Future Without Losing Your Soul</p>
-        <p>How AI is reshaping entrepreneurship, and why the founders who will win are the ones who stay human-centered in an increasingly automated world.</p>
-      </div>
-
-      <div>
-        <p class="font-semibold text-foreground mb-1">Self-Leadership Systems: Purpose, Values, Vision, Habits</p>
-        <p>A practical framework for getting clear on who you are, what you want, and how to build daily systems that move you toward it. The four pillars of the LNF operating system.</p>
-      </div>
-
-      <div>
-        <p class="font-semibold text-foreground mb-1">For Universities: Helping Students Find Their Path</p>
-        <p>Helping students and young people figure out what they really want to do with their life, what to study, and how to build a foundation of self-awareness before the world tells them who to be.</p>
-      </div>
-
-      <div>
-        <p class="font-semibold text-foreground mb-1">Love Not Fear Workshops: Interactive Team Sessions</p>
-        <p>Half-day or full-day workshops for teams and organizations. Participants discover their purpose, define their values, and build personal operating systems. Creating alignment from the inside out.</p>
+      <div class="md:col-span-2">
+        <img
+          src="/images/david-onstage.png"
+          alt="David Henzel speaking on stage"
+          class="w-full object-cover grayscale"
+          loading="lazy"
+        />
       </div>
     </div>
   </section>
 
-  <hr class="border-t border-accent/25 my-12" />
+  <!-- Talk topics -->
+  <Section width="content" space="lg">
+    <SectionHeading eyebrow="Talk topics" title="What I speak about." />
+    <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+      {topics.map((topic) => (
+        <div class="border-t border-border pt-6">
+          <h3 class="font-serif text-xl font-medium text-foreground leading-snug mb-2">{topic.title}</h3>
+          <p class="text-sm text-secondary leading-relaxed">{topic.body}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
 
-  <!-- Past Appearances -->
-  <section>
-    <h2 class="text-sm font-semibold uppercase tracking-widest text-accent mb-6">Past Appearances</h2>
-    <p class="text-base text-secondary leading-relaxed mb-6">
-      Keynotes, panels, and podcasts on entrepreneurship, conscious leadership, and self-leadership systems.
-    </p>
-    <ul class="space-y-2 text-base text-secondary leading-relaxed list-none">
-      <li>Entrepreneurs' Organization (EO), Member & Speaker</li>
-      <li>Forbes Business Council, Guest Contributor</li>
-      <li>Entrepreneur on Fire Podcast</li>
-      <li>Marketing Speak Podcast by Stephan Spencer</li>
-      <li>Radical Responsibility Podcast with Fleet Maull</li>
-      <li>Org Design Podcast</li>
-      <li>The Startup Chat Podcast, Multiple Appearances</li>
-      <li>Running Remote, Future of Distributed Teams</li>
-      <li>SaaStock, Building Companies with Purpose</li>
-      <li>SEED Slovenia</li>
-      <li>University guest lectures, Self-Leadership for Students</li>
-      <li>Corporate workshops & webinars, Love Not Fear for Teams</li>
+  <!-- Past appearances -->
+  <Section width="content" space="lg" surface>
+    <SectionHeading eyebrow="Past appearances" title="Keynotes, panels, and podcasts." />
+    <ul class="grid sm:grid-cols-2 gap-x-12">
+      {appearances.map((a) => (
+        <li class="border-t border-border py-3 text-sm text-secondary">{a}</li>
+      ))}
     </ul>
-  </section>
-
-  <hr class="border-t border-accent/25 my-12" />
+  </Section>
 
   <!-- CTA -->
-  <section>
-    <p class="text-base text-secondary leading-relaxed mb-2">
-      I'm available for keynotes, workshops, webinars, podcasts, and university lectures.
+  <Section width="prose" space="lg">
+    <p class="font-serif text-2xl md:text-3xl font-medium tracking-tight text-foreground leading-tight">
+      Available for keynotes, workshops, webinars, podcasts, and university lectures.
     </p>
-    <p class="text-base text-secondary leading-relaxed">
-      Email me: <a href="mailto:dh@davidhenzel.com?subject=Speaking%20Inquiry" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">dh@davidhenzel.com</a>
+    <p class="mt-5">
+      <a href="mailto:dh@davidhenzel.com?subject=Speaking%20Inquiry" class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]">
+        Email me → dh@davidhenzel.com
+      </a>
     </p>
-  </section>
-
+  </Section>
 </BaseLayout>

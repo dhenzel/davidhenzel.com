@@ -1,64 +1,133 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
 import NewsletterForm from '../components/NewsletterForm.astro';
 ---
 
 <BaseLayout
-  title="About - David Henzel"
-  description="David Henzel is a serial entrepreneur, recovering introvert, and creator of the Love Not Fear operating system. 25+ years building companies, now focused on helping people find their purpose."
+  title="About — David Henzel"
+  description="David Henzel is a serial entrepreneur and recovering introvert — from Wiesbaden to LA to Bodrum. 25+ years building companies, now building from love not fear."
 >
-
-  <!-- Bio -->
-  <section class="pt-16">
-    <div class="flex flex-col sm:flex-row sm:items-start gap-8 mb-8">
+  <!-- Hero -->
+  <section class="max-w-prose mx-auto px-6 pt-20 md:pt-28">
+    <p class="font-mono text-[0.72rem] uppercase tracking-[0.2em] text-secondary mb-8">About</p>
+    <div class="flex flex-col sm:flex-row sm:items-center gap-8">
       <img
         src="/images/david-headshot.png"
         alt="David Henzel"
-        class="w-32 h-32 object-cover rounded-full border-2 border-accent/40 shrink-0"
+        class="w-28 h-28 object-cover rounded-full border border-border shrink-0"
       />
-      <div>
-        <h1 class="text-2xl font-semibold tracking-tight text-foreground mb-2">About</h1>
-        <p class="text-base text-secondary leading-relaxed">
-          Recovering introvert. Serial entrepreneur. Originally from Wiesbaden, Germany. Lived in Los Angeles for years. Now based in Bodrum, Turkey. Living by <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">Love Not Fear</a>.
-        </p>
-      </div>
+      <h1 class="font-serif text-3xl md:text-4xl font-medium tracking-tight text-foreground leading-[1.1]">
+        Recovering introvert. Serial entrepreneur. Building from love, not fear.
+      </h1>
     </div>
+    <p class="mt-8 text-lg text-secondary leading-relaxed">
+      From Wiesbaden, Germany. Lived in Los Angeles for years. Now based in Bodrum, Turkey. I'm a
+      systems thinker who's obsessed with applying business principles to personal life — helping
+      people find their purpose, build systems for their lives, and make decisions from love instead
+      of fear.
+    </p>
+  </section>
 
+  <!-- The story -->
+  <Section width="prose" space="lg">
     <div class="space-y-5 text-base text-secondary leading-relaxed">
       <p>
-        Hi, I'm David. I'm excited about helping people find their purpose, build systems for their lives, and make decisions from love instead of fear. I'm a systems thinker, a serial entrepreneur, and I'm obsessed with applying business principles to personal life.
+        Growing up, I attended 14 different schools. Always the new kid. I was pretty lost and
+        incredibly shy. I dropped out at 15, never got a degree, never had a real job. But I found
+        entrepreneurship, and that gave me direction.
       </p>
       <p>
-        Growing up, I attended 14 different schools. Always the new kid. I was pretty lost and incredibly shy. I dropped out at 15, never got a degree, never had a real job. But I found entrepreneurship, and that gave me direction.
-      </p>
-      <p>
-        In 2009, I moved from Germany to Los Angeles and co-founded <a href="https://en.wikipedia.org/wiki/MaxCDN" target="_blank" rel="noopener" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">MaxCDN</a>. The business grew, but I was still deeply introverted. Making a phone call felt painful. So I forced myself through exposure therapy: Toastmasters twice a week, two networking events a week, talking to everyone even though it was incredibly uncomfortable. Over time, it worked.
+        In 2009, I moved from Germany to Los Angeles and co-founded <a href="https://en.wikipedia.org/wiki/MaxCDN" target="_blank" rel="noopener" class="ink-link">MaxCDN</a>. The business grew, but I was still deeply introverted. Making a phone call felt painful. So I forced myself through exposure therapy: Toastmasters twice a week, two networking events a week, talking to everyone even though it was uncomfortable. Over time, it worked.
       </p>
       <p>
         Then a yoga teacher said something that rewired everything: <em>"Every decision in life, you make out of love or out of fear."</em> I started seeing it everywhere. In sales, in leadership, in how I showed up at home. Most of what I thought were rational decisions were actually fear in disguise. This simple idea was so powerful that I started building my life around it.
       </p>
       <p>
-        Around the same time, my mother passed away from cancer and my wife was diagnosed with breast cancer. She's fine today. But it shook me. I did the <a href="https://community.lovenotfear.com/c/funeral-exercise" target="_blank" rel="noopener" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">funeral exercise</a>, imagined myself on my deathbed, and asked: <em>did I live a good life?</em> The answer was clear. I wanted more impact. I wanted to find my real purpose.
+        Around the same time, my mother passed away from cancer and my wife was diagnosed with breast cancer. She's fine today. But it shook me. I did the <a href="https://community.lovenotfear.com/c/funeral-exercise" target="_blank" rel="noopener" class="ink-link">funeral exercise</a>, imagined myself on my deathbed, and asked: <em>did I live a good life?</em> The answer was clear. I wanted more impact. I wanted to find my real purpose.
       </p>
       <p>
-        We had a successful exit with MaxCDN. I started applying the same frameworks I used in business (vision, mission, values, goals, habits) to my personal life. And it worked ridiculously well. I built a <a href="/companies" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">portfolio of companies</a>, moved to Bodrum, Turkey with my wife Yurda and our daughter Emma, and built <a href="https://dunyamvillage.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">Dunyam Village, a leadership retreat center in Bodrum</a>. We live there with 10 dogs, horses, donkeys, chickens, and ducks. Love Not Fear was always there in the background, but it stayed a side project. I kept getting excited about it, then getting distracted by the next company.
+        We had a successful exit with MaxCDN. I started applying the same frameworks I used in business — vision, mission, values, goals, habits — to my personal life. And it worked. I built a <a href="/companies" class="ink-link">portfolio of companies</a>, moved to Bodrum with my wife Yurda and our daughter Emma, and built <a href="https://dunyamvillage.com" target="_blank" rel="noopener" class="ink-link">Dünyam Village, a leadership retreat center in Bodrum</a>. We live there with 10 dogs, horses, donkeys, chickens, and ducks. Love Not Fear was always there in the background, but it stayed a side project. I kept getting excited about it, then getting distracted by the next company.
       </p>
       <p>
-        Then my friend <a href="https://philipmckernan.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">Philip McKernan</a> gave me the push I needed. He told me I was like someone who'd loved a girl for 20 years but kept hooking up with her friends. I was too scared to fully commit to Love Not Fear because if it didn't work out, it would feel like I'd failed at life. It was too personal. Once I saw that, I couldn't unsee it.
+        Then my friend <a href="https://philipmckernan.com" target="_blank" rel="noopener" class="ink-link">Philip McKernan</a> gave me the push I needed. He told me I was like someone who'd loved a girl for 20 years but kept hooking up with her friends. I was too scared to fully commit to Love Not Fear because if it didn't work out, it would feel like I'd failed at life. It was too personal. Once I saw that, I couldn't unsee it.
       </p>
       <p>
-        Today, <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">Love Not Fear</a> is the center of everything I do. I help <a href="https://lovenotfear.com/students" target="_blank" rel="noopener" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">students</a> figure out what they want to do with their lives, <a href="https://lovenotfear.com/entrepreneurs" target="_blank" rel="noopener" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">entrepreneurs</a> find alignment, and <a href="https://lnfpeople.com" target="_blank" rel="noopener" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">organizations</a> build culture rooted in purpose. I'm writing a book, building <a href="https://community.lovenotfear.com/c/free-lnf-self-leadership-course" target="_blank" rel="noopener" class="text-accent underline underline-offset-3 decoration-accent/30 hover:decoration-accent transition-colors">free tools</a> and courses, and I'm excited about using AI to make all of this more accessible. I'm just sharing what I learned along the way.
+        Today I run a portfolio of real companies and build in public across all of it — from <a href="https://contextengine.com" target="_blank" rel="noopener" class="ink-link">Context Engine</a> and the AI-native org, to the growth ventures, to <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="ink-link">Love Not Fear</a> at the center of it. I help <a href="https://lovenotfear.com/students" target="_blank" rel="noopener" class="ink-link">students</a> figure out what they want to do with their lives, <a href="https://lovenotfear.com/entrepreneurs" target="_blank" rel="noopener" class="ink-link">entrepreneurs</a> find alignment, and <a href="https://lnfpeople.com" target="_blank" rel="noopener" class="ink-link">organizations</a> build culture rooted in purpose. I'm just sharing what I learned along the way.
       </p>
     </div>
-  </section>
+  </Section>
 
-  <hr class="border-t border-accent/25 my-12" />
+  <!-- What I believe -->
+  <Section width="prose" space="md" divider>
+    <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary mb-5">What I believe</p>
+    <div class="space-y-5 text-base text-secondary leading-relaxed">
+      <p>
+        Most personal development is backwards. People set goals, build habits, and grind, then wonder why they feel empty when they hit the number. That's because they skipped the foundation. You can't build a system for your life if you don't know what your life is for.
+      </p>
+      <p>
+        Purpose comes first. Not passion. Purpose. Passion is what you enjoy. Purpose is what you'd do even when it's hard. Once you know that, values become your filter. Vision becomes your direction. Habits become your engine. In that order.
+      </p>
+      <p>
+        Most fear-based decisions look rational on the surface. Staying in a job you've outgrown because "the market is tough." Not raising prices because "customers might leave." Not having the hard conversation because "the timing isn't right." These feel like logic. They're fear wearing a reasonable mask.
+      </p>
+      <p>
+        I believe you should build companies that make the world slightly less broken, not slightly more optimized. The best leaders are the ones who've done the inner work. You can be ambitious and kind at the same time, and anyone who tells you otherwise is protecting their own cynicism.
+      </p>
+      <p>
+        Simplicity is a discipline, not a style. The hardest thing in business, and in life, is saying no to good things so you can say yes to the right things.
+      </p>
+    </div>
+  </Section>
+
+  <!-- Values -->
+  <Section width="prose" space="md" divider>
+    <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary mb-5">My values</p>
+    <ol class="space-y-6">
+      <li>
+        <p class="font-serif text-lg text-foreground mb-1">1. First Things First</p>
+        <p class="text-base text-secondary leading-relaxed">Always prioritize health and your loved ones. If it's not a "FUCK YES," it's a "NO."</p>
+      </li>
+      <li>
+        <p class="font-serif text-lg text-foreground mb-1">2. Own It</p>
+        <p class="text-base text-secondary leading-relaxed">Always do your best. Be impeccable with your word. Do not complain or blame. Find solutions.</p>
+      </li>
+      <li>
+        <p class="font-serif text-lg text-foreground mb-1">3. Create Impact</p>
+        <p class="text-base text-secondary leading-relaxed">Enrich the lives of everybody we come in touch with. Don't take things personal. Do not make assumptions.</p>
+      </li>
+      <li>
+        <p class="font-serif text-lg text-foreground mb-1">4. Unconditional Love</p>
+        <p class="text-base text-secondary leading-relaxed">Make decisions out of love, not fear.</p>
+      </li>
+      <li>
+        <p class="font-serif text-lg text-foreground mb-1">5. Simplicity</p>
+        <p class="text-base text-secondary leading-relaxed">Be authentic. Only do and buy things that matter.</p>
+      </li>
+    </ol>
+    <p class="mt-8 text-sm text-secondary leading-relaxed">
+      Want to define your own? I built a free AI tool that walks you through it. <a href="https://community.lovenotfear.com/c/define-your-personal-core-values" target="_blank" rel="noopener" class="ink-link">Discover your core values here</a>.
+    </p>
+  </Section>
+
+  <!-- Vision & Mission -->
+  <Section width="prose" space="md" divider>
+    <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary mb-6">Vision & mission</p>
+    <blockquote class="font-serif text-2xl md:text-3xl font-medium tracking-tight text-foreground leading-[1.2]">
+      A world where people and organizations thrive through better systems, technology, and choices
+      rooted in love rather than fear.
+    </blockquote>
+    <p class="mt-6 text-base text-secondary leading-relaxed">
+      My mission is to build companies, tools, and frameworks that help individuals and organizations
+      grow, work better, and live more intentionally — by combining technology, practical methodology,
+      and the practice of acting from love rather than fear.
+    </p>
+  </Section>
 
   <!-- Newsletter -->
-  <section>
-    <p class="text-sm font-semibold text-foreground mb-1">Want to follow the journey?</p>
-    <p class="text-xs text-secondary mb-4">Occasional essays on building companies, finding purpose, and the Love Not Fear operating system.</p>
-    <NewsletterForm id="about" compact />
-  </section>
-
+  <Section width="prose" space="md" divider>
+    <p class="font-serif text-xl text-foreground mb-2">Want to follow the journey?</p>
+    <p class="text-sm text-secondary mb-5">Occasional letters on building companies, finding purpose, and the love-not-fear work underneath it. Much love.</p>
+    <NewsletterForm id="about" />
+  </Section>
 </BaseLayout>

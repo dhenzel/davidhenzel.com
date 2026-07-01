@@ -8,22 +8,14 @@ interface Props {
 const { company } = Astro.props;
 ---
 
-<div class="group flex items-center gap-5 p-5 border border-border rounded-xl bg-background hover:border-accent/30 hover:shadow-sm transition-all duration-200">
-  <div class="shrink-0 w-20 h-20 rounded-lg bg-muted border border-border flex items-center justify-center overflow-hidden">
-    <img
-      src={company.logo}
-      alt={`${company.name} logo`}
-      class="w-16 h-16 object-contain"
-      loading="lazy"
-    />
-  </div>
-
-  <div class="min-w-0 flex-1">
-    <h3 class="text-base font-semibold text-foreground mb-1">
-      <a href={company.url} target="_blank" rel="noopener" class="hover:text-accent transition-colors">
-        {company.name}
-      </a>
-    </h3>
-    <p class="text-sm text-secondary leading-relaxed [&_a]:text-accent [&_a]:underline [&_a]:underline-offset-2 [&_a]:hover:opacity-70 [&_a]:transition-opacity" set:html={company.description} />
-  </div>
+<div class="group grid grid-cols-1 sm:grid-cols-[10rem_1fr] gap-1 sm:gap-8 border-t border-border py-6">
+  <h3 class="font-serif text-lg font-medium leading-snug">
+    <a href={company.url} target="_blank" rel="noopener" class="text-foreground hover:text-hover transition-colors">
+      {company.name}
+    </a>
+  </h3>
+  <p
+    class="text-sm text-secondary leading-relaxed max-w-2xl [&_a]:text-foreground [&_a]:underline [&_a]:underline-offset-2 [&_a]:decoration-border [&_a:hover]:text-hover [&_a:hover]:decoration-hover [&_a]:transition-colors"
+    set:html={company.description}
+  />
 </div>
