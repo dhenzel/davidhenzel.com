@@ -97,7 +97,7 @@ export const companies: Company[] = [
   {
     name: 'MaxCDN',
     url: 'https://en.wikipedia.org/wiki/MaxCDN',
-    description: 'The content delivery network I co-founded in Los Angeles. We grew it into a global CDN serving millions of sites, then exited — the outcome that funded everything since.',
+    description: 'The content delivery network I co-founded in Los Angeles. We grew it into a global CDN serving millions of sites, then exited, the outcome that funded everything since.',
     logo: '',
     status: 'exited',
   },

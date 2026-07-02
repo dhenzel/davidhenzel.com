@@ -13,13 +13,13 @@ const fmt = (d: Date) =>
 ---
 
 <BaseLayout
-  title="Writing — David Henzel"
-  description="Essays from inside the arena — building the AI-native company, culture without fear, the operator's notebook, and the love-not-fear work underneath it all."
+  title="Writing · David Henzel"
+  description="Essays from inside the arena, building the AI-native company, culture without fear, the operator's notebook, and the love-not-fear work underneath it all."
 >
   <section class="max-w-content mx-auto px-6 pt-20 md:pt-28">
     <p class="font-mono text-[0.72rem] uppercase tracking-[0.2em] text-secondary mb-8">Writing</p>
     <h1 class="font-serif text-4xl md:text-5xl font-medium tracking-tight text-foreground leading-[1.1] max-w-3xl">
-      From inside the arena — not the sidelines.
+      From inside the arena, not the sidelines.
     </h1>
     <p class="mt-6 text-lg text-secondary leading-relaxed max-w-2xl">
       What I'm actually building, what broke, and the love-not-fear work underneath it. Filter by pillar.
@@ -62,12 +62,12 @@ const fmt = (d: Date) =>
         })}
       </div>
     )}
-    <p id="empty-state" class="hidden text-sm text-secondary mt-8">No posts in this pillar yet — more coming. Meanwhile, <a href="/blog" class="ink-link">see everything</a>.</p>
+    <p id="empty-state" class="hidden text-sm text-secondary mt-8">No posts in this pillar yet, more coming. Meanwhile, <a href="/blog" class="ink-link">see everything</a>.</p>
   </Section>
 </BaseLayout>
 
 <script>
-  // Client-side pillar filtering (static site — query string, not a route)
+  // Client-side pillar filtering (static site, query string, not a route)
   const params = new URLSearchParams(window.location.search);
   const activePillar = params.get('pillar');
 
