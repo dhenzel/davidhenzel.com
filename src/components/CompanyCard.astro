@@ -9,10 +9,14 @@ const { company } = Astro.props;
 ---
 
 <div class="group grid grid-cols-1 sm:grid-cols-[10rem_1fr] gap-1 sm:gap-8 border-t border-border py-6">
-  <h3 class="font-serif text-lg font-medium leading-snug">
-    <a href={company.url} target="_blank" rel="noopener" class="text-foreground hover:text-hover transition-colors">
-      {company.name}
-    </a>
+  <h3 class="font-serif text-lg font-medium leading-snug text-foreground">
+    {company.url ? (
+      <a href={company.url} target="_blank" rel="noopener" class="hover:text-hover transition-colors">
+        {company.name}
+      </a>
+    ) : (
+      company.name
+    )}
   </h3>
   <p
     class="text-sm text-secondary leading-relaxed max-w-2xl [&_a]:text-foreground [&_a]:underline [&_a]:underline-offset-2 [&_a]:decoration-border [&_a:hover]:text-hover [&_a:hover]:decoration-hover [&_a]:transition-colors"

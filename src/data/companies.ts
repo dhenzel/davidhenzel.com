@@ -101,4 +101,11 @@ export const companies: Company[] = [
     logo: '',
     status: 'exited',
   },
+  {
+    name: '12moons',
+    url: '',
+    description: 'One of my earliest ventures. An e-commerce brand in Germany selling a range of consumer products. Sold in 2006.',
+    logo: '',
+    status: 'exited',
+  },
 ];
