@@ -108,4 +108,11 @@ export const companies: Company[] = [
     logo: '',
     status: 'exited',
   },
+  {
+    name: 'RMS',
+    url: '',
+    description: 'Rhein-Main Support. One of my very first ventures, maintaining the in-house servers of local businesses back when servers still lived in company basements.',
+    logo: '',
+    status: 'exited',
+  },
 ];
