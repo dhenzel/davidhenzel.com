@@ -6,8 +6,8 @@ import CompanyCard from '../components/CompanyCard.astro';
 import NewsletterForm from '../components/NewsletterForm.astro';
 import { companies } from '../data/companies';
 
-const flagship = companies.filter((c) => c.status === 'flagship');
-const active = companies.filter((c) => c.status !== 'flagship' && c.status !== 'exited');
+const focus = companies.filter((c) => c.status === 'focus');
+const active = companies.filter((c) => c.status !== 'focus' && c.status !== 'exited');
 const exited = companies.filter((c) => c.status === 'exited');
 ---
 
@@ -27,23 +27,16 @@ const exited = companies.filter((c) => c.status === 'exited');
     </p>
   </section>
 
-  <!-- Flagship -->
-  {flagship.length > 0 && (
+  <!-- Current focus: Relote + the stack -->
+  {focus.length > 0 && (
     <Section width="content" space="lg">
-      <SectionHeading eyebrow="Flagship" title="Where most of my energy goes." />
+      <SectionHeading
+        eyebrow="Current focus"
+        title="Relote, and the stack it runs on."
+        subtitle="Where most of my energy goes right now: rebuilding companies around AI. We proved it on our own portfolio first, then built the products to do it for others."
+      />
       <div class="border-b border-border">
-        {flagship.map((company) => <CompanyCard company={company} />)}
-      </div>
-      <div class="mt-10 overflow-hidden" style="aspect-ratio: 16/9;">
-        <iframe
-          src="https://www.youtube.com/embed/WUHhTPiVTtc"
-          title="David Henzel, Companies & Portfolio"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          style="width: 100%; height: 100%;"
-          loading="lazy"
-        ></iframe>
+        {focus.map((company) => <CompanyCard company={company} />)}
       </div>
     </Section>
   )}

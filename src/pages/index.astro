@@ -8,12 +8,18 @@ import MediaLogos from '../components/MediaLogos.astro';
 import NewsletterForm from '../components/NewsletterForm.astro';
 import { getCollection } from 'astro:content';
 
+const focus = [
+  { name: 'Context Engine', tag: "Your company's permanent memory", url: 'https://contextengine.com' },
+  { name: 'Daimon', tag: 'The ambient agent, in your team chats', url: 'https://daimon.sh' },
+  { name: 'Relote Cloud', tag: 'Your engines, run for you, on servers you own', url: 'https://relote.com/cloud' },
+];
+
 const ventures = [
-  { name: 'Context Engine', tag: 'The AI context layer', url: 'https://contextengine.com' },
-  { name: 'Love Not Fear', tag: 'Operating system for conscious leadership', url: 'https://lovenotfear.com' },
-  { name: 'upcoach', tag: 'All-in-one coaching platform', url: 'https://upcoach.com' },
   { name: 'LTVplus', tag: 'Customer support, done right', url: 'https://ltvplus.com' },
+  { name: 'upcoach', tag: 'All-in-one coaching platform', url: 'https://upcoach.com' },
   { name: 'Shortlist', tag: 'Revenue-first marketing', url: 'https://shortlist.io' },
+  { name: 'Love Not Fear', tag: 'Operating system for conscious leadership', url: 'https://lovenotfear.com' },
+  { name: 'WinbackEngine', tag: 'Win back lapsed customers', url: 'https://winbackengine.com' },
   { name: 'Dünyam Village', tag: 'Leadership retreat in Bodrum', url: 'https://dunyamvillage.com' },
 ];
 
@@ -79,6 +85,35 @@ const fmt = (d: Date) =>
         transformation is adoption and proven value, not an impressive rig nobody opens two months later.
       </p>
     </div>
+  </Section>
+
+  <!-- Current focus: Relote -->
+  <Section width="content" space="lg">
+    <SectionHeading
+      eyebrow="Current focus"
+      title="Relote: rebuilding companies around AI."
+      subtitle="If you built your company from scratch today, with AI, what would it look like? At Relote we go build that answer, workflow by workflow. We proved it on our own portfolio first. Three products of ours power every transformation."
+    />
+    <ul class="grid grid-cols-1 sm:grid-cols-3 gap-px bg-border border border-border">
+      {focus.map((item) => (
+        <li>
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noopener"
+            class="group flex flex-col justify-between bg-background h-40 p-6 hover:bg-muted transition-colors"
+          >
+            <span class="font-serif text-xl font-medium text-foreground group-hover:text-hover transition-colors">{item.name}</span>
+            <span class="text-sm text-secondary">{item.tag}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p class="mt-8">
+      <a href="https://relote.com" target="_blank" rel="noopener" class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]">
+        See Relote →
+      </a>
+    </p>
   </Section>
 
   <!-- Two tracks -->

@@ -4,11 +4,18 @@ export interface Company {
   description: string;
   logo: string;
   featured?: boolean;
-  /** flagship = lead of the portfolio; exited = past company/exit; default active */
-  status?: 'flagship' | 'active' | 'exited';
+  /** focus = current focus (Relote stack); exited = past company/exit; default active */
+  status?: 'focus' | 'active' | 'exited';
 }
 
 export const companies: Company[] = [
+  {
+    name: 'Relote',
+    url: 'https://relote.com',
+    description: 'Helping you forge an AI-native company. We rebuild businesses around AI, workflow by workflow: an assessment, a six-month transformation, and a Context Engine you own. Built by operators who rebuilt their own portfolio first, and got so excited by the results we now do it for others.',
+    logo: '',
+    status: 'focus',
+  },
   {
     name: 'Love Not Fear',
     url: 'https://lovenotfear.com',
@@ -26,10 +33,24 @@ export const companies: Company[] = [
   {
     name: 'Context Engine',
     url: 'https://contextengine.com',
-    description: 'A single-tenant, self-hostable <a href="https://contextengine.com" target="_blank" rel="noopener">context layer for AI</a> that captures, consolidates, and serves your company\'s knowledge to any MCP-capable tool or agent, so your AI already knows your world without endless re-briefing. Own your context; we help you run it.',
+    description: 'Your company\'s permanent memory. A single-tenant, self-hostable <a href="https://contextengine.com" target="_blank" rel="noopener">context layer for AI</a> that captures your emails, calls, documents, and decisions and serves them to any MCP-capable tool or agent, so your AI already knows your world without endless re-briefing. Sold standalone at contextengine.com; part of the Relote stack.',
     logo: '/logos/companies/contextengine.png',
     featured: true,
-    status: 'flagship',
+    status: 'focus',
+  },
+  {
+    name: 'Daimon',
+    url: 'https://daimon.sh',
+    description: 'The ambient agent in the Relote stack. It sits quietly inside the chats where your team already works, remembers what matters (decisions, commitments, blockers, open loops), and surfaces the intelligence on demand. No new app to adopt, no runaway automation.',
+    logo: '',
+    status: 'focus',
+  },
+  {
+    name: 'Relote Cloud',
+    url: 'https://relote.com/cloud',
+    description: 'Your engines, run for you, never read by us. A fully managed service that provisions, operates, and maintains your context engines and daimons on servers you own. Least-privilege by design: the operator can run and repair your instances but cannot read what is inside them.',
+    logo: '',
+    status: 'focus',
   },
   {
     name: 'Sendloop',
