@@ -1,5 +1,5 @@
 ---
-title: "'Fear Not' — The One Thing Every Major Religion Agrees On"
+title: "'Fear Not': The One Thing Every Major Religion Agrees On"
 description: "Christianity, Islam, Judaism, Hinduism, Buddhism, Taoism, and Sufism all carry the same core message: overcome fear through love. This isn't modern self-help. It's ancient truth."
 heroImage: "/images/blog/fear-not-sacred-texts.svg"
 pubDate: 2026-03-16
