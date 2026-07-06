@@ -2,8 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Section from '../components/Section.astro';
 import SectionHeading from '../components/SectionHeading.astro';
-import TwoTracks from '../components/TwoTracks.astro';
-import PillarGrid from '../components/PillarGrid.astro';
 import MediaLogos from '../components/MediaLogos.astro';
 import NewsletterForm from '../components/NewsletterForm.astro';
 import { getCollection } from 'astro:content';
@@ -12,15 +10,6 @@ const focus = [
   { name: 'Context Engine', tag: "Your company's permanent memory", url: 'https://contextengine.com' },
   { name: 'Daimon', tag: 'The ambient agent, in your team chats', url: 'https://daimon.sh' },
   { name: 'Relote Cloud', tag: 'Your engines, run for you, on servers you own', url: 'https://relote.com/cloud' },
-];
-
-const ventures = [
-  { name: 'LTVplus', tag: 'Customer support, done right', url: 'https://ltvplus.com' },
-  { name: 'upcoach', tag: 'All-in-one coaching platform', url: 'https://upcoach.com' },
-  { name: 'Shortlist', tag: 'Revenue-first marketing', url: 'https://shortlist.io' },
-  { name: 'Love Not Fear', tag: 'Operating system for conscious leadership', url: 'https://lovenotfear.com' },
-  { name: 'WinbackEngine', tag: 'Win back lapsed customers', url: 'https://winbackengine.com' },
-  { name: 'Dünyam Village', tag: 'Leadership retreat in Bodrum', url: 'https://dunyamvillage.com' },
 ];
 
 const latestPosts = (await getCollection('blog', ({ data }) => !data.draft))
@@ -33,7 +22,7 @@ const fmt = (d: Date) =>
 
 <BaseLayout
   title="David Henzel · Serial entrepreneur, building from love not fear"
-  description="David Henzel is a serial entrepreneur running a portfolio of companies including Context Engine, upcoach, LTVplus, and Love Not Fear. He writes about doing AI transformation for real, building culture without fear, and getting to your A-game."
+  description="David Henzel is a serial entrepreneur running a portfolio he rebuilt around AI. He writes from inside the arena about building companies, AI transformation done for real, and choosing love over fear."
 >
   <!-- Hero -->
   <section class="max-w-wide mx-auto px-6 pt-20 md:pt-32 pb-16 md:pb-24">
@@ -45,10 +34,9 @@ const fmt = (d: Date) =>
       <span class="transition-colors hover:text-hover">love, not fear</span>.
     </h1>
     <p class="mt-8 text-lg text-secondary leading-relaxed max-w-2xl">
-      I've spent 25+ years building companies, never a real job, one exit, and a portfolio I run
-      today (Context Engine, upcoach, LTVplus, Love Not Fear). I write from inside the arena about
-      doing AI transformation for real, building culture without fear, and getting yourself to your
-      A-game.
+      Serial entrepreneur, 25+ years and one exit, running a portfolio I've rebuilt around AI. I write
+      from inside the arena about building companies, AI transformation done for real, and choosing love
+      over fear.
     </p>
     <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
       <a
@@ -68,50 +56,35 @@ const fmt = (d: Date) =>
     <MediaLogos />
   </div>
 
-  <!-- The flag / contrarian spine -->
-  <Section surface width="wide" space="lg">
-    <div class="max-w-3xl">
-      <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary mb-6">
-        What I stand for
-      </p>
-      <p class="font-serif text-2xl md:text-4xl font-medium tracking-tight text-foreground leading-[1.15]">
-        AI transformation is real work, not a magic trick. Most of what you're being sold is
-        theater.
-      </p>
-      <p class="mt-6 text-base md:text-lg text-secondary leading-relaxed max-w-2xl">
-        The demo is easy; production is hard. There's no overnight transformation, and most AI gurus
-        have never run a business. Our edge is simple: we're transforming our entire portfolio into
-        AI-first companies, and we've built Context Engine, Daimon, and Relote along the way. Real
-        transformation is adoption and proven value, not an impressive rig nobody opens two months later.
-      </p>
-    </div>
-  </Section>
-
-  <!-- Why now / personal note -->
+  <!-- Why now: the POV + the story -->
   <Section width="content" space="lg">
     <div class="max-w-2xl">
-    <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary mb-6">Why now</p>
-    <p class="font-serif text-2xl md:text-3xl font-medium tracking-tight text-foreground leading-[1.2]">
-      I've been doing this my whole career.
-    </p>
-    <div class="mt-6 space-y-5 text-base md:text-lg text-secondary leading-relaxed">
-      <p>
-        Organizational development, personal development, leading with a clear vision, mission, and
-        values, real goals, and a team that knows exactly where it's going. For 25 years, helping
-        people and organizations get to their A-game has been the real work underneath every company
-        I've built.
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary mb-6">Why now</p>
+      <p class="font-serif text-2xl md:text-3xl font-medium tracking-tight text-foreground leading-[1.2]">
+        I've been doing this my whole career.
       </p>
-      <p>
-        AI transformation makes it faster, better, and more exciting than anything I've done before.
-        While rebuilding my own portfolio companies around AI, we built the tools and the processes to
-        help companies and people thrive. I'm more energized than ever to bring it to the market.
-      </p>
-    </div>
+      <div class="mt-6 space-y-5 text-base md:text-lg text-secondary leading-relaxed">
+        <p>
+          Organizational development, personal development, leading with a clear vision, mission, and
+          values, real goals, and a team that knows exactly where it's going. For 25 years, helping
+          people and organizations get to their A-game has been the real work underneath every company
+          I've built.
+        </p>
+        <p>
+          AI transformation makes it faster, better, and more exciting than anything I've done before.
+          While rebuilding my own portfolio companies around AI, we built the tools and the processes to
+          help companies and people thrive. I'm more energized than ever to bring it to the market.
+        </p>
+        <p class="text-foreground font-medium">
+          Most of what gets sold as "AI transformation" is theater. This is the real thing: hard work,
+          measured in adoption and proven value, from someone who actually runs the companies.
+        </p>
+      </div>
     </div>
   </Section>
 
   <!-- Current focus: Relote -->
-  <Section width="content" space="lg">
+  <Section width="content" space="lg" surface>
     <SectionHeading
       eyebrow="Current focus"
       title="Relote: rebuilding companies around AI."
@@ -137,26 +110,6 @@ const fmt = (d: Date) =>
         See Relote →
       </a>
     </p>
-  </Section>
-
-  <!-- Two tracks -->
-  <Section width="content" space="lg">
-    <SectionHeading
-      eyebrow="Two ways in"
-      title="One audience, two tracks."
-      subtitle="Some come for the business, some for the person behind it, some for both. Pick your track. They're completely separable."
-    />
-    <TwoTracks />
-  </Section>
-
-  <!-- Pillars -->
-  <Section width="content" space="lg" surface>
-    <SectionHeading
-      eyebrow="What I write about"
-      title="Five things, on repeat."
-      subtitle="Everything I publish lives in one of these five pillars: building in public across a real portfolio, never lecturing from a mountaintop."
-    />
-    <PillarGrid />
   </Section>
 
   <!-- Latest writing -->
@@ -195,37 +148,8 @@ const fmt = (d: Date) =>
     </Section>
   )}
 
-  <!-- Ventures preview -->
-  <Section width="content" space="lg" surface>
-    <SectionHeading
-      eyebrow="The portfolio"
-      title="The ventures behind the writing."
-      subtitle="The personal brand is the trust layer; these are the vehicles that deliver the work."
-    />
-    <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-px bg-border border border-border">
-      {ventures.map((venture) => (
-        <li>
-          <a
-            href={venture.url}
-            target="_blank"
-            rel="noopener"
-            class="group flex flex-col justify-between bg-background h-36 p-6 hover:bg-muted transition-colors"
-          >
-            <span class="font-serif text-xl font-medium text-foreground group-hover:text-hover transition-colors">{venture.name}</span>
-            <span class="text-sm text-secondary">{venture.tag}</span>
-          </a>
-        </li>
-      ))}
-    </ul>
-    <p class="mt-8">
-      <a href="/companies" class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]">
-        All ventures →
-      </a>
-    </p>
-  </Section>
-
   <!-- Newsletter -->
-  <Section width="prose" space="lg">
+  <Section width="prose" space="lg" surface>
     <SectionHeading
       eyebrow="Stay close"
       title="Occasional letters from the arena."
