@@ -1,30 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Section from '../components/Section.astro';
-import SectionHeading from '../components/SectionHeading.astro';
 import MediaLogos from '../components/MediaLogos.astro';
-import { getCollection } from 'astro:content';
-
-const focus = [
-  { name: 'Context Engine', tag: "Your company's permanent memory", url: 'https://contextengine.com' },
-  { name: 'Daimon', tag: 'The ambient agent, in your team chats', url: 'https://daimon.sh' },
-  { name: 'Relote Cloud', tag: 'Your engines, run for you, on servers you own', url: 'https://relote.com/cloud' },
-];
-
-const latestPosts = (await getCollection('blog', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 1);
-
-const fmt = (d: Date) =>
-  d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 ---
 
 <BaseLayout
   title="David Henzel · Serial entrepreneur, building from love not fear"
   description="David Henzel is a serial entrepreneur turning his portfolio into AI-native companies. Helping people and companies thrive has been his passion for as long as he can remember, and AI just made it the most exciting work of his life."
 >
-  <!-- Hero + why now, merged -->
-  <section class="max-w-wide mx-auto px-6 pt-20 md:pt-32 pb-16 md:pb-24">
+  <!-- Hero -->
+  <section class="max-w-wide mx-auto px-6 pt-20 md:pt-32 pb-20 md:pb-28">
     <p class="font-mono text-[0.72rem] uppercase tracking-[0.2em] text-secondary mb-8">
       David Henzel · Serial entrepreneur
     </p>
@@ -51,115 +35,30 @@ const fmt = (d: Date) =>
         anything gets handed over.
       </p>
     </div>
-    <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
+
+    <!-- CTAs -->
+    <div class="mt-10 flex flex-wrap items-center gap-3">
       <a
         href="/cal"
         class="font-mono text-[0.72rem] uppercase tracking-[0.15em] text-background bg-foreground px-5 py-3 hover:bg-hover transition-colors"
       >
         Book a call
       </a>
-      <a href="/blog" class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]">
-        Read the writing
+      <a
+        href="/companies"
+        class="font-mono text-[0.72rem] uppercase tracking-[0.15em] text-foreground border border-foreground px-5 py-3 hover:bg-foreground hover:text-background transition-colors"
+      >
+        Check out my portfolio
       </a>
     </div>
+    <p class="mt-6 text-sm text-secondary leading-relaxed max-w-xl">
+      That call is where we map out making your company AI-native. Prefer a keynote?
+      <a href="/speaking" class="ink-link">Have me speak at your event →</a>
+    </p>
   </section>
 
   <!-- Featured in -->
   <div class="max-w-content mx-auto px-6">
     <MediaLogos />
   </div>
-
-  <!-- My companies: Relote is the focus + the whole portfolio -->
-  <Section width="content" space="lg" surface>
-    <SectionHeading
-      eyebrow="My companies"
-      title="Right now, everything points at Relote."
-      subtitle="Relote helps you turn your company into an AI-native one, workflow by workflow. We proved it on our own portfolio first, then built the products to do it for others. Three of them power every transformation."
-    />
-    <ul class="grid grid-cols-1 sm:grid-cols-3 gap-px bg-border border border-border">
-      {focus.map((item) => (
-        <li>
-          <a
-            href={item.url}
-            target="_blank"
-            rel="noopener"
-            class="group flex flex-col justify-between bg-background h-40 p-6 hover:bg-muted transition-colors"
-          >
-            <span class="font-serif text-xl font-medium text-foreground group-hover:text-hover transition-colors">{item.name}</span>
-            <span class="text-sm text-secondary">{item.tag}</span>
-          </a>
-        </li>
-      ))}
-    </ul>
-    <p class="mt-8">
-      <a href="https://relote.com" target="_blank" rel="noopener" class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]">
-        See Relote →
-      </a>
-    </p>
-
-    <div class="mt-12 pt-8 border-t border-border">
-      <p class="text-base md:text-lg text-secondary leading-relaxed max-w-2xl">
-        Relote is the focus, but there's a whole portfolio behind it.
-        <a href="/companies" class="ink-link">Check out my portfolio companies →</a>
-      </p>
-    </div>
-  </Section>
-
-  <!-- Latest writing -->
-  {latestPosts.length > 0 && (
-    <Section width="content" space="lg">
-      <SectionHeading eyebrow="Latest writing" title="From the notebook." />
-      {latestPosts.map((post) => (
-        <a href={`/blog/${post.id}`} class="group block border-t border-border pt-8">
-          <time class="font-mono text-[0.7rem] uppercase tracking-[0.15em] text-secondary/70">
-            {fmt(new Date(post.data.pubDate))}
-          </time>
-          <h3 class="mt-3 font-serif text-2xl md:text-3xl font-medium tracking-tight text-foreground leading-snug group-hover:text-hover transition-colors max-w-3xl">
-            {post.data.title}
-          </h3>
-          {post.data.description && (
-            <p class="mt-3 text-base text-secondary leading-relaxed max-w-2xl">
-              {post.data.description}
-            </p>
-          )}
-        </a>
-      ))}
-      <p class="mt-8">
-        <a href="/blog" class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]">
-          All writing →
-        </a>
-      </p>
-    </Section>
-  )}
-
-  <!-- Work with me -->
-  <Section width="content" space="lg" surface>
-    <SectionHeading eyebrow="Work with me" title="Two ways I can help." />
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border">
-      <div class="bg-background p-8 md:p-10 flex flex-col">
-        <h3 class="font-serif text-2xl font-medium tracking-tight text-foreground leading-tight mb-3">
-          Transform your company
-        </h3>
-        <p class="text-base text-secondary leading-relaxed mb-8 flex-1">
-          Let's talk about turning your company into an AI-native one, and exactly what it takes to get
-          there.
-        </p>
-        <a href="/cal" class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]">
-          Book a call →
-        </a>
-      </div>
-      <div class="bg-background p-8 md:p-10 flex flex-col">
-        <h3 class="font-serif text-2xl font-medium tracking-tight text-foreground leading-tight mb-3">
-          Speaking
-        </h3>
-        <p class="text-base text-secondary leading-relaxed mb-8 flex-1">
-          Want me at your event, workshop, or on your podcast? I speak on AI transformation, building
-          companies, and leading from love not fear.
-        </p>
-        <a href="/speaking" class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]">
-          See speaking topics →
-        </a>
-      </div>
-    </div>
-  </Section>
 </BaseLayout>
