@@ -125,7 +125,14 @@ export const companies: Company[] = [
   {
     name: '12moons',
     url: '',
-    description: 'One of my earliest ventures. An e-commerce brand in Germany selling a range of consumer products. Sold in 2006.',
+    description: 'One of a small portfolio of German e-commerce brands I built and sold together, my second exit, alongside Aroma Tee (tea) and 1a-Teppich (rugs).',
+    logo: '',
+    status: 'exited',
+  },
+  {
+    name: 'Emma',
+    url: '',
+    description: 'A small retail chain, four stores across Germany selling home accessories and furniture.',
     logo: '',
     status: 'exited',
   },
