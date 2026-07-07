@@ -25,6 +25,20 @@ const exited = companies.filter((c) => c.status === 'exited');
       These are the companies I run, across AI, growth, and conscious leadership. They're the vehicles
       that deliver the work I write about. Interested in any of them? <a href="/contact" class="ink-link">Reach out</a> and I'm happy to introduce you to the founder or key person on the team.
     </p>
+
+    <dl class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-px bg-border border border-border">
+      {[
+        { n: '25+', l: 'Years in the arena' },
+        { n: '13', l: 'Companies built' },
+        { n: '500+', l: 'People across the teams' },
+        { n: '2', l: 'Exits' },
+      ].map((s) => (
+        <div class="bg-background p-6">
+          <dt class="font-serif text-3xl md:text-4xl font-medium tracking-tight text-foreground leading-none">{s.n}</dt>
+          <dd class="mt-2 font-mono text-[0.66rem] uppercase tracking-[0.15em] text-secondary/80 leading-relaxed">{s.l}</dd>
+        </div>
+      ))}
+    </dl>
   </section>
 
   <!-- Current focus: Relote + the stack -->

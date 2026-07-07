@@ -31,18 +31,21 @@ const topics = [
 ];
 
 const appearances = [
-  "Entrepreneurs' Organization (EO), Member & Speaker",
-  'Forbes Business Council, Guest Contributor',
-  'Entrepreneur on Fire Podcast',
-  'Marketing Speak Podcast by Stephan Spencer',
-  'Radical Responsibility Podcast with Fleet Maull',
-  'Org Design Podcast',
-  'The Startup Chat Podcast, Multiple Appearances',
-  'Running Remote, Future of Distributed Teams',
-  'SaaStock, Building Companies with Purpose',
-  'SEED Slovenia',
-  'University guest lectures, Self-Leadership for Students',
-  'Corporate workshops & webinars, Love Not Fear for Teams',
+  { name: 'Forbes, Guest Contributor', url: 'https://www.forbes.com/councils/theyec/2022/04/13/10-ways-to-balance-what-customers-want-with-whats-best-for-business/' },
+  { name: 'Entrepreneurs on Fire, with John Lee Dumas', url: 'https://www.eofire.com/podcast/davidhenzel/' },
+  { name: 'Growth Everywhere, with Eric Siu', url: 'https://www.levelingup.com/growth-everywhere-interview/david-henzel-managing-happiness/' },
+  { name: 'Predictable Profits Podcast', url: 'https://predictableprofits.com/david-henzel-podcast/' },
+  { name: 'Consulting Success Podcast', url: 'https://www.consultingsuccess.com/how-to-manage-yourself-out-of-your-consulting-business-with-david-henzel' },
+  { name: 'How We Solve Podcast', url: 'https://howwesolve.com/podcast/e1-david-henzel-mission-vision-values/' },
+  { name: "Entrepreneurs' Organization (EO), Member & Speaker" },
+  { name: 'Marketing Speak, with Stephan Spencer' },
+  { name: 'Radical Responsibility, with Fleet Maull' },
+  { name: 'The Startup Chat, Multiple Appearances' },
+  { name: 'Running Remote, Future of Distributed Teams' },
+  { name: 'SaaStock, Building Companies with Purpose' },
+  { name: 'SEED Slovenia' },
+  { name: 'University guest lectures, Self-Leadership for Students' },
+  { name: 'Corporate workshops & webinars, Love Not Fear for Teams' },
 ];
 ---
 
@@ -99,7 +102,13 @@ const appearances = [
     <SectionHeading eyebrow="Past appearances" title="Keynotes, panels, and podcasts." />
     <ul class="grid sm:grid-cols-2 gap-x-12">
       {appearances.map((a) => (
-        <li class="border-t border-border py-3 text-sm text-secondary">{a}</li>
+        <li class="border-t border-border py-3 text-sm text-secondary">
+          {a.url ? (
+            <a href={a.url} target="_blank" rel="noopener" class="ink-link">{a.name}</a>
+          ) : (
+            a.name
+          )}
+        </li>
       ))}
     </ul>
   </Section>
