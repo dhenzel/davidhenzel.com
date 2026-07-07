@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Section from '../components/Section.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import CompanyCard from '../components/CompanyCard.astro';
-import NewsletterForm from '../components/NewsletterForm.astro';
 import { companies } from '../data/companies';
 
 const focus = companies.filter((c) => c.status === 'focus');
@@ -72,11 +71,4 @@ const exited = companies.filter((c) => c.status === 'exited');
       </div>
     </Section>
   )}
-
-  <!-- Newsletter -->
-  <Section width="prose" space="lg" surface>
-    <p class="font-serif text-xl text-foreground mb-2">Follow what we're building</p>
-    <p class="text-sm text-secondary mb-5">Updates on new ventures, lessons learned, and the love-not-fear work underneath it. Much love.</p>
-    <NewsletterForm id="companies" />
-  </Section>
 </BaseLayout>

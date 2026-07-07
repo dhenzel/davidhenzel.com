@@ -12,22 +12,15 @@ const { type, tags = [] } = Astro.props;
 const pillarToCTA: Record<string, string> = {
   'ai-native-company': 'context-engine',
   'culture-without-fear': 'upcoach',
-  'operators-notebook': 'newsletter',
+  'operators-notebook': 'context-engine',
   'founders-operating-system': 'lnf-course',
   'love-vs-fear': 'community',
 };
 
 const pillar = pillarForTags(tags);
-const ctaType = type || (pillar ? pillarToCTA[pillar.slug] : undefined) || 'newsletter';
+const ctaType = type || (pillar ? pillarToCTA[pillar.slug] : undefined) || 'context-engine';
 
 const ctas: Record<string, { heading: string; body: string; linkText: string; url: string; external: boolean }> = {
-  'newsletter': {
-    heading: 'Want more like this?',
-    body: 'I write occasionally from inside the arena, what I\'m building, what broke, and the plays that worked. No spam, no fluff.',
-    linkText: 'Subscribe to the newsletter',
-    url: '/contact',
-    external: false,
-  },
   'context-engine': {
     heading: 'This is what I build all day.',
     body: 'Context Engine is the context layer I actually run, it captures your company\'s knowledge and serves it to any AI tool, so your agents already know your world. Real transformation, not setup porn.',
@@ -79,7 +72,7 @@ const ctas: Record<string, { heading: string; body: string; linkText: string; ur
   },
 };
 
-const cta = ctas[ctaType] ?? ctas['newsletter'];
+const cta = ctas[ctaType] ?? ctas['context-engine'];
 ---
 
 <aside class="my-14 border-t border-border pt-8">

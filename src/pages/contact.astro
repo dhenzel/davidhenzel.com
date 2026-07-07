@@ -1,7 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Section from '../components/Section.astro';
-import NewsletterForm from '../components/NewsletterForm.astro';
 
 const methods = [
   { label: 'Email', value: 'dh@davidhenzel.com', href: 'mailto:dh@davidhenzel.com' },
@@ -44,11 +42,4 @@ const methods = [
       ))}
     </ul>
   </section>
-
-  <!-- Newsletter -->
-  <Section width="prose" space="lg">
-    <p class="font-serif text-xl text-foreground mb-2">Or just stay in the loop</p>
-    <p class="text-sm text-secondary mb-5">Occasional letters on building companies and the love-not-fear work underneath it. No spam. Much love.</p>
-    <NewsletterForm id="contact" />
-  </Section>
 </BaseLayout>
