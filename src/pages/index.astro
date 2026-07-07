@@ -21,7 +21,7 @@ const fmt = (d: Date) =>
 
 <BaseLayout
   title="David Henzel · Serial entrepreneur, building from love not fear"
-  description="David Henzel is a serial entrepreneur running a portfolio he rebuilt around AI. Helping people and companies thrive has been his whole career, and AI just made it the most exciting work of his life."
+  description="David Henzel is a serial entrepreneur turning his portfolio into AI-native companies. Helping people and companies thrive has been his passion for as long as he can remember, and AI just made it the most exciting work of his life."
 >
   <!-- Hero + why now, merged -->
   <section class="max-w-wide mx-auto px-6 pt-20 md:pt-32 pb-16 md:pb-24">
@@ -29,7 +29,7 @@ const fmt = (d: Date) =>
       David Henzel · Serial entrepreneur
     </p>
     <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-foreground leading-[1.08] max-w-4xl">
-      Helping people and companies thrive has been my whole career.
+      Helping people and companies thrive has been my passion for as long as I can remember.
       <span class="text-secondary">AI just made it the most exciting work of my life.</span>
     </h1>
     <div class="mt-10 space-y-5 text-base md:text-lg text-secondary leading-relaxed max-w-2xl">
@@ -40,24 +40,26 @@ const fmt = (d: Date) =>
         love, not fear.
       </p>
       <p>
-        AI transformation makes it faster, better, and more exciting than anything I've done before.
-        While rebuilding my own portfolio companies around AI, we built the tools and the processes to
-        help companies and people thrive. I'm more energized than ever to bring it to the market.
+        AI makes it faster, better, and more exciting than anything I've done before. While turning my
+        own portfolio companies into AI-native companies, we built the tools and the processes to help
+        companies and people thrive. I'm more energized than ever to bring it to the market.
       </p>
       <p class="text-foreground font-medium">
-        Most of what gets sold as "AI transformation" is theater. This is the real thing: hard work,
-        measured in adoption and proven value, from someone who actually runs the companies.
+        Most of what gets sold as "AI transformation" is theater: prompting workshops, a pilot that
+        never touches a real workflow, advice from people who've never run a company. The real thing
+        changes how the work actually happens. Real systems, not slide decks, proven with numbers before
+        anything gets handed over.
       </p>
     </div>
     <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
       <a
-        href="/blog"
+        href="/cal"
         class="font-mono text-[0.72rem] uppercase tracking-[0.15em] text-background bg-foreground px-5 py-3 hover:bg-hover transition-colors"
       >
-        Read the writing
+        Book a call
       </a>
-      <a href="/companies" class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]">
-        Explore the ventures
+      <a href="/blog" class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]">
+        Read the writing
       </a>
     </div>
   </section>
@@ -67,12 +69,12 @@ const fmt = (d: Date) =>
     <MediaLogos />
   </div>
 
-  <!-- Current focus: Relote -->
+  <!-- My companies: Relote is the focus + the whole portfolio -->
   <Section width="content" space="lg" surface>
     <SectionHeading
-      eyebrow="Current focus"
-      title="Relote: rebuilding companies around AI."
-      subtitle="If you built your company from scratch today, with AI, what would it look like? At Relote we go build that answer, workflow by workflow. We proved it on our own portfolio first. Three products of ours power every transformation."
+      eyebrow="My companies"
+      title="Right now, everything points at Relote."
+      subtitle="Relote helps you turn your company into an AI-native one, workflow by workflow. We proved it on our own portfolio first, then built the products to do it for others. Three of them power every transformation."
     />
     <ul class="grid grid-cols-1 sm:grid-cols-3 gap-px bg-border border border-border">
       {focus.map((item) => (
@@ -94,23 +96,18 @@ const fmt = (d: Date) =>
         See Relote →
       </a>
     </p>
-  </Section>
 
-  <!-- Portfolio pointer -->
-  <Section width="content" space="lg">
-    <p class="font-serif text-2xl md:text-3xl font-medium tracking-tight text-foreground leading-snug max-w-2xl">
-      Relote is the focus, but there's a whole portfolio behind it.
-    </p>
-    <p class="mt-5">
-      <a href="/companies" class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]">
-        Check out all the portfolio companies →
-      </a>
-    </p>
+    <div class="mt-12 pt-8 border-t border-border">
+      <p class="text-base md:text-lg text-secondary leading-relaxed max-w-2xl">
+        Relote is the focus, but there's a whole portfolio behind it.
+        <a href="/companies" class="ink-link">Check out my portfolio companies →</a>
+      </p>
+    </div>
   </Section>
 
   <!-- Latest writing -->
   {latestPosts.length > 0 && (
-    <Section width="content" space="lg" surface>
+    <Section width="content" space="lg">
       <SectionHeading eyebrow="Latest writing" title="From the notebook." />
       {latestPosts.map((post) => (
         <a href={`/blog/${post.id}`} class="group block border-t border-border pt-8">
@@ -134,4 +131,35 @@ const fmt = (d: Date) =>
       </p>
     </Section>
   )}
+
+  <!-- Work with me -->
+  <Section width="content" space="lg" surface>
+    <SectionHeading eyebrow="Work with me" title="Two ways I can help." />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border">
+      <div class="bg-background p-8 md:p-10 flex flex-col">
+        <h3 class="font-serif text-2xl font-medium tracking-tight text-foreground leading-tight mb-3">
+          Transform your company
+        </h3>
+        <p class="text-base text-secondary leading-relaxed mb-8 flex-1">
+          Let's talk about turning your company into an AI-native one, and exactly what it takes to get
+          there.
+        </p>
+        <a href="/cal" class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]">
+          Book a call →
+        </a>
+      </div>
+      <div class="bg-background p-8 md:p-10 flex flex-col">
+        <h3 class="font-serif text-2xl font-medium tracking-tight text-foreground leading-tight mb-3">
+          Speaking
+        </h3>
+        <p class="text-base text-secondary leading-relaxed mb-8 flex-1">
+          Want me at your event, workshop, or on your podcast? I speak on AI transformation, building
+          companies, and leading from love not fear.
+        </p>
+        <a href="/speaking" class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]">
+          See speaking topics →
+        </a>
+      </div>
+    </div>
+  </Section>
 </BaseLayout>
