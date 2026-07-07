@@ -10,23 +10,28 @@ import SectionHeading from '../components/SectionHeading.astro';
 >
   <!-- Hero -->
   <section class="max-w-content mx-auto px-6 pt-20 md:pt-28">
-    <p class="font-mono text-[0.72rem] uppercase tracking-[0.2em] text-secondary mb-8">About</p>
-    <div class="flex flex-col sm:flex-row sm:items-center gap-8">
-      <img
-        src="/images/david-headshot.png"
-        alt="David Henzel"
-        class="w-28 h-28 object-cover rounded-full border border-border shrink-0"
-      />
-      <h1 class="font-serif text-3xl md:text-5xl font-medium tracking-tight text-foreground leading-[1.1] max-w-3xl">
-        Recovering introvert. Serial entrepreneur. Turning companies AI-native, and choosing love over fear.
-      </h1>
+    <div class="grid md:grid-cols-5 gap-10 items-center">
+      <div class="md:col-span-3">
+        <p class="font-mono text-[0.72rem] uppercase tracking-[0.2em] text-secondary mb-8">About</p>
+        <h1 class="font-serif text-3xl md:text-4xl font-medium tracking-tight text-foreground leading-[1.1]">
+          Recovering introvert. Serial entrepreneur. Turning companies AI-native, and choosing love over fear.
+        </h1>
+        <p class="mt-6 text-lg text-secondary leading-relaxed">
+          From Wiesbaden, Germany. Lived in Los Angeles for years. Now based in Bodrum, Turkey. Helping
+          people and companies thrive has been my passion for as long as I can remember. I'm a systems
+          thinker, obsessed with applying the same frameworks to a business and to a life, and AI just made
+          it the most exciting work I've ever done.
+        </p>
+      </div>
+      <div class="md:col-span-2">
+        <img
+          src="/images/david-headshot.png"
+          alt="David Henzel"
+          class="w-full object-cover grayscale"
+          loading="lazy"
+        />
+      </div>
     </div>
-    <p class="mt-8 text-lg text-secondary leading-relaxed max-w-2xl">
-      From Wiesbaden, Germany. Lived in Los Angeles for years. Now based in Bodrum, Turkey. Helping
-      people and companies thrive has been my passion for as long as I can remember. I'm a systems
-      thinker, obsessed with applying the same frameworks to a business and to a life, and AI just made
-      it the most exciting work I've ever done.
-    </p>
   </section>
 
   <!-- The story -->
