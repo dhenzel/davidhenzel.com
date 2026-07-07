@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Section from '../components/Section.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import MediaLogos from '../components/MediaLogos.astro';
-import NewsletterForm from '../components/NewsletterForm.astro';
 import { getCollection } from 'astro:content';
 
 const focus = [
@@ -22,22 +21,34 @@ const fmt = (d: Date) =>
 
 <BaseLayout
   title="David Henzel · Serial entrepreneur, building from love not fear"
-  description="David Henzel is a serial entrepreneur running a portfolio he rebuilt around AI. He writes from inside the arena about building companies, AI transformation done for real, and choosing love over fear."
+  description="David Henzel is a serial entrepreneur running a portfolio he rebuilt around AI. Helping people and companies thrive has been his whole career, and AI just made it the most exciting work of his life."
 >
-  <!-- Hero -->
+  <!-- Hero + why now, merged -->
   <section class="max-w-wide mx-auto px-6 pt-20 md:pt-32 pb-16 md:pb-24">
     <p class="font-mono text-[0.72rem] uppercase tracking-[0.2em] text-secondary mb-8">
       David Henzel · Serial entrepreneur
     </p>
-    <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-medium tracking-tight text-foreground leading-[1.05] max-w-4xl">
-      Helping people and organizations thrive through better systems, and choices rooted in
-      <span class="transition-colors hover:text-hover">love, not fear</span>.
+    <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-foreground leading-[1.08] max-w-4xl">
+      Helping people and companies thrive has been my whole career.
+      <span class="text-secondary">AI just made it the most exciting work of my life.</span>
     </h1>
-    <p class="mt-8 text-lg text-secondary leading-relaxed max-w-2xl">
-      Serial entrepreneur, 25+ years and one exit, running a portfolio I've rebuilt around AI. I write
-      from inside the arena about building companies, AI transformation done for real, and choosing love
-      over fear.
-    </p>
+    <div class="mt-10 space-y-5 text-base md:text-lg text-secondary leading-relaxed max-w-2xl">
+      <p>
+        For 25 years the real work underneath every company I've built has been the same:
+        organizational and personal development, leading with a clear vision, mission, and values, real
+        goals, and a team that knows exactly where it's going. Better systems, and choices rooted in
+        love, not fear.
+      </p>
+      <p>
+        AI transformation makes it faster, better, and more exciting than anything I've done before.
+        While rebuilding my own portfolio companies around AI, we built the tools and the processes to
+        help companies and people thrive. I'm more energized than ever to bring it to the market.
+      </p>
+      <p class="text-foreground font-medium">
+        Most of what gets sold as "AI transformation" is theater. This is the real thing: hard work,
+        measured in adoption and proven value, from someone who actually runs the companies.
+      </p>
+    </div>
     <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
       <a
         href="/blog"
@@ -49,38 +60,12 @@ const fmt = (d: Date) =>
         Explore the ventures
       </a>
     </div>
-
-    <div class="mt-16 pt-10 border-t border-border max-w-3xl">
-      <MediaLogos compact />
-    </div>
   </section>
 
-  <!-- Why now: the POV + the story -->
-  <Section width="content" space="lg">
-    <div class="max-w-2xl">
-      <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary mb-6">Why now</p>
-      <p class="font-serif text-2xl md:text-3xl font-medium tracking-tight text-foreground leading-[1.2]">
-        I've been doing this my whole career.
-      </p>
-      <div class="mt-6 space-y-5 text-base md:text-lg text-secondary leading-relaxed">
-        <p>
-          Organizational development, personal development, leading with a clear vision, mission, and
-          values, real goals, and a team that knows exactly where it's going. For 25 years, helping
-          people and organizations get to their A-game has been the real work underneath every company
-          I've built.
-        </p>
-        <p>
-          AI transformation makes it faster, better, and more exciting than anything I've done before.
-          While rebuilding my own portfolio companies around AI, we built the tools and the processes to
-          help companies and people thrive. I'm more energized than ever to bring it to the market.
-        </p>
-        <p class="text-foreground font-medium">
-          Most of what gets sold as "AI transformation" is theater. This is the real thing: hard work,
-          measured in adoption and proven value, from someone who actually runs the companies.
-        </p>
-      </div>
-    </div>
-  </Section>
+  <!-- Featured in -->
+  <div class="max-w-content mx-auto px-6">
+    <MediaLogos />
+  </div>
 
   <!-- Current focus: Relote -->
   <Section width="content" space="lg" surface>
@@ -111,9 +96,21 @@ const fmt = (d: Date) =>
     </p>
   </Section>
 
+  <!-- Portfolio pointer -->
+  <Section width="content" space="lg">
+    <p class="font-serif text-2xl md:text-3xl font-medium tracking-tight text-foreground leading-snug max-w-2xl">
+      Relote is the focus, but there's a whole portfolio behind it.
+    </p>
+    <p class="mt-5">
+      <a href="/companies" class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]">
+        Check out all the portfolio companies →
+      </a>
+    </p>
+  </Section>
+
   <!-- Latest writing -->
   {latestPosts.length > 0 && (
-    <Section width="content" space="lg">
+    <Section width="content" space="lg" surface>
       <SectionHeading eyebrow="Latest writing" title="From the notebook." />
       {latestPosts.map((post) => (
         <a href={`/blog/${post.id}`} class="group block border-t border-border pt-8">
@@ -137,14 +134,4 @@ const fmt = (d: Date) =>
       </p>
     </Section>
   )}
-
-  <!-- Newsletter -->
-  <Section width="prose" space="lg" surface>
-    <SectionHeading
-      eyebrow="Stay close"
-      title="Occasional letters from the arena."
-      subtitle="What I'm building, what broke, and the love-not-fear work underneath it. No spam. Much love."
-    />
-    <NewsletterForm id="home" />
-  </Section>
 </BaseLayout>
