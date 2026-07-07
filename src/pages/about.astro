@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Section from '../components/Section.astro';
+import SectionHeading from '../components/SectionHeading.astro';
 ---
 
 <BaseLayout
@@ -8,7 +9,7 @@ import Section from '../components/Section.astro';
   description="David Henzel is a serial entrepreneur turning his portfolio into AI-native companies, and choosing love over fear. From Wiesbaden to LA to Bodrum, 25+ years building companies."
 >
   <!-- Hero -->
-  <section class="max-w-prose mx-auto px-6 pt-20 md:pt-28">
+  <section class="max-w-content mx-auto px-6 pt-20 md:pt-28">
     <p class="font-mono text-[0.72rem] uppercase tracking-[0.2em] text-secondary mb-8">About</p>
     <div class="flex flex-col sm:flex-row sm:items-center gap-8">
       <img
@@ -16,11 +17,11 @@ import Section from '../components/Section.astro';
         alt="David Henzel"
         class="w-28 h-28 object-cover rounded-full border border-border shrink-0"
       />
-      <h1 class="font-serif text-3xl md:text-4xl font-medium tracking-tight text-foreground leading-[1.1]">
+      <h1 class="font-serif text-3xl md:text-5xl font-medium tracking-tight text-foreground leading-[1.1] max-w-3xl">
         Recovering introvert. Serial entrepreneur. Turning companies AI-native, and choosing love over fear.
       </h1>
     </div>
-    <p class="mt-8 text-lg text-secondary leading-relaxed">
+    <p class="mt-8 text-lg text-secondary leading-relaxed max-w-2xl">
       From Wiesbaden, Germany. Lived in Los Angeles for years. Now based in Bodrum, Turkey. Helping
       people and companies thrive has been my passion for as long as I can remember. I'm a systems
       thinker, obsessed with applying the same frameworks to a business and to a life, and AI just made
@@ -29,8 +30,9 @@ import Section from '../components/Section.astro';
   </section>
 
   <!-- The story -->
-  <Section width="prose" space="lg">
-    <div class="space-y-5 text-base text-secondary leading-relaxed">
+  <Section width="content" space="lg" surface>
+    <SectionHeading eyebrow="The story" title="From Wiesbaden to Bodrum, the long way." />
+    <div class="max-w-2xl space-y-5 text-base text-secondary leading-relaxed">
       <p>
         Growing up, I attended 14 different schools. Always the new kid. I was pretty lost and
         incredibly shy. I dropped out at 15, never got a degree, never had a real job. But I found
@@ -55,9 +57,9 @@ import Section from '../components/Section.astro';
   </Section>
 
   <!-- What I believe -->
-  <Section width="prose" space="md" divider>
-    <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary mb-5">What I believe</p>
-    <div class="space-y-5 text-base text-secondary leading-relaxed">
+  <Section width="content" space="lg">
+    <SectionHeading eyebrow="What I believe" title="A few things I'm sure of." />
+    <div class="max-w-2xl space-y-5 text-base text-secondary leading-relaxed">
       <p>
         Most personal development is backwards. People set goals, build habits, and grind, then wonder why they feel empty when they hit the number. That's because they skipped the foundation. You can't build a system for your life if you don't know what your life is for.
       </p>
@@ -80,9 +82,9 @@ import Section from '../components/Section.astro';
   </Section>
 
   <!-- Values -->
-  <Section width="prose" space="md" divider>
-    <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary mb-5">My values</p>
-    <ol class="space-y-6">
+  <Section width="content" space="lg" surface>
+    <SectionHeading eyebrow="My values" title="The five I actually use." />
+    <ol class="max-w-2xl space-y-6">
       <li>
         <p class="font-serif text-lg text-foreground mb-1">1. First Things First</p>
         <p class="text-base text-secondary leading-relaxed">Always prioritize health and your loved ones. If it's not a "FUCK YES," it's a "NO."</p>
@@ -104,20 +106,19 @@ import Section from '../components/Section.astro';
         <p class="text-base text-secondary leading-relaxed">Be authentic. Only do and buy things that matter.</p>
       </li>
     </ol>
-    <p class="mt-8 text-sm text-secondary leading-relaxed">
+    <p class="mt-8 max-w-2xl text-sm text-secondary leading-relaxed">
       Want to define your own? I built a free AI tool that walks you through it. <a href="https://community.lovenotfear.com/c/define-your-personal-core-values" target="_blank" rel="noopener" class="ink-link">Discover your core values here</a>.
     </p>
   </Section>
 
   <!-- The operating system I run on -->
-  <Section width="prose" space="md" divider>
-    <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary mb-6">The operating system I run on</p>
-    <p class="text-base text-secondary leading-relaxed mb-10">
-      I run my own life on the same operating system I bring to a company: vision, mission, values,
-      goals, habits. Here's the top of mine.
-    </p>
-
-    <div class="space-y-10">
+  <Section width="content" space="lg">
+    <SectionHeading
+      eyebrow="Operating system"
+      title="The one I run on myself."
+      subtitle="I run my own life on the same operating system I bring to a company: vision, mission, values, goals, habits. Here's the top of mine."
+    />
+    <div class="max-w-2xl space-y-10">
       <div>
         <p class="font-mono text-[0.66rem] uppercase tracking-[0.15em] text-secondary/70 mb-4">Professionally</p>
         <blockquote class="font-serif text-xl md:text-2xl font-medium tracking-tight text-foreground leading-[1.25]">
@@ -125,9 +126,9 @@ import Section from '../components/Section.astro';
           rooted in love rather than fear.
         </blockquote>
         <p class="mt-4 text-base text-secondary leading-relaxed">
-          My mission is to build companies, tools, and frameworks that help individuals and
-          organizations grow, work better, and live more intentionally, by combining technology,
-          practical methodology, and the practice of acting from love rather than fear.
+          Build companies, tools, and frameworks that help individuals and organizations grow, work
+          better, and live more intentionally, by combining technology, practical methodology, and the
+          practice of acting from love rather than fear.
         </p>
       </div>
 
@@ -138,13 +139,24 @@ import Section from '../components/Section.astro';
           learning and growing until the end.
         </blockquote>
       </div>
+
+      <div>
+        <p class="font-mono text-[0.66rem] uppercase tracking-[0.15em] text-secondary/70 mb-4">As a family</p>
+        <blockquote class="font-serif text-xl md:text-2xl font-medium tracking-tight text-foreground leading-[1.25]">
+          Empower, protect, and lead the people you love.
+        </blockquote>
+        <p class="mt-4 text-base text-secondary leading-relaxed">
+          Provide your family with everything they need to thrive physically, mentally, and emotionally.
+          Remove uncertainty and provide direction.
+        </p>
+      </div>
     </div>
   </Section>
 
   <!-- Who I help -->
-  <Section width="prose" space="md" divider>
-    <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary mb-6">Who I help</p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8">
+  <Section width="content" space="lg" surface>
+    <SectionHeading eyebrow="Who I help" title="Two ways in." />
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8 max-w-3xl">
       <div class="border-t border-border pt-5">
         <h3 class="font-serif text-lg text-foreground mb-2">Founders and leaders</h3>
         <p class="text-sm text-secondary leading-relaxed">
@@ -163,8 +175,8 @@ import Section from '../components/Section.astro';
   </Section>
 
   <!-- Work with me -->
-  <Section width="prose" space="md" divider>
-    <p class="font-serif text-xl md:text-2xl text-foreground leading-snug mb-5">
+  <Section width="content" space="lg">
+    <p class="font-serif text-2xl md:text-3xl font-medium tracking-tight text-foreground leading-snug mb-6">
       Want to work together?
     </p>
     <div class="flex flex-wrap gap-x-8 gap-y-3">
