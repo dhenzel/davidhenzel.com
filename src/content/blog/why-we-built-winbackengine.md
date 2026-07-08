@@ -1,7 +1,7 @@
 ---
 title: "The Revenue You Already Earned and Lost: Why We Built WinbackEngine"
 description: "Every service business is sitting on a database of customers who used to love them and quietly drifted away. Here is why we built a company to call those people back, and why a real human beats another automated email every time."
-pubDate: 2026-07-08
+pubDate: 2026-07-09
 tags: ["growth", "retention", "entrepreneurship", "marketing"]
 cta: "winback"
 draft: false
@@ -35,6 +35,14 @@ We built WinbackEngine AI-first from day one. The engine does the part machines 
 
 That split is the whole idea. Machine precision underneath, human warmth on top. It is the same belief that runs through everything I build. Use AI to carry the routine load and point people at the moments that matter, then let real humans be human where it actually counts. Automate the targeting, never automate the relationship.
 
+## The rare kind of technology that creates jobs
+
+Here is the part I am most excited about, and it has nothing to do with the technology. Most AI stories end with fewer people. This one ends with more.
+
+A robocall does not work for winning a customer back. The second someone realizes a machine is dialing them about a relationship they used to have with a business, it is over. It feels cheap, it is a turnoff, and it does the exact opposite of what you want. Winning someone back is an act of warmth, and warmth cannot be faked by a bot.
+
+So the person on the phone is not a cost we are trying to engineer away. The person is the product. Every campaign we run means real jobs for real people having real conversations, and the better WinbackEngine does, the more of those jobs there are. At a moment when everyone is anxious about which jobs AI will erase, I love that we are building a company where the technology exists to put more good people to work, not fewer. That is the love-not-fear version of AI, and it is the only version I am interested in building.
+
 ## We only win when the client wins
 
 The last piece is how we charge, and it matters more than it sounds.
@@ -43,7 +51,7 @@ I did not want to build another agency that gets paid whether or not it works. S
 
 That is not a marketing gimmick. It is a discipline. When you only get paid on recovered revenue, you cannot hide behind impressions or open rates or a nice-looking dashboard. You either put real dollars back on the client's books or you do not eat. It forces the whole company to be honest about what is working, which is exactly the pressure I want on a business I run.
 
-It also runs on real infrastructure, not a promise. WinbackEngine sits on top of LTVplus's operating backbone, hundreds of trained agents across dozens of countries, so quality holds as the volume grows.
+It also runs on real infrastructure, not a promise. WinbackEngine sits on top of [LTVplus](https://ltvplus.com), the customer-experience company I have spent years building. That means over 500 trained agents across more than 30 countries, vetted, coached, and certified to the security and quality standards that come from running customer support at that scale. This is not a startup wiring up a call script. It is a proven global operation pointed at one specific, lucrative job: getting your lost customers back.
 
 ## Why this is the pattern now
 
