@@ -2,8 +2,9 @@
 title: "The First Thing to Build in an AI-Native Company Isn't AI. It's Memory."
 description: "Most AI transformation is theater. The real foundation of an AI-native company is a shared, permanent memory, the layer almost every company skips. Here is why, drawn from rebuilding my own portfolio first."
 pubDate: 2026-07-08
+heroImage: "/images/blog/ai-native-memory.svg"
 tags: ["ai", "systems", "technology", "entrepreneurship"]
-draft: true
+draft: false
 ---
 
 Everyone is buying AI right now. Almost nobody is becoming an AI-native company.
