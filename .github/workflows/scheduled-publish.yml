@@ -1,32 +1,58 @@
 name: Scheduled publish
 
-# Rebuilds the production site on a schedule so that future-dated blog posts
-# (draft:false with a pubDate in the future) go live automatically once their
-# date arrives. The build-time filter in src/utils/posts.ts hides them until then.
+# Publishes future-dated blog posts on their pubDate with no manual step and no
+# secrets. Cloudflare Pages rebuilds on every push to `main` (git integration),
+# and the production build hides posts whose pubDate is still in the future
+# (see src/utils/posts.ts). This job runs daily and, only on a day when a
+# non-draft post is due, pushes a tiny commit to `main` to trigger that rebuild.
 #
-# One-time setup required:
-#   1. In Cloudflare Pages > davidhenzel-com > Settings > Builds & deployments,
-#      create a Deploy hook for the production branch (main). Copy its URL.
-#   2. In GitHub > repo Settings > Secrets and variables > Actions, add a secret
-#      named CLOUDFLARE_DEPLOY_HOOK with that URL.
-#
-# You can also trigger a rebuild manually from the Actions tab (Run workflow).
+# You can also run it on demand from the Actions tab (Run workflow) to force a
+# rebuild at any time.
 
 on:
   schedule:
-    # Every 6 hours (UTC). Picks up newly-due posts within a few hours of midnight UTC.
-    - cron: '0 */6 * * *'
+    - cron: '15 0 * * *' # daily at 00:15 UTC (~03:15 in Bodrum)
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  trigger-rebuild:
+  publish-due-posts:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Cloudflare Pages deploy hook
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Rebuild production if a post is due
         run: |
-          if [ -z "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}" ]; then
-            echo "CLOUDFLARE_DEPLOY_HOOK secret is not set. Skipping." >&2
-            exit 1
+          set -euo pipefail
+          today=$(date -u +%Y-%m-%d)
+          yesterday=$(date -u -d 'yesterday' +%Y-%m-%d)
+          force="${{ github.event_name == 'workflow_dispatch' }}"
+
+          due=""
+          shopt -s nullglob
+          for f in src/content/blog/*.md src/content/blog/*.mdx; do
+            draft=$(grep -m1 -E '^draft:' "$f" | tr -d ' \r' | cut -d: -f2 || true)
+            pub=$(grep -m1 -E '^pubDate:' "$f" | sed -E 's/^pubDate:[[:space:]]*//' | tr -d "\"' \r" | cut -c1-10 || true)
+            if [ "$draft" != "true" ] && { [ "$pub" = "$today" ] || [ "$pub" = "$yesterday" ]; }; then
+              due="$f"
+              echo "Due post: $f (pubDate $pub)"
+            fi
+          done
+
+          if [ "$force" != "true" ] && [ -z "$due" ]; then
+            echo "No posts due today ($today). Nothing to rebuild."
+            exit 0
           fi
-          curl -fsS -X POST "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}"
-          echo "Triggered Cloudflare Pages rebuild."
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > .github/last-scheduled-rebuild.txt
+          git add .github/last-scheduled-rebuild.txt
+          git commit -m "chore: scheduled publish rebuild ($today)"
+          git push origin main
+          echo "Pushed rebuild commit. Cloudflare Pages will redeploy main."
