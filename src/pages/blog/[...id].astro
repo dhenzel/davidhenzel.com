@@ -1,9 +1,10 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { render } from 'astro:content';
 import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
+import { getPublishedPosts } from '../../utils/posts';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  const posts = await getPublishedPosts();
   const sorted = posts.sort(
     (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
   );
@@ -37,7 +38,7 @@ const bodyText = post.body ?? '';
 const readingTime = estimateReadingTime(bodyText);
 
 // Related posts: find posts sharing tags with this post
-const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const allPosts = await getPublishedPosts();
 const currentTags = new Set(post.data.tags ?? []);
 const relatedPosts = allPosts
   .filter((p) => p.id !== post.id)

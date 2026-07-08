@@ -2,10 +2,10 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Section from '../../components/Section.astro';
 import PillarFilter from '../../components/PillarFilter.astro';
-import { getCollection } from 'astro:content';
 import { pillarForTags } from '../../data/pillars';
+import { getPublishedPosts } from '../../utils/posts';
 
-const posts = (await getCollection('blog', ({ data }) => !data.draft))
+const posts = (await getPublishedPosts())
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const fmt = (d: Date) =>

@@ -1,0 +1,32 @@
+name: Scheduled publish
+
+# Rebuilds the production site on a schedule so that future-dated blog posts
+# (draft:false with a pubDate in the future) go live automatically once their
+# date arrives. The build-time filter in src/utils/posts.ts hides them until then.
+#
+# One-time setup required:
+#   1. In Cloudflare Pages > davidhenzel-com > Settings > Builds & deployments,
+#      create a Deploy hook for the production branch (main). Copy its URL.
+#   2. In GitHub > repo Settings > Secrets and variables > Actions, add a secret
+#      named CLOUDFLARE_DEPLOY_HOOK with that URL.
+#
+# You can also trigger a rebuild manually from the Actions tab (Run workflow).
+
+on:
+  schedule:
+    # Every 6 hours (UTC). Picks up newly-due posts within a few hours of midnight UTC.
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  trigger-rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Cloudflare Pages deploy hook
+        run: |
+          if [ -z "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}" ]; then
+            echo "CLOUDFLARE_DEPLOY_HOOK secret is not set. Skipping." >&2
+            exit 1
+          fi
+          curl -fsS -X POST "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}"
+          echo "Triggered Cloudflare Pages rebuild."
