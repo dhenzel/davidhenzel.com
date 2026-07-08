@@ -35,6 +35,10 @@ A company is not smart because it has smart tools. A company is smart because it
 
 So the foundational building block is the layer that fixes the amnesia. One shared, permanent memory that every tool, and every person, draws from. We call ours the Context Engine, and it is the thing I would install before I touched a single fancy automation.
 
+![How the Context Engine works: every source your company runs on, email, meetings, team chats on Slack, WhatsApp and Telegram, documents, CRM and calendar, flows into one shared memory. Daimon listens in the chats your team already uses. The engine then surfaces briefings to your team and connects to any AI tool via MCP.](/images/blog/context-engine-diagram.svg)
+
+*Everything your company knows flows into one memory. Daimon sits in the chats your team already uses, on Slack, WhatsApp, or Telegram, and keeps that memory alive. Then any tool, or any person, can draw on it.*
+
 ## The proof came from my own portfolio
 
 I run a portfolio of real companies, and I mean real in the boring, operational sense. Customer support and CX. Recruiting and people work. Marketing. SaaS. Customer reactivation. Queues, hiring funnels, churn, SLAs, pipelines. Not slideware.
@@ -53,7 +57,13 @@ We got so excited by the results that we turned the playbook into a company. But
 
 ## The layer almost everyone skips
 
-There is a useful way to think about how an AI-native company actually operates, as a loop that runs continuously: it senses what is happening, interprets it against everything the company knows, decides, acts, and learns from the outcome. Governance wraps the whole thing so a human stays in control and nothing runs off the rails.
+This is not a framework I invented. The clearest map of how a company built around AI actually operates comes from **ExO 3.0, *The Organizational Singularity***, by Salim Ismail and colleagues, the follow-up to the original *Exponential Organizations*. The idea is that an AI-native organization runs as a continuous loop, at machine speed: it senses what is happening, interprets it against everything the company knows, decides, acts, and learns from the outcome. A purpose sets the goals and the hard constraints up top, and governance wraps the whole thing so a human stays in control and nothing runs off the rails.
+
+Plenty of people have read the book. The difference is that we actually build the loop, layer by layer, inside real companies. That is what the whole engagement is: installing this stack where a pile of disconnected tools used to be.
+
+![The ExO 3.0 operating loop of an AI-native company: Purpose sets the constraints, then a continuous loop of Sense, Interpret (the memory), Decide, Act, and Learn (which compounds), with every outcome feeding back into the memory. Governance wraps the whole loop.](/images/blog/ai-native-operating-loop.svg)
+
+*The two highlighted layers, Interpret and Learn, are the ones almost nobody builds. They make no demo, so they get skipped. They are also the only reason the system gets smarter every month.*
 
 Most companies buy a chatbot, which is a sliver of the "act" layer, and stop. They never build the two layers that actually compound.
 

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" fill="none" role="img" aria-label="How the Context Engine works: company sources (email, meetings, team chats on Slack, WhatsApp and Telegram, docs, CRM and calendar) flow into one shared memory. Daimon listens in team chats and both remembers to and recalls from the engine. The engine surfaces briefings to your team and connects to any AI tool via MCP, and includes five personal engines.">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="2" width="996" height="656" rx="16" fill="#FBFBFA" stroke="#E4E2DD" stroke-width="1.5"/>
+
+  <text x="40" y="52" font-family="ui-monospace, 'Courier New', monospace" font-size="12" letter-spacing="2" fill="#6E6C66">WHAT FLOWS IN</text>
+  <text x="960" y="52" text-anchor="end" font-family="ui-monospace, 'Courier New', monospace" font-size="12" letter-spacing="2" fill="#6E6C66">WHAT COMES OUT</text>
+
+  <!-- source inputs -->
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#1C1C1A">
+    <rect x="40" y="78" width="210" height="48" rx="10" fill="#FFFFFF" stroke="#E4E2DD" stroke-width="1.5"/>
+    <text x="62" y="108">Email</text>
+    <rect x="40" y="138" width="210" height="48" rx="10" fill="#FFFFFF" stroke="#E4E2DD" stroke-width="1.5"/>
+    <text x="62" y="168">Meetings &amp; calls</text>
+    <rect x="40" y="198" width="210" height="66" rx="10" fill="#FFFFFF" stroke="#B91C1C" stroke-width="1.5"/>
+    <text x="62" y="226">Team chats</text>
+    <text x="62" y="249" font-family="ui-monospace, 'Courier New', monospace" font-size="11" fill="#6E6C66">SLACK · WHATSAPP · TELEGRAM</text>
+    <rect x="40" y="278" width="210" height="48" rx="10" fill="#FFFFFF" stroke="#E4E2DD" stroke-width="1.5"/>
+    <text x="62" y="308">Docs &amp; files</text>
+    <rect x="40" y="338" width="210" height="48" rx="10" fill="#FFFFFF" stroke="#E4E2DD" stroke-width="1.5"/>
+    <text x="62" y="368">CRM &amp; pipeline</text>
+    <rect x="40" y="398" width="210" height="48" rx="10" fill="#FFFFFF" stroke="#E4E2DD" stroke-width="1.5"/>
+    <text x="62" y="428">Calendar</text>
+  </g>
+
+  <!-- intake bus -->
+  <g stroke="#A7A49B" stroke-width="1.5" fill="none">
+    <path d="M250,102 H320"/>
+    <path d="M250,162 H320"/>
+    <path d="M250,302 H320"/>
+    <path d="M250,362 H320"/>
+    <path d="M250,422 H320"/>
+    <path d="M320,102 V422"/>
+  </g>
+  <path d="M320,300 H396" stroke="#B91C1C" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- team chats listen into Daimon -->
+  <path d="M250,231 C330,231 348,124 396,114" stroke="#B91C1C" stroke-width="1.5" stroke-dasharray="5 5" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Daimon -->
+  <rect x="400" y="70" width="280" height="80" rx="14" fill="#FBFBFA" stroke="#B91C1C" stroke-width="1.5"/>
+  <text x="424" y="108" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#1C1C1A">Daimon</text>
+  <text x="424" y="132" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6E6C66">The ambient agent · daimon.sh</text>
+
+  <!-- Daimon <-> Engine -->
+  <path d="M520,150 V206" stroke="#B91C1C" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M560,206 V156" stroke="#B91C1C" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="590" y="186" font-family="ui-monospace, 'Courier New', monospace" font-size="11" fill="#6E6C66">remembers ↓ · recalls ↑</text>
+
+  <!-- Context Engine -->
+  <rect x="400" y="210" width="280" height="140" rx="16" fill="#F6EBE8" stroke="#B91C1C" stroke-width="2"/>
+  <text x="424" y="256" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#1C1C1A">Context Engine</text>
+  <text x="424" y="284" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6E6C66">Your company's permanent memory,</text>
+  <text x="424" y="303" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6E6C66">on your own server</text>
+  <text x="424" y="334" font-family="ui-monospace, 'Courier New', monospace" font-size="12" fill="#B91C1C">contextengine.com</text>
+
+  <!-- personal engines -->
+  <path d="M540,350 V368" stroke="#A7A49B" stroke-width="1.5" fill="none"/>
+  <g fill="#FFFFFF" stroke="#E4E2DD" stroke-width="1.5">
+    <rect x="415" y="370" width="44" height="44" rx="10"/>
+    <rect x="469" y="370" width="44" height="44" rx="10"/>
+    <rect x="523" y="370" width="44" height="44" rx="10"/>
+    <rect x="577" y="370" width="44" height="44" rx="10"/>
+    <rect x="631" y="370" width="44" height="44" rx="10"/>
+  </g>
+  <g fill="#B91C1C">
+    <circle cx="437" cy="392" r="4"/>
+    <circle cx="491" cy="392" r="4"/>
+    <circle cx="545" cy="392" r="4"/>
+    <circle cx="599" cy="392" r="4"/>
+    <circle cx="653" cy="392" r="4"/>
+  </g>
+  <text x="545" y="442" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6E6C66">5 personal engines · one per key person, included</text>
+
+  <!-- outputs -->
+  <path d="M680,242 C722,204 732,152 758,130" stroke="#B91C1C" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="694" y="214" font-family="ui-monospace, 'Courier New', monospace" font-size="11" fill="#6E6C66">surfaces</text>
+  <rect x="760" y="86" width="200" height="80" rx="14" fill="#FBFBFA" stroke="#E4E2DD" stroke-width="1.5"/>
+  <text x="784" y="122" font-family="system-ui, -apple-system, sans-serif" font-size="17" fill="#1C1C1A">Your team</text>
+  <text x="784" y="144" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#6E6C66">briefings · answers · patterns</text>
+
+  <path d="M680,290 H756" stroke="#B91C1C" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="694" y="280" font-family="ui-monospace, 'Courier New', monospace" font-size="11" fill="#6E6C66">via MCP</text>
+  <rect x="760" y="252" width="200" height="80" rx="14" fill="#FBFBFA" stroke="#E4E2DD" stroke-width="1.5"/>
+  <text x="784" y="288" font-family="system-ui, -apple-system, sans-serif" font-size="17" fill="#1C1C1A">Any AI tool</text>
+  <text x="784" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#6E6C66">Claude · ChatGPT · what's next</text>
+
+  <g transform="translate(905,610) scale(0.55)" opacity="0.16" fill="#1A1A1A"><path d="M0,36.8 L4.54,36.8 L4.54,8.61 L0,8.61 L0,5.34 L17.81,5.34 C21.42,5.34 24.49,6.14 27.03,7.75 C29.57,9.35 31.47,11.46 32.74,14.07 C34,16.68 34.63,19.44 34.63,22.36 C34.63,25.82 34,28.88 32.74,31.55 C31.47,34.23 29.59,36.31 27.09,37.81 C24.59,39.31 21.51,40.06 17.87,40.06 L0,40.06 L0,36.8Z M17.29,36.8 C21.42,36.8 24.49,35.5 26.52,32.89 C28.54,30.29 29.55,26.87 29.55,22.64 C29.55,20.2 29.11,17.94 28.22,15.86 C27.34,13.79 25.99,12.11 24.17,10.83 C22.36,9.54 20.13,8.9 17.47,8.9 L9.25,8.9 L9.25,36.8 L17.29,36.8Z M45.37,40.06 L45.37,36.8 L49.74,36.8 L49.74,8.61 L45.37,8.61 L45.37,5.34 L58.69,5.34 L58.69,8.61 L54.32,8.61 L54.32,20.45 L71.11,20.45 L71.11,8.61 L66.69,8.61 L66.69,5.34 L80,5.34 L80,8.61 L75.64,8.61 L75.64,36.8 L80,36.8 L80,40.06 L66.69,40.06 L66.69,36.8 L71.11,36.8 L71.11,23.97 L54.32,23.97 L54.32,36.8 L58.69,36.8 L58.69,40.06Z M38.7,0 L40.7,0 L40.7,45.7 L38.7,45.7Z"/></g>
+</svg>
