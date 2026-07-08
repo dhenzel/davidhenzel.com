@@ -4,7 +4,7 @@ description: "Ecommerce brands keep pouring money into colder and colder traffic
 pubDate: 2026-07-22
 tags: ["ecommerce", "growth", "retention", "marketing"]
 cta: "winback"
-draft: true
+draft: false
 ---
 
 Ask an ecommerce operator where their next dollar of revenue comes from and almost all of them say the same thing: the ad account. More spend, more traffic, more conversions. So they pour money into audiences that get colder and more expensive every quarter, chasing strangers who have never heard of the brand.
