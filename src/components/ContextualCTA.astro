@@ -2,7 +2,7 @@
 import { pillarForTags } from '../data/pillars';
 
 interface Props {
-  type?: 'newsletter' | 'lnf-course' | 'free-course' | 'community' | 'cohort' | 'retreat' | 'upcoach' | 'context-engine';
+  type?: 'newsletter' | 'lnf-course' | 'free-course' | 'community' | 'cohort' | 'retreat' | 'upcoach' | 'context-engine' | 'winback';
   tags?: string[];
 }
 
@@ -68,6 +68,13 @@ const ctas: Record<string, { heading: string; body: string; linkText: string; ur
     body: 'The Love Not Fear community is where people who think like this hang out. Facilitators, founders, students. Real conversations, no fluff.',
     linkText: 'Join the community',
     url: 'https://community.lovenotfear.com/c/love-not-fear-community',
+    external: true,
+  },
+  'winback': {
+    heading: 'Sitting on a pile of lapsed customers?',
+    body: 'WinbackEngine puts trained human agents on the phone with the customers who drifted away, and only gets paid on the revenue we actually recover. Guaranteed 5x in the first 30 days or you don\'t pay.',
+    linkText: 'See what WinbackEngine can recover',
+    url: 'https://winbackengine.com',
     external: true,
   },
 };

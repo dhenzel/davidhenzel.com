@@ -11,7 +11,7 @@ const blog = defineCollection({
     heroImage: z.string().optional(),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
-    cta: z.enum(['newsletter', 'lnf-course', 'free-course', 'community', 'cohort', 'retreat', 'upcoach']).optional(),
+    cta: z.enum(['newsletter', 'lnf-course', 'free-course', 'community', 'cohort', 'retreat', 'upcoach', 'winback']).optional(),
   }),
 });
 

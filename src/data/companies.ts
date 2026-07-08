@@ -74,7 +74,7 @@ export const companies: Company[] = [
   {
     name: 'WinbackEngine',
     url: 'https://winbackengine.com',
-    description: 'A <a href="https://winbackengine.com" target="_blank" rel="noopener">customer win-back service</a> that uses AI-powered omnichannel outreach, including real phone calls by trained agents, to reactivate lapsed customers with a guaranteed 3x ROI.',
+    description: 'A <a href="https://winbackengine.com" target="_blank" rel="noopener">customer win-back service</a> that uses AI-powered omnichannel outreach, including real phone calls by trained agents, to reactivate lapsed customers with a guaranteed 5x ROI.',
     logo: '/logos/companies/winbackengine.svg',
   },
   {
