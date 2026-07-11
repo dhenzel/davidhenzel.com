@@ -32,7 +32,10 @@ const { title, description, image, canonicalURL, article, footer = 'full' } = As
     />
   </head>
   <body>
-    <div class="mx-auto max-w-site bg-paper sm:border-x border-ink min-h-screen flex flex-col">
+    <div class:list={[
+      'mx-auto max-w-site bg-paper sm:border-x border-ink flex flex-col',
+      footer === 'none' ? 'border-b' : 'min-h-screen',
+    ]}>
       <Header />
       <main class="flex-1">
         <slot />
