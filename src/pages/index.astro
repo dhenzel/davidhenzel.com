@@ -1,62 +1,75 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import VentureRow from '../components/VentureRow.astro';
+
+const featuredVentures = [
+  { number: '01', name: 'Relote', oneLiner: 'Forging AI-native companies', tag: 'Focus', href: 'https://relote.com' },
+  { number: '02', name: 'Context Engine', oneLiner: "Your company's permanent memory", tag: 'AI', href: 'https://contextengine.com' },
+  { number: '03', name: 'upcoach', oneLiner: 'Group coaching platform', tag: 'SaaS', href: 'https://upcoach.com' },
+  { number: '04', name: 'MaxCDN', oneLiner: 'Content delivery network', tag: 'Exited', tagAccent: true, href: 'https://en.wikipedia.org/wiki/MaxCDN' },
+];
 ---
 
 <BaseLayout
   title="David Henzel · Serial entrepreneur, building from love not fear"
   description="David Henzel is a serial entrepreneur turning his portfolio into AI-native companies. Helping people and companies thrive has been his passion for as long as he can remember, and AI just made it the most exciting work of his life."
+  footer="slim"
 >
   <!-- Hero -->
-  <section class="max-w-content mx-auto px-6 pt-20 md:pt-32 pb-20 md:pb-28">
-    <p class="font-mono text-[0.72rem] uppercase tracking-[0.2em] text-secondary mb-8">
-      David Henzel · Serial entrepreneur
-    </p>
-    <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-foreground leading-[1.08] max-w-4xl">
-      Helping people and companies thrive has been my passion for as long as I can remember.
-      <span class="text-secondary">AI just made it the most exciting work of my life.</span>
+  <section class="px-6 md:px-8 pt-14 md:pt-[72px] pb-12 border-b border-ink">
+    <p class="eyebrow mb-5">Serial entrepreneur · 25+ years · 15+ companies</p>
+    <h1 class="font-serif font-semibold text-[clamp(2.125rem,5.5vw,3.375rem)] leading-[1.12] max-w-[900px]">
+      Building companies since 1999.
+      <span class="text-faint">Rebuilding them around AI since 2024.</span>
     </h1>
-    <div class="mt-10 space-y-5 text-base md:text-lg text-secondary leading-relaxed max-w-2xl">
-      <p>
-        For 25 years the real work underneath every company I've built has been the same:
-        organizational and personal development, leading with a clear vision, mission, and values, real
-        goals, and a team that knows exactly where it's going. Better systems, and choices rooted in
-        love, not fear.
-      </p>
-      <p>
-        AI makes it faster, better, and more exciting than anything I've done before. While turning my
-        own portfolio companies into AI-native companies, we built the tools and the processes to help
-        companies and people thrive. I'm more energized than ever to bring it to the market.
-      </p>
-      <p class="text-foreground font-medium">
-        Most of what gets sold as "AI transformation" is theater: prompting workshops, a pilot that
-        never touches a real workflow, advice from people who've never run a company. The real thing
-        changes how the work actually happens. Real systems, not slide decks, proven with numbers before
-        anything gets handed over.
-      </p>
-    </div>
-
-    <!-- CTAs -->
-    <div class="mt-10 flex flex-wrap items-center gap-3">
-      <a
-        href="/cal"
-        class="font-mono text-[0.72rem] uppercase tracking-[0.15em] text-background bg-foreground px-5 py-3 hover:bg-hover transition-colors"
-      >
-        Book a call
-      </a>
-      <a
-        href="/companies"
-        class="font-mono text-[0.72rem] uppercase tracking-[0.15em] text-foreground border border-foreground px-5 py-3 hover:bg-foreground hover:text-background transition-colors"
-      >
-        Check out my portfolio
-      </a>
-    </div>
-    <p class="mt-6 text-sm text-secondary leading-relaxed max-w-xl">
-      That call is where we map out making your company AI-native. Prefer a keynote?
-      <a href="/speaking" class="ink-link">Have me speak at your event →</a>
-    </p>
-
-    <p class="mt-12 font-mono text-[0.66rem] uppercase tracking-[0.15em] text-secondary/60">
-      As featured in <a href="https://www.forbes.com/councils/theyec/2022/04/13/10-ways-to-balance-what-customers-want-with-whats-best-for-business/" target="_blank" rel="noopener" class="hover:text-foreground underline decoration-transparent hover:decoration-current underline-offset-2 transition-colors">Forbes</a> · Inc. · Fast Company · HuffPost · The Next Web
-    </p>
   </section>
+
+  <!-- Intro + CTA band -->
+  <div class="grid md:grid-cols-[1.4fr_1fr] border-b border-ink">
+    <div class="px-6 md:px-8 py-7 md:border-r border-ink text-[15.5px] leading-relaxed text-body">
+      A lot of AI transformation is theater — workshops, slide decks, pilots that never touch real
+      work. The real thing is built department by department, on solid operational foundations, by
+      people who have built companies, not just AI vibecoders. That's what we do: we made our
+      portfolio AI-native, and we're helping others do the same.
+    </div>
+    <div class="px-6 md:px-8 py-7 flex items-center justify-between gap-4 border-t border-hairline md:border-t-0">
+      <span class="text-sm font-medium text-ink">Map your AI-native path</span>
+      <a href="/cal" class="btn-pill">Book a call</a>
+    </div>
+  </div>
+
+  <!-- Ventures table -->
+  <div class="table-label px-6 md:px-8 py-[13px] border-b border-hairline">01 — Ventures</div>
+  <div>
+    {featuredVentures.map((v) => (
+      <VentureRow
+        number={v.number}
+        name={v.name}
+        oneLiner={v.oneLiner}
+        tag={v.tag}
+        tagAccent={v.tagAccent}
+        href={v.href}
+      />
+    ))}
+    <a href="/companies" class="grid grid-cols-[40px_1fr] md:grid-cols-[56px_1fr_150px] items-baseline gap-y-1 px-6 md:px-8 py-4 bg-tint group">
+      <span class="text-faint text-xs">05–15</span>
+      <span class="text-body text-sm">LTVplus, Sendloop, Octeth, Shortlist, TaskDrive, WinbackEngine &amp; six more</span>
+      <span class="col-start-2 md:col-start-3 md:text-right text-[13.5px] font-medium text-accent whitespace-nowrap group-hover:opacity-75 transition-opacity">All ventures →</span>
+    </a>
+  </div>
+
+  <!-- Featured-in strip -->
+  <div class="flex flex-col sm:flex-row sm:justify-between gap-3 px-6 md:px-8 py-[18px] border-t border-ink items-baseline">
+    <div class="flex gap-x-5 gap-y-1 items-baseline flex-wrap font-serif font-semibold text-[13px] text-mute">
+      <span class="table-label whitespace-nowrap">Featured in</span>
+      <a href="https://www.forbes.com/councils/theyec/2022/04/13/10-ways-to-balance-what-customers-want-with-whats-best-for-business/" target="_blank" rel="noopener" class="hover:text-accent transition-colors">Forbes</a>
+      <span>Inc.</span>
+      <span class="whitespace-nowrap">Fast Company</span>
+      <span>HuffPost</span>
+      <span class="whitespace-nowrap">The Next Web</span>
+    </div>
+    <span class="text-[12.5px] text-faint whitespace-nowrap hidden lg:block">
+      Prefer a keynote? <a href="/speaking" class="accent-link">Have me speak →</a>
+    </span>
+  </div>
 </BaseLayout>

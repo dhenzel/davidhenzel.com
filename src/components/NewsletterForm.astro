@@ -1,25 +1,21 @@
 ---
 interface Props {
   id: string;
-  compact?: boolean;
 }
 
-const { id, compact = false } = Astro.props;
+const { id } = Astro.props;
 ---
 
-<form class="newsletter-form" data-form-id={id}>
-  <div class="flex gap-2">
+<form class="newsletter-form w-full" data-form-id={id}>
+  <div class="flex items-center gap-3">
     <input
       type="email"
       name="email"
       placeholder="your@email.com"
       required
-      class="flex-1 min-w-0 px-3 py-2 text-sm border-b border-border bg-transparent text-foreground placeholder-secondary/40 focus:outline-none focus:border-accent transition-colors"
+      class="flex-1 min-w-0 px-1 py-2 text-sm border-b border-hairline bg-transparent text-ink placeholder-faint focus:outline-none focus:border-accent transition-colors"
     />
-    <button
-      type="submit"
-      class="font-mono text-[0.72rem] uppercase tracking-[0.15em] text-foreground hover:text-hover transition-colors shrink-0"
-    >
+    <button type="submit" class="btn-pill shrink-0">
       Subscribe
     </button>
   </div>
@@ -62,16 +58,16 @@ const { id, compact = false } = Astro.props;
 
         if (res.ok) {
           status.textContent = 'You\'re in! Check your inbox.';
-          status.className = 'newsletter-status mt-2 text-xs text-foreground';
+          status.className = 'newsletter-status mt-2 text-xs text-ink';
           f.reset();
         } else {
           const data = await res.json();
           status.textContent = data.error || 'Something went wrong. Try again.';
-          status.className = 'newsletter-status mt-2 text-xs text-hover';
+          status.className = 'newsletter-status mt-2 text-xs text-accent';
         }
       } catch {
         status.textContent = 'Network error. Please try again.';
-        status.className = 'newsletter-status mt-2 text-xs text-hover';
+        status.className = 'newsletter-status mt-2 text-xs text-accent';
       }
 
       btn.disabled = false;

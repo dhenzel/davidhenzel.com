@@ -1,55 +1,44 @@
 ---
 import { navItems } from '../data/navigation';
+
+interface Props {
+  variant?: 'full' | 'slim';
+}
+
+const { variant = 'full' } = Astro.props;
 const year = new Date().getFullYear();
 ---
 
-<footer class="border-t border-border mt-24">
-  <div class="max-w-content mx-auto px-6 py-14">
-
-    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
-      <div class="max-w-xs">
-        <img src="/images/dh-logo.svg" alt="David Henzel" class="h-6 w-auto mb-4" />
-        <p class="text-sm text-secondary leading-relaxed">
+<footer class="border-t border-ink">
+  {variant === 'full' && (
+    <div class="grid md:grid-cols-[1.6fr_1fr_1fr] gap-8 px-6 md:px-8 py-9 border-b border-hairline">
+      <div>
+        <img src="/images/dh-logo.svg" alt="David Henzel" class="h-[22px] w-auto mb-3" />
+        <p class="text-[13.5px] leading-relaxed text-mute max-w-[260px]">
           Building companies and choosing love over fear.
         </p>
-        <a
-          href="https://lovenotfear.com"
-          target="_blank"
-          rel="noopener"
-          class="inline-block mt-5 hover:opacity-80 transition-opacity"
-          aria-label="Love Not Fear"
-        >
-          <img src="/logos/companies/lovenotfear.png" alt="Love Not Fear" class="h-14 w-14" width="56" height="56" loading="lazy" />
-        </a>
       </div>
 
-      <div class="flex flex-col gap-8 sm:flex-row sm:gap-16">
-        <div>
-          <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary/70 mb-4">Site</p>
-          <ul class="space-y-2.5">
-            {navItems.map((item) => (
-              <li>
-                <a href={item.href} class="text-sm text-secondary hover:text-foreground transition-colors">{item.label}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <nav class="flex flex-col gap-2 text-[13.5px] text-body" aria-label="Footer navigation">
+        <span class="table-label mb-1">Site</span>
+        {navItems.map((item) => (
+          <a href={item.href} class="hover:text-accent transition-colors">{item.label}</a>
+        ))}
+      </nav>
 
-        <div>
-          <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary/70 mb-4">Elsewhere</p>
-          <ul class="space-y-2.5">
-            <li><a href="mailto:dh@davidhenzel.com" class="text-sm text-secondary hover:text-foreground transition-colors">Email</a></li>
-            <li><a href="https://twitter.com/davidhenzel" target="_blank" rel="noopener noreferrer" class="text-sm text-secondary hover:text-foreground transition-colors">Twitter / X</a></li>
-            <li><a href="https://www.linkedin.com/in/davidhenzel" target="_blank" rel="noopener noreferrer" class="text-sm text-secondary hover:text-foreground transition-colors">LinkedIn</a></li>
-            <li><a href="https://www.instagram.com/davidhenzel" target="_blank" rel="noopener noreferrer" class="text-sm text-secondary hover:text-foreground transition-colors">Instagram</a></li>
-          </ul>
-        </div>
+      <div class="flex flex-col gap-2 text-[13.5px] text-body">
+        <span class="table-label mb-1">Elsewhere</span>
+        <a href="mailto:dh@davidhenzel.com" class="hover:text-accent transition-colors">Email</a>
+        <a href="https://twitter.com/davidhenzel" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Twitter / X</a>
+        <a href="https://www.linkedin.com/in/davidhenzel" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">LinkedIn</a>
+        <a href="https://www.instagram.com/davidhenzel" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Instagram</a>
+        <a href="https://lovenotfear.com" target="_blank" rel="noopener" class="hover:text-accent transition-colors">Love Not Fear</a>
       </div>
     </div>
+  )}
 
-    <div class="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-      <p class="font-mono text-[0.7rem] uppercase tracking-[0.15em] text-secondary/70">🇩🇪 Wiesbaden · 🇺🇸 Los Angeles · 🇹🇷 Bodrum</p>
-      <p class="font-mono text-[0.7rem] uppercase tracking-[0.15em] text-secondary/70">&copy; {year} David Henzel</p>
-    </div>
+  <div class="flex flex-col sm:flex-row sm:justify-between gap-1 px-6 md:px-8 py-4 text-[12.5px] text-faint">
+    <span class="whitespace-nowrap">🇩🇪 Wiesbaden · 🇺🇸 Los Angeles · 🇹🇷 Bodrum</span>
+    <span>&copy; {year} David Henzel</span>
   </div>
 </footer>

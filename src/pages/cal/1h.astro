@@ -5,27 +5,29 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <BaseLayout
   title="Book a 1-Hour Call · David Henzel"
   description="Book a 1-hour call with David Henzel. Let's talk about building companies, AI transformation, conscious leadership, or how we might work together."
+  footer="slim"
 >
-  <section class="max-w-content mx-auto px-6 pt-20 md:pt-28">
-    <p class="font-mono text-[0.72rem] uppercase tracking-[0.2em] text-secondary mb-8">Book a call · 1 hour</p>
-    <h1 class="font-serif text-4xl md:text-5xl font-medium tracking-tight text-foreground leading-[1.1]">
+  <section class="px-6 md:px-8 pt-14 md:pt-16 pb-12 border-b border-ink">
+    <p class="eyebrow mb-5">Book a call · 1 hour</p>
+    <h1 class="font-serif font-semibold text-[clamp(2rem,5vw,3rem)] leading-[1.12] mb-5">
       Let's talk, the long version.
     </h1>
-    <p class="mt-6 text-lg text-secondary leading-relaxed">
+    <p class="text-[15.5px] leading-relaxed text-body max-w-[600px]">
       Whether it's about building companies, AI transformation, conscious leadership, or finding ways
       to work together, grab a time that works for you.
     </p>
-
-    <div class="mt-12">
-      <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary mb-6">Pick a time</p>
-      <iframe
-        src="https://api.leadconnectorhq.com/widget/booking/wvZ1o2Ocl0diHYgJameX"
-        style="width: 100%; min-width: 320px; height: 1000px; border: none; overflow: hidden;"
-        scrolling="no"
-        id="Hi3CT6gGT3JZGLlIgoQP_1780826336275"
-      ></iframe>
-    </div>
-
-  <script is:inline src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
   </section>
+
+  <div class="px-6 md:px-8 py-8">
+    <p class="table-label mb-5">Pick a time</p>
+    <iframe
+      src="https://api.leadconnectorhq.com/widget/booking/wvZ1o2Ocl0diHYgJameX"
+      style="width: 100%; min-width: 320px; height: 1000px; border: none; overflow: hidden;"
+      scrolling="no"
+      id="Hi3CT6gGT3JZGLlIgoQP_1780826336275"
+      title="Booking calendar"
+    ></iframe>
+
+    <script is:inline src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+  </div>
 </BaseLayout>

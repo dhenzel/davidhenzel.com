@@ -9,6 +9,7 @@ interface Props {
   description: string;
   image?: string;
   canonicalURL?: string;
+  footer?: 'full' | 'slim';
   article?: {
     pubDate: Date;
     updatedDate?: Date;
@@ -16,7 +17,7 @@ interface Props {
   };
 }
 
-const { title, description, image, canonicalURL, article } = Astro.props;
+const { title, description, image, canonicalURL, article, footer = 'full' } = Astro.props;
 ---
 
 <!doctype html>
@@ -31,11 +32,13 @@ const { title, description, image, canonicalURL, article } = Astro.props;
     />
   </head>
   <body>
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+    <div class="mx-auto max-w-site bg-paper sm:border-x border-ink min-h-screen flex flex-col">
+      <Header />
+      <main class="flex-1">
+        <slot />
+      </main>
+      <Footer variant={footer} />
+    </div>
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "1f00855df001483695bf5ea2aab1273c"}'></script>
   </body>
 </html>

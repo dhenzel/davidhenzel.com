@@ -4,47 +4,47 @@ import { navItems } from '../data/navigation';
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="border-b border-border">
-  <div class="max-w-content mx-auto px-6">
-    <div class="flex items-center justify-between h-16">
-      <!-- Logo -->
+<header class="border-b border-ink">
+  <!-- Desktop: 3-col ink-ruled grid -->
+  <div class="hidden md:grid grid-cols-[1fr_2fr_1fr] items-center">
+    <div class="px-8 py-[18px] border-r border-ink">
       <a href="/" class="hover:opacity-70 transition-opacity" aria-label="David Henzel, home">
         <img src="/images/dh-logo.svg" alt="David Henzel" class="h-6 w-auto" />
       </a>
+    </div>
+    <nav class="px-8 py-[18px] border-r border-ink flex gap-6 text-[13px] font-medium" aria-label="Main navigation">
+      {navItems.map((item) => {
+        const isActive =
+          item.href === '/'
+            ? currentPath === '/'
+            : currentPath.startsWith(item.href);
+        return (
+          <a
+            href={item.href}
+            class:list={[
+              'transition-colors hover:text-accent',
+              isActive ? 'text-ink font-semibold' : 'text-body',
+            ]}
+          >
+            {item.label}
+          </a>
+        );
+      })}
+    </nav>
+    <div class="px-8 py-[18px] text-right text-[13px] font-medium">
+      <a href="/cal" class="text-ink hover:text-accent transition-colors">Book a call →</a>
+    </div>
+  </div>
 
-      <!-- Desktop nav -->
-      <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
-        {navItems.map((item) => {
-          const isActive =
-            item.href === '/'
-              ? currentPath === '/'
-              : currentPath.startsWith(item.href);
-          return (
-            <a
-              href={item.href}
-              class:list={[
-                'font-mono text-[0.72rem] uppercase tracking-[0.15em] transition-colors',
-                isActive
-                  ? 'text-foreground'
-                  : 'text-secondary hover:text-foreground',
-              ]}
-            >
-              {item.label}
-            </a>
-          );
-        })}
-        <a
-          href="/cal"
-          class="font-mono text-[0.72rem] uppercase tracking-[0.15em] text-background bg-foreground px-3.5 py-2 hover:bg-hover transition-colors"
-        >
-          Book a call
-        </a>
-      </nav>
-
-      <!-- Mobile hamburger button -->
+  <!-- Mobile: logo + hamburger -->
+  <div class="md:hidden px-6">
+    <div class="flex items-center justify-between h-14">
+      <a href="/" class="hover:opacity-70 transition-opacity" aria-label="David Henzel, home">
+        <img src="/images/dh-logo.svg" alt="David Henzel" class="h-6 w-auto" />
+      </a>
       <button
         id="menu-toggle"
-        class="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 text-foreground"
+        class="flex flex-col justify-center items-center w-8 h-8 gap-1.5 text-ink"
         aria-label="Toggle menu"
         aria-expanded="false"
         aria-controls="mobile-menu"
@@ -55,13 +55,8 @@ const currentPath = Astro.url.pathname;
       </button>
     </div>
 
-    <!-- Mobile menu -->
-    <div
-      id="mobile-menu"
-      class="md:hidden hidden"
-      aria-label="Mobile navigation"
-    >
-      <nav class="pb-6 flex flex-col gap-4">
+    <div id="mobile-menu" class="hidden" aria-label="Mobile navigation">
+      <nav class="pb-6 pt-2 flex flex-col gap-3 border-t border-hairline">
         {navItems.map((item) => {
           const isActive =
             item.href === '/'
@@ -71,17 +66,15 @@ const currentPath = Astro.url.pathname;
             <a
               href={item.href}
               class:list={[
-                'font-mono text-xs uppercase tracking-[0.15em] py-1 transition-colors',
-                isActive
-                  ? 'text-foreground'
-                  : 'text-secondary hover:text-foreground',
+                'text-sm font-medium py-1 transition-colors',
+                isActive ? 'text-ink font-semibold' : 'text-body hover:text-accent',
               ]}
             >
               {item.label}
             </a>
           );
         })}
-        <a href="/cal" class="font-mono text-xs uppercase tracking-[0.15em] py-1 text-foreground">
+        <a href="/cal" class="text-sm font-medium py-1 text-ink">
           Book a call →
         </a>
       </nav>

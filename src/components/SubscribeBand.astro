@@ -1,0 +1,24 @@
+---
+import NewsletterForm from './NewsletterForm.astro';
+
+interface Props {
+  id: string;
+  copy?: string;
+  border?: 'ink' | 'none';
+}
+
+const {
+  id,
+  copy = 'Get new essays by email — occasional, practical, no spam.',
+  border = 'ink',
+} = Astro.props;
+---
+
+<div class:list={['grid md:grid-cols-[1.4fr_1fr]', border === 'ink' && 'border-t border-ink']}>
+  <div class="px-6 md:px-8 py-6 md:border-r border-ink text-[15px] leading-relaxed text-body flex items-center">
+    {copy}
+  </div>
+  <div class="px-6 md:px-8 py-6 flex items-center border-t border-hairline md:border-t-0">
+    <NewsletterForm id={id} />
+  </div>
+</div>

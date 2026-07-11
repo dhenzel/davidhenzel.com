@@ -5,20 +5,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout
   title="Page Not Found · David Henzel"
   description="The page you're looking for doesn't exist."
+  footer="slim"
 >
-  <section class="max-w-content mx-auto px-6 pt-28 pb-32">
-    <p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-secondary mb-8">404</p>
-    <h1 class="font-serif text-5xl md:text-7xl font-medium tracking-tight text-foreground mb-6 leading-[1.05]">
+  <section class="px-6 md:px-8 pt-20 pb-28">
+    <p class="eyebrow mb-5">404</p>
+    <h1 class="font-serif font-semibold text-[clamp(2.5rem,7vw,4.5rem)] leading-[1.05] mb-6">
       Page not found.
     </h1>
-    <p class="text-lg text-secondary leading-relaxed max-w-lg mb-10">
+    <p class="text-[15.5px] leading-relaxed text-body max-w-lg mb-9">
       This page doesn't exist or may have moved. Head back home and you'll find your way. Keep going.
     </p>
-    <a
-      href="/"
-      class="inline-block font-mono text-[0.72rem] uppercase tracking-[0.15em] text-background bg-foreground px-5 py-3 hover:bg-hover transition-colors"
-    >
-      Back to home →
-    </a>
+    <a href="/" class="btn-pill">Back to home →</a>
   </section>
 </BaseLayout>

@@ -1,7 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Section from '../components/Section.astro';
-import SectionHeading from '../components/SectionHeading.astro';
 
 const topics = [
   {
@@ -47,81 +45,78 @@ const appearances = [
   { name: 'University guest lectures, Self-Leadership for Students' },
   { name: 'Corporate workshops & webinars, Love Not Fear for Teams' },
 ];
+
+const half = Math.ceil(appearances.length / 2);
+const appearancesLeft = appearances.slice(0, half);
+const appearancesRight = appearances.slice(half);
 ---
 
 <BaseLayout
   title="Speaking · David Henzel"
   description="Book David Henzel to speak. Topics include doing AI transformation for real, building culture without fear, from introvert to CEO, and building your personal operating system."
 >
-  <!-- Intro -->
-  <section class="max-w-content mx-auto px-6 pt-20 md:pt-28">
-    <div class="grid md:grid-cols-5 gap-10 items-center">
-      <div class="md:col-span-3">
-        <p class="font-mono text-[0.72rem] uppercase tracking-[0.2em] text-secondary mb-8">Speaking</p>
-        <h1 class="font-serif text-4xl md:text-5xl font-medium tracking-tight text-foreground leading-[1.1]">
-          Real stories from 25+ years playing the game of business.
-        </h1>
-        <p class="mt-6 text-lg text-secondary leading-relaxed">
-          I speak about doing AI transformation for real, building companies from a place of love, and
-          the systems that help people find their purpose. Keynote, workshop, webinar, podcast, or
-          university lecture, I bring what I'm actually building and running, not theory from the
-          sidelines.
-        </p>
-        <p class="mt-6">
-          <a href="mailto:dh@davidhenzel.com?subject=Speaking%20Inquiry" class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]">
-            dh@davidhenzel.com →
-          </a>
-        </p>
-      </div>
-      <div class="md:col-span-2">
-        <img
-          src="/images/david-onstage.png"
-          alt="David Henzel speaking on stage"
-          class="w-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-          loading="lazy"
-        />
-      </div>
+  <!-- Hero -->
+  <section class="grid md:grid-cols-[1fr_400px] border-b border-ink">
+    <div class="px-6 md:px-8 pt-14 md:pt-16 pb-12 md:border-r border-ink">
+      <p class="eyebrow mb-5">Speaking</p>
+      <h1 class="font-serif font-semibold text-[clamp(1.875rem,4.5vw,3rem)] leading-[1.15] mb-5">
+        Real stories from 25+ years of building. <span class="text-faint">On stage.</span>
+      </h1>
+      <p class="text-[15.5px] leading-relaxed text-body max-w-[560px]">
+        I speak about doing AI transformation for real, building companies from a place of love, and
+        the systems that help people find their purpose. Keynote, workshop, webinar, podcast, or
+        university lecture — I bring what I'm actually building and running, not theory from the
+        sidelines.
+      </p>
+    </div>
+    <div class="relative min-h-[300px] md:min-h-[380px] border-t md:border-t-0 border-hairline grayscale hover:grayscale-0 transition-[filter] duration-500">
+      <img
+        src="/images/david-onstage.png"
+        alt="David Henzel speaking on stage"
+        class="absolute inset-0 w-full h-full object-cover"
+        loading="eager"
+      />
     </div>
   </section>
 
-  <!-- Talk topics -->
-  <Section width="content" space="lg">
-    <SectionHeading eyebrow="Talk topics" title="What I speak about." />
-    <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
-      {topics.map((topic) => (
-        <div class="border-t border-border pt-6">
-          <h3 class="font-serif text-xl font-medium text-foreground leading-snug mb-2">{topic.title}</h3>
-          <p class="text-sm text-secondary leading-relaxed">{topic.body}</p>
-        </div>
-      ))}
+  <!-- CTA band -->
+  <div class="grid md:grid-cols-[1.4fr_1fr] border-b border-ink">
+    <div class="px-6 md:px-8 py-7 md:border-r border-ink text-[15px] leading-relaxed text-body">
+      Available for keynotes, workshops, webinars, podcasts, and university lectures — in person or remote.
     </div>
-  </Section>
+    <div class="px-6 md:px-8 py-7 flex items-center justify-between gap-4 border-t border-hairline md:border-t-0">
+      <span class="text-sm font-medium text-ink">Interested?</span>
+      <a href="mailto:dh@davidhenzel.com?subject=Speaking%20Inquiry" class="btn-pill">Email me</a>
+    </div>
+  </div>
+
+  <!-- Talk topics -->
+  <div class="table-label px-6 md:px-8 py-[13px] border-b border-hairline">01 — Talk topics</div>
+  <div class="border-b border-ink">
+    {topics.map((topic, i) => (
+      <div class:list={['grid grid-cols-[40px_1fr] md:grid-cols-[56px_1fr_1.2fr] items-baseline gap-y-1.5 px-6 md:px-8 py-5', i < topics.length - 1 && 'border-b border-hairline']}>
+        <span class="text-faint text-xs">{String(i + 1).padStart(2, '0')}</span>
+        <h3 class="font-serif font-semibold text-[17px] leading-[1.35] text-ink md:pr-7">{topic.title}</h3>
+        <p class="col-start-2 md:col-start-3 text-mute text-sm leading-relaxed">{topic.body}</p>
+      </div>
+    ))}
+  </div>
 
   <!-- Past appearances -->
-  <Section width="content" space="lg" surface>
-    <SectionHeading eyebrow="Past appearances" title="Keynotes, panels, and podcasts." />
-    <ul class="grid sm:grid-cols-2 gap-x-12">
-      {appearances.map((a) => (
-        <li class="border-t border-border py-3 text-sm text-secondary">
-          {a.url ? (
-            <a href={a.url} target="_blank" rel="noopener" class="ink-link">{a.name}</a>
-          ) : (
-            a.name
-          )}
-        </li>
-      ))}
-    </ul>
-  </Section>
-
-  <!-- CTA -->
-  <Section width="prose" space="lg">
-    <p class="font-serif text-2xl md:text-3xl font-medium tracking-tight text-foreground leading-tight">
-      Available for keynotes, workshops, webinars, podcasts, and university lectures.
-    </p>
-    <p class="mt-5">
-      <a href="mailto:dh@davidhenzel.com?subject=Speaking%20Inquiry" class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]">
-        Email me → dh@davidhenzel.com
-      </a>
-    </p>
-  </Section>
+  <div class="table-label px-6 md:px-8 py-[13px] border-b border-hairline">02 — Past appearances</div>
+  <div class="grid md:grid-cols-2">
+    {[appearancesLeft, appearancesRight].map((column, colIdx) => (
+      <ul class:list={['px-6 md:px-8 py-6 flex flex-col gap-2.5 text-[14.5px] text-body', colIdx === 0 && 'md:border-r border-hairline', colIdx === 1 && 'border-t md:border-t-0 border-hairline']}>
+        {column.map((a) => (
+          <li>
+            {a.url ? (
+              <a href={a.url} target="_blank" rel="noopener" class="ink-link">{a.name}</a>
+            ) : (
+              a.name
+            )}
+          </li>
+        ))}
+      </ul>
+    ))}
+  </div>
 </BaseLayout>

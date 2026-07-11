@@ -82,14 +82,14 @@ const ctas: Record<string, { heading: string; body: string; linkText: string; ur
 const cta = ctas[ctaType] ?? ctas['context-engine'];
 ---
 
-<aside class="my-14 border-t border-border pt-8">
-  <p class="font-serif text-xl text-foreground mb-2">{cta.heading}</p>
-  <p class="text-sm text-secondary leading-relaxed mb-4 max-w-xl">{cta.body}</p>
+<aside class="mt-12 border-t border-ink pt-7">
+  <p class="font-serif font-semibold text-xl text-ink mb-2">{cta.heading}</p>
+  <p class="text-sm text-body leading-relaxed mb-4 max-w-xl">{cta.body}</p>
   <a
     href={cta.url}
     target={cta.external ? '_blank' : undefined}
     rel={cta.external ? 'noopener' : undefined}
-    class="ink-link font-mono text-[0.72rem] uppercase tracking-[0.15em]"
+    class="accent-link text-sm font-medium"
   >
     {cta.linkText} →
   </a>

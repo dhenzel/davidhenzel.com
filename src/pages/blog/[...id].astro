@@ -24,7 +24,7 @@ export async function getStaticPaths() {
 }
 
 const { post, prevPost, nextPost } = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
 
 // Reading time estimate (~200 words per minute)
 function estimateReadingTime(text: string): number {
@@ -36,19 +36,6 @@ function estimateReadingTime(text: string): number {
 // A simple heuristic: use the rendered body string if available
 const bodyText = post.body ?? '';
 const readingTime = estimateReadingTime(bodyText);
-
-// Related posts: find posts sharing tags with this post
-const allPosts = await getPublishedPosts();
-const currentTags = new Set(post.data.tags ?? []);
-const relatedPosts = allPosts
-  .filter((p) => p.id !== post.id)
-  .map((p) => {
-    const shared = (p.data.tags ?? []).filter((t: string) => currentTags.has(t)).length;
-    return { id: p.id, title: p.data.title, pubDate: p.data.pubDate, shared };
-  })
-  .filter((p) => p.shared > 0)
-  .sort((a, b) => b.shared - a.shared || b.pubDate.valueOf() - a.pubDate.valueOf())
-  .slice(0, 3);
 ---
 
 <BlogPostLayout
@@ -60,9 +47,9 @@ const relatedPosts = allPosts
   tags={post.data.tags}
   cta={post.data.cta}
   readingTime={readingTime}
+  headings={headings}
   prevPost={prevPost}
   nextPost={nextPost}
-  relatedPosts={relatedPosts}
 >
   <Content />
 </BlogPostLayout>

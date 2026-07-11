@@ -8,14 +8,14 @@ interface Props {
 const { activePillar } = Astro.props;
 ---
 
-<nav class="flex flex-wrap gap-x-6 gap-y-2" aria-label="Filter by pillar">
+<nav class="flex flex-wrap gap-x-5 gap-y-2" aria-label="Filter by pillar">
   <a
     href="/blog"
     class:list={[
-      'font-mono text-[0.7rem] uppercase tracking-[0.15em] pb-1 border-b transition-colors',
+      'text-[11px] font-medium uppercase tracking-[0.12em] pb-0.5 border-b transition-colors',
       !activePillar
-        ? 'text-foreground border-foreground'
-        : 'text-secondary border-transparent hover:text-foreground',
+        ? 'text-ink border-ink'
+        : 'text-faint border-transparent hover:text-accent',
     ]}
   >
     All
@@ -24,10 +24,10 @@ const { activePillar } = Astro.props;
     <a
       href={`/blog?pillar=${pillar.slug}`}
       class:list={[
-        'font-mono text-[0.7rem] uppercase tracking-[0.15em] pb-1 border-b transition-colors',
+        'text-[11px] font-medium uppercase tracking-[0.12em] pb-0.5 border-b transition-colors',
         activePillar === pillar.slug
-          ? 'text-foreground border-foreground'
-          : 'text-secondary border-transparent hover:text-foreground',
+          ? 'text-ink border-ink'
+          : 'text-faint border-transparent hover:text-accent',
       ]}
     >
       {pillar.title}
