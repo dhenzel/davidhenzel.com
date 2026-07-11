@@ -4,18 +4,18 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Palette: editorial ink-on-paper with a single blue accent ────────
+  /* ── Palette: editorial ink-on-paper, cool neutrals, cobalt accent ────────
      Structure is carried by 1px rules: ink for major seams,
      hairline for row dividers. */
-  --color-paper: #FBFBFA;    /* content column */
-  --color-canvas: #EFEDE8;   /* page behind the column */
-  --color-ink: #1c1a17;      /* near-black ink — text + major rules */
-  --color-body: #5b554c;     /* body copy */
-  --color-mute: #8d867b;     /* secondary copy */
-  --color-faint: #a39a8c;    /* metadata, muted heading spans */
-  --color-hairline: #e8e4dc; /* row dividers */
-  --color-tint: #F5F2EC;     /* raised / highlighted rows */
-  --color-accent: oklch(0.5 0.13 255); /* blue — eyebrows, hovers, badges */
+  --color-paper: #FCFCFD;    /* content column */
+  --color-canvas: #ECEDEF;   /* page behind the column */
+  --color-ink: #17181A;      /* near-black ink — text + major rules */
+  --color-body: #52555A;     /* body copy */
+  --color-mute: #82868C;     /* secondary copy */
+  --color-faint: #9BA0A6;    /* metadata, muted heading spans */
+  --color-hairline: #E3E5E8; /* row dividers */
+  --color-tint: #F2F3F5;     /* raised / highlighted rows */
+  --color-accent: #2563EB; /* blue — eyebrows, hovers, badges */
 
   /* ── Type ──────────────────────────────────────────────────────────── */
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;

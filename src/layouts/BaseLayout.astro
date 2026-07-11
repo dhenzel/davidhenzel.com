@@ -9,7 +9,7 @@ interface Props {
   description: string;
   image?: string;
   canonicalURL?: string;
-  footer?: 'full' | 'slim';
+  footer?: 'full' | 'slim' | 'none';
   article?: {
     pubDate: Date;
     updatedDate?: Date;
@@ -37,7 +37,7 @@ const { title, description, image, canonicalURL, article, footer = 'full' } = As
       <main class="flex-1">
         <slot />
       </main>
-      <Footer variant={footer} />
+      {footer !== 'none' && <Footer variant={footer} />}
     </div>
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "1f00855df001483695bf5ea2aab1273c"}'></script>
   </body>
