@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 216" role="img" aria-label="Bar chart: cold traffic returns about two times ad spend and falls; WinbackEngine returns five times, guaranteed">
+  <style>
+    .rowlabel { font: 500 15px Helvetica, Arial, sans-serif; fill: #17181A; }
+    .note { font: 400 13px Helvetica, Arial, sans-serif; fill: #82868C; }
+    .val { font: 700 20px Georgia, 'Times New Roman', serif; }
+  </style>
+  <rect width="720" height="216" fill="#FCFCFD"/>
+
+  <!-- baseline -->
+  <line x1="10" y1="20" x2="10" y2="172" stroke="#E3E5E8" stroke-width="1"/>
+
+  <!-- Cold traffic: ~2x of 5x max => width 240 of 600 -->
+  <text x="10" y="42" class="rowlabel">Cold traffic ads</text>
+  <path d="M10 54 h236 a4 4 0 0 1 4 4 v16 a4 4 0 0 1 -4 4 h-236 z" fill="#82868C"/>
+  <text x="264" y="72" class="val" fill="#17181A">≈2×</text>
+  <text x="326" y="71" class="note">and falling every quarter</text>
+
+  <!-- WinbackEngine: 5x => width 600 -->
+  <text x="10" y="128" class="rowlabel">WinbackEngine</text>
+  <path d="M10 140 h596 a4 4 0 0 1 4 4 v16 a4 4 0 0 1 -4 4 h-596 z" fill="#2563EB"/>
+  <text x="624" y="158" class="val" fill="#17181A">5×</text>
+
+  <text x="10" y="200" class="note">Return on spend, same marketing dollar. 5× guaranteed in the first 30 days.</text>
+</svg>

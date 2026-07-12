@@ -13,6 +13,11 @@ Meanwhile the warmest, cheapest revenue in the whole business is sitting untouch
 
 That is why we brought WinbackEngine to ecommerce.
 
+<figure>
+  <img src="/images/blog/winback-how-it-works.svg" alt="How WinbackEngine works, in four steps: your customer list, AI targeting, human outreach, and recovered revenue at a guaranteed 5x ROAS." width="720" height="384" loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — How WinbackEngine works</figcaption>
+</figure>
+
 ## The revenue your ad account can't reach
 
 I wrote recently about [why we built WinbackEngine](/blog/why-we-built-winbackengine) for multi-location service businesses, wellness, fitness, beauty, dental. The pattern turned out to be universal. Every business that sells to the same people more than once is sitting on a pile of lapsed customers, and almost nobody works it.
@@ -30,6 +35,11 @@ We took that muscle, human-led recovery of revenue you already own, and pointed 
 Ecommerce operators do not think in vague retention metrics. They think in ROAS, return on ad spend. So that is the language we speak.
 
 The pitch is simple, and it is the reason this lands: instead of a 1.5x or 2x return on cold traffic that gets worse every month, we go after customers who already bought from you, with AI picking exactly who is recoverable and a real human doing the outreach that actually brings them back. It is the highest-intent audience you have, and nobody is talking to them. That is how we can promise a 5x return, and mean it.
+
+<figure>
+  <img src="/images/blog/winback-roas.svg" alt="Bar chart comparing return on spend: cold traffic ads return roughly 2x and falling, while WinbackEngine returns 5x, guaranteed in the first 30 days." width="720" height="216" loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 02</span> — The same marketing dollar, two very different returns</figcaption>
+</figure>
 
 Same principles as everything we build. Machine precision on the targeting, human warmth on the relationship. Real jobs for real people, because a bot chasing your customers is a turnoff, not a win-back. And we only win when you win.
 

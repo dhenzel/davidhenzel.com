@@ -11,6 +11,11 @@ Almost every company I meet is pouring money into the front door while the back 
 
 The front door is acquisition: ads, funnels, SEO, content, the endless hunt for someone brand new who has never heard of you. The back door is churn: the customers who already found you, already paid you, already liked what you did, and then quietly drifted away. Nobody chases them. And that is exactly why we built WinbackEngine.
 
+<figure>
+  <img src="/images/blog/winback-front-back-door.svg" alt="Two columns comparing the front door — acquisition through ads, funnels, and SEO that gets colder and pricier every quarter — with the back door: lapsed customers who already know you and already paid you, the warmest revenue you own." width="720" height="320" loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — Where the budget goes vs. where the revenue is</figcaption>
+</figure>
+
 ## The revenue hiding in plain sight
 
 I have spent years running customer support and customer experience for service businesses through LTVplus. When you sit that close to the operations of a lot of companies, you start to see the same thing everywhere: a database full of lapsed customers that just keeps growing, and nobody doing anything about it.
@@ -32,6 +37,11 @@ What actually works is embarrassingly old-fashioned: a real person picks up the 
 So why not just hire a room full of callers and be done with it? Because dialing a cold list at random is a miserable, expensive way to work, and it does not scale.
 
 We built WinbackEngine AI-first from day one. The engine does the part machines are genuinely good at: it reads the customer database, works out who is actually recoverable, when to reach them, and what offer fits, so no agent is ever calling blind. Then a trained human does the part only a human can do: the real conversation that earns the rebooking.
+
+<figure>
+  <img src="/images/blog/winback-how-it-works.svg" alt="How WinbackEngine works, in four steps: your customer list, AI targeting, human outreach, and recovered revenue at a guaranteed 5x ROAS." width="720" height="384" loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 02</span> — Machine precision underneath, human warmth on top</figcaption>
+</figure>
 
 That split is the whole idea. Machine precision underneath, human warmth on top. It is the same belief that runs through everything I build. Use AI to carry the routine load and point people at the moments that matter, then let real humans be human where it actually counts. Automate the targeting, never automate the relationship.
 

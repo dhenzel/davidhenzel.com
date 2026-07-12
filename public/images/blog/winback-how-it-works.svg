@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 384" role="img" aria-label="How WinbackEngine works: your customer list, AI targeting, human outreach, recovered revenue">
+  <style>
+    .num { font: 600 13px Helvetica, Arial, sans-serif; fill: #2563EB; letter-spacing: .08em; }
+    .title { font: 700 21px Georgia, 'Times New Roman', serif; fill: #17181A; }
+    .desc { font: 400 15px Helvetica, Arial, sans-serif; fill: #82868C; }
+    .accent { fill: #2563EB; }
+  </style>
+  <rect width="720" height="384" fill="#FCFCFD"/>
+
+  <!-- Row 1 -->
+  <text x="10" y="34" class="num">01</text>
+  <text x="56" y="36" class="title">Your customer list</text>
+  <text x="56" y="64" class="desc">Lapsed buyers sitting idle in the database you already own.</text>
+  <line x1="0" y1="94" x2="720" y2="94" stroke="#E3E5E8" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <text x="10" y="130" class="num">02</text>
+  <text x="56" y="132" class="title">AI targeting</text>
+  <text x="56" y="160" class="desc">Scores who is recoverable, when to reach them, and what offer fits.</text>
+  <line x1="0" y1="190" x2="720" y2="190" stroke="#E3E5E8" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <text x="10" y="226" class="num">03</text>
+  <text x="56" y="228" class="title">Human outreach</text>
+  <text x="56" y="256" class="desc">A real person calls. A real conversation, not another template.</text>
+  <line x1="0" y1="286" x2="720" y2="286" stroke="#E3E5E8" stroke-width="1"/>
+
+  <!-- Row 4 (highlighted) -->
+  <rect x="0" y="287" width="720" height="97" fill="#F2F3F5"/>
+  <text x="10" y="326" class="num">04</text>
+  <text x="56" y="328" class="title">Recovered revenue <tspan class="accent">— 5× ROAS</tspan></text>
+  <text x="56" y="356" class="desc">Guaranteed in the first 30 days. We only get paid when you do.</text>
+</svg>

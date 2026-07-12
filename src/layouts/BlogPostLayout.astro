@@ -325,6 +325,40 @@ const formattedUpdatedDate = updatedDate
     margin: 2em 0;
   }
 
+  /* Figures: ruled editorial frames for diagrams and screenshots */
+  .prose-content :global(figure) {
+    margin: 2.4em 0;
+    padding: 1.6em 0 1.2em;
+    border-top: 1px solid var(--color-ink);
+    border-bottom: 1px solid var(--color-hairline);
+  }
+
+  .prose-content :global(figure img) {
+    width: 100%;
+    height: auto;
+    border: none;
+    margin: 0;
+    display: block;
+  }
+
+  .prose-content :global(figure img.screenshot) {
+    border: 1px solid var(--color-ink);
+  }
+
+  .prose-content :global(figcaption) {
+    margin-top: 1.1em;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-faint);
+  }
+
+  .prose-content :global(figcaption .fig-no) {
+    color: var(--color-accent);
+  }
+
   .prose-content :global(video) {
     max-width: 100%;
     height: auto;
