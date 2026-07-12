@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-label="A five-step framework for planning your life, moving from understanding why you plan through SWOT analysis and SMARTR goals to five-year plans and daily habits.">
+  <style>
+    .num { font: 600 13px Helvetica, Arial, sans-serif; fill: #2563EB; letter-spacing: .08em; }
+    .title { font: 700 21px Georgia, 'Times New Roman', serif; fill: #17181A; }
+    .desc { font: 400 15px Helvetica, Arial, sans-serif; fill: #82868C; }
+    .accent { fill: #2563EB; }
+    .label { font: 600 12px Helvetica, Arial, sans-serif; letter-spacing: .12em; }
+    .h { font: 700 22px Georgia, 'Times New Roman', serif; fill: #17181A; }
+    .li { font: 400 15px Helvetica, Arial, sans-serif; fill: #82868C; }
+    .verdict { font: 600 15px Helvetica, Arial, sans-serif; }
+  </style>
+  <rect width="720" height="480" fill="#FCFCFD"/>
+  <text x="10" y="38" class="num">01</text>
+  <text x="56" y="40" class="title">Why Plan?</text>
+  <text x="56" y="68" class="desc">Direction, accountability and measurability build lasting change.</text>
+  <line x1="0" y1="96" x2="720" y2="96" stroke="#E3E5E8" stroke-width="1"/>
+  <text x="10" y="134" class="num">02</text>
+  <text x="56" y="136" class="title">Run a Personal SWOT</text>
+  <text x="56" y="164" class="desc">Map strengths, weaknesses, opportunities and threats to find fit.</text>
+  <line x1="0" y1="192" x2="720" y2="192" stroke="#E3E5E8" stroke-width="1"/>
+  <text x="10" y="230" class="num">03</text>
+  <text x="56" y="232" class="title">Set SMARTR Goals</text>
+  <text x="56" y="260" class="desc">Specific, measurable, attainable, realistic, timely — and rich.</text>
+  <line x1="0" y1="288" x2="720" y2="288" stroke="#E3E5E8" stroke-width="1"/>
+  <text x="10" y="326" class="num">04</text>
+  <text x="56" y="328" class="title">Build a Five-Year Plan</text>
+  <text x="56" y="356" class="desc">Work backwards from the big milestone; the further, the fuzzier.</text>
+  <line x1="0" y1="384" x2="720" y2="384" stroke="#E3E5E8" stroke-width="1"/>
+  <rect x="0" y="385" width="720" height="95" fill="#F2F3F5"/>
+  <text x="10" y="422" class="num">05</text>
+  <text x="56" y="424" class="title">Make Each Day Count<tspan class="accent"> — the habit</tspan></text>
+  <text x="56" y="452" class="desc">Plan, schedule big tasks early, single-task, track and reflect.</text>
+</svg>

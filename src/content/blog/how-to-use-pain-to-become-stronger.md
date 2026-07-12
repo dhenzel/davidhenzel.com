@@ -18,6 +18,11 @@ Zach recently spoke about this idea, and I wanted to share some of the key point
 
 Whether physical, emotional, or mental; each time you come face to face with it the choice is yours -- how will you **allow** pain to affect you? Because like fire, pain can either destroy or refine everything it touches. But it's important to remember that successfully learning how to use pain as a tool is entirely dependent on you and how you cope with it. If you wish to be made stronger by your painful experiences, try paying attention to the decisions you make about these three key areas: ownership, healing, and vulnerability.
 
+<figure>
+  <img src="/images/blog/how-to-use-pain-to-become-stronger-fig.svg" alt="A two-column comparison of letting pain destroy you through blame and victimhood versus being refined by it through ownership, healing, and vulnerability." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — Pain destroys or refines — you choose</figcaption>
+</figure>
+
 ## Ownership
 
 When you first encounter pain, it can be tempting to avoid claiming any kind of responsibility for it. We do this all the time. When a relationship ends, we often lay 100% of the blame on our partner. If we have a car accident, we think about what would have happened if "the other person was paying more attention."

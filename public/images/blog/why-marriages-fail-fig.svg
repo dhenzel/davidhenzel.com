@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 384" role="img" aria-label="A numbered list of the four major reasons entrepreneurial marriages fail: diverging priorities, emotional distance, financial distress, and bringing work stress home.">
+  <style>
+    .num { font: 600 13px Helvetica, Arial, sans-serif; fill: #2563EB; letter-spacing: .08em; }
+    .title { font: 700 21px Georgia, 'Times New Roman', serif; fill: #17181A; }
+    .desc { font: 400 15px Helvetica, Arial, sans-serif; fill: #82868C; }
+    .accent { fill: #2563EB; }
+    .label { font: 600 12px Helvetica, Arial, sans-serif; letter-spacing: .12em; }
+    .h { font: 700 22px Georgia, 'Times New Roman', serif; fill: #17181A; }
+    .li { font: 400 15px Helvetica, Arial, sans-serif; fill: #82868C; }
+    .verdict { font: 600 15px Helvetica, Arial, sans-serif; }
+  </style>
+  <rect width="720" height="384" fill="#FCFCFD"/>
+  <text x="10" y="38" class="num">01</text>
+  <text x="56" y="40" class="title">Diverging Priorities</text>
+  <text x="56" y="68" class="desc">'Business first' invites your spouse's jealousy — plan and align.</text>
+  <line x1="0" y1="96" x2="720" y2="96" stroke="#E3E5E8" stroke-width="1"/>
+  <text x="10" y="134" class="num">02</text>
+  <text x="56" y="136" class="title">Emotional Distance</text>
+  <text x="56" y="164" class="desc">Lack of communication is the number one reason for divorce.</text>
+  <line x1="0" y1="192" x2="720" y2="192" stroke="#E3E5E8" stroke-width="1"/>
+  <text x="10" y="230" class="num">03</text>
+  <text x="56" y="232" class="title">Financial Distress</text>
+  <text x="56" y="260" class="desc">Money fights end marriages; keep backup, check unit economics.</text>
+  <line x1="0" y1="288" x2="720" y2="288" stroke="#E3E5E8" stroke-width="1"/>
+  <text x="10" y="326" class="num">04</text>
+  <text x="56" y="328" class="title">Ghosts From Work</text>
+  <text x="56" y="356" class="desc">Build a cool-down routine; leave work stress at the office.</text>
+</svg>

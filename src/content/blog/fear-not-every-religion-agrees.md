@@ -43,6 +43,11 @@ When you actually dig into the sacred texts, the pattern is impossible to ignore
 
 Seven traditions. Thousands of years apart. Different languages, different cultures, different continents. And they all landed on the same truth: **fear is the obstacle, and love is the way through.**
 
+<figure>
+  <img src="/images/blog/fear-not-every-religion-agrees-fig.svg" alt="A two-column comparison showing fear as the obstacle and love as the way through, the shared teaching of seven major religious traditions." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — One ancient truth across seven traditions</figcaption>
+</figure>
+
 This isn't a coincidence. It's a signal.
 
 The [Love Not Fear](https://lovenotfear.com) framework — purpose, values, vision, habits — isn't something new. It's something ancient, organized into a system that works for modern life.

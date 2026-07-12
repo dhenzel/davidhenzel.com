@@ -16,6 +16,11 @@ Once the merchant left, I started a conversation with them. I asked him if he sa
 
 Not having a backup plan, not having money on the side. He just quit... to follow his passion in Music.
 
+<figure>
+  <img src="/images/blog/do-you-have-the-courage-to-follow-your-calling-fig.svg" alt="A two-column comparison contrasting staying in the comfort zone with having the courage to take the plunge and follow your calling." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — Comfort zone or calling — the courage gap</figcaption>
+</figure>
+
 His girlfriend took the same courageous plunge and quit her event management job to work in a bar until she could find her true calling. They are doing OK but are far from where they want to be. I deeply admire their courage!
 
 When I meet somebody, I'm always following one of my family core values:

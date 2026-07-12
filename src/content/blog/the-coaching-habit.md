@@ -10,6 +10,11 @@ draft: false
 
 Coaching your employees is a critical tool for your direct reports' growth and your organization's success. Bungay Stanier's book, *The Coaching Habit: Say Less, Ask More & Change the Way You Lead Forever*, covers seven questions that, when followed, will profoundly change your leadership game. Unlike other coaching training that's overly theoretical, too complicated, a little boring and divorced from the reality of your busy work life, Bungay Stanier contends that the New Habit Formula, Seven Essential Questions and Masterclass Exercises of his *Coaching Habit* provide quick and practical ways to elevate the way you work and lead.
 
+<figure>
+  <img src="/images/blog/the-coaching-habit-fig.svg" alt="A numbered list of five coaching questions from The Coaching Habit, from the kickstart question to the learning question." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — Five essential coaching questions from The Coaching Habit</figcaption>
+</figure>
+
 ## Form Your New Habit With These 7 Essential Questions
 
 ### Question 1: The Kickstart Question

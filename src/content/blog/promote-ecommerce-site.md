@@ -14,6 +14,11 @@ So today, I'd like to narrow our focus a little and talk to any of you enterpris
 
 But advertising can be expensive. Let's talk about how you can get your name in front of customers **without** breaking the bank. Specifically, let's go over how you might get your eCommerce store featured on someone's blog or website.
 
+<figure>
+  <img src="/images/blog/promote-ecommerce-site-fig.svg" alt="Two-column comparison contrasting paid advertising, which burns scarce cash with high acquisition costs, against free blog outreach, which takes more work but costs almost nothing." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — Two ways to get in front of customers</figcaption>
+</figure>
+
 ## How to Do it Without Spending a Cent
 
 If you're seriously pressed for cash, it's entirely possible to do this without opening your wallet. It will take a little longer and will require more work, but the pay off is your Customer Acquisition Costs (CAC) will be nonexistent. Meaning greater margins to be invested back into your business.

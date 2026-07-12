@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 384" role="img" aria-label="A diagram of the Stoic Happiness Triangle: living with arete, focusing on what you control, and taking responsibility, all supporting eudaimonia.">
+  <style>
+    .num { font: 600 13px Helvetica, Arial, sans-serif; fill: #2563EB; letter-spacing: .08em; }
+    .title { font: 700 21px Georgia, 'Times New Roman', serif; fill: #17181A; }
+    .desc { font: 400 15px Helvetica, Arial, sans-serif; fill: #82868C; }
+    .accent { fill: #2563EB; }
+    .label { font: 600 12px Helvetica, Arial, sans-serif; letter-spacing: .12em; }
+    .h { font: 700 22px Georgia, 'Times New Roman', serif; fill: #17181A; }
+    .li { font: 400 15px Helvetica, Arial, sans-serif; fill: #82868C; }
+    .verdict { font: 600 15px Helvetica, Arial, sans-serif; }
+  </style>
+  <rect width="720" height="384" fill="#FCFCFD"/>
+  <text x="10" y="38" class="num">01</text>
+  <text x="56" y="40" class="title">Live With Arete</text>
+  <text x="56" y="68" class="desc">Express your highest self and close the capability–action gap.</text>
+  <line x1="0" y1="96" x2="720" y2="96" stroke="#E3E5E8" stroke-width="1"/>
+  <text x="10" y="134" class="num">02</text>
+  <text x="56" y="136" class="title">Focus on What You Control</text>
+  <text x="56" y="164" class="desc">The cornerstone: accept everything beyond your influence.</text>
+  <line x1="0" y1="192" x2="720" y2="192" stroke="#E3E5E8" stroke-width="1"/>
+  <text x="10" y="230" class="num">03</text>
+  <text x="56" y="232" class="title">Take Responsibility</text>
+  <text x="56" y="260" class="desc">Events don't decide your happiness; your interpretation does.</text>
+  <line x1="0" y1="288" x2="720" y2="288" stroke="#E3E5E8" stroke-width="1"/>
+  <rect x="0" y="289" width="720" height="95" fill="#F2F3F5"/>
+  <text x="10" y="326" class="num">04</text>
+  <text x="56" y="328" class="title">Eudaimonia<tspan class="accent"> — the goal</tspan></text>
+  <text x="56" y="356" class="desc">Ultimate human flourishing and life satisfaction at the center.</text>
+</svg>

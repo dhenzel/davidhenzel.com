@@ -14,6 +14,11 @@ I have been practicing stoic principles my whole life without knowing about the 
 
 Jonas Salzgeber's *The Little Book of Stoicism: Timeless Wisdom to Gain Resilience, Confidence, and Calmness* makes ancient philosophy practical for contemporary life. The book divides into two sections: the first explains stoicism's goals and key philosophers, then presents the author's "Stoic Happiness Triangle" framework. The second section offers 55 actionable daily practices.
 
+<figure>
+  <img src="/images/blog/the-little-book-of-stoicism-review-fig.svg" alt="A diagram of the Stoic Happiness Triangle: living with arete, focusing on what you control, and taking responsibility, all supporting eudaimonia." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — The Stoic Happiness Triangle from Salzgeber's book</figcaption>
+</figure>
+
 ## The Stoic Happiness Triangle
 
 The triangle centers on **Eudaimonia** -- ultimate human flourishing and life satisfaction. Three corners support this goal:

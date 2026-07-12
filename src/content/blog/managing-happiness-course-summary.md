@@ -46,6 +46,11 @@ Your home and your business don't have to be competing forces anymore. Let me sh
 
 **A quick overview of the 6 parts of the course:**
 
+<figure>
+  <img src="/images/blog/managing-happiness-course-summary-fig.svg" alt="Stacked numbered list of the Managing Happiness course parts: managing yourself, defining your foundation, roles and responsibilities, planning and goal setting, and problem-solving plus finance." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — The Managing Happiness framework at a glance</figcaption>
+</figure>
+
 ## Part 1: Managing Yourself
 
 It is important that you are always on your A-game and that you take care of yourself.

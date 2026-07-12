@@ -1,40 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0.5" y2="1">
-      <stop offset="0%" stop-color="#1A1A1A"/>
-      <stop offset="100%" stop-color="#2A2018"/>
+      <stop offset="0%" stop-color="#17181A"/>
+      <stop offset="100%" stop-color="#17181A"/>
     </linearGradient>
     <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#B91C1C" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#B91C1C" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
     </radialGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
   <!-- Subtle radial glow -->
   <circle cx="600" cy="315" r="400" fill="url(#glow)"/>
   <!-- Decorative lines -->
-  <line x1="460" y1="280" x2="740" y2="280" stroke="#B91C1C" stroke-width="2" stroke-opacity="0.4"/>
-  <line x1="480" y1="400" x2="720" y2="400" stroke="#B91C1C" stroke-width="2" stroke-opacity="0.4"/>
+  <line x1="460" y1="280" x2="740" y2="280" stroke="#2563EB" stroke-width="2" stroke-opacity="0.4"/>
+  <line x1="480" y1="400" x2="720" y2="400" stroke="#2563EB" stroke-width="2" stroke-opacity="0.4"/>
   <!-- Heart symbol -->
   <g transform="translate(600,220)" opacity="0.15">
-    <path d="M0,-30 C-25,-55 -65,-30 -40,5 C-25,30 0,50 0,50 C0,50 25,30 40,5 C65,-30 25,-55 0,-30Z" fill="#B91C1C" transform="scale(1.5)"/>
+    <path d="M0,-30 C-25,-55 -65,-30 -40,5 C-25,30 0,50 0,50 C0,50 25,30 40,5 C65,-30 25,-55 0,-30Z" fill="#2563EB" transform="scale(1.5)"/>
   </g>
   <!-- Title text -->
-  <text x="600" y="330" text-anchor="middle" font-family="Georgia, serif" font-size="46" font-weight="700" fill="#FAFAF8" font-style="italic">"Fear Not"</text>
-  <text x="600" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#FAFAF8" fill-opacity="0.6" letter-spacing="4" text-transform="uppercase">The one thing every religion agrees on</text>
+  <text x="600" y="330" text-anchor="middle" font-family="Georgia, serif" font-size="46" font-weight="700" fill="#FCFCFD" font-style="italic">"Fear Not"</text>
+  <text x="600" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#FCFCFD" fill-opacity="0.6" letter-spacing="4" text-transform="uppercase">The one thing every religion agrees on</text>
   <!-- Tradition symbols as small circles -->
-  <circle cx="380" cy="480" r="4" fill="#B91C1C" fill-opacity="0.5"/>
-  <circle cx="440" cy="480" r="4" fill="#B91C1C" fill-opacity="0.5"/>
-  <circle cx="500" cy="480" r="4" fill="#B91C1C" fill-opacity="0.5"/>
-  <circle cx="560" cy="480" r="4" fill="#B91C1C" fill-opacity="0.5"/>
-  <circle cx="620" cy="480" r="4" fill="#B91C1C" fill-opacity="0.5"/>
-  <circle cx="680" cy="480" r="4" fill="#B91C1C" fill-opacity="0.5"/>
-  <circle cx="740" cy="480" r="4" fill="#B91C1C" fill-opacity="0.5"/>
-  <text x="380" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FAFAF8" fill-opacity="0.35">Christianity</text>
-  <text x="440" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FAFAF8" fill-opacity="0.35">Islam</text>
-  <text x="500" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FAFAF8" fill-opacity="0.35">Judaism</text>
-  <text x="560" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FAFAF8" fill-opacity="0.35">Hinduism</text>
-  <text x="620" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FAFAF8" fill-opacity="0.35">Buddhism</text>
-  <text x="680" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FAFAF8" fill-opacity="0.35">Taoism</text>
-  <text x="740" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FAFAF8" fill-opacity="0.35">Sufism</text>
+  <circle cx="380" cy="480" r="4" fill="#2563EB" fill-opacity="0.5"/>
+  <circle cx="440" cy="480" r="4" fill="#2563EB" fill-opacity="0.5"/>
+  <circle cx="500" cy="480" r="4" fill="#2563EB" fill-opacity="0.5"/>
+  <circle cx="560" cy="480" r="4" fill="#2563EB" fill-opacity="0.5"/>
+  <circle cx="620" cy="480" r="4" fill="#2563EB" fill-opacity="0.5"/>
+  <circle cx="680" cy="480" r="4" fill="#2563EB" fill-opacity="0.5"/>
+  <circle cx="740" cy="480" r="4" fill="#2563EB" fill-opacity="0.5"/>
+  <text x="380" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FCFCFD" fill-opacity="0.35">Christianity</text>
+  <text x="440" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FCFCFD" fill-opacity="0.35">Islam</text>
+  <text x="500" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FCFCFD" fill-opacity="0.35">Judaism</text>
+  <text x="560" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FCFCFD" fill-opacity="0.35">Hinduism</text>
+  <text x="620" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FCFCFD" fill-opacity="0.35">Buddhism</text>
+  <text x="680" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FCFCFD" fill-opacity="0.35">Taoism</text>
+  <text x="740" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FCFCFD" fill-opacity="0.35">Sufism</text>
 </svg>

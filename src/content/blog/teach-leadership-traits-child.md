@@ -14,6 +14,11 @@ For many children these traits are inherent. But as a parent, you need to imbibe
 
 So let me show you three ways to inculcate leadership traits in your child while having fun.
 
+<figure>
+  <img src="/images/blog/teach-leadership-traits-child-fig.svg" alt="Numbered list of three ways to teach children leadership: team building through extracurricular activities, encouraging playfulness and curiosity, and telling stories of grit." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — Three ways to grow a leader while having fun</figcaption>
+</figure>
+
 ## 1. Encourage Team Building by Participation in Extracurricular Activities
 
 As an entrepreneur, you might regularly go on team lunches and play games to boost your team's morale. You also expect your employees to learn new skills.

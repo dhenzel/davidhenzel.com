@@ -18,6 +18,11 @@ A quick background about me: I'm a 43-year-old entrepreneur with a small portfol
 
 Anyhow, I want to share with you how I limit the number of business decisions I have to make and what kind of filters I use to make the right choices.
 
+<figure>
+  <img src="/images/blog/productivity-tips-for-running-multiple-companies-fig.svg" alt="Numbered list of five decision-limiting systems: using frameworks like EOS, monthly mission-vision-values calls, keeping an error log, hiring strong team leads, and pricing tasks by hourly value." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — Systems that limit decisions and save focus</figcaption>
+</figure>
+
 ## Business productivity tips
 
 ### Use Frameworks!

@@ -24,6 +24,11 @@ Best-selling author Matthew Kelly, in his short paperback *Off Balance*, describ
 
 Work isn't something that should exist outside of 'life'. Work is *part* of life, especially if you're at a point in your entrepreneurial career where you've truly found your vocation (and not just working for a paycheck). Instead of trying to spend a certain percentage of time on work and another percentage on life, try viewing your work as simply a single piece of the whole. So instead of chasing "work-life balance", instead view the entire pursuit as "work-life integration".
 
+<figure>
+  <img src="/images/blog/the-definitive-guide-to-work-life-balance-fig.svg" alt="A two-column comparison contrasting the myth of work-life balance with the healthier reframe of work-life integration." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — Balance is a myth; aim for work-life integration</figcaption>
+</figure>
+
 In this guide, you'll get the tools you need to begin building a more balanced life. By the time you're done, you should be on the road to creating a system that works for you, your partner, and your family. After all, a family truly is a system. Like a business, families are interdependent networks with moving parts, different competing priorities, and multiple stakeholders.
 
 And, just like a business, your family is another area in life that requires *active management*. To help it run smoothly, I'll share tools, processes, and project management philosophies you can use to run your family life as successfully as you run your business.

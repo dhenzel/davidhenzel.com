@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-label="Numbered five-step cold email formula: open with praise, sell your skills quickly, make a specific ask, offer to pay for their time, and send at volume.">
+  <style>
+    .num { font: 600 13px Helvetica, Arial, sans-serif; fill: #2563EB; letter-spacing: .08em; }
+    .title { font: 700 21px Georgia, 'Times New Roman', serif; fill: #17181A; }
+    .desc { font: 400 15px Helvetica, Arial, sans-serif; fill: #82868C; }
+    .accent { fill: #2563EB; }
+    .label { font: 600 12px Helvetica, Arial, sans-serif; letter-spacing: .12em; }
+    .h { font: 700 22px Georgia, 'Times New Roman', serif; fill: #17181A; }
+    .li { font: 400 15px Helvetica, Arial, sans-serif; fill: #82868C; }
+    .verdict { font: 600 15px Helvetica, Arial, sans-serif; }
+  </style>
+  <rect width="720" height="480" fill="#FCFCFD"/>
+  <text x="10" y="38" class="num">01</text>
+  <text x="56" y="40" class="title">Open With Praise</text>
+  <text x="56" y="68" class="desc">Tell them why they're awesome; shut off the lizard brain</text>
+  <line x1="0" y1="96" x2="720" y2="96" stroke="#E3E5E8" stroke-width="1"/>
+  <text x="10" y="134" class="num">02</text>
+  <text x="56" y="136" class="title">Sell Skills Quickly</text>
+  <text x="56" y="164" class="desc">One or two sentences of credibility — never arrogance</text>
+  <line x1="0" y1="192" x2="720" y2="192" stroke="#E3E5E8" stroke-width="1"/>
+  <text x="10" y="230" class="num">03</text>
+  <text x="56" y="232" class="title">Make a Specific Ask</text>
+  <text x="56" y="260" class="desc">Pitch why you're writing and cite their actual work</text>
+  <line x1="0" y1="288" x2="720" y2="288" stroke="#E3E5E8" stroke-width="1"/>
+  <text x="10" y="326" class="num">04</text>
+  <text x="56" y="328" class="title">Offer to Pay</text>
+  <text x="56" y="356" class="desc">Respect their time — they'll often admire you and waive it</text>
+  <line x1="0" y1="384" x2="720" y2="384" stroke="#E3E5E8" stroke-width="1"/>
+  <rect x="0" y="385" width="720" height="95" fill="#F2F3F5"/>
+  <text x="10" y="422" class="num">05</text>
+  <text x="56" y="424" class="title">Send at Volume</text>
+  <text x="56" y="452" class="desc">Networking is a numbers game — repetition wins</text>
+</svg>

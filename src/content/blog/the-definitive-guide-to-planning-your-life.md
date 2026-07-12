@@ -10,6 +10,11 @@ draft: false
 
 You have dreams. I know this because I have dreams, we all do. But unfortunately, for a lot of us achieving these dreams is easier said than done. In order to get things done, we need an actionable plan for doing so. I wrote this guide to help you build that plan and take action on it every day.
 
+<figure>
+  <img src="/images/blog/the-definitive-guide-to-planning-your-life-fig.svg" alt="A five-step framework for planning your life, moving from understanding why you plan through SWOT analysis and SMARTR goals to five-year plans and daily habits." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — From life purpose to daily action: the planning framework</figcaption>
+</figure>
+
 **Who Is This Guide For?**
 
 This is a guide for two people: (1) someone with huge aspirations but little plan for getting there; and (2) someone who is still struggling to determine their life purpose.

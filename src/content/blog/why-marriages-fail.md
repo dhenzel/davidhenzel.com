@@ -18,6 +18,11 @@ If you look around, you'll find workaholics like Elon Musk. He's an inspiring fi
 
 So today, let's look at the four major reasons why entrepreneurs fail at marriage. We'll also discuss a few ways to solve these issues.
 
+<figure>
+  <img src="/images/blog/why-marriages-fail-fig.svg" alt="A numbered list of the four major reasons entrepreneurial marriages fail: diverging priorities, emotional distance, financial distress, and bringing work stress home." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — Four reasons entrepreneurial marriages fall apart</figcaption>
+</figure>
+
 ## 1. Diverging Perspectives and Priorities
 
 One of the most common ways in which a marriage starts malfunctioning is when the entrepreneur dissolves their life outside of work. Sure, your company is a part of your identity. But how has that changed you as an individual?

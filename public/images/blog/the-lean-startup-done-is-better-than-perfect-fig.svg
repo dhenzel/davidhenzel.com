@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 384" role="img" aria-label="A four-step diagram showing why shipping a Minimum Viable Product matters: it validates the idea, saves resources, and generates immediate ROI.">
+  <style>
+    .num { font: 600 13px Helvetica, Arial, sans-serif; fill: #2563EB; letter-spacing: .08em; }
+    .title { font: 700 21px Georgia, 'Times New Roman', serif; fill: #17181A; }
+    .desc { font: 400 15px Helvetica, Arial, sans-serif; fill: #82868C; }
+    .accent { fill: #2563EB; }
+    .label { font: 600 12px Helvetica, Arial, sans-serif; letter-spacing: .12em; }
+    .h { font: 700 22px Georgia, 'Times New Roman', serif; fill: #17181A; }
+    .li { font: 400 15px Helvetica, Arial, sans-serif; fill: #82868C; }
+    .verdict { font: 600 15px Helvetica, Arial, sans-serif; }
+  </style>
+  <rect width="720" height="384" fill="#FCFCFD"/>
+  <text x="10" y="38" class="num">01</text>
+  <text x="56" y="40" class="title">Ship the MVP</text>
+  <text x="56" y="68" class="desc">The most basic version with only the most critical features.</text>
+  <line x1="0" y1="96" x2="720" y2="96" stroke="#E3E5E8" stroke-width="1"/>
+  <text x="10" y="134" class="num">02</text>
+  <text x="56" y="136" class="title">Idea Validation</text>
+  <text x="56" y="164" class="desc">Get off the drawing board; battle-test your big idea in the market.</text>
+  <line x1="0" y1="192" x2="720" y2="192" stroke="#E3E5E8" stroke-width="1"/>
+  <text x="10" y="230" class="num">03</text>
+  <text x="56" y="232" class="title">Saves Resources</text>
+  <text x="56" y="260" class="desc">Skip the logo and t-shirts; spend energy where it matters most.</text>
+  <line x1="0" y1="288" x2="720" y2="288" stroke="#E3E5E8" stroke-width="1"/>
+  <rect x="0" y="289" width="720" height="95" fill="#F2F3F5"/>
+  <text x="10" y="326" class="num">04</text>
+  <text x="56" y="328" class="title">Immediate ROI<tspan class="accent"> — the payoff</tspan></text>
+  <text x="56" y="356" class="desc">Real paying customers make investors far more likely to fund you.</text>
+</svg>

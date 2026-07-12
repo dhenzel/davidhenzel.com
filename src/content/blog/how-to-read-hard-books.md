@@ -16,6 +16,11 @@ And while it's tempting to simply put a book away when it becomes too challengin
 
 So how can you consistently make it through difficult, mind-numbing tomes? It all starts with a dictionary...
 
+<figure>
+  <img src="/images/blog/how-to-read-hard-books-fig.svg" alt="A diagram of five numbered strategies for reading hard books: use a dictionary, add the audiobook, ditch the highlighter, get directions first, and quit for a new book when needed." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — Five ways to get through hard books</figcaption>
+</figure>
+
 ## Get a Dictionary. Use it.
 
 If you don't know a word, look it up. Don't carry on assuming you'll understand the context of it. Just getting the gist of a game-changing book is unacceptable. Don't allow an unfamiliar word keep you from progressing.

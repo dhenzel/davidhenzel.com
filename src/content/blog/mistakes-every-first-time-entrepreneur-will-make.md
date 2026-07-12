@@ -12,6 +12,11 @@ As a new business owner, you're bound to make mistakes. I know I've made plenty.
 
 Even after reading about all these mistakes, you're still likely to fall into a few traps along the way. In fact, if you're like most first-time entrepreneurs, you may have already fallen for one and just haven't realized it yet. Here are seven of the most common mistakes I see business owners make.
 
+<figure>
+  <img src="/images/blog/mistakes-every-first-time-entrepreneur-will-make-fig.svg" alt="Numbered list of five common first-time entrepreneur mistakes: chasing money, shiny object syndrome, failure to ship, lacking a vision, and fear of failure." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — Five traps that catch first-time entrepreneurs</figcaption>
+</figure>
+
 ## 1. Chasing Benjamins
 
 Ask yourself right now (and be honest): are you in this for the cash? If so, it's going to be an uphill battle. By focusing on extracting as much cash as possible from your customers, you'll quickly blind yourself to what actually makes money: providing value. If you want to avoid this mistake, retool your efforts so you're focusing on changing lives, reducing pain, or just making life easier for your market.

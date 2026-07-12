@@ -24,6 +24,11 @@ But poor communication can ruin the sanctity of a relationship. Indeed, communic
 
 So let's explore the three characteristics of effective communication. Here goes number one.
 
+<figure>
+  <img src="/images/blog/characteristics-of-effective-communication-fig.svg" alt="A diagram of three numbered characteristics of effective communication with your spouse: empathy, honesty and transparency, and active listening." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — Three characteristics of effective communication</figcaption>
+</figure>
+
 ## 1. Empathy (Even When You're Being Criticized)
 
 As per a study by Forbes, empathy ranks among the top five traits for a successful entrepreneur.

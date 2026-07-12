@@ -14,6 +14,11 @@ It's hard.
 
 Unfortunately, it's also an inevitable stepping-stone on your quest for success. So today, I want to share with you a powerful email formula that will help you connect with your industry's top talent. The head honchos. The big cheese.
 
+<figure>
+  <img src="/images/blog/simple-cold-email-makes-networking-easy-fig.svg" alt="Numbered five-step cold email formula: open with praise, sell your skills quickly, make a specific ask, offer to pay for their time, and send at volume." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — The cold email formula, step by step</figcaption>
+</figure>
+
 ## Shutting off the Lizard Brain
 
 Right off the bat you're doing something unique. Instead of immediately jumping into a long soliloquy about who you are and why you're awesome, you do something neat -- you tell your recipient why **they're special** and why **they're awesome.**

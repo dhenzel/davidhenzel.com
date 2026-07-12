@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 288" role="img" aria-label="A diagram of three numbered characteristics of effective communication with your spouse: empathy, honesty and transparency, and active listening.">
+  <style>
+    .num { font: 600 13px Helvetica, Arial, sans-serif; fill: #2563EB; letter-spacing: .08em; }
+    .title { font: 700 21px Georgia, 'Times New Roman', serif; fill: #17181A; }
+    .desc { font: 400 15px Helvetica, Arial, sans-serif; fill: #82868C; }
+    .accent { fill: #2563EB; }
+    .label { font: 600 12px Helvetica, Arial, sans-serif; letter-spacing: .12em; }
+    .h { font: 700 22px Georgia, 'Times New Roman', serif; fill: #17181A; }
+    .li { font: 400 15px Helvetica, Arial, sans-serif; fill: #82868C; }
+    .verdict { font: 600 15px Helvetica, Arial, sans-serif; }
+  </style>
+  <rect width="720" height="288" fill="#FCFCFD"/>
+  <text x="10" y="38" class="num">01</text>
+  <text x="56" y="40" class="title">Empathy</text>
+  <text x="56" y="68" class="desc">Put yourself in your spouse's shoes — even when criticized</text>
+  <line x1="0" y1="96" x2="720" y2="96" stroke="#E3E5E8" stroke-width="1"/>
+  <text x="10" y="134" class="num">02</text>
+  <text x="56" y="136" class="title">Honesty &amp; Transparency</text>
+  <text x="56" y="164" class="desc">Don't hide bad news — warmth plus truth builds real trust</text>
+  <line x1="0" y1="192" x2="720" y2="192" stroke="#E3E5E8" stroke-width="1"/>
+  <rect x="0" y="193" width="720" height="95" fill="#F2F3F5"/>
+  <text x="10" y="230" class="num">03</text>
+  <text x="56" y="232" class="title">Active Listening</text>
+  <text x="56" y="260" class="desc">Undivided attention; define goals, roles, and shared time</text>
+</svg>

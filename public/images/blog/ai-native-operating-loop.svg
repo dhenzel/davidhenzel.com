@@ -1,46 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" fill="none" role="img" aria-label="The operating loop of an AI-native company: Purpose sets the constraints; then a continuous loop of Sense, Interpret (the memory), Decide, Act, and Learn (which compounds), feeding every outcome back into the memory. Governance wraps the whole loop with humans in control, every action logged, on your own servers.">
   <defs>
     <marker id="arn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="#6E6C66"/>
+      <path d="M0,0 L10,5 L0,10 z" fill="#82868C"/>
     </marker>
     <marker id="ara" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/>
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/>
     </marker>
   </defs>
 
-  <rect x="2" y="2" width="996" height="396" rx="16" fill="#FBFBFA" stroke="#E4E2DD" stroke-width="1.5"/>
+  <rect x="2" y="2" width="996" height="396" rx="16" fill="#FCFCFD" stroke="#E3E5E8" stroke-width="1.5"/>
 
   <!-- Purpose -->
-  <rect x="400" y="30" width="200" height="44" rx="22" fill="#FFFFFF" stroke="#E4E2DD" stroke-width="1.5"/>
-  <text x="500" y="58" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#1C1C1A">Purpose</text>
-  <text x="500" y="96" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="11" fill="#6E6C66">SETS THE GOALS AND THE HARD CONSTRAINTS</text>
+  <rect x="400" y="30" width="200" height="44" rx="22" fill="#FFFFFF" stroke="#E3E5E8" stroke-width="1.5"/>
+  <text x="500" y="58" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#17181A">Purpose</text>
+  <text x="500" y="96" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="11" fill="#82868C">SETS THE GOALS AND THE HARD CONSTRAINTS</text>
 
   <!-- loop stages -->
   <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
     <!-- Sense -->
-    <rect x="70" y="140" width="150" height="80" rx="12" fill="#FFFFFF" stroke="#E4E2DD" stroke-width="1.5"/>
-    <text x="145" y="178" text-anchor="middle" font-size="19" fill="#1C1C1A">Sense</text>
-    <text x="145" y="202" text-anchor="middle" font-size="12" fill="#6E6C66">notices everything</text>
+    <rect x="70" y="140" width="150" height="80" rx="12" fill="#FFFFFF" stroke="#E3E5E8" stroke-width="1.5"/>
+    <text x="145" y="178" text-anchor="middle" font-size="19" fill="#17181A">Sense</text>
+    <text x="145" y="202" text-anchor="middle" font-size="12" fill="#82868C">notices everything</text>
     <!-- Interpret (hot) -->
-    <rect x="247" y="140" width="150" height="80" rx="12" fill="#F6EBE8" stroke="#B91C1C" stroke-width="2"/>
-    <text x="322" y="178" text-anchor="middle" font-size="19" fill="#1C1C1A">Interpret</text>
-    <text x="322" y="202" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="11" fill="#B91C1C">THE MEMORY</text>
+    <rect x="247" y="140" width="150" height="80" rx="12" fill="#F2F3F5" stroke="#2563EB" stroke-width="2"/>
+    <text x="322" y="178" text-anchor="middle" font-size="19" fill="#17181A">Interpret</text>
+    <text x="322" y="202" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="11" fill="#2563EB">THE MEMORY</text>
     <!-- Decide -->
-    <rect x="424" y="140" width="150" height="80" rx="12" fill="#FFFFFF" stroke="#E4E2DD" stroke-width="1.5"/>
-    <text x="499" y="178" text-anchor="middle" font-size="19" fill="#1C1C1A">Decide</text>
-    <text x="499" y="202" text-anchor="middle" font-size="12" fill="#6E6C66">judgment stays human</text>
+    <rect x="424" y="140" width="150" height="80" rx="12" fill="#FFFFFF" stroke="#E3E5E8" stroke-width="1.5"/>
+    <text x="499" y="178" text-anchor="middle" font-size="19" fill="#17181A">Decide</text>
+    <text x="499" y="202" text-anchor="middle" font-size="12" fill="#82868C">judgment stays human</text>
     <!-- Act -->
-    <rect x="601" y="140" width="150" height="80" rx="12" fill="#FFFFFF" stroke="#E4E2DD" stroke-width="1.5"/>
-    <text x="676" y="178" text-anchor="middle" font-size="19" fill="#1C1C1A">Act</text>
-    <text x="676" y="202" text-anchor="middle" font-size="12" fill="#6E6C66">AI carries the routine</text>
+    <rect x="601" y="140" width="150" height="80" rx="12" fill="#FFFFFF" stroke="#E3E5E8" stroke-width="1.5"/>
+    <text x="676" y="178" text-anchor="middle" font-size="19" fill="#17181A">Act</text>
+    <text x="676" y="202" text-anchor="middle" font-size="12" fill="#82868C">AI carries the routine</text>
     <!-- Learn (hot) -->
-    <rect x="778" y="140" width="150" height="80" rx="12" fill="#F6EBE8" stroke="#B91C1C" stroke-width="2"/>
-    <text x="853" y="178" text-anchor="middle" font-size="19" fill="#1C1C1A">Learn</text>
-    <text x="853" y="202" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="11" fill="#B91C1C">COMPOUNDS</text>
+    <rect x="778" y="140" width="150" height="80" rx="12" fill="#F2F3F5" stroke="#2563EB" stroke-width="2"/>
+    <text x="853" y="178" text-anchor="middle" font-size="19" fill="#17181A">Learn</text>
+    <text x="853" y="202" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="11" fill="#2563EB">COMPOUNDS</text>
   </g>
 
   <!-- forward arrows -->
-  <g stroke="#6E6C66" stroke-width="2" fill="none">
+  <g stroke="#82868C" stroke-width="2" fill="none">
     <path d="M222,180 H245" marker-end="url(#arn)"/>
     <path d="M399,180 H422" marker-end="url(#arn)"/>
     <path d="M576,180 H599" marker-end="url(#arn)"/>
@@ -48,10 +48,10 @@
   </g>
 
   <!-- feedback loop -->
-  <path d="M853,220 C853,290 145,290 145,220" stroke="#B91C1C" stroke-width="2" stroke-dasharray="6 5" fill="none" marker-end="url(#ara)"/>
-  <text x="499" y="266" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="12" fill="#B91C1C">EVERY OUTCOME FEEDS BACK INTO THE MEMORY</text>
+  <path d="M853,220 C853,290 145,290 145,220" stroke="#2563EB" stroke-width="2" stroke-dasharray="6 5" fill="none" marker-end="url(#ara)"/>
+  <text x="499" y="266" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="12" fill="#2563EB">EVERY OUTCOME FEEDS BACK INTO THE MEMORY</text>
 
   <!-- Govern -->
-  <rect x="70" y="316" width="858" height="42" rx="10" fill="#FFFFFF" stroke="#E4E2DD" stroke-width="1.5"/>
-  <text x="499" y="342" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6E6C66">Govern · humans in control · every action logged · on your own servers</text>
+  <rect x="70" y="316" width="858" height="42" rx="10" fill="#FFFFFF" stroke="#E3E5E8" stroke-width="1.5"/>
+  <text x="499" y="342" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#82868C">Govern · humans in control · every action logged · on your own servers</text>
 </svg>

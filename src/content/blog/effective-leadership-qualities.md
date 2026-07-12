@@ -20,6 +20,11 @@ We all crave validation; it's a biological need.
 
 Here are the five leadership qualities to make you more effective and successful.
 
+<figure>
+  <img src="/images/blog/effective-leadership-qualities-fig.svg" alt="A diagram of five numbered leadership qualities: emotional intelligence, compelling vision, aggressive action taking, effective communication, and passing on the bait." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — Five effective leadership qualities</figcaption>
+</figure>
+
 ## 1. Emotional Intelligence
 
 We live in a world obsessed with data, problem-solving, and decision-making.

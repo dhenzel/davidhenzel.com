@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" role="img" aria-label="A two-column comparison contrasting the myth of work-life balance with the healthier reframe of work-life integration.">
+  <style>
+    .num { font: 600 13px Helvetica, Arial, sans-serif; fill: #2563EB; letter-spacing: .08em; }
+    .title { font: 700 21px Georgia, 'Times New Roman', serif; fill: #17181A; }
+    .desc { font: 400 15px Helvetica, Arial, sans-serif; fill: #82868C; }
+    .accent { fill: #2563EB; }
+    .label { font: 600 12px Helvetica, Arial, sans-serif; letter-spacing: .12em; }
+    .h { font: 700 22px Georgia, 'Times New Roman', serif; fill: #17181A; }
+    .li { font: 400 15px Helvetica, Arial, sans-serif; fill: #82868C; }
+    .verdict { font: 600 15px Helvetica, Arial, sans-serif; }
+  </style>
+  <rect width="720" height="260" fill="#FCFCFD"/>
+  <line x1="360" y1="0" x2="360" y2="260" stroke="#17181A" stroke-width="1"/>
+  <text x="28" y="42" class="label" fill="#82868C">THE MYTH</text>
+  <text x="28" y="82" class="h">Work-life balance</text>
+  <text x="28" y="122" class="li">Splits time into fixed percentages</text>
+  <text x="28" y="152" class="li">Treats work as outside of life</text>
+  <text x="28" y="182" class="li">Chasing a balance you never reach</text>
+  <line x1="28" y1="194" x2="332" y2="194" stroke="#E3E5E8" stroke-width="1"/>
+  <text x="28" y="228" class="verdict" fill="#82868C">Misleading — and always has been</text>
+  <text x="388" y="42" class="label" fill="#2563EB">THE REFRAME</text>
+  <text x="388" y="82" class="h">Work-life integration</text>
+  <text x="388" y="122" class="li">Work is one piece of the whole</text>
+  <text x="388" y="152" class="li">Align with what matters most</text>
+  <text x="388" y="182" class="li">Manage family life actively</text>
+  <line x1="388" y1="194" x2="692" y2="194" stroke="#E3E5E8" stroke-width="1"/>
+  <text x="388" y="228" class="verdict" fill="#2563EB">A system you actively manage</text>
+</svg>

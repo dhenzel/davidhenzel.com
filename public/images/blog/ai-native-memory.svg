@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FAFAF8"/>
-      <stop offset="100%" stop-color="#F2F0EB"/>
+      <stop offset="0%" stop-color="#FCFCFD"/>
+      <stop offset="100%" stop-color="#F2F3F5"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
 
   <!-- lines: every source converges onto the memory layer -->
-  <g stroke="#6B6355" stroke-opacity="0.28" stroke-width="2">
+  <g stroke="#82868C" stroke-opacity="0.28" stroke-width="2">
     <path d="M300,220 L400,430"/>
     <path d="M470,195 L500,430"/>
     <path d="M600,185 L600,430"/>
@@ -17,7 +17,7 @@
   </g>
 
   <!-- source nodes: the tools and inputs with amnesia -->
-  <g fill="#6B6355" fill-opacity="0.20">
+  <g fill="#82868C" fill-opacity="0.20">
     <rect x="265" y="150" width="70" height="70" rx="10"/>
     <rect x="435" y="125" width="70" height="70" rx="10"/>
     <rect x="565" y="115" width="70" height="70" rx="10"/>
@@ -26,11 +26,11 @@
   </g>
 
   <!-- the foundation: one shared, permanent memory -->
-  <rect x="220" y="430" width="760" height="96" rx="12" fill="#B91C1C" fill-opacity="0.30"/>
-  <rect x="220" y="430" width="760" height="96" rx="12" stroke="#B91C1C" stroke-opacity="0.45" stroke-width="2"/>
+  <rect x="220" y="430" width="760" height="96" rx="12" fill="#2563EB" fill-opacity="0.30"/>
+  <rect x="220" y="430" width="760" height="96" rx="12" stroke="#2563EB" stroke-opacity="0.45" stroke-width="2"/>
 
   <!-- connection points where everything meets the memory -->
-  <g fill="#B91C1C" fill-opacity="0.5">
+  <g fill="#2563EB" fill-opacity="0.5">
     <circle cx="400" cy="430" r="5"/>
     <circle cx="500" cy="430" r="5"/>
     <circle cx="600" cy="430" r="5"/>
@@ -39,7 +39,7 @@
   </g>
 
   <!-- ground line: the foundation everything else stands on -->
-  <line x1="140" y1="560" x2="1060" y2="560" stroke="#6B6355" stroke-opacity="0.20" stroke-width="2"/>
+  <line x1="140" y1="560" x2="1060" y2="560" stroke="#82868C" stroke-opacity="0.20" stroke-width="2"/>
 
-  <g transform="translate(1125,578) scale(0.6)" opacity="0.18" fill="#1A1A1A"><path d="M0,36.8 L4.54,36.8 L4.54,8.61 L0,8.61 L0,5.34 L17.81,5.34 C21.42,5.34 24.49,6.14 27.03,7.75 C29.57,9.35 31.47,11.46 32.74,14.07 C34,16.68 34.63,19.44 34.63,22.36 C34.63,25.82 34,28.88 32.74,31.55 C31.47,34.23 29.59,36.31 27.09,37.81 C24.59,39.31 21.51,40.06 17.87,40.06 L0,40.06 L0,36.8Z M17.29,36.8 C21.42,36.8 24.49,35.5 26.52,32.89 C28.54,30.29 29.55,26.87 29.55,22.64 C29.55,20.2 29.11,17.94 28.22,15.86 C27.34,13.79 25.99,12.11 24.17,10.83 C22.36,9.54 20.13,8.9 17.47,8.9 L9.25,8.9 L9.25,36.8 L17.29,36.8Z M45.37,40.06 L45.37,36.8 L49.74,36.8 L49.74,8.61 L45.37,8.61 L45.37,5.34 L58.69,5.34 L58.69,8.61 L54.32,8.61 L54.32,20.45 L71.11,20.45 L71.11,8.61 L66.69,8.61 L66.69,5.34 L80,5.34 L80,8.61 L75.64,8.61 L75.64,36.8 L80,36.8 L80,40.06 L66.69,40.06 L66.69,36.8 L71.11,36.8 L71.11,23.97 L54.32,23.97 L54.32,36.8 L58.69,36.8 L58.69,40.06Z M38.7,0 L40.7,0 L40.7,45.7 L38.7,45.7Z"/></g>
+  <g transform="translate(1125,578) scale(0.6)" opacity="0.18" fill="#17181A"><path d="M0,36.8 L4.54,36.8 L4.54,8.61 L0,8.61 L0,5.34 L17.81,5.34 C21.42,5.34 24.49,6.14 27.03,7.75 C29.57,9.35 31.47,11.46 32.74,14.07 C34,16.68 34.63,19.44 34.63,22.36 C34.63,25.82 34,28.88 32.74,31.55 C31.47,34.23 29.59,36.31 27.09,37.81 C24.59,39.31 21.51,40.06 17.87,40.06 L0,40.06 L0,36.8Z M17.29,36.8 C21.42,36.8 24.49,35.5 26.52,32.89 C28.54,30.29 29.55,26.87 29.55,22.64 C29.55,20.2 29.11,17.94 28.22,15.86 C27.34,13.79 25.99,12.11 24.17,10.83 C22.36,9.54 20.13,8.9 17.47,8.9 L9.25,8.9 L9.25,36.8 L17.29,36.8Z M45.37,40.06 L45.37,36.8 L49.74,36.8 L49.74,8.61 L45.37,8.61 L45.37,5.34 L58.69,5.34 L58.69,8.61 L54.32,8.61 L54.32,20.45 L71.11,20.45 L71.11,8.61 L66.69,8.61 L66.69,5.34 L80,5.34 L80,8.61 L75.64,8.61 L75.64,36.8 L80,36.8 L80,40.06 L66.69,40.06 L66.69,36.8 L71.11,36.8 L71.11,23.97 L54.32,23.97 L54.32,36.8 L58.69,36.8 L58.69,40.06Z M38.7,0 L40.7,0 L40.7,45.7 L38.7,45.7Z"/></g>
 </svg>

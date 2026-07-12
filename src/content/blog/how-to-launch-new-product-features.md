@@ -18,6 +18,11 @@ It turned out to be a lengthy and hard process, but we found a way to communicat
 
 So, you just created a new product feature? Follow these steps before you launch it and you won't piss off your team.
 
+<figure>
+  <img src="/images/blog/how-to-launch-new-product-features-fig.svg" alt="A diagram of four numbered launch communication steps: brief support first, educate marketing and sales, update the whole company, then inform customers." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — Four steps to launch a feature without chaos</figcaption>
+</figure>
+
 ## 1. Start with your Support team
 
 First and foremost, give your support team heads up so that they know what to expect on the release date.

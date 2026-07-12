@@ -22,6 +22,11 @@ The MVP is critical to your success. Without it, you're in danger of spending to
 
 The Lean Startup is full of advice on how to build your product quickly, get it to the right people, and continually improve it based on their feedback. However, lets look at the "why" behind those ideas. What makes the MVP such a critical component to your success?
 
+<figure>
+  <img src="/images/blog/the-lean-startup-done-is-better-than-perfect-fig.svg" alt="A four-step diagram showing why shipping a Minimum Viable Product matters: it validates the idea, saves resources, and generates immediate ROI." loading="lazy" />
+  <figcaption><span class="fig-no">Fig. 01</span> — Why the Minimum Viable Product is critical to success</figcaption>
+</figure>
+
 - **Idea Validation** -- Your MVP is the most basic version of your product, with only the most critical features. By narrowing your focus and devoting 100% of your effort to its completion, you allow yourself to get off the drawing board and into the market. And this is where your "big idea" is battle-tested to see if it truly brings value to your customers.
 
 - **Saves Resources** -- By concentrating your energy on building your product and nothing else, you save money and time you might have wasted elsewhere. You won't spend $500 on a logo, $300 on company t-shirts, or two days at startup workshop. Instead, you spend your time and energy where it matters most: building a product and finding customers.
