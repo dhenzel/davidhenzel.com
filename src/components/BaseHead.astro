@@ -28,10 +28,23 @@ const personSchema = {
   '@type': 'Person',
   name: 'David Henzel',
   url: 'https://davidhenzel.com',
+  image: 'https://davidhenzel.com/images/david-headshot.png',
   jobTitle: 'Serial Entrepreneur',
+  description:
+    'Serial entrepreneur building companies since 1999 and rebuilding them around AI since 2024. Creator of the Love Not Fear operating system for conscious leadership.',
+  knowsAbout: [
+    'entrepreneurship',
+    'AI transformation',
+    'AI-native companies',
+    'conscious leadership',
+    'customer experience',
+    'customer retention',
+    'self-leadership',
+  ],
   sameAs: [
     'https://twitter.com/davidhenzel',
     'https://www.linkedin.com/in/davidhenzel',
+    'https://www.instagram.com/davidhenzel',
   ],
 };
 
@@ -59,9 +72,16 @@ const blogPostSchema = article
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
       headline: title,
+      url: canonicalURL,
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalURL },
       datePublished: article.pubDate.toISOString(),
       ...(article.updatedDate && { dateModified: article.updatedDate.toISOString() }),
       author: {
+        '@type': 'Person',
+        name: 'David Henzel',
+        url: 'https://davidhenzel.com',
+      },
+      publisher: {
         '@type': 'Person',
         name: 'David Henzel',
         url: 'https://davidhenzel.com',
@@ -100,6 +120,7 @@ const blogPostSchema = article
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImage} />
 <meta property="og:site_name" content="David Henzel" />
+<meta property="og:locale" content="en_US" />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
@@ -114,6 +135,9 @@ const blogPostSchema = article
   <>
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content={article.pubDate.toISOString()} />
+    {article.updatedDate && (
+      <meta property="article:modified_time" content={article.updatedDate.toISOString()} />
+    )}
     <meta property="article:author" content="David Henzel" />
     {article.tags?.map((tag) => (
       <meta property="article:tag" content={tag} />
